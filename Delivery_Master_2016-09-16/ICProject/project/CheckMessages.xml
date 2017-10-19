@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CheckMessageDefinition AIVersion="1.0">
+    <CheckMessages>
+        <Message Name="CloseRoof" Prio="0" GCLTriggerSink="CloseRoofTrigger" Reoccurring="false" ClearCondition="Trigger" Timeout="0">
+            <Items>
+                <Item Index="0" Type="DynamicLabel" ResourceID="1" AssociatedWidgetID="595"/>
+                <Item Index="1" Type="DynamicLabel" ResourceID="1" AssociatedWidgetID="596"/>
+            </Items>
+            <AllowedIn>
+                <Layout ID="2"/>
+            </AllowedIn>
+        </Message>
+        <Message Name="RelParkBrake" Prio="1" GCLTriggerSink="RelParkBrakeTrigger" Reoccurring="false" ClearCondition="Timeout" Timeout="3000">
+            <Items>
+                <Item Index="0" Type="DynamicLabel" ResourceID="2" AssociatedWidgetID="595"/>
+                <Item Index="1" Type="DynamicLabel" ResourceID="2" AssociatedWidgetID="596"/>
+            </Items>
+            <AllowedIn>
+                <Layout ID="3"/>
+            </AllowedIn>
+        </Message>
+        <Message Name="CloseDoors" Prio="2" GCLTriggerSink="CloseDoorsTrigger" Reoccurring="true" ClearCondition="Button" Timeout="0">
+            <Items>
+                <Item Index="0" Type="DynamicLabel" ResourceID="3" AssociatedWidgetID="595"/>
+                <Item Index="1" Type="DynamicLabel" ResourceID="3" AssociatedWidgetID="596"/>
+            </Items>
+            <AllowedIn>
+                <Layout ID="4"/>
+            </AllowedIn>
+        </Message>
+    </CheckMessages>
+</CheckMessageDefinition>

@@ -1,0 +1,90 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="http://check.sourceforge.net/xml/check_unittest.xslt"?>
+<testsuites xmlns="http://check.sourceforge.net/ns">
+  <datetime>2015-10-12 11:13:22</datetime>
+  <suite>
+    <title>TurnIndicationSuite</title>
+    <test result="success">
+      <path>.</path>
+      <fn>TurnIndication_test.c:173</fn>
+      <id>AllSignalsOff_NoSoundOrTellTale</id>
+      <iteration>0</iteration>
+      <duration>0.000000</duration>
+      <description>TurnIndicationTests</description>
+      <message>Passed</message>
+    </test>
+    <test result="success">
+      <path>.</path>
+      <fn>TurnIndication_test.c:192</fn>
+      <id>LeftSignalPositiveFlank_TickSoundAndTelltaleOn</id>
+      <iteration>0</iteration>
+      <duration>0.000000</duration>
+      <description>TurnIndicationTests</description>
+      <message>Passed</message>
+    </test>
+    <test result="success">
+      <path>.</path>
+      <fn>TurnIndication_test.c:213</fn>
+      <id>LeftSignalNegativeFlank_TackSoundAndTelltaleOff</id>
+      <iteration>0</iteration>
+      <duration>0.000000</duration>
+      <description>TurnIndicationTests</description>
+      <message>Passed</message>
+    </test>
+    <test result="success">
+      <path>.</path>
+      <fn>TurnIndication_test.c:192</fn>
+      <id>RightSignalPositiveFlank_TickSoundAndTelltaleOn</id>
+      <iteration>0</iteration>
+      <duration>0.000000</duration>
+      <description>TurnIndicationTests</description>
+      <message>Passed</message>
+    </test>
+    <test result="success">
+      <path>.</path>
+      <fn>TurnIndication_test.c:213</fn>
+      <id>RightSignalNegativeFlank_TackSoundAndTelltaleOff</id>
+      <iteration>0</iteration>
+      <duration>0.000000</duration>
+      <description>TurnIndicationTests</description>
+      <message>Passed</message>
+    </test>
+    <test result="success">
+      <path>.</path>
+      <fn>TurnIndication_test.c:173</fn>
+      <id>LeftSignalPositiveFlankWithTelltaleDelay_SoundOnAndTelltaleDelayed</id>
+      <iteration>0</iteration>
+      <duration>0.000000</duration>
+      <description>TurnIndicationTests</description>
+      <message>Passed</message>
+    </test>
+    <test result="success">
+      <path>.</path>
+      <fn>TurnIndication_test.c:173</fn>
+      <id>RightSignalPositiveFlankWithTelltaleDelay_SoundOnAndTelltaleDelayed</id>
+      <iteration>0</iteration>
+      <duration>0.000000</duration>
+      <description>TurnIndicationTests</description>
+      <message>Passed</message>
+    </test>
+    <test result="success">
+      <path>.</path>
+      <fn>TurnIndication_test.c:173</fn>
+      <id>LeftSignalNegativeFlankWithTelltaleDelay_SoundOffAndTelltaleDelayed</id>
+      <iteration>0</iteration>
+      <duration>0.000000</duration>
+      <description>TurnIndicationTests</description>
+      <message>Passed</message>
+    </test>
+    <test result="success">
+      <path>.</path>
+      <fn>TurnIndication_test.c:173</fn>
+      <id>RightSignalNegativeFlankWithTelltaleDelay_SoundOffAndTelltaleDelayed</id>
+      <iteration>0</iteration>
+      <duration>0.000000</duration>
+      <description>TurnIndicationTests</description>
+      <message>Passed</message>
+    </test>
+  </suite>
+  <duration>0.000000</duration>
+</testsuites>

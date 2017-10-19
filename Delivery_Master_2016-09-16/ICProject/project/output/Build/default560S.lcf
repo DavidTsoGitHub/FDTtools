@@ -1,0 +1,167 @@
+/*
+ *######################################################################
+ *                                RAppIDJDP
+ *           Rapid Application Initialization and Documentation Tool
+ *                         Freescale Semiconductor Inc.
+ *
+ *######################################################################
+ *
+ * Project Name           : detc_ecu
+ *
+ * Project File           : detc_ecu.rsp
+ *
+ * Revision Number        : 1.0
+ *
+ * Tool Version           : 1.0.0.3
+ *
+ * file                   : default560S.lcf
+ *
+ * Target Compiler        : Codewarrior
+ *
+ * Target Part            : MPC5606S
+ *
+ * Part Errata Fixes      : none
+ *
+ * Project Last Save Date : 04-Sep-2014 15:25:01
+ *
+ * Created on Date        : 04-Sep-2014 15:25:02
+ *
+ * Brief Description      : 
+ *
+ ******************************************************************************** 
+ *
+ * Detail Description     : 
+ *
+ ******************************************************************************** 
+ *
+ *######################################################################
+*/
+
+ 
+ 
+MEMORY
+{
+    rcw:                            org=0x00010000, len=0x00000008
+    init:                           org=0x00010020, len=0x00000FE0
+    exception_handlers:             org=0x00011000, len=0x00001000
+    int_flash:                      org=0x00012000, len=0x000EC000
+    vector_table:                   org=0x000FE000, len=0x00002000
+    int_sram:                       org=0x40000000, len=0x0000A000
+	heap_ram:                       org=0x4000A000, len=0x00001000
+    stack_ram:                      org=0x4000B000, len=0x00001000
+    dcu_ram:                        org=0x60000000, len=0x00028000
+}
+
+FORCEACTIVE { "bam_rchw" "bam_resetvector" }
+
+SECTIONS
+{
+
+
+
+
+
+    GROUP : { 
+    
+        .__bam_bootarea  LOAD (0x10000): {   }} >rcw
+
+
+
+    GROUP : { 
+    
+        .init : {  }
+        .init_vle (VLECODE) LOAD (0x10020): { 
+            *(.init)
+            *(.init_vle)
+          }} >init
+
+
+
+    GROUP : { 
+    
+        .exec_vect  LOAD (0x11000): {   }
+        .exec_vect_Vle (VLECODE) LOAD (0x11000): {   }} >exception_handlers
+
+
+
+    GROUP : { 
+    
+        __argv=.;
+
+        __env=.;
+
+        .text : {  }
+        .text_vle (VLECODE): { 
+            *(.text_vle)
+            *(.text)
+         }
+        .rodata (CONST): { 
+            *(.rdata)
+            *(.rodata)
+         }
+        .ctors  ALIGN (0x4): { *(.ctors) }
+        .dtors  ALIGN (0x4): { *(.dtors) }
+        .sdata2 : {  }
+        . = ALIGN(0x8);
+        .sbss2 : {  }} >int_flash
+
+
+
+    GROUP : { 
+    
+        .vects  LOAD (0xFE000): {   }} >vector_table
+
+
+
+    GROUP : { 
+    
+        __DATA_ROM =ADDR(.sbss2) + SIZEOF(.sbss2);
+
+        __DATA_RAM=.;
+
+        .data LOAD (ADDR(.sbss2) + SIZEOF(.sbss2)): { }
+        .j_pdata LOAD (ADDR(.data) + SIZEOF(.data)): { *(.j_pdata) }
+        .sdata LOAD (ADDR(.j_pdata) + SIZEOF(.j_pdata)): { *(.sdata) }
+        __DATA_END=.;
+
+        __BSS_START=.;
+
+        .sbss : { *(.sbss) }
+        .bss : { *(.bss) }
+        .tibss : {  }
+        __BSS_END=.;
+
+        .tidata : {  }
+        
+} >int_sram
+
+
+
+    GROUP : { 
+    
+        __DATA_DCU_ROM =__DATA_ROM + (__DATA_END - __DATA_RAM);
+
+        __DATA_DCU_RAM=.;
+
+        .graphics  LOAD (__DATA_DCU_ROM): {   }
+        __DATA_DCU_END=.;
+} >dcu_ram
+
+}
+
+
+
+
+__HEAP_START = ADDR(heap_ram);
+__SP_INIT=ADDR(stack_ram)+SIZEOF(stack_ram);
+__SP_END=ADDR(stack_ram);
+__HEAP_END=__SP_END;
+___HEAP_START=__HEAP_START;
+___HEAP_END=__HEAP_END;
+___SP_INIT=__SP_INIT;
+___SP_END=__SP_END;
+___DATA_ROM=__DATA_ROM;
+___DATA_RAM=__DATA_RAM;
+___DATA_END=__DATA_END;
+___BSS_START=__BSS_START;
+___BSS_END=__BSS_END;

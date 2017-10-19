@@ -1,0 +1,55 @@
+2016-09-20 10:01:23.841 F:/T_project/Delivery_Master_2016-09-16/fdtInstall/platformgenerator.exe F:/T_project/Delivery_Master_2016-09-16/ICProject/project/project.fdt F:/T_project/Delivery_Master_2016-09-16/FunctionLibrary -t
+
+2016-09-20 10:01:24.258 2016-09-20 10:01:24.256 [INFO] Reading project file...
+2016-09-20 10:01:24.260 2016-09-20 10:01:24.259 [INFO] Reading project file...done!
+2016-09-20 10:01:24.260 2016-09-20 10:01:24.259 [INFO] Initializing project...
+2016-09-20 10:01:24.314 2016-09-20 10:01:24.314 [INFO] Initializing project...done!
+2016-09-20 10:01:24.314 2016-09-20 10:01:24.314 [INFO] Project name: MonoProject
+2016-09-20 10:01:24.314 [INFO] BSP Specification: BSP_specification_XML__160912.xml
+2016-09-20 10:01:24.314 [INFO] CAN Specification: IC_CAN_DBC_20150820.xml
+2016-09-20 10:01:24.314 [INFO] Function blocks
+2016-09-20 10:01:24.314 [INFO] 	ID | Function Library Path | Configuration File Path
+2016-09-20 10:01:24.314 [INFO] 	3 QuadSwitchManager.V001/QuadSwitchManager.fdf
+2016-09-20 10:01:24.314 [INFO] 	5 VehSpdGauge/VehSpdGauge.fdf
+2016-09-20 10:01:24.317 2016-09-20 10:01:24.314 [INFO] 	7 HighBeamTelltale/HighBeamTelltale.fdf
+2016-09-20 10:01:24.314 [INFO] 	8 UreaLevelMeter/UreaLevelMeter.fdf
+2016-09-20 10:01:24.314 [INFO] 	9 ChargingTellTale/ChargingTellTale.fdf
+2016-09-20 10:01:24.314 [INFO] 	10 EngineOilPressureTellTale/EngineOilPressureTellTale.fdf
+2016-09-20 10:01:24.314 [INFO] 	11 BrakePressureDummy/BrakePressureDummy.fdf
+2016-09-20 10:01:24.314 [INFO] 	12 TurnIndication/TurnIndication.fdf
+2016-09-20 10:01:24.314 [INFO] 	13 WaterTempHighIndicator/WaterTempHighIndicator.fdf
+2016-09-20 10:01:24.314 [INFO] 	14 FuelLevel/FuelLevel.fdf
+2016-09-20 10:01:24.314 [INFO] 	15 TPMS/TPMS.fdf
+2016-09-20 10:01:24.314 [INFO] 	16 ParkBrakeIndicator/ParkBrakeIndicator.fdf
+2016-09-20 10:01:24.314 [INFO] 	17 BrakePressureLowTellTale/BrakePressureLowTellTale.fdf
+2016-09-20 10:01:24.314 [INFO] 	18 LocalizationManager/LocalizationManager.fdf
+2016-09-20 10:01:24.314 [INFO] 	19 WarningIconFields/WarningIconFields.fdf
+2016-09-20 10:01:24.314 [INFO] 	20 ODOTrip/ODOTrip.fdf
+2016-09-20 10:01:24.314 [INFO] 	21 OdoAndTripDisplayHandler/OdoAndTripDisplayHandler.fdf
+2016-09-20 10:01:24.314 [INFO] 	22 FuelConsumption/FuelConsumption.fdf
+2016-09-20 10:01:24.314 [INFO] 	23 OutputShaftRotationSpeed/OutputShaftRotationSpeed.fdf
+2016-09-20 10:01:24.314 [INFO] 	24 IlluminationManager/IlluminationManager.fdf
+2016-09-20 10:01:24.314 [INFO] 	26 FaultBlockDummy/FaultBlockDummy.fdf
+2016-09-20 10:01:24.314 [INFO] 	27 OdoRuntimeHandler/OdoRuntimeHandler.fdf
+2016-09-20 10:01:24.314 [INFO] Validating project for target hardware...
+2016-09-20 10:01:24.331 2016-09-20 10:01:24.331 [INFO] Validating project for target hardware...done!
+2016-09-20 10:01:24.332 2016-09-20 10:01:24.331 [INFO] Cleaning output directory...
+2016-09-20 10:01:27.102 2016-09-20 10:01:27.100 [INFO] Cleaning output directory...done!
+2016-09-20 10:01:27.103 2016-09-20 10:01:27.101 [INFO] Generating platform for target hardware to F:/T_project/Delivery_Master_2016-09-16/ICProject/project/output...
+2016-09-20 10:01:27.106 2016-09-20 10:01:27.101 [INFO] Running file generators
+2016-09-20 10:01:27.576 2016-09-20 10:01:27.575 [INFO] Generating BSP common files...
+2016-09-20 10:01:27.577 2016-09-20 10:01:27.576 [INFO] Copying BSP for target hardware
+2016-09-20 10:01:27.578 2016-09-20 10:01:27.576 [INFO] source: F:/T_project/Delivery_Master_2016-09-16/ICProject/project/TargetSource destination:F:/T_project/Delivery_Master_2016-09-16/ICProject/project/output/Source/MCAL/Target
+2016-09-20 10:01:28.033 2016-09-20 10:01:28.032 [INFO] Generating BSP common files...done!
+2016-09-20 10:01:28.124 2016-09-20 10:01:28.123 [INFO] Generating Menu files...
+2016-09-20 10:01:28.128 2016-09-20 10:01:28.127 [INFO] Generating Menu files...done!
+2016-09-20 10:01:28.927 2016-09-20 10:01:28.927 [INFO] Generating CheckMessageManager!
+2016-09-20 10:01:28.943 2016-09-20 10:01:28.942 [INFO] Generating ContentsManager...
+2016-09-20 10:01:28.944 2016-09-20 10:01:28.943 [INFO] Generating ContentsManager...done!
+2016-09-20 10:01:28.947 2016-09-20 10:01:28.947 [INFO] Generating DisplayManager...
+2016-09-20 10:01:28.949 2016-09-20 10:01:28.948 [INFO] Generating DisplayManager...done!
+2016-09-20 10:01:28.989 2016-09-20 10:01:28.988 [INFO] Generating LayoutManager...
+2016-09-20 10:01:28.989 2016-09-20 10:01:28.988 [INFO] Generating LayoutManager...done!
+2016-09-20 10:01:28.991 2016-09-20 10:01:28.989 [INFO] Generating SegmentDisplayManager!
+2016-09-20 10:01:29.005 2016-09-20 10:01:29.004 [INFO] ...generating platform for target hardware done!
+2016-09-20 10:01:29.066 <font color="#33AA33">DONE!</font>

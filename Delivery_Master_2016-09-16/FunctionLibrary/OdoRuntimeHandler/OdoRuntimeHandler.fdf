@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<FunctionDefinition Name="OdoRuntimeHandler">
+    <Tasks>
+        <Task>
+            <InitFunction>OdoRuntimeHandler_Init</InitFunction>
+            <Runnable>OdoRuntimeHandler_Run</Runnable>
+            <StartupDelay>10</StartupDelay>
+            <Periodicity>500</Periodicity>
+        </Task>
+    </Tasks>
+    <SignalInterface>
+        <InputSignals>
+            <Signal Name="OdoValue" DataType="uint32" UpdateNotification="False"/>
+            <Signal Name="RuntimeValue" DataType="uint16" UpdateNotification="False"/>
+            <Signal Name="ShowNext" DataType="void" UpdateNotification="True"/>
+        </InputSignals>
+        <OutputSignals>
+            <Signal Name="Value" DataType="uint32"/>
+            <Signal Name="ShowDot" DataType="uint8"/>
+            <Signal Name="ShowHourGlass" DataType="uint8"/>
+        </OutputSignals>
+    </SignalInterface>
+    <ConfigurationParameters/>
+    <CalibrationParameters/>
+    <LabelMappingsParameters/>
+    <FaultDefinitions/>
+    <UIResources>
+        <Icons/>
+    </UIResources>
+</FunctionDefinition>

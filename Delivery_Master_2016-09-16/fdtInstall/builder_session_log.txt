@@ -1,0 +1,104 @@
+2016-09-20 10:14:15.168 F:/T_project/Delivery_Master_2016-09-16/fdtInstall/builder.exe F:/T_project/Delivery_Master_2016-09-16/ICProject/project/output <CompilerData><Type>CodeWarrior_MPC5606S</Type><Name>cw</Name><EnvironmentVariables/><CompilerSpecificData><AssemblerExeKey>mwasmeppc</AssemblerExeKey><CompilerExeKey>mwcceppc</CompilerExeKey><CompilerRootPath>D:/Freescale/CW MCU v10.6</CompilerRootPath><ExternalMemoryAddress></ExternalMemoryAddress><GenerateS19Key>0</GenerateS19Key><LinkerExeKey>mwldeppc</LinkerExeKey><LinkerFileKey>F:/T_project/Delivery_Master_2016-09-16/ICProject/project/TargetSource/default560S.lcf</LinkerFileKey><MakeExeKey>D:/Freescale/CW MCU v10.6/gnu/bin/mingw32-make.exe</MakeExeKey></CompilerSpecificData></CompilerData> -b -g -q -v=DEBUG
+
+2016-09-20 10:14:15.336 2016-09-20 10:14:15.334 [INFO] Generating buildfiles to F:/T_project/Delivery_Master_2016-09-16/ICProject/project/output...
+2016-09-20 10:14:15.336 2016-09-20 10:14:15.336 [INFO] [CWCompiler] Generating build environment...
+2016-09-20 10:14:15.359 2016-09-20 10:14:15.359 [INFO] Generating MPC5606S makefiles...
+2016-09-20 10:14:15.360 2016-09-20 10:14:15.360 [INFO] Generating Makefile.Local...
+2016-09-20 10:14:15.360 2016-09-20 10:14:15.360 [INFO] Generating argument file for compiler...
+2016-09-20 10:14:15.361 2016-09-20 10:14:15.361 [INFO] Generating argument file for assembler...
+2016-09-20 10:14:15.362 2016-09-20 10:14:15.361 [INFO] Generating argument file for linker...
+2016-09-20 10:14:15.365 2016-09-20 10:14:15.364 [INFO] Generating subdir.mk in:
+2016-09-20 10:14:15.365 2016-09-20 10:14:15.364 [INFO]     Application/FunctionBlocks/BrakePressureDummy/src
+2016-09-20 10:14:15.366 2016-09-20 10:14:15.366 [INFO]     Application/FunctionBlocks/BrakePressureLowTellTale/src
+2016-09-20 10:14:15.368 2016-09-20 10:14:15.368 [INFO]     Application/FunctionBlocks/ChargingTellTale/src
+2016-09-20 10:14:15.369 2016-09-20 10:14:15.369 [INFO]     Application/FunctionBlocks/EngineOilPressureTellTale/src
+2016-09-20 10:14:15.371 2016-09-20 10:14:15.371 [INFO]     Application/FunctionBlocks/FaultBlockDummy/cfg
+2016-09-20 10:14:15.372 2016-09-20 10:14:15.372 [INFO]     Application/FunctionBlocks/FaultBlockDummy/src
+2016-09-20 10:14:15.374 2016-09-20 10:14:15.374 [INFO]     Application/FunctionBlocks/FuelConsumption/cfg
+2016-09-20 10:14:15.375 2016-09-20 10:14:15.375 [INFO]     Application/FunctionBlocks/FuelConsumption/src
+2016-09-20 10:14:15.376 2016-09-20 10:14:15.376 [INFO]     Application/FunctionBlocks/FuelLevel/cfg
+2016-09-20 10:14:15.377 2016-09-20 10:14:15.377 [INFO]     Application/FunctionBlocks/FuelLevel/src
+2016-09-20 10:14:15.382 2016-09-20 10:14:15.378 [INFO]     Application/FunctionBlocks/HighBeamTelltale/src
+2016-09-20 10:14:15.382 2016-09-20 10:14:15.379 [INFO]     Application/FunctionBlocks/IlluminationManager/src
+2016-09-20 10:14:15.380 [INFO]     Application/FunctionBlocks/LocalizationManager/cfg
+2016-09-20 10:14:15.384 2016-09-20 10:14:15.381 [INFO]     Application/FunctionBlocks/LocalizationManager/src
+2016-09-20 10:14:15.385 2016-09-20 10:14:15.382 [INFO]     Application/FunctionBlocks/OdoAndTripDisplayHandler/src
+2016-09-20 10:14:15.384 [INFO]     Application/FunctionBlocks/OdoRuntimeHandler/src
+2016-09-20 10:14:15.387 2016-09-20 10:14:15.385 [INFO]     Application/FunctionBlocks/ODOTrip/src
+2016-09-20 10:14:15.388 2016-09-20 10:14:15.386 [INFO]     Application/FunctionBlocks/OutputShaftRotationSpeed/src
+2016-09-20 10:14:15.389 2016-09-20 10:14:15.387 [INFO]     Application/FunctionBlocks/ParkBrakeIndicator/src
+2016-09-20 10:14:15.389 2016-09-20 10:14:15.388 [INFO]     Application/FunctionBlocks/QuadSwitchManager/src
+2016-09-20 10:14:15.390 2016-09-20 10:14:15.389 [INFO]     Application/FunctionBlocks/TPMS/src
+2016-09-20 10:14:15.391 2016-09-20 10:14:15.390 [INFO]     Application/FunctionBlocks/TurnIndication/src
+2016-09-20 10:14:15.392 2016-09-20 10:14:15.392 [INFO]     Application/FunctionBlocks/UreaLevelMeter/src
+2016-09-20 10:14:15.394 2016-09-20 10:14:15.393 [INFO]     Application/FunctionBlocks/VehSpdGauge/cfg
+2016-09-20 10:14:15.395 2016-09-20 10:14:15.394 [INFO]     Application/FunctionBlocks/VehSpdGauge/src
+2016-09-20 10:14:15.396 2016-09-20 10:14:15.395 [INFO]     Application/FunctionBlocks/WarningIconFields/cfg
+2016-09-20 10:14:15.397 2016-09-20 10:14:15.396 [INFO]     Application/FunctionBlocks/WarningIconFields/src
+2016-09-20 10:14:15.398 2016-09-20 10:14:15.397 [INFO]     Application/FunctionBlocks/WaterTempHighIndicator/src
+2016-09-20 10:14:15.399 2016-09-20 10:14:15.398 [INFO]     Application/Services/CheckMessageManager
+2016-09-20 10:14:15.400 2016-09-20 10:14:15.399 [INFO]     Application/Services/ContentsManager
+2016-09-20 10:14:15.401 2016-09-20 10:14:15.401 [INFO]     Application/Services/DisplayManager
+2016-09-20 10:14:15.403 2016-09-20 10:14:15.402 [INFO]     Application/Services/FilterLib
+2016-09-20 10:14:15.404 2016-09-20 10:14:15.403 [INFO]     Application/Services/Fonts
+2016-09-20 10:14:15.405 2016-09-20 10:14:15.404 [INFO]     Application/Services/IconManager
+2016-09-20 10:14:15.406 2016-09-20 10:14:15.405 [INFO]     Application/Services/IconRenderer
+2016-09-20 10:14:15.407 2016-09-20 10:14:15.406 [INFO]     Application/Services/LabelManager
+2016-09-20 10:14:15.408 2016-09-20 10:14:15.407 [INFO]     Application/Services/LayoutManager
+2016-09-20 10:14:15.409 2016-09-20 10:14:15.408 [INFO]     Application/Services/Menu
+2016-09-20 10:14:15.410 2016-09-20 10:14:15.410 [INFO]     Application/Services/ResourceManager
+2016-09-20 10:14:15.412 2016-09-20 10:14:15.411 [INFO]     Application/Services/SegmentDisplayManager
+2016-09-20 10:14:15.413 2016-09-20 10:14:15.412 [INFO]     Application/Services/SoundManager
+2016-09-20 10:14:15.414 2016-09-20 10:14:15.413 [INFO]     Application/Services/TextRenderer
+2016-09-20 10:14:15.415 2016-09-20 10:14:15.414 [INFO]     Application/UIWidgets/BlockBar
+2016-09-20 10:14:15.416 2016-09-20 10:14:15.415 [INFO]     Application/UIWidgets/ColumnLevel
+2016-09-20 10:14:15.417 2016-09-20 10:14:15.416 [INFO]     Application/UIWidgets/DynamicIcon
+2016-09-20 10:14:15.418 2016-09-20 10:14:15.418 [INFO]     Application/UIWidgets/DynamicLabel
+2016-09-20 10:14:15.420 2016-09-20 10:14:15.419 [INFO]     Application/UIWidgets/DynamicTextLabel
+2016-09-20 10:14:15.421 2016-09-20 10:14:15.420 [INFO]     Application/UIWidgets/DynamicValueLabel
+2016-09-20 10:14:15.422 2016-09-20 10:14:15.421 [INFO]     Application/UIWidgets/Icon
+2016-09-20 10:14:15.423 2016-09-20 10:14:15.422 [INFO]     Application/UIWidgets/Label
+2016-09-20 10:14:15.423 2016-09-20 10:14:15.423 [INFO]     Application/UIWidgets/ListNavigation
+2016-09-20 10:14:15.425 2016-09-20 10:14:15.424 [INFO]     Application/UIWidgets/SelectableList
+2016-09-20 10:14:15.426 2016-09-20 10:14:15.425 [INFO]     Application/UIWidgets/SignalTrigger
+2016-09-20 10:14:15.427 2016-09-20 10:14:15.426 [INFO]     Application/UIWidgets/UIWidget
+2016-09-20 10:14:15.428 2016-09-20 10:14:15.427 [INFO]     Application
+2016-09-20 10:14:15.429 2016-09-20 10:14:15.429 [INFO]     MCAL/Common
+2016-09-20 10:14:15.430 2016-09-20 10:14:15.430 [INFO]     MCAL/Target
+2016-09-20 10:14:15.432 2016-09-20 10:14:15.431 [INFO]     MCAL/Target/CAN
+2016-09-20 10:14:15.435 2016-09-20 10:14:15.432 [INFO]     MCAL/Target/ECUAbstraction
+2016-09-20 10:14:15.435 2016-09-20 10:14:15.434 [INFO]     MCAL/Target/MCUAbstraction/DataFlashDriver
+2016-09-20 10:14:15.436 2016-09-20 10:14:15.435 [INFO]     MCAL/Target/MCUAbstraction
+2016-09-20 10:14:15.437 2016-09-20 10:14:15.436 [INFO]     MCAL/Target/rappid
+2016-09-20 10:14:15.438 2016-09-20 10:14:15.437 [INFO]     platform/CAL/src
+2016-09-20 10:14:15.439 2016-09-20 10:14:15.438 [INFO]     platform/COM/src
+2016-09-20 10:14:15.440 2016-09-20 10:14:15.440 [INFO]     platform/Diagnosis/cfg
+2016-09-20 10:14:15.441 2016-09-20 10:14:15.441 [INFO]     platform/Diagnosis/src
+2016-09-20 10:14:15.442 2016-09-20 10:14:15.442 [INFO]     platform/GCL/src
+2016-09-20 10:14:15.443 2016-09-20 10:14:15.443 [INFO]     platform/Logger
+2016-09-20 10:14:15.444 2016-09-20 10:14:15.444 [INFO]     platform/ModeManager/src
+2016-09-20 10:14:15.446 2016-09-20 10:14:15.445 [INFO]     platform/Scheduler/src
+2016-09-20 10:14:15.447 2016-09-20 10:14:15.446 [INFO] Generating buildfiles...done!
+2016-09-20 10:14:15.447 2016-09-20 10:14:15.446 [INFO] Building F:/T_project/Delivery_Master_2016-09-16/ICProject/project/output...
+2016-09-20 10:14:16.061 'Regenerating dependency file: MCAL/Target/ECUAbstraction/ECU_DataFlash.d'
+2016-09-20 10:14:16.238 ' '
+2016-09-20 10:14:17.069 'Building file: ../Source/MCAL/Target/ECUAbstraction/ECU_DataFlash.c'
+2016-09-20 10:14:17.281 'Invoking: PowerPC Compiler'
+2016-09-20 10:14:17.285 "D:/Freescale/CW MCU v10.6/MCU/PA_Tools/Command_Line_Tools/mwcceppc" @@"MPC5606S.obj.args" -o "MCAL/Target/ECUAbstraction/ECU_DataFlash.obj" "../Source/MCAL/Target/ECUAbstraction/ECU_DataFlash.c" -MD -gccdep
+2016-09-20 10:14:17.832 D:/Freescale/CW MCU v10.6/MCU/PA_Tools/Command_Line_Tools/mwcceppc|Compiler|Warning
+2016-09-20 10:14:17.833 (F:\T_project\Delivery_Master_2016-09-16\ICProject\project\output\Source\MCAL\Target\ECUAbstraction\ECU_DataFlash.c|186|22|12|6933|12)
+= UINT32 pflash_pfcr1, pflash_pfcr2;  
+>variable / argument 'pflash_pfcr2' is not used in function
+D:/Freescale/CW MCU v10.6/MCU/PA_Tools/Command_Line_Tools/mwcceppc|Compiler|Warning
+(F:\T_project\Delivery_Master_2016-09-16\ICProject\project\output\Source\MCAL\Target\ECUAbstraction\ECU_DataFlash.c|186|8|12|6919|12)
+= UINT32 pflash_pfcr1, pflash_pfcr2;  
+>variable / argument 'pflash_pfcr1' is not used in function
+2016-09-20 10:14:18.020 'Finished building: ../Source/MCAL/Target/ECUAbstraction/ECU_DataFlash.c'
+2016-09-20 10:14:18.189 ' '
+2016-09-20 10:14:18.398 'Building target: FreescaleMPC5606S.elf'
+2016-09-20 10:14:18.612 'Invoking: PowerPC Linker'
+2016-09-20 10:14:18.618 "D:/Freescale/CW MCU v10.6/MCU/PA_Tools/Command_Line_Tools/mwldeppc" -o "FreescaleMPC5606S.elf" @@"MPC5606S.elf.args"
+2016-09-20 10:14:19.594 'Finished building target: FreescaleMPC5606S.elf'
+2016-09-20 10:14:19.801 ' '
+2016-09-20 10:14:19.810 2016-09-20 10:14:19.810 [INFO] Building ... done!
+2016-09-20 10:14:19.817 <font color="#33AA33">DONE!</font>

@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<FunctionDefinition Name="ParkBrakeIndicator">
+    <Tasks>
+        <Task>
+            <InitFunction>ParkBrakeIndicator_Init</InitFunction>
+            <Runnable>ParkBrakeIndicator_Run</Runnable>
+            <StartupDelay>15</StartupDelay>
+            <Periodicity>10</Periodicity>
+        </Task>
+    </Tasks>
+    <SignalInterface>
+        <InputSignals>
+            <Signal Name="VehSpd" DataType="uint16" UpdateNotification="False" Mandatory="True"/>
+            <Signal Name="ParkBrakeSwitch" DataType="uint8" UpdateNotification="False" Mandatory="True"/>
+            <Signal Name="SystemPowerMode" DataType="PowerMode" UpdateNotification="False" Mandatory="True"/>
+        </InputSignals>
+        <OutputSignals>
+            <Signal Name="ParkBrakeIndicatorCheckMessageActive" DataType="uint8" />
+			<Signal Name="ParkBrakeIndicatorValue" DataType="uint8" />
+        </OutputSignals>
+  </SignalInterface>
+</FunctionDefinition>

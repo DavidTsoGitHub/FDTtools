@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<FunctionDefinition Name="HighBeamTelltale">
+    <Tasks>
+        <Task>
+            <InitFunction>HighBeamTelltale_Init</InitFunction>
+            <Runnable>HighBeamTelltale_Run</Runnable>
+            <StartupDelay>10</StartupDelay>
+            <Periodicity>50</Periodicity>
+        </Task>
+    </Tasks>
+    <SignalInterface>
+        <InputSignals>
+            <Signal Name="HighBeamIndicatorRequest" DataType="uint8" UpdateNotification="False" Mandatory="True"/>
+            <Signal Name="SystemPowerMode" DataType="PowerMode" UpdateNotification="False" Mandatory="True"/>
+        </InputSignals>
+        <OutputSignals>
+            <Signal Name="HighBeamTellTaleValue" DataType="uint8" />
+        </OutputSignals>
+  </SignalInterface>
+</FunctionDefinition>
+
+
+

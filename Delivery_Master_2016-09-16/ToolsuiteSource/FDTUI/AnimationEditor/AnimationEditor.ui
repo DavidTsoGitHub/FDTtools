@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>AnimationEditor</class>
+ <widget class="QWidget" name="AnimationEditor">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>708</width>
+    <height>480</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <layout class="QGridLayout" name="gridLayout">
+   <property name="leftMargin">
+    <number>9</number>
+   </property>
+   <item row="0" column="0">
+    <widget class="QTabWidget" name="AnimationEditorTabWidget">
+     <property name="currentIndex">
+      <number>0</number>
+     </property>
+     <widget class="QSplitter" name="AnimationEditorTabFrameByFrame">
+      <property name="lineWidth">
+       <number>1</number>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+      <attribute name="title">
+       <string>Frame-by-Frame</string>
+      </attribute>
+      <widget class="QGroupBox" name="groupBoxAnimations">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>300</width>
+         <height>16777215</height>
+        </size>
+       </property>
+       <property name="title">
+        <string>Animations</string>
+       </property>
+       <layout class="QGridLayout" name="animationTypeFrameListWidgetLayout" rowstretch="0" columnstretch="0">
+        <property name="leftMargin">
+         <number>9</number>
+        </property>
+        <property name="horizontalSpacing">
+         <number>6</number>
+        </property>
+       </layout>
+      </widget>
+      <widget class="QGroupBox" name="groupBoxFrameSelection">
+       <property name="title">
+        <string>Frame Selection</string>
+       </property>
+       <layout class="QGridLayout" name="animationTypeFrameSelectionLayout" columnstretch="0"/>
+      </widget>
+     </widget>
+     <widget class="QSplitter" name="AnimationEditorTabOpacity">
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+      <attribute name="title">
+       <string>Opacity</string>
+      </attribute>
+      <widget class="QGroupBox" name="groupBoxOpacityAnimations">
+       <property name="maximumSize">
+        <size>
+         <width>300</width>
+         <height>16777215</height>
+        </size>
+       </property>
+       <property name="title">
+        <string>Animations</string>
+       </property>
+       <layout class="QGridLayout" name="animationTypeOpacityListWidgetLayout" columnstretch="0"/>
+      </widget>
+      <widget class="QGroupBox" name="groupBoxOpacityCurve">
+       <property name="title">
+        <string>Opacity curve</string>
+       </property>
+       <layout class="QGridLayout" name="animationTypeOpacityCurveLayout" columnstretch="1"/>
+      </widget>
+     </widget>
+     <widget class="QSplitter" name="AnimationEditorTabTranslation">
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+      <attribute name="title">
+       <string>Translation</string>
+      </attribute>
+      <widget class="QGroupBox" name="groupBoxTranslationAnimations">
+       <property name="maximumSize">
+        <size>
+         <width>300</width>
+         <height>16777215</height>
+        </size>
+       </property>
+       <property name="title">
+        <string>Animations</string>
+       </property>
+       <layout class="QGridLayout" name="animationTypeTranslationListWidgetLayout" columnstretch="0"/>
+      </widget>
+      <widget class="QGroupBox" name="groupBoxTranslationCurve">
+       <property name="title">
+        <string>Path</string>
+       </property>
+       <layout class="QGridLayout" name="animationTypeTranslationCurveLayout" columnstretch="1"/>
+      </widget>
+     </widget>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

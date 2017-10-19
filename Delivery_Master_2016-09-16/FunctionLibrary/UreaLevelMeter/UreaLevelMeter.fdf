@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<FunctionDefinition Name="UreaLevelMeter">
+    <Tasks>
+        <Task>
+            <InitFunction>UreaLevelMeter_Init</InitFunction>
+            <Runnable>UreaLevelMeter_Run</Runnable>
+            <StartupDelay>10</StartupDelay>
+            <Periodicity>20</Periodicity>
+        </Task>
+    </Tasks>
+    <SignalInterface>
+        <InputSignals>
+            <Signal Name="CatalystTankLevel" DataType="uint8" UpdateNotification="False" Mandatory="True"/>
+            <Signal Name="PowerMode" DataType="PowerMode" UpdateNotification="False" Mandatory="True"/>
+        </InputSignals>
+        <OutputSignals>
+            <Signal Name="Segment0" DataType="uint8"/>
+            <Signal Name="Segment1" DataType="uint8"/>
+            <Signal Name="Segment2" DataType="uint8"/>
+            <Signal Name="Segment3" DataType="uint8"/>
+        </OutputSignals>
+    </SignalInterface>
+    <ConfigurationParameters/>
+</FunctionDefinition>

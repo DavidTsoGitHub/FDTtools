@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<FunctionDefinition Name="VehSpdGauge">
+    <Tasks>
+        <Task>
+            <InitFunction>VehSpdGauge_Init</InitFunction>
+            <Runnable>VehSpdGauge_Run</Runnable>
+            <StartupDelay>10</StartupDelay>
+            <Periodicity>50</Periodicity>
+        </Task>
+    </Tasks>
+    <SignalInterface>
+        <InputSignals>
+            <Signal Name="InputFrequency" DataType="uint32" UpdateNotification="False" Mandatory="True"/>
+            <Signal Name="SystemPowerMode" DataType="PowerMode" UpdateNotification="False" Mandatory="True"/>
+        </InputSignals>
+        <OutputSignals>
+            <Signal Name="VehSpdGaugeValue" DataType="uint16"/>
+        </OutputSignals>
+    </SignalInterface>
+    <CalibrationParameters>
+        <CalibrationParameter DescriptiveName="Max Input Frequency (24.8 FPF)" ParameterName="VEHSPD_MAXINPUTFREQUENCY" Description="The maximum value for the input frequency" DataType="uint32"  ArrayLength="1"/>
+        <CalibrationParameter DescriptiveName="Speed Value On Max Input Frequency" ParameterName="VEHSPD_MAXSPEEDVALUE" Description="The value for vehicle speed given maximum input frequency" DataType="uint8"  ArrayLength="1"/>
+        <CalibrationParameter DescriptiveName="Filter Constant" ParameterName="VEHSPD_FILTERC" Description="Filter constant for the first degree filter" DataType="uint8"  ArrayLength="1"/>
+    </CalibrationParameters>
+    <ConfigurationParameters>
+        <ConfigurationParameter DescriptiveName="Needle rest position" ParameterName="u16NeedleRestPos" Description="Value to set when requesting rest position" DataType="uint16"  ArrayLength="1"/>
+        <ConfigurationParameter DescriptiveName="Needle max position" ParameterName="u16NeedleMaxPos" Description="Max value for the needle position" DataType="uint16" ArrayLength="1"/>
+        <ConfigurationParameter DescriptiveName="VehSpd bias" ParameterName="u16VehSpdBias" Description="Vehicle speed bias" DataType="uint16" ArrayLength="1"/>
+    </ConfigurationParameters>
+</FunctionDefinition>

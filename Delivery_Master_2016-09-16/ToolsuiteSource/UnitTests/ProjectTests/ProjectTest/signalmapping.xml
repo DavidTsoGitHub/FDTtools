@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<SignalMappings xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <SignalMapping Name="VehSpd">
+    <Source ComponentName="BSP" Port="VehSpd" />
+    <Sink ComponentName="VehSpdGauge" Port="VehSpd" />
+  </SignalMapping>
+  <SignalMapping Name="SysPwrMode">
+    <Source ComponentName="BSP" Port="SystemPowerMode" />
+    <Sink ComponentName="VehSpdGauge" Port="SystemPowerMode" />
+  </SignalMapping>
+  <SignalMapping Name="VehSpdGaugeVal">
+    <Source ComponentName="VehSpdGauge" Port="VehSpdGaugeVal" />
+    <Sink ComponentName="BSP" Port="VehSpdGaugeVal" />
+  </SignalMapping>
+  <SignalMapping Name="VehSpdGaugeRestPos">
+    <Source ComponentName="VehSpdGauge" Port="VehSpdGaugeRestPos" />
+    <Sink ComponentName="BSP" Port="VehSpdGaugeRestPos" />
+  </SignalMapping>
+</SignalMappings>

@@ -1,0 +1,437 @@
+<?xml version="1.0"?>
+<SignalMappings>
+    <SignalMapping>
+        <Source ComponentName="Platform" Port="PowerMode"/>
+        <Sink ComponentName="VehSpdGauge" Port="SystemPowerMode"/>
+        <Sink ComponentName="HighBeamTelltale" Port="SystemPowerMode"/>
+        <Sink ComponentName="UreaLevelMeter" Port="PowerMode"/>
+        <Sink ComponentName="ChargingTellTale" Port="SystemPowerMode"/>
+        <Sink ComponentName="EngineOilPressureTellTale" Port="SystemPowerMode"/>
+        <Sink ComponentName="WaterTempHighIndicator" Port="SystemPowerMode"/>
+        <Sink ComponentName="FuelLevel" Port="PowerMode"/>
+        <Sink ComponentName="TPMS" Port="SystemPowerMode"/>
+        <Sink ComponentName="BrakePressureLowTellTale" Port="SystemPowerMode"/>
+        <Sink ComponentName="ODOTrip" Port="SystemPowerMode"/>
+        <Sink ComponentName="FuelConsumption" Port="SystemPowerMode"/>
+        <Sink ComponentName="IlluminationManager" Port="SystemPowerMode"/>
+        <Sink ComponentName="ParkBrakeIndicator" Port="SystemPowerMode"/>
+        <Sink ComponentName="LayoutManager" Port="SystemPowerMode"/>
+        <Sink ComponentName="CheckMessageManager" Port="SystemPowerMode"/>
+    </SignalMapping>
+    <SignalMapping>
+        <Source ComponentName="HAL" Port="FuelLevel"/>
+        <Sink ComponentName="FuelLevel" Port="FuelLevel"/>
+    </SignalMapping>
+    <SignalMapping>
+        <Source ComponentName="HAL" Port="FrontReservoirPressure"/>
+        <Sink ComponentName="BrakePressureLowTellTale" Port="FrontReservoirPressure"/>
+        <Sink ComponentName="BrakePressureLowTellTale" Port="RearReservoirPressure"/>
+    </SignalMapping>
+    <SignalMapping>
+        <Source ComponentName="HAL" Port="RearReservoirPressure"/>
+        <Sink ComponentName="BrakePressureLowTellTale" Port="RearCircuitPressure"/>
+        <Sink ComponentName="BrakePressureLowTellTale" Port="ParkBrakeReservoirPressure"/>
+        <Sink ComponentName="BrakePressureLowTellTale" Port="FrontCircuitPressure"/>
+    </SignalMapping>
+    <SignalMapping>
+        <Source ComponentName="HAL" Port="Button_OK"/>
+        <Sink ComponentName="QuadSwitchManager" Port="Button3State"/>
+    </SignalMapping>
+    <SignalMapping>
+        <Source ComponentName="HAL" Port="Button_Cancel"/>
+        <Sink ComponentName="QuadSwitchManager" Port="Button4State"/>
+        <Sink ComponentName="CheckMessageManager" Port="ClearIndication"/>
+    </SignalMapping>
+    <SignalMapping>
+        <Source ComponentName="HAL" Port="Button_Up"/>
+        <Sink ComponentName="QuadSwitchManager" Port="Button1State"/>
+        <Sink ComponentName="CANTestBlock" Port="TestInput2"/>
+    </SignalMapping>
+    <SignalMapping>
+        <Source ComponentName="HAL" Port="Button_Down"/>
+        <Sink ComponentName="QuadSwitchManager" Port="Button2State"/>
+    </SignalMapping>
+    <SignalMapping>
+        <Source ComponentName="HAL" Port="Charging_Indication"/>
+        <Sink ComponentName="WarningIconFields" Port="ChargingIndication"/>
+        <Sink ComponentName="ChargingTellTale" Port="ChargingIndicatorRequest"/>
+        <Sink ComponentName="ImageFieldsDummy" Port="ChargingIndication"/>
+    </SignalMapping>
+    <SignalMapping>
+        <Source ComponentName="HAL" Port="VehSpdFreqInput"/>
+        <Sink ComponentName="VehSpdGauge" Port="InputFrequency"/>
+        <Sink ComponentName="ODOTrip" Port="VehSpdFrequency"/>
+        <Sink ComponentName="OutputShaftRotationSpeed" Port="VehSpdFreqInput"/>
+    </SignalMapping>
+    <SignalMapping>
+        <Source ComponentName="CAN" Port="catalyst_tank_level"/>
+        <Sink ComponentName="UreaLevelMeter" Port="CatalystTankLevel"/>
+    </SignalMapping>
+    <SignalMapping>
+        <Source ComponentName="CAN" Port="fuel_rate"/>
+        <Sink ComponentName="FuelConsumption" Port="FuelRate"/>
+    </SignalMapping>
+    <SignalMapping>
+        <Source ComponentName="CAN" Port="instantaneous_fuel_economy"/>
+        <Sink ComponentName="FuelConsumption" Port="InstantaneousFuelConsumption"/>
+    </SignalMapping>
+    <SignalMapping>
+        <Source ComponentName="CAN" Port="water_in_fuel"/>
+        <Sink ComponentName="ImageFieldsDummy" Port="BrakePressureLowIndication"/>
+    </SignalMapping>
+    <SignalMapping>
+        <Source ComponentName="CAN" Port="parking_brake_lamp"/>
+        <Sink ComponentName="ParkBrakeIndicator" Port="ParkBrakeSwitch"/>
+        <Sink ComponentName="ImageFieldsDummy" Port="ParkBrakeIndication"/>
+    </SignalMapping>
+    <SignalMapping>
+        <Source ComponentName="CAN" Port="tire_location"/>
+        <Sink ComponentName="TPMS" Port="TPMSTireLocation"/>
+    </SignalMapping>
+    <SignalMapping>
+        <Source ComponentName="CAN" Port="tire_pressure"/>
+        <Sink ComponentName="TPMS" Port="TPMSTirePressure"/>
+    </SignalMapping>
+    <SignalMapping>
+        <Source ComponentName="CAN" Port="tire_pressure_warning"/>
+        <Sink ComponentName="TPMS" Port="TPMSTirePressureWarning"/>
+    </SignalMapping>
+    <SignalMapping>
+        <Source ComponentName="CAN" Port="water_warning"/>
+        <Sink ComponentName="WaterTempHighIndicator" Port="WaterTempHighIndication"/>
+    </SignalMapping>
+    <SignalMapping>
+        <Source ComponentName="CAN" Port="oil_pressure_warning"/>
+        <Sink ComponentName="EngineOilPressureTellTale" Port="OilPressureWarningRequest"/>
+    </SignalMapping>
+    <SignalMapping>
+        <Source ComponentName="CAN" Port="vehicle_left_turn_lamp"/>
+        <Sink ComponentName="TurnIndication" Port="LeftTurnIndication"/>
+    </SignalMapping>
+    <SignalMapping>
+        <Source ComponentName="CAN" Port="vehicle_right_turn_lamp"/>
+        <Sink ComponentName="TurnIndication" Port="RightTurnIndication"/>
+    </SignalMapping>
+    <SignalMapping>
+        <Source ComponentName="CAN" Port="high_beam"/>
+        <Sink ComponentName="HighBeamTelltale" Port="HighBeamIndicatorRequest"/>
+    </SignalMapping>
+    <SignalMapping>
+        <Source ComponentName="CAN" Port="back_lamp"/>
+        <Sink ComponentName="IlluminationManager" Port="IlluminationMode"/>
+    </SignalMapping>
+    <SignalMapping>
+        <Source ComponentName="LayoutManager_DTCLayout" Port="ClearButtonClicked"/>
+        <Sink ComponentName="OdoAndTripDisplayHandler" Port="ShowNextTrigger2"/>
+    </SignalMapping>
+    <SignalMapping>
+        <Source ComponentName="LayoutManager_MainLayout" Port="ClearButtonClicked"/>
+        <Sink ComponentName="OdoAndTripDisplayHandler" Port="ShowNextTrigger1"/>
+        <Sink ComponentName="OdoRuntimeHandler" Port="ShowNext"/>
+    </SignalMapping>
+    <SignalMapping>
+        <Source ComponentName="MenuController" Port="CurrentItemImage"/>
+        <Sink ComponentName="Widgets_583_DynamicImageMenuCurrent" Port="ResourceIDToDisplay"/>
+    </SignalMapping>
+    <SignalMapping>
+        <Source ComponentName="MenuController" Port="PreviousItemImage"/>
+        <Sink ComponentName="Widgets_582_DynamicImageMenuPrev" Port="ResourceIDToDisplay"/>
+    </SignalMapping>
+    <SignalMapping>
+        <Source ComponentName="MenuController" Port="NextItemImage"/>
+        <Sink ComponentName="Widgets_584_DynamicImageMenuNext" Port="ResourceIDToDisplay"/>
+    </SignalMapping>
+    <SignalMapping>
+        <Source ComponentName="MenuController" Port="CurrentItemLabel"/>
+        <Sink ComponentName="Widgets_581_DynamicLabelMenuText" Port="ResourceIDToDisplay"/>
+    </SignalMapping>
+    <SignalMapping>
+        <Source ComponentName="MenuController" Port="NextItemEvent"/>
+        <Sink ComponentName="Transition_DynamicImage_583_Animation1" Port="Transition_0_1"/>
+        <Sink ComponentName="Transition_DynamicImage_582_Animation1" Port="Transition_0_1"/>
+        <Sink ComponentName="Transition_DynamicImage_584_Animation1" Port="Transition_0_1"/>
+    </SignalMapping>
+    <SignalMapping>
+        <Source ComponentName="MenuController" Port="PreviousItemEvent"/>
+        <Sink ComponentName="Transition_DynamicImage_583_Animation2" Port="Transition_0_1"/>
+        <Sink ComponentName="Transition_DynamicImage_582_Animation2" Port="Transition_0_1"/>
+        <Sink ComponentName="Transition_DynamicImage_584_Animation2" Port="Transition_0_1"/>
+    </SignalMapping>
+    <SignalMapping>
+        <Source ComponentName="Widgets_530_SignalTriggerTripA" Port="SignalTriggerSource"/>
+        <Sink ComponentName="ODOTrip" Port="TripResetA"/>
+        <Sink ComponentName="FuelConsumption" Port="ResetSignal"/>
+    </SignalMapping>
+    <SignalMapping>
+        <Source ComponentName="Widgets_531_SignalTriggerTripB" Port="SignalTriggerSource"/>
+        <Sink ComponentName="ODOTrip" Port="TripResetB"/>
+    </SignalMapping>
+    <SignalMapping>
+        <Source ComponentName="Widgets_501_SelectableListWidget" Port="SelectedValue"/>
+        <Sink ComponentName="LocalizationManager" Port="SelectedLanguageValue"/>
+    </SignalMapping>
+    <SignalMapping>
+        <Source ComponentName="Widgets_506_IlluminationLevel" Port="SelectedValue"/>
+        <Sink ComponentName="IlluminationManager" Port="IlluminationLevel"/>
+        <Sink ComponentName="CAN" Port="Tachograph_vehicle_speed_EP"/>
+    </SignalMapping>
+    <SignalMapping>
+        <Source ComponentName="CheckMessageManager" Port="Widgets_606_DynamicLabel1_ResourceIDToDisplay"/>
+        <Sink ComponentName="Widgets_606_DynamicLabel1" Port="ResourceIDToDisplay"/>
+    </SignalMapping>
+    <SignalMapping>
+        <Source ComponentName="CheckMessageManager" Port="Widgets_607_DynamicLabel2_ResourceIDToDisplay"/>
+        <Sink ComponentName="Widgets_607_DynamicLabel2" Port="ResourceIDToDisplay"/>
+    </SignalMapping>
+    <SignalMapping>
+        <Source ComponentName="CheckMessageManager" Port="Widgets_608_DynamicImage1_ResourceIDToDisplay"/>
+        <Sink ComponentName="Widgets_608_DynamicImage1" Port="ResourceIDToDisplay"/>
+    </SignalMapping>
+    <SignalMapping>
+        <Source ComponentName="CheckMessageManager" Port="Widgets_609_DynamicImage2_ResourceIDToDisplay"/>
+        <Sink ComponentName="Widgets_609_DynamicImage2" Port="ResourceIDToDisplay"/>
+    </SignalMapping>
+    <SignalMapping>
+        <Source ComponentName="AnimationManager_fbfRunningManAnimation_1" Port="CurrentImageID"/>
+        <Sink ComponentName="Widgets_640_DynamicImage" Port="ResourceIDToDisplay"/>
+    </SignalMapping>
+    <SignalMapping>
+        <Source ComponentName="QuadSwitchManager" Port="Button1Event"/>
+        <Sink ComponentName="MenuController" Port="Up"/>
+        <Sink ComponentName="LayoutManager" Port="Up"/>
+    </SignalMapping>
+    <SignalMapping>
+        <Source ComponentName="QuadSwitchManager" Port="Button2Event"/>
+        <Sink ComponentName="MenuController" Port="Down"/>
+        <Sink ComponentName="LayoutManager" Port="Down"/>
+    </SignalMapping>
+    <SignalMapping>
+        <Source ComponentName="QuadSwitchManager" Port="Button3Event"/>
+        <Sink ComponentName="MenuController" Port="Set"/>
+        <Sink ComponentName="LayoutManager" Port="Set"/>
+    </SignalMapping>
+    <SignalMapping>
+        <Source ComponentName="QuadSwitchManager" Port="Button4Event"/>
+        <Sink ComponentName="MenuController" Port="Clear"/>
+        <Sink ComponentName="LayoutManager" Port="Clear"/>
+    </SignalMapping>
+    <SignalMapping>
+        <Source ComponentName="VehSpdGauge" Port="VehSpdGaugeValue"/>
+        <Sink ComponentName="HAL" Port="VehSpdGauge"/>
+        <Sink ComponentName="ParkBrakeIndicator" Port="VehSpd"/>
+        <Sink ComponentName="MenuController" Port="VehicleSpeed"/>
+        <Sink ComponentName="CAN" Port="Tachograph_vehicle_speed"/>
+        <Sink ComponentName="Transition_MainLayout" Port="Transition_0_1"/>
+    </SignalMapping>
+    <SignalMapping>
+        <Source ComponentName="HighBeamTelltale" Port="HighBeamTellTaleValue"/>
+        <Sink ComponentName="HAL" Port="High_Beam_Indicator"/>
+    </SignalMapping>
+    <SignalMapping>
+        <Source ComponentName="UreaLevelMeter" Port="Segment0"/>
+        <Sink ComponentName="HAL" Port="Urea_Level_1_4_Indicator"/>
+    </SignalMapping>
+    <SignalMapping>
+        <Source ComponentName="UreaLevelMeter" Port="Segment1"/>
+        <Sink ComponentName="HAL" Port="Urea_Level_2_4_Indicator"/>
+    </SignalMapping>
+    <SignalMapping>
+        <Source ComponentName="UreaLevelMeter" Port="Segment2"/>
+        <Sink ComponentName="HAL" Port="Urea_Level_3_4_Indicator"/>
+    </SignalMapping>
+    <SignalMapping>
+        <Source ComponentName="UreaLevelMeter" Port="Segment3"/>
+        <Sink ComponentName="HAL" Port="Urea_Level_4_4_Indicator"/>
+    </SignalMapping>
+    <SignalMapping>
+        <Source ComponentName="ChargingTellTale" Port="ChargingTellTaleValue"/>
+        <Sink ComponentName="HAL" Port="Charging_Indicator"/>
+        <Sink ComponentName="CheckMessageManager" Port="RelParkBrakeTrigger"/>
+        <Sink ComponentName="CheckMessageManager" Port="CloseRoofTrigger"/>
+        <Sink ComponentName="CheckMessageManager" Port="CloseDoorsTrigger"/>
+        <Sink ComponentName="Transition_DynamicImage_640_Animation2" Port="Transition_0_1"/>
+    </SignalMapping>
+    <SignalMapping>
+        <Source ComponentName="EngineOilPressureTellTale" Port="OilPressureWarningIndication"/>
+        <Sink ComponentName="HAL" Port="Oil_Pressure_Low_Indicator"/>
+        <Sink ComponentName="WarningIconFields" Port="EngineOilPressureIndication"/>
+    </SignalMapping>
+    <SignalMapping>
+        <Source ComponentName="BrakePressureDummy" Port="BrakePressure"/>
+        <Sink ComponentName="OdoRuntimeHandler" Port="RuntimeValue"/>
+        <Sink ComponentName="Widgets_567_DL1" Port="ValueToDisplay"/>
+        <Sink ComponentName="Widgets_568_DL2" Port="ValueToDisplay"/>
+        <Sink ComponentName="Widgets_569_DL3" Port="ValueToDisplay"/>
+        <Sink ComponentName="Widgets_550_BatteryBlockBar" Port="BlockBarValue"/>
+        <Sink ComponentName="Widgets_551_OilBlockBar" Port="BlockBarValue"/>
+    </SignalMapping>
+    <SignalMapping>
+        <Source ComponentName="TurnIndication" Port="TurnRightTelltaleValue"/>
+        <Sink ComponentName="HAL" Port="Right_Indicator"/>
+    </SignalMapping>
+    <SignalMapping>
+        <Source ComponentName="TurnIndication" Port="TurnLeftTelltaleValue"/>
+        <Sink ComponentName="HAL" Port="Left_Indicator"/>
+    </SignalMapping>
+    <SignalMapping>
+        <Source ComponentName="WaterTempHighIndicator" Port="WaterTempHighTelltaleValue"/>
+        <Sink ComponentName="HAL" Port="Coolant_Temp_High_Indicator"/>
+    </SignalMapping>
+    <SignalMapping>
+        <Source ComponentName="FuelLevel" Port="FuelLevelGaugeValue"/>
+        <Sink ComponentName="HAL" Port="FuelGauge"/>
+    </SignalMapping>
+    <SignalMapping>
+        <Source ComponentName="FuelLevel" Port="FuelLevelWarningIndication"/>
+        <Sink ComponentName="HAL" Port="Fuel_Level_Low_Indicator"/>
+        <Sink ComponentName="FaultBlockDummy" Port="Trigger1"/>
+        <Sink ComponentName="FaultBlockDummy" Port="Trigger2"/>
+    </SignalMapping>
+    <SignalMapping>
+        <Source ComponentName="TPMS" Port="TPMSFrontLeftTireValue"/>
+        <Sink ComponentName="Widgets_289_FL_TP" Port="ValueToDisplay"/>
+    </SignalMapping>
+    <SignalMapping>
+        <Source ComponentName="TPMS" Port="TPMSFrontRightTireValue"/>
+        <Sink ComponentName="Widgets_288_FR_TP" Port="ValueToDisplay"/>
+    </SignalMapping>
+    <SignalMapping>
+        <Source ComponentName="TPMS" Port="TPMSMiddleAxleLeftOuterTireValue"/>
+        <Sink ComponentName="Widgets_290_ML_TP" Port="ValueToDisplay"/>
+    </SignalMapping>
+    <SignalMapping>
+        <Source ComponentName="TPMS" Port="TPMSMiddleAxleLeftInnerTireValue"/>
+        <Sink ComponentName="Widgets_294_MLI_TP" Port="ValueToDisplay"/>
+    </SignalMapping>
+    <SignalMapping>
+        <Source ComponentName="TPMS" Port="TPMSMiddleAxleRightOuterTireValue"/>
+        <Sink ComponentName="Widgets_293_MRO_TP" Port="ValueToDisplay"/>
+    </SignalMapping>
+    <SignalMapping>
+        <Source ComponentName="TPMS" Port="TPMSMiddleAxleRightInnerTireValue"/>
+        <Sink ComponentName="Widgets_296_MRI_TP" Port="ValueToDisplay"/>
+    </SignalMapping>
+    <SignalMapping>
+        <Source ComponentName="TPMS" Port="TPMSRearAxleLeftOuterTireValue"/>
+        <Sink ComponentName="Widgets_291_RL_TP" Port="ValueToDisplay"/>
+    </SignalMapping>
+    <SignalMapping>
+        <Source ComponentName="TPMS" Port="TPMSRearAxleLeftInnerTireValue"/>
+        <Sink ComponentName="Widgets_295_RLI_TP" Port="ValueToDisplay"/>
+    </SignalMapping>
+    <SignalMapping>
+        <Source ComponentName="TPMS" Port="TPMSRearAxleRightOuterTireValue"/>
+        <Sink ComponentName="Widgets_292_RR_TP" Port="ValueToDisplay"/>
+    </SignalMapping>
+    <SignalMapping>
+        <Source ComponentName="TPMS" Port="TPMSRearAxleRightInnerTireValue"/>
+        <Sink ComponentName="Widgets_297_RRI_TP" Port="ValueToDisplay"/>
+    </SignalMapping>
+    <SignalMapping>
+        <Source ComponentName="TPMS" Port="TPMSIndicatorValue"/>
+        <Sink ComponentName="HAL" Port="Tyre_Pressure_Low_Indicator"/>
+    </SignalMapping>
+    <SignalMapping>
+        <Source ComponentName="ParkBrakeIndicator" Port="ParkBrakeIndicatorValue"/>
+        <Sink ComponentName="HAL" Port="Parking_Light_Indicator"/>
+        <Sink ComponentName="WarningIconFields" Port="ParkBrakeIndication"/>
+    </SignalMapping>
+    <SignalMapping>
+        <Source ComponentName="BrakePressureLowTellTale" Port="BrakePressureLowIndicatorValue"/>
+        <Sink ComponentName="HAL" Port="Brake_Pressure_Low_Indicator"/>
+        <Sink ComponentName="WarningIconFields" Port="BrakePressureLowIndication"/>
+    </SignalMapping>
+    <SignalMapping>
+        <Source ComponentName="LocalizationManager" Port="CurrentLanguageValue"/>
+        <Sink ComponentName="LayoutManager" Port="CurrentLanguage"/>
+        <Sink ComponentName="Widgets_622_DTCInfowidget" Port="CurrentValue"/>
+        <Sink ComponentName="Widgets_501_SelectableListWidget" Port="CurrentValue"/>
+    </SignalMapping>
+    <SignalMapping>
+        <Source ComponentName="LocalizationManager" Port="Languages"/>
+        <Sink ComponentName="Widgets_622_DTCInfowidget" Port="LabelToValueMappings"/>
+        <Sink ComponentName="Widgets_501_SelectableListWidget" Port="LabelToValueMappings"/>
+    </SignalMapping>
+    <SignalMapping>
+        <Source ComponentName="ODOTrip" Port="CurrentODOValue"/>
+        <Sink ComponentName="OdoAndTripDisplayHandler" Port="OdoValue"/>
+        <Sink ComponentName="OdoRuntimeHandler" Port="OdoValue"/>
+        <Sink ComponentName="Widgets_315_MenuODOValue" Port="ValueToDisplay"/>
+    </SignalMapping>
+    <SignalMapping>
+        <Source ComponentName="ODOTrip" Port="CurrentTripValueA"/>
+        <Sink ComponentName="OdoAndTripDisplayHandler" Port="TripValue"/>
+        <Sink ComponentName="Widgets_525_TripAValue" Port="ValueToDisplay"/>
+    </SignalMapping>
+    <SignalMapping>
+        <Source ComponentName="ODOTrip" Port="CurrentTripValueB"/>
+        <Sink ComponentName="Widgets_528_TripBValue" Port="ValueToDisplay"/>
+    </SignalMapping>
+    <SignalMapping>
+        <Source ComponentName="OdoAndTripDisplayHandler" Port="TripFieldText"/>
+        <Sink ComponentName="Widgets_619_BottomRightInfo" Port="StringToPrint"/>
+        <Sink ComponentName="Widgets_506_BottomRightInfo" Port="StringToPrint"/>
+        <Sink ComponentName="Widgets_596_BottomRightInfo" Port="StringToPrint"/>
+    </SignalMapping>
+    <SignalMapping>
+        <Source ComponentName="OdoAndTripDisplayHandler" Port="OdoAndInstFuelFieldText"/>
+        <Sink ComponentName="Widgets_618_BottomLeftInfo" Port="StringToPrint"/>
+        <Sink ComponentName="Widgets_507_BottomLeftInfo" Port="StringToPrint"/>
+        <Sink ComponentName="Widgets_595_BottomLeftInfo" Port="StringToPrint"/>
+    </SignalMapping>
+    <SignalMapping>
+        <Source ComponentName="FuelConsumption" Port="TotalFuelConsumption"/>
+        <Sink ComponentName="Widgets_535_TotalFuelLabel" Port="ValueToDisplay"/>
+    </SignalMapping>
+    <SignalMapping>
+        <Source ComponentName="FuelConsumption" Port="TripFuelConsumption"/>
+        <Sink ComponentName="OdoAndTripDisplayHandler" Port="TripFuelConsumption"/>
+        <Sink ComponentName="Widgets_533_TripFuelLabel" Port="ValueToDisplay"/>
+    </SignalMapping>
+    <SignalMapping>
+        <Source ComponentName="FuelConsumption" Port="FilteredInstantaniousFuelConsumption"/>
+        <Sink ComponentName="OdoAndTripDisplayHandler" Port="InstantaneousFuelConsumption"/>
+    </SignalMapping>
+    <SignalMapping>
+        <Source ComponentName="OutputShaftRotationSpeed" Port="OutputShaftRotationSpeed"/>
+        <Sink ComponentName="CAN" Port="Tachograph_output_shaft_speed"/>
+    </SignalMapping>
+    <SignalMapping>
+        <Source ComponentName="IlluminationManager" Port="GaugeIlluminationLevel"/>
+        <Sink ComponentName="HAL" Port="Gauge_Backlight"/>
+    </SignalMapping>
+    <SignalMapping>
+        <Source ComponentName="IlluminationManager" Port="DisplayIlluminationLevel"/>
+        <Sink ComponentName="HAL" Port="Display_Backlight"/>
+    </SignalMapping>
+    <SignalMapping>
+        <Source ComponentName="IlluminationManager" Port="CurrentIlluminationLevel"/>
+        <Sink ComponentName="Widgets_506_IlluminationLevel" Port="CurrentValue"/>
+    </SignalMapping>
+    <SignalMapping>
+        <Source ComponentName="FaultBlockDummy" Port="DTCIndication"/>
+        <Sink ComponentName="Transition_DTCLayout" Port="Transition_0_1"/>
+    </SignalMapping>
+    <SignalMapping>
+        <Source ComponentName="ImageFieldsDummy" Port="Image1ID"/>
+        <Sink ComponentName="Widgets_603_DynamicImage" Port="ResourceIDToDisplay"/>
+        <Sink ComponentName="Widgets_574_DynamicImage" Port="ResourceIDToDisplay"/>
+        <Sink ComponentName="Widgets_592_DynamicImage" Port="ResourceIDToDisplay"/>
+    </SignalMapping>
+    <SignalMapping>
+        <Source ComponentName="ImageFieldsDummy" Port="Image2ID"/>
+        <Sink ComponentName="Widgets_604_DynamicImage" Port="ResourceIDToDisplay"/>
+        <Sink ComponentName="Widgets_575_DynamicImage" Port="ResourceIDToDisplay"/>
+        <Sink ComponentName="Widgets_593_DynamicImage" Port="ResourceIDToDisplay"/>
+    </SignalMapping>
+    <SignalMapping>
+        <Source ComponentName="ImageFieldsDummy" Port="Image3ID"/>
+        <Sink ComponentName="Widgets_605_DynamicImage" Port="ResourceIDToDisplay"/>
+        <Sink ComponentName="Widgets_576_DynamicImage" Port="ResourceIDToDisplay"/>
+        <Sink ComponentName="Widgets_594_DynamicImage" Port="ResourceIDToDisplay"/>
+    </SignalMapping>
+    <SignalMapping>
+        <Source ComponentName="CANTestBlock" Port="OutCyclic16"/>
+        <Sink ComponentName="CAN" Port="Tachograph_output_shaft_speed_EP"/>
+    </SignalMapping>
+</SignalMappings>

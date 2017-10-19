@@ -1,0 +1,76 @@
+<Packages>
+    <ApplicationName>FDT</ApplicationName>
+    <ApplicationVersion>1.0.0</ApplicationVersion>
+    <Package>
+        <Name>com.swedspot.fdt.builder</Name>
+        <Pixmap></Pixmap>
+        <Title>FDT PlatformBuilder</Title>
+        <Description>FDT Platform Builder</Description>
+        <Version>1.0.0</Version>
+        <LastUpdateDate></LastUpdateDate>
+        <InstallDate>2016-09-20</InstallDate>
+        <Size>180776</Size>
+        <Dependencies></Dependencies>
+        <ForcedInstallation>true</ForcedInstallation>
+    </Package>
+    <Package>
+        <Name>com.swedspot.fdt.simulator</Name>
+        <Pixmap></Pixmap>
+        <Title>FDT Simulator</Title>
+        <Description>FDT Tool Simulator</Description>
+        <Version>1.0.0</Version>
+        <LastUpdateDate></LastUpdateDate>
+        <InstallDate>2016-09-20</InstallDate>
+        <Size>53028065</Size>
+        <Dependencies></Dependencies>
+        <ForcedInstallation>true</ForcedInstallation>
+    </Package>
+    <Package>
+        <Name>com.swedspot.fdt.bspeditor</Name>
+        <Pixmap></Pixmap>
+        <Title>FDT BSP Editor</Title>
+        <Description>FDT BSP Editor</Description>
+        <Version>1.0.0</Version>
+        <LastUpdateDate></LastUpdateDate>
+        <InstallDate>2016-09-20</InstallDate>
+        <Size>57867950</Size>
+        <Dependencies></Dependencies>
+        <ForcedInstallation>true</ForcedInstallation>
+    </Package>
+    <Package>
+        <Name>com.swedspot.fdt.dbc2xml</Name>
+        <Pixmap></Pixmap>
+        <Title>FDT dbc2xml</Title>
+        <Description>FDT Tool DBC to XML Converter</Description>
+        <Version>1.0.0</Version>
+        <LastUpdateDate></LastUpdateDate>
+        <InstallDate>2016-09-20</InstallDate>
+        <Size>68136</Size>
+        <Dependencies></Dependencies>
+        <ForcedInstallation>true</ForcedInstallation>
+    </Package>
+    <Package>
+        <Name>com.swedspot.fdt.platformgenerator</Name>
+        <Pixmap></Pixmap>
+        <Title>FDT PlatformGenerator</Title>
+        <Description>FDT Tool Platform Generator</Description>
+        <Version>1.0.0</Version>
+        <LastUpdateDate></LastUpdateDate>
+        <InstallDate>2016-09-20</InstallDate>
+        <Size>2270760</Size>
+        <Dependencies></Dependencies>
+        <ForcedInstallation>true</ForcedInstallation>
+    </Package>
+    <Package>
+        <Name>com.swedspot.fdt</Name>
+        <Pixmap></Pixmap>
+        <Title>FDT</Title>
+        <Description>FDT Tool</Description>
+        <Version>0.1.0</Version>
+        <LastUpdateDate></LastUpdateDate>
+        <InstallDate>2016-09-20</InstallDate>
+        <Size>54633009</Size>
+        <Dependencies>com.swedspot.fdt.simulator,com.swedspot.fdt.dbc2xml,com.swedspot.fdt.platformgenerator</Dependencies>
+        <ForcedInstallation>true</ForcedInstallation>
+    </Package>
+</Packages>

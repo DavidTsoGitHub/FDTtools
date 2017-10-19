@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<FunctionDefinition Name="BrakePressureDummy">
+    <Tasks>
+        <Task>
+            <InitFunction>BrakePressureDummy_Init</InitFunction>
+            <Runnable>BrakePressureDummy_Run</Runnable>
+            <StartupDelay>20</StartupDelay>
+            <Periodicity>10</Periodicity>
+        </Task>
+    </Tasks>
+    <SignalInterface>
+        <InputSignals/>
+        <OutputSignals>
+            <Signal Name="BrakePressure" DataType="uint16" />
+        </OutputSignals>
+    </SignalInterface>
+    <ConfigurationParameters/>
+    <CalibrationParameters/>
+</FunctionDefinition>

@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>ProjectDefinitionWizardPage</class>
+ <widget class="QWizardPage" name="ProjectDefinitionWizardPage">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>400</width>
+    <height>300</height>
+   </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="windowTitle">
+   <string>WizardPage</string>
+  </property>
+  <property name="title">
+   <string>Define Project Parameters</string>
+  </property>
+  <property name="subTitle">
+   <string>Set the basic project parameters. The CAN specification is optional (but must contain the CAN ECU Name if set). Please note that it's NOT possible to change the BSP specification after this point!</string>
+  </property>
+  <layout class="QGridLayout" name="gridLayout">
+   <item row="0" column="0">
+    <layout class="QFormLayout" name="formLayout">
+     <property name="sizeConstraint">
+      <enum>QLayout::SetMaximumSize</enum>
+     </property>
+     <item row="0" column="0">
+      <widget class="QLabel" name="ProjectNameLabel">
+       <property name="text">
+        <string>Project Name</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="1">
+      <widget class="QLineEdit" name="ProjectName">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="0">
+      <widget class="QLabel" name="ProjectRootLabel">
+       <property name="text">
+        <string>Project Root</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="1">
+      <layout class="QHBoxLayout" name="ProjectRootLayout">
+       <property name="sizeConstraint">
+        <enum>QLayout::SetMaximumSize</enum>
+       </property>
+       <item>
+        <widget class="QLineEdit" name="ProjectRoot"/>
+       </item>
+       <item>
+        <widget class="QPushButton" name="SelectProjectRootButton">
+         <property name="text">
+          <string>Select...</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item row="2" column="0">
+      <widget class="QLabel" name="BSPSpecificationLabel">
+       <property name="text">
+        <string>BSP Specification</string>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="1">
+      <layout class="QHBoxLayout" name="BSPSpecificationLayout">
+       <item>
+        <widget class="QLineEdit" name="BSPSpecification"/>
+       </item>
+       <item>
+        <widget class="QPushButton" name="SelectBSPSpecificationButton">
+         <property name="text">
+          <string>Select...</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item row="3" column="0">
+      <widget class="QLabel" name="CANSpecificationLabel">
+       <property name="text">
+        <string>CAN Specification</string>
+       </property>
+      </widget>
+     </item>
+     <item row="3" column="1">
+      <layout class="QHBoxLayout" name="horizontalLayout">
+       <item>
+        <widget class="QLineEdit" name="CANSpecification"/>
+       </item>
+       <item>
+        <widget class="QPushButton" name="SelectCANSpecificationButton">
+         <property name="text">
+          <string>Select...</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item row="4" column="0">
+      <widget class="QLabel" name="CANECUNameLabel">
+       <property name="text">
+        <string>CAN ECU Name</string>
+       </property>
+       <property name="scaledContents">
+        <bool>false</bool>
+       </property>
+      </widget>
+     </item>
+     <item row="4" column="1">
+      <widget class="QComboBox" name="CANECUNameComboBox">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+ <slots>
+  <slot>ProjectNameChanged(QString)</slot>
+  <slot>SelectProjectRootButtonClicked()</slot>
+  <slot>ProjectRootChanged(QString)</slot>
+  <slot>SelectBSPSpecificationButtonClicked()</slot>
+  <slot>SelectCANSpecificationButtonClicked()</slot>
+  <slot>BSPSpecificationChanged(QString)</slot>
+  <slot>CANSpecificationEdited(QString)</slot>
+  <slot>CANECUNameChanged(QString)</slot>
+  <slot>CANSpecificationEditFinished()</slot>
+ </slots>
+</ui>

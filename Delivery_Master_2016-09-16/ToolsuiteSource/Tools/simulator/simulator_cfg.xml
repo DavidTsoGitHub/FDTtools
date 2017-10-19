@@ -1,0 +1,14 @@
+<SimulatorConfig>
+    <TellTales>
+        <TellTale Index="0x0F" BitmapPath="Telltales/A01_s.bmp" ActiveColor="Blue" />
+        <TellTale Index="0x00" BitmapPath="Telltales/A16L.bmp" ActiveColor="Green" />
+        <TellTale Index="0x02" BitmapPath="Telltales/A16R.bmp" ActiveColor="Green" />
+        <TellTale Index="0x23" BitmapPath="Telltales/B01_s.bmp" ActiveColor="Red" />
+        <TellTale Index="0x0B" BitmapPath="Telltales/B02_s.bmp" ActiveColor="Red" />
+        <TellTale Index="0x04" BitmapPath="Telltales/F03_s.bmp" ActiveColor="Red" />
+        <TellTale Index="0x0C" BitmapPath="Telltales/F04_s.bmp" ActiveColor="Red" />
+        <TellTale Index="0x25" BitmapPath="Telltales/G01_s.bmp" ActiveColor="Red" />
+        <TellTale Index="0x1D" BitmapPath="Telltales/K10_s.bmp" ActiveColor="Red" />
+        <TellTale Index="0x4E" BitmapPath="Telltales/M01_s.bmp" ActiveColor="Red" />
+    </TellTales>
+</SimulatorConfig>

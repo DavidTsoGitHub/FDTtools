@@ -1,0 +1,6 @@
+<RCC>
+    <qresource prefix="/">
+        <file>ProjectTest/signalmapping.xml</file>
+        <file>ProjectTest/bsp.xml</file>
+    </qresource>
+</RCC>

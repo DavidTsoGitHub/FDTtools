@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AnimationDefinition AIVersion="1.0">
+    <Animations HighestID="6">
+        <FrameByFrameAnimation ID="1" Name="fbfRunningManAnimation" RepeatMode="0" DefaultStep="0" FrameDurationMs="100">
+            <Frames>
+                <Frame ImageId="31"/>
+                <Frame ImageId="32"/>
+                <Frame ImageId="33"/>
+                <Frame ImageId="34"/>
+                <Frame ImageId="35"/>
+                <Frame ImageId="36"/>
+                <Frame ImageId="37"/>
+                <Frame ImageId="38"/>
+                <Frame ImageId="39"/>
+                <Frame ImageId="40"/>
+            </Frames>
+        </FrameByFrameAnimation>
+        <OpacityAnimation ID="3" Name="StartupOpacityAnimation" RepeatMode="3" DefaultStep="0" LengthMs="3000" StartOpacityPercent="0" StopOpacityPercent="100" CurveType="6"/>
+        <TranslationAnimation ID="4" Name="TranslationAnimation" RepeatMode="0" DefaultStep="0" LengthMs="900" PathType="0" StartPointX="0" StartPointY="-80" StopPointX="0" StopPointY="0" BezierC0X="-80" BezierC0Y="-78" BezierC1X="-59" BezierC1Y="60" EasingCurveType="38"/>
+        <TranslationAnimation ID="5" Name="NextMenuItemTranslationAnimation" RepeatMode="0" DefaultStep="1" LengthMs="200" PathType="0" StartPointX="45" StartPointY="0" StopPointX="0" StopPointY="0" BezierC0X="0" BezierC0Y="-50" BezierC1X="-50" BezierC1Y="0" EasingCurveType="2"/>
+        <TranslationAnimation ID="6" Name="PreviousMenuItemTranslationAnimation" RepeatMode="0" DefaultStep="1" LengthMs="200" PathType="0" StartPointX="-45" StartPointY="0" StopPointX="0" StopPointY="0" BezierC0X="0" BezierC0Y="-50" BezierC1X="-50" BezierC1Y="0" EasingCurveType="2"/>
+    </Animations>
+</AnimationDefinition>

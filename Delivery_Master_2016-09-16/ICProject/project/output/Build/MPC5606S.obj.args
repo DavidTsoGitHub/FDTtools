@@ -1,0 +1,132 @@
+-sym dwarf-2
+-sym full
+-msgstyle parseable
+-proc zen
+-big
+-fp soft
+-model absolute
+-abi eabi
+-sdata 0
+-sdata2 0
+-vle
+-enc ascii
+-prefix
+"$(MCUToolsBaseDirEnv)/PA_Support/ewl/EWL_C/include/lib_ewl.prefix"
+-prefix
+"MPC5606S.prefix"
+-c
+-nostdinc
+-nosyspath
+
+-i ../Source/Application/FunctionBlocks/BrakePressureDummy/inc
+-i ../Source/Application/FunctionBlocks/BrakePressureLowTellTale/inc
+-i ../Source/Application/FunctionBlocks/ChargingTellTale/inc
+-i ../Source/Application/FunctionBlocks/EngineOilPressureTellTale/inc
+-i ../Source/Application/FunctionBlocks/FaultBlockDummy/cfg
+-i ../Source/Application/FunctionBlocks/FaultBlockDummy/inc
+-i ../Source/Application/FunctionBlocks/FuelConsumption/cfg
+-i ../Source/Application/FunctionBlocks/FuelConsumption/inc
+-i ../Source/Application/FunctionBlocks/FuelLevel/cfg
+-i ../Source/Application/FunctionBlocks/FuelLevel/inc
+-i ../Source/Application/FunctionBlocks/HighBeamTelltale/inc
+-i ../Source/Application/FunctionBlocks/IlluminationManager/inc
+-i ../Source/Application/FunctionBlocks/LocalizationManager/cfg
+-i ../Source/Application/FunctionBlocks/LocalizationManager/inc
+-i ../Source/Application/FunctionBlocks/OdoAndTripDisplayHandler/inc
+-i ../Source/Application/FunctionBlocks/OdoRuntimeHandler/inc
+-i ../Source/Application/FunctionBlocks/ODOTrip/inc
+-i ../Source/Application/FunctionBlocks/OutputShaftRotationSpeed/inc
+-i ../Source/Application/FunctionBlocks/ParkBrakeIndicator/inc
+-i ../Source/Application/FunctionBlocks/QuadSwitchManager/inc
+-i ../Source/Application/FunctionBlocks/TPMS/inc
+-i ../Source/Application/FunctionBlocks/TurnIndication/inc
+-i ../Source/Application/FunctionBlocks/UreaLevelMeter/inc
+-i ../Source/Application/FunctionBlocks/VehSpdGauge/cfg
+-i ../Source/Application/FunctionBlocks/VehSpdGauge/inc
+-i ../Source/Application/FunctionBlocks/WarningIconFields/cfg
+-i ../Source/Application/FunctionBlocks/WarningIconFields/inc
+-i ../Source/Application/FunctionBlocks/WaterTempHighIndicator/inc
+-i ../Source/Application/Services/CheckMessageManager
+-i ../Source/Application/Services/ContentsManager
+-i ../Source/Application/Services/DisplayManager
+-i ../Source/Application/Services/FilterLib
+-i ../Source/Application/Services/Fonts
+-i ../Source/Application/Services/IconManager
+-i ../Source/Application/Services/IconRenderer
+-i ../Source/Application/Services/Icons
+-i ../Source/Application/Services/LabelManager
+-i ../Source/Application/Services/LayoutManager
+-i ../Source/Application/Services/Menu
+-i ../Source/Application/Services/ResourceManager
+-i ../Source/Application/Services/SegmentDisplayManager
+-i ../Source/Application/Services/SoundManager
+-i ../Source/Application/Services/TextRenderer
+-i ../Source/Application/UIWidgets/BlockBar
+-i ../Source/Application/UIWidgets/ColumnLevel
+-i ../Source/Application/UIWidgets/DynamicIcon
+-i ../Source/Application/UIWidgets/DynamicLabel
+-i ../Source/Application/UIWidgets/DynamicTextLabel
+-i ../Source/Application/UIWidgets/DynamicValueLabel
+-i ../Source/Application/UIWidgets/Icon
+-i ../Source/Application/UIWidgets/Label
+-i ../Source/Application/UIWidgets/ListNavigation
+-i ../Source/Application/UIWidgets/SelectableList
+-i ../Source/Application/UIWidgets/SignalTrigger
+-i ../Source/Application/UIWidgets/UIWidget
+-i ../Source/Application
+-i ../Source/MCAL/Common
+-i ../Source/MCAL/Target/CAN
+-i ../Source/MCAL/Target/ECUAbstraction
+-i ../Source/MCAL/Target/MCUAbstraction/DataFlashDriver
+-i ../Source/MCAL/Target/MCUAbstraction
+-i ../Source/MCAL/Target
+-i ../Source/MCAL/Target/rappid
+-i ../Source/platform/CAL/inc
+-i ../Source/platform/COM/inc
+-i ../Source/platform/Diagnosis/cfg
+-i ../Source/platform/Diagnosis/inc
+-i ../Source/platform/GCL/inc
+-i ../Source/platform/GCL/interfaces
+-i ../Source/platform/Logger
+-i ../Source/platform/ModeManager/inc
+-i ../Source/platform/Scheduler/cfg
+-i ../Source/platform/Scheduler/inc
+-i ../Source/platform
+-i ./
+
+-I"$(MCUToolsBaseDirEnv)/PA_Support/ewl/EWL_C/include"
+-I"$(MCUToolsBaseDirEnv)/PA_Support/ewl/EWL_Runtime/Runtime_PA/Include"
+-I"$(MCUToolsBaseDirEnv)/PA_Support/Initialization_Files"
+
+-disable_extensions off
+-warn illpragmas
+-warn unwanted
+-warn hidevirtual
+-warn implicitconv
+-warn unusedarg
+-warn unusedvar
+-warn unusedexpr
+-warn extracomma
+-warn structclass
+-opt level=0
+-opt speed
+-inline off
+-inline nobottomup
+-align powerpc
+-func_align 4
+-pooldata off
+-common off
+-use_lmw_stmw on
+-novolatileasm
+-schedule off
+-opt nopeephole
+-use_isel on
+-ppc_asm_to_vle
+-Cpp_Exceptions off
+-bool off
+-requireprotos
+-lang c99
+-char unsigned
+-str nopool
+-str reuse
+-ipa off

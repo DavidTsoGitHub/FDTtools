@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<FunctionDefinition Name="IlluminationManager">
+    <Tasks>
+        <Task>
+            <InitFunction>IlluminationManager_Init</InitFunction>
+            <Runnable>IlluminationManager_Run</Runnable>
+            <StartupDelay>35</StartupDelay>
+            <Periodicity>100</Periodicity>
+        </Task>
+    </Tasks>
+    <SignalInterface>
+        <InputSignals>
+            <Signal Name="IlluminationMode" DataType="uint8" UpdateNotification="False" Mandatory="True"/>
+            <Signal Name="IlluminationLevel" DataType="uint8" UpdateNotification="True" Mandatory="True"/>
+            <Signal Name="SystemPowerMode" DataType="PowerMode" UpdateNotification="False" Mandatory="True"/>
+        </InputSignals>
+        <OutputSignals>
+            <Signal Name="GaugeIlluminationLevel" DataType="uint8" />
+            <Signal Name="DisplayIlluminationLevel" DataType="uint8" />
+            <Signal Name="CurrentIlluminationLevel" DataType="uint8" />
+        </OutputSignals>
+    </SignalInterface>
+    <CalibrationParameters>
+        <CalibrationParameter DescriptiveName="Display illumination" ParameterName="DISP_ILLUM" Description="PWM illumination output for display illumination" DataType="uint8" ArrayLength="5"/>
+        <CalibrationParameter DescriptiveName="Gauge illumination" ParameterName="GAUGE_ILLUM" Description="PWM illumination output for gauge illumination" DataType="uint8" ArrayLength="5"/>
+        <CalibrationParameter DescriptiveName="Current illumination level" ParameterName="ILLUMINATION_LEVEL" Description="Current set illumination level" DataType="uint8" ArrayLength="1"/>
+    </CalibrationParameters>
+    <LabelMappingsParameters/>
+    <UIResources>
+        <Icons/>
+    </UIResources>
+</FunctionDefinition>

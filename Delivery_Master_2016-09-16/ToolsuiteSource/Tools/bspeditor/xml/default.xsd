@@ -1,0 +1,486 @@
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" 
+  xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <!-- BSP_specification_schema__160524.xsd -->
+  
+  <!-- Root element BSP -->
+  <xs:element name="BSP">
+    <xs:complexType>
+      <xs:sequence>
+      <!-- BSPRunnables -->
+        <xs:element name="BSPRunnables">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="BSPRunnable" maxOccurs="unbounded" minOccurs="0">
+                <xs:complexType>
+                  <xs:simpleContent>
+                    <xs:extension base="xs:string">
+                      <!-- Note, we'd really like to express that at least one of the attributes
+                           Init, Runnable are required but this is not possible in XML Schema 1.0 -->
+                      <xs:attribute name="Init" use="optional">
+                        <xs:simpleType>
+                          <xs:restriction base="xs:string">
+                              <xs:pattern value="([A-Za-z_]+[A-Za-z0-9_\-]*)*" />
+                          </xs:restriction>
+                        </xs:simpleType>
+                      </xs:attribute>
+                      <xs:attribute name="Runnable" use="optional">
+                        <xs:simpleType>
+                          <xs:restriction base="xs:string">
+                              <xs:pattern value="([A-Za-z_]+[A-Za-z0-9_\-]*)*" />
+                          </xs:restriction>
+                        </xs:simpleType>
+                      </xs:attribute>
+                      <xs:attribute type="xs:unsignedInt" name="CycleTime" use="required"/>
+                      <xs:attribute type="xs:unsignedInt" name="InitialDelay" use="required"/>
+                      <xs:attribute type="xs:string" name="Name" use="optional"/>
+                      <xs:attribute type="xs:string" name="Description" use="optional"/>
+                    </xs:extension>
+                  </xs:simpleContent>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        
+        <!-- BSPCalibrations -->
+        <xs:element name="BSPCalibrations">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="BSPCalibration" maxOccurs="unbounded" minOccurs="0">
+                <xs:complexType>
+                  <xs:simpleContent>
+                    <xs:extension base="xs:string">
+                      <xs:attribute name="Name" use="required">
+                        <xs:simpleType>
+                          <xs:restriction base="xs:string">
+                              <xs:pattern value="([A-Z_]+[A-Z0-9_]*)*" />
+                          </xs:restriction>
+                        </xs:simpleType>
+                      </xs:attribute>                      
+                      <xs:attribute name="DataType" use="required">
+                        <xs:simpleType>
+                          <xs:restriction base="xs:string">
+                            <xs:enumeration value="uint8"/>
+                            <xs:enumeration value="uint16"/>
+                            <xs:enumeration value="uint32"/>
+                          </xs:restriction>
+                        </xs:simpleType>                      
+                      </xs:attribute>
+                      <xs:attribute name="ArrayLength" use="required">
+                        <xs:simpleType>
+                          <xs:restriction base="xs:integer">
+                            <xs:minInclusive value="1"/>
+                            <xs:maxInclusive value="255"/>
+                          </xs:restriction>
+                        </xs:simpleType>
+                      </xs:attribute>                      
+                      <!-- Note, we'd really like to restrict the value of DefaultValue according to
+                           the value of attribute DataType, however, co-occurrence constraints are
+                           not supported in XML Schema 1.0 -->
+                      <xs:attribute type="xs:unsignedInt" name="DefaultValue" use="required"/>
+                      <xs:attribute type="xs:string" name="Description" use="optional"/>
+                    </xs:extension>
+                  </xs:simpleContent>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+          <!-- Make the Name attribute unique -->
+          <xs:unique name="UniqueBSPCalibrationName">
+            <xs:selector xpath="BSPCalibration" /> 
+            <xs:field xpath="@Name" /> 
+          </xs:unique>          
+        </xs:element>
+        
+        <!-- BSP Types -->
+        <xs:element name="BSPTypes">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="BSPEnumerations">
+                <xs:complexType>
+                  <xs:sequence>                  
+                  <!-- The 2 is to express that there are two default BSPEnum expected, ideally they should
+                  be further specified if possible -->
+                    <xs:element name="BSPEnum" maxOccurs="unbounded" minOccurs="2">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="Items">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element name="Item" maxOccurs="unbounded" minOccurs="1">
+                                  <xs:complexType>
+                                    <xs:simpleContent>
+                                      <xs:extension base="xs:string">
+                                        <xs:attribute type="xs:unsignedInt" name="Value" use="required"/>
+                                        <xs:attribute name="Identifier" use="required">
+                                          <xs:simpleType>
+                                            <xs:restriction base="xs:string">
+                                                <xs:pattern value="([A-Z_]+[A-Z0-9_]*)*" />
+                                            </xs:restriction>
+                                          </xs:simpleType>
+                                        </xs:attribute>                                         
+                                        <xs:attribute type="xs:string" name="Description" use="optional"/>
+                                      </xs:extension>
+                                    </xs:simpleContent>
+                                  </xs:complexType>
+                                </xs:element>
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+                        </xs:sequence>
+                        <xs:attribute name="Name" use="required">
+                          <xs:simpleType>
+                            <xs:restriction base="xs:string">
+                                <xs:pattern value="([A-Za-z_]+[A-Za-z0-9_\-]*)*" />
+                            </xs:restriction>
+                          </xs:simpleType>
+                        </xs:attribute>
+                        <xs:attribute type="xs:string" name="Description" use="optional"/>
+                      </xs:complexType>                           
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              <!-- Make the Name attribute unique -->
+              <xs:unique name="UniqueBSPEnumName">
+                <xs:selector xpath="BSPEnum" /> 
+                <xs:field xpath="@Name" /> 
+              </xs:unique>                    
+              </xs:element>
+              <xs:element name="BSPFixedPointFloats">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="BSPFixedPointFloat" maxOccurs="unbounded" minOccurs="0">
+                      <xs:complexType>
+                        <xs:simpleContent>
+                          <xs:extension base="xs:string">
+                            <xs:attribute name="Name" use="required">
+                              <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:pattern value="([A-Za-z_]+[A-Za-z0-9_\-]*)*" />
+                                </xs:restriction>
+                              </xs:simpleType>
+                            </xs:attribute>
+                            <xs:attribute name="BaseType" use="required">
+                              <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                  <xs:enumeration value="uint8"/>
+                                  <xs:enumeration value="uint16"/>
+                                  <xs:enumeration value="uint32"/>
+                                </xs:restriction>
+                              </xs:simpleType>                      
+                            </xs:attribute>
+                            <xs:attribute type="xs:string" name="Unit" use="required"/>
+                            <xs:attribute name="Endianess" use="required">
+                              <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                  <xs:enumeration value="BigEndian"/>
+                                  <xs:enumeration value="LittleEndian"/>
+                                </xs:restriction>
+                              </xs:simpleType>
+                            </xs:attribute>
+                            <xs:attribute name="SignificantBits" use="required">
+                              <xs:simpleType>
+                                <xs:restriction base="xs:integer">
+                                  <xs:minInclusive value="1"/>
+                                  <xs:maxInclusive value="32"/>
+                                </xs:restriction>
+                              </xs:simpleType>
+                            </xs:attribute>  
+                            <xs:attribute name="FractionalBits" use="required">
+                              <xs:simpleType>
+                                <xs:restriction base="xs:integer">
+                                  <xs:minInclusive value="1"/>
+                                  <xs:maxInclusive value="32"/>
+                                </xs:restriction>
+                              </xs:simpleType>
+                            </xs:attribute>                        
+                          </xs:extension>
+                        </xs:simpleContent>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        
+        <!-- BSP Functions -->
+        <xs:element name="BSPFunctions">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="BSPFunction" maxOccurs="unbounded" minOccurs="0">
+                <xs:complexType mixed="true">
+                  <xs:sequence>
+                    <xs:element name="Arguments" minOccurs="0">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="Argument" maxOccurs="unbounded" minOccurs="0">
+                            <xs:complexType>
+                              <xs:simpleContent>
+                                <xs:extension base="xs:string">
+                                  <xs:attribute type="xs:unsignedInt" name="Order" use="required"/>
+                                  <xs:attribute name="ArgumentName" use="required">
+                                    <xs:simpleType>
+                                      <xs:restriction base="xs:string">
+                                          <xs:pattern value="([A-Za-z_]+[A-Za-z0-9_\-]*)*" />
+                                      </xs:restriction>
+                                    </xs:simpleType>
+                                  </xs:attribute>
+                                  <!-- The set of valid values are really restricted by an enumeration (uint8, uint16...) plus a keyref 
+                                  to the Name attribute of BSPEnums. This is however not possible to express with the limited xpath subset 
+                                  allowed when specifing keyref, so, allow general strings. -->                                  
+                                  <xs:attribute name="ArgumentType" use="required">
+                                    <xs:simpleType>
+                                      <xs:restriction base="xs:string">
+                                          <xs:pattern value="([A-Za-z_]+[A-Za-z0-9_\-\*\s]*)*" />
+                                      </xs:restriction>
+                                    </xs:simpleType>
+                                  </xs:attribute>
+                                </xs:extension>
+                              </xs:simpleContent>
+                            </xs:complexType>
+                          </xs:element>
+                        </xs:sequence>
+                      </xs:complexType>
+                    <!-- Make the Order attribute unique -->
+                    <xs:unique name="UniqueArgumentOrder">
+                      <xs:selector xpath="Argument" /> 
+                      <xs:field xpath="@Order" /> 
+                    </xs:unique>                                
+                    </xs:element>
+                    <xs:element name="IndexToSignalMappings" minOccurs="0">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="IndexToSignalMapping" maxOccurs="unbounded" minOccurs="0">
+                            <xs:complexType>
+                              <xs:simpleContent>
+                                <xs:extension base="xs:string">
+                                  <xs:attribute name="ID" use="required">
+                                    <xs:simpleType>
+                                      <xs:restriction base="xs:string">
+                                        <xs:pattern value="(0x[0-9A-Fa-f]+)+|[0-9]+"/>
+                                      </xs:restriction>
+                                    </xs:simpleType>
+                                  </xs:attribute>
+                                  <xs:attribute name="GCLSignal" use="required">
+                                    <xs:simpleType>
+                                      <xs:restriction base="xs:string">
+                                          <xs:pattern value="([A-Za-z_]+[A-Za-z0-9_\-]*)*" />
+                                      </xs:restriction>
+                                    </xs:simpleType>
+                                  </xs:attribute>
+                                  <xs:attribute type="xs:string" name="Description" use="optional"/>
+                                </xs:extension>
+                              </xs:simpleContent>
+                            </xs:complexType>
+                          </xs:element>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                  <xs:attribute type="xs:string" name="ToImplement" use="optional"/>
+                  <xs:attribute name="FunctionName" use="required">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                          <xs:pattern value="([A-Za-z_]+[A-Za-z0-9_\-]*)*" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:attribute>                  
+                  <xs:attribute type="xs:string" name="Description" use="optional"/>
+                  <xs:attribute type="xs:string" name="Requirement" use="optional"/>
+                  <xs:attribute type="xs:string" name="Version" use="optional"/>                 
+                  <!-- The set of valid values are really restricted by an enumeration (uint8, uint16...) plus a keyref 
+                  to the Name attribute of BSPEnums. This is however not possible to express with the limited xpath subset 
+                  allowed when specifing keyref, so, allow general strings. -->
+                  <xs:attribute name="Return" use="required">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                          <xs:pattern value="([A-Za-z_]+[A-Za-z0-9_\-\*\s]*)*" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:attribute>                                                      
+                  <xs:attribute name="GCLSignalType" use="optional">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:enumeration value="Sink"/>
+                        <xs:enumeration value="Source"/>
+                      </xs:restriction>
+                    </xs:simpleType>                      
+                  </xs:attribute>                      
+                  <xs:attribute name="GCLSignalName" use="optional">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                          <xs:pattern value="([A-Za-z_]+[A-Za-z0-9_\-]*)*" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:attribute>                    
+                  <xs:attribute type="xs:string" name="MappingType" use="optional"/>
+                  <xs:attribute type="xs:string" name="Scaling" use="optional"/>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+          <!-- Make the FunctionName attribute unique -->
+          <xs:unique name="UniqueFunctionName">
+            <xs:selector xpath="BSPFunction" /> 
+            <xs:field xpath="@FunctionName" /> 
+          </xs:unique>             
+        </xs:element>
+                
+        <!-- BSPSegmentDisplay -->
+        <xs:element name="BSPSegmentDisplay" minOccurs="0" maxOccurs="1">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="CharacterMappings">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="CharacterMapping" maxOccurs="unbounded" minOccurs="1">
+                      <xs:complexType>
+                        <xs:simpleContent>
+                          <xs:extension base="xs:string">
+                            <xs:attribute type="xs:byte" name="Char" use="required"/>
+                            <xs:attribute name="Segments" use="required">
+                              <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:pattern value="[A-G]*" />
+                                </xs:restriction>
+                              </xs:simpleType>
+                            </xs:attribute>                            
+                          </xs:extension>
+                        </xs:simpleContent>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="SpecialSegments">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="SpecialSegment" maxOccurs="unbounded" minOccurs="0">
+                      <xs:complexType>
+                        <xs:simpleContent>
+                          <xs:extension base="xs:string">
+                            <xs:attribute type="xs:string" name="ID" use="required"/>
+                          </xs:extension>
+                        </xs:simpleContent>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="SegmentBitMappings">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="SegmentBitMapping" maxOccurs="unbounded" minOccurs="1">
+                      <xs:complexType>
+                        <xs:simpleContent>
+                          <xs:extension base="xs:string">
+                            <xs:attribute type="xs:byte" name="Byte" use="required"/>
+                            <xs:attribute type="xs:string" name="Bit0" use="required"/>
+                            <xs:attribute type="xs:string" name="Bit1" use="required"/>
+                            <xs:attribute type="xs:string" name="Bit2" use="required"/>
+                            <xs:attribute type="xs:string" name="Bit3" use="required"/>
+                            <xs:attribute type="xs:string" name="Bit4" use="required"/>
+                            <xs:attribute type="xs:string" name="Bit5" use="required"/>
+                            <xs:attribute type="xs:string" name="Bit6" use="required"/>
+                            <xs:attribute type="xs:string" name="Bit7" use="required"/>
+                          </xs:extension>
+                        </xs:simpleContent>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+
+        <!-- BSPDisplay -->
+        <xs:element name="BSPDisplay" minOccurs="0" maxOccurs="1">
+          <xs:complexType>
+            <xs:simpleContent>
+              <xs:extension base="xs:string">
+                <xs:attribute type="xs:unsignedInt" name="Width" use="required"/>
+                <xs:attribute type="xs:unsignedInt" name="Height" use="required"/>
+                <xs:attribute type="xs:unsignedInt" name="AvailableMemory" use="required"/>
+                <xs:attribute name="UseGRAM" use="required">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                      <xs:enumeration value="True"/>
+                      <xs:enumeration value="False"/>
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:attribute>
+                <xs:attribute name="NumberOfLayers" use="required">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:integer">
+                      <xs:minInclusive value="1"/>
+                      <xs:maxInclusive value="255"/>
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:attribute>
+                <xs:attribute name="RenderingType" use="required">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                      <xs:enumeration value="HW"/>
+                      <xs:enumeration value="SW"/>
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:attribute>
+                <xs:attribute name="RenderingOrientation" use="required">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                      <xs:enumeration value="Normal"/>
+                      <xs:enumeration value="CW"/>
+                      <xs:enumeration value="CCW"/>
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:attribute>
+              </xs:extension>
+            </xs:simpleContent>
+          </xs:complexType>
+        </xs:element>
+
+        <!-- BSPMemory -->
+        <xs:element name="BSPMemory">
+          <xs:complexType>
+            <xs:simpleContent>
+              <xs:extension base="xs:string">
+                <xs:attribute name="InternalMemorySize" use="required">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                      <xs:pattern value="(0x[0-9A-Fa-f]+)"/>
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:attribute>
+                <xs:attribute name="ExternalMemorySize" use="required">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                      <xs:pattern value="(0x[0-9A-Fa-f]+)"/>
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:attribute>
+                <xs:attribute name="ExternalMemoryAddress" use="required">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                      <xs:pattern value="(0x[0-9A-Fa-f]+)"/>
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:attribute>
+              </xs:extension>
+            </xs:simpleContent>
+          </xs:complexType>
+        </xs:element>
+
+      </xs:sequence>
+      <xs:attribute name="AIVersion" use="required">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:pattern value="^[0-9]+\.[0-9]+$" />
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:attribute>
+    </xs:complexType>
+  </xs:element>                 
+</xs:schema>

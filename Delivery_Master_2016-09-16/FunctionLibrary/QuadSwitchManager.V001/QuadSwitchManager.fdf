@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<FunctionDefinition Name="QuadSwitchManager">
+    <Tasks>
+        <Task>
+            <InitFunction>QuadSwitchManager_Init</InitFunction>
+            <Runnable>QuadSwitchManager_Run</Runnable>
+            <StartupDelay>5</StartupDelay>
+            <Periodicity>10</Periodicity>
+        </Task>
+    </Tasks>
+    <SignalInterface>
+        <InputSignals>
+            <Signal Name="Button1State" DataType="uint8" UpdateNotification="False" Mandatory="True"/>
+            <Signal Name="Button2State" DataType="uint8" UpdateNotification="False" Mandatory="True"/>
+            <Signal Name="Button3State" DataType="uint8" UpdateNotification="False" Mandatory="True"/>
+            <Signal Name="Button4State" DataType="uint8" UpdateNotification="False" Mandatory="True"/>
+        </InputSignals>
+        <OutputSignals>
+            <Signal Name="Button1Event" DataType="uint8" />
+			<Signal Name="Button2Event" DataType="uint8" />
+			<Signal Name="Button3Event" DataType="uint8" />
+			<Signal Name="Button4Event" DataType="uint8" />
+        </OutputSignals>
+  </SignalInterface>
+</FunctionDefinition>

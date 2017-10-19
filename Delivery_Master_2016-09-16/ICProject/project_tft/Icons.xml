@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<IconDefinition AIVersion="1.0">
+    <Icons>
+        <Icon ID="4" Name="B02" Path="Icons/B02.bmp" Description="B02"/>
+        <Icon ID="5" Name="B03" Path="Icons/B03.bmp" Description="B03"/>
+        <Icon ID="6" Name="B04" Path="Icons/B04.bmp" Description="B04"/>
+        <Icon ID="7" Name="TPMS" Path="Icons/TPMS.bmp" Description="TPMS"/>
+        <Icon ID="8" Name="ParkBrake_32x32" Path="Icons/B02_32x32.bmp" Description="ParkBrake_32x32"/>
+        <Icon ID="9" Name="OilPressure_32x32" Path="Icons/F04_32x32.bmp" Description="OilPressure_32x32"/>
+        <Icon ID="10" Name="BrakePressure_32x32" Path="Icons/B01_32x32.bmp" Description="BrakePressure_32x32"/>
+        <Icon ID="11" Name="Charging_32x32" Path="Icons/M01_32x32.bmp" Description="Charging_32x32"/>
+    </Icons>
+</IconDefinition>

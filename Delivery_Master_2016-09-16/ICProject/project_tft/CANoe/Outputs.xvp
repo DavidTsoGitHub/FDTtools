@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<Panel Type="Vector.CANalyzer.Panels.PanelSerializer, Vector.CANalyzer.Panels.Serializer, Version=7.2.38.0, Culture=neutral, PublicKeyToken=null">
+  <Object Type="Vector.CANalyzer.Panels.Runtime.Panel, Vector.CANalyzer.Panels.Common, Version=7.2.38.0, Culture=neutral, PublicKeyToken=null" Name="Panel" Children="Controls" ControlName="Outputs">
+    <Object Type="Vector.CANalyzer.Panels.Design.TextBoxControl, Vector.CANalyzer.Panels.CommonControls, Version=7.2.38.0, Culture=neutral, PublicKeyToken=null" Name="TextBoxControl2" Children="Controls" ControlName="Input/Output Box 2">
+      <Property Name="Name">TextBoxControl2</Property>
+      <Property Name="Size">315, 22</Property>
+      <Property Name="Location">4, 34</Property>
+      <Property Name="AlarmUpperTextColor">WindowText</Property>
+      <Property Name="ValueDecimalPlaces">0</Property>
+      <Property Name="AlarmLowerBkgColor">Salmon</Property>
+      <Property Name="ValueDisplay">Decimal</Property>
+      <Property Name="AlarmUpperBkgColor">IndianRed</Property>
+      <Property Name="AlarmLowerTextColor">WindowText</Property>
+      <Property Name="AlarmUpperFont">Microsoft Sans Serif, 7.8pt</Property>
+      <Property Name="AlarmGeneralSettings">1;0;0;0</Property>
+      <Property Name="DisplayLabel">Left</Property>
+      <Property Name="DescriptionText">Tachograph_vehicle_speed:</Property>
+      <Property Name="AlarmLowerFont">Microsoft Sans Serif, 7.8pt</Property>
+      <Property Name="DescriptionSize">173, 22</Property>
+      <Property Name="SymbolConfiguration">4;2;IC_CAN_DBC_20150820;IC;TCO1;Tachograph_vehicle_speed;0;IC_CAN_DBC_20150820;;-1</Property>
+      <Property Name="TabIndex">1</Property>
+    </Object>
+    <Object Type="Vector.CANalyzer.Panels.Design.TextBoxControl, Vector.CANalyzer.Panels.CommonControls, Version=7.2.38.0, Culture=neutral, PublicKeyToken=null" Name="TextBoxControl1" Children="Controls" ControlName="Input/Output Box">
+      <Property Name="Name">TextBoxControl1</Property>
+      <Property Name="Size">347, 22</Property>
+      <Property Name="Location">4, 4</Property>
+      <Property Name="AlarmUpperTextColor">WindowText</Property>
+      <Property Name="ValueDecimalPlaces">3</Property>
+      <Property Name="AlarmLowerBkgColor">Salmon</Property>
+      <Property Name="ValueDisplay">Double</Property>
+      <Property Name="AlarmUpperBkgColor">IndianRed</Property>
+      <Property Name="AlarmLowerTextColor">WindowText</Property>
+      <Property Name="AlarmUpperFont">Microsoft Sans Serif, 7.8pt</Property>
+      <Property Name="AlarmGeneralSettings">1;2;0;8191.875</Property>
+      <Property Name="DisplayLabel">Left</Property>
+      <Property Name="DescriptionText">Tachograph_output_shaft_speed:</Property>
+      <Property Name="AlarmLowerFont">Microsoft Sans Serif, 7.8pt</Property>
+      <Property Name="DescriptionSize">205, 22</Property>
+      <Property Name="SymbolConfiguration">4;2;IC_CAN_DBC_20150820;IC;TCO1;Tachograph_output_shaft_speed;0;IC_CAN_DBC_20150820;;-1</Property>
+      <Property Name="TabIndex">0</Property>
+    </Object>
+    <Property Name="Name">Panel</Property>
+    <Property Name="Size">450, 320</Property>
+  </Object>
+</Panel>

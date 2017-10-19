@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<FunctionDefinition Name="SwitchManager">
+    <Tasks>
+        <Task>
+            <InitFunction>SwitchManager_Init</InitFunction>
+            <Runnable>SwitchManager_Run</Runnable>
+            <StartupDelay>5</StartupDelay>
+            <Periodicity>10</Periodicity>
+        </Task>
+    </Tasks>
+    <SignalInterface>
+        <InputSignals>
+            <Signal Name="ButtonRaw" DataType="uint8" UpdateNotification="False" Mandatory="True"/>
+        </InputSignals>
+        <OutputSignals>
+            <Signal Name="ButtonEvent_Up" DataType="uint8"/>
+			<Signal Name="ButtonEvent_Down" DataType="uint8"/>
+			<Signal Name="ButtonEvent_Left" DataType="uint8"/>
+			<Signal Name="ButtonEvent_Right" DataType="uint8"/>
+			<Signal Name="ButtonEvent_Set" DataType="uint8"/>
+			<Signal Name="ButtonEvent_Clear" DataType="uint8"/>
+        </OutputSignals>
+  </SignalInterface>
+</FunctionDefinition>

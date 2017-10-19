@@ -1,0 +1,45 @@
+<RCC>
+    <qresource prefix="/">
+        <file>UIWidgets/TargetSource/Icon/IconWidget.c</file>
+        <file>UIWidgets/TargetSource/Icon/IconWidget.h</file>
+        <file>UIWidgets/TargetSource/Label/LabelWidget.c</file>
+        <file>UIWidgets/TargetSource/Label/LabelWidget.h</file>
+        <file>UIWidgets/TargetSource/UIWidget/UIWidget.h</file>
+        <file>UIWidgets/TargetSource/DynamicValueLabel/DynamicValueLabelWidget.c</file>
+        <file>UIWidgets/TargetSource/DynamicValueLabel/DynamicValueLabelWidget.h</file>
+        <file>UIWidgets/TargetSource/BlockBar/BlockBarWidget.c</file>
+        <file>UIWidgets/TargetSource/BlockBar/BlockBarWidget.h</file>
+        <file>UIWidgets/TargetSource/UIWidget/UIWidget.c</file>
+        <file>UIWidgets/TargetSource/SelectableList/SelectableListWidget.c</file>
+        <file>UIWidgets/TargetSource/SelectableList/SelectableListWidget.h</file>
+        <file>UIWidgets/TargetSource/DynamicIcon/DynamicIconWidget.c</file>
+        <file>UIWidgets/TargetSource/DynamicIcon/DynamicIconWidget.h</file>
+        <file>UIWidgets/TargetSource/SignalTrigger/SignalTriggerWidget.c</file>
+        <file>UIWidgets/TargetSource/SignalTrigger/SignalTriggerWidget.h</file>
+        <file>UIWidgets/TargetSource/ColumnLevel/ColumnLevelWidget.c</file>
+        <file>UIWidgets/TargetSource/ColumnLevel/ColumnLevelWidget.h</file>
+        <file>UIWidgets/TargetSource/DynamicTextLabel/DynamicTextLabelWidget.c</file>
+        <file>UIWidgets/TargetSource/DynamicTextLabel/DynamicTextLabelWidget.h</file>
+        <file>UIWidgets/TargetSource/DynamicIcon/DynamicIconWidgetCfg.h</file>
+        <file>UIWidgets/TargetSource/BlockBar/BlockBarWidgetCfg.h</file>
+        <file>UIWidgets/TargetSource/ColumnLevel/ColumnLevelWidgetCfg.h</file>
+        <file>UIWidgets/TargetSource/DynamicTextLabel/DynamicTextLabelWidgetCfg.h</file>
+        <file>UIWidgets/TargetSource/DynamicValueLabel/DynamicValueLabelWidgetCfg.h</file>
+        <file>UIWidgets/TargetSource/Icon/IconWidgetCfg.h</file>
+        <file>UIWidgets/TargetSource/Label/LabelWidgetCfg.h</file>
+        <file>UIWidgets/TargetSource/SelectableList/SelectableListWidgetCfg.h</file>
+        <file>UIWidgets/TargetSource/SignalTrigger/SignalTriggerWidgetCfg.h</file>
+        <file>UIWidgets/TargetSource/ListNavigation/ListNavigationWidget.c</file>
+        <file>UIWidgets/TargetSource/ListNavigation/ListNavigationWidget.h</file>
+        <file>UIWidgets/TargetSource/ListNavigation/ListNavigationWidgetCfg.h</file>
+        <file>UIWidgets/TargetSource/Image/ImageWidget.c</file>
+        <file>UIWidgets/TargetSource/Image/ImageWidget.h</file>
+        <file>UIWidgets/TargetSource/Image/ImageWidgetCfg.h</file>
+        <file>UIWidgets/TargetSource/DynamicImage/DynamicImageWidget.c</file>
+        <file>UIWidgets/TargetSource/DynamicImage/DynamicImageWidget.h</file>
+        <file>UIWidgets/TargetSource/DynamicImage/DynamicImageWidgetCfg.h</file>
+        <file>UIWidgets/TargetSource/DynamicLabel/DynamicLabelWidget.c</file>
+        <file>UIWidgets/TargetSource/DynamicLabel/DynamicLabelWidget.h</file>
+        <file>UIWidgets/TargetSource/DynamicLabel/DynamicLabelWidgetCfg.h</file>
+    </qresource>
+</RCC>

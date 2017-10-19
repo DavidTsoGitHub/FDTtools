@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<FunctionDefinition Name="ODOTrip">
+    <Tasks>
+        <Task>
+            <InitFunction>ODOTrip_Init</InitFunction>
+            <Runnable>ODOTrip_Run</Runnable>
+            <StartupDelay>100</StartupDelay>
+            <Periodicity>100</Periodicity>
+        </Task>
+    </Tasks>
+    <SignalInterface>
+        <InputSignals>
+            <Signal Name="VehSpdFrequency" DataType="uint32" UpdateNotification="False" Mandatory="True"/>
+            <Signal Name="SystemPowerMode" DataType="PowerMode" UpdateNotification="False" Mandatory="True"/>
+            <Signal Name="TripResetA" DataType="void" UpdateNotification="True" Mandatory="True"/>
+            <Signal Name="TripResetB" DataType="void" UpdateNotification="True" Mandatory="True"/>
+        </InputSignals>
+        <OutputSignals>
+            <Signal Name="CurrentODOValue" DataType="uint32"/>
+            <Signal Name="CurrentTripValueA" DataType="uint32"/>
+            <Signal Name="CurrentTripValueB" DataType="uint32"/>            
+        </OutputSignals>
+    </SignalInterface>
+    <ConfigurationParameters/>
+    <CalibrationParameters>
+        <CalibrationParameter DescriptiveName="NumberOfRestPulses" ParameterName="ODO_KM_REST_PULSES" Description="NUmber of pulses not counted in full km" DataType="uint32" ArrayLength="1"/>
+        <CalibrationParameter DescriptiveName="NumberOfRestPulsesTripA" ParameterName="ODO_HM_REST_PULSES_TRIP_A" Description="Number of pulses not counted in full hundreds m" DataType="uint32" ArrayLength="1"/>
+        <CalibrationParameter DescriptiveName="NumberOfRestPulsesTripB" ParameterName="ODO_HM_REST_PULSES_TRIP_B" Description="Number of pulses not counted in full hundreds m" DataType="uint32" ArrayLength="1"/>
+        <CalibrationParameter DescriptiveName="Number of pulses per kilometer" ParameterName="ODO_PULSES_PER_KM" Description="" DataType="uint32" ArrayLength="1"/>
+        <CalibrationParameter DescriptiveName="Current ODOMeter value" ParameterName="ODO_VALUE1" Description="Number of km" DataType="uint32" ArrayLength="1"/>
+        <CalibrationParameter DescriptiveName="Current ODOMeter value" ParameterName="ODO_VALUE2" Description="Number of km" DataType="uint32" ArrayLength="1"/>
+        <CalibrationParameter DescriptiveName="Current ODOMeter value" ParameterName="ODO_VALUE3" Description="Number of km" DataType="uint32" ArrayLength="1"/>
+        <CalibrationParameter DescriptiveName="Current ODOMeter value" ParameterName="ODO_VALUE4" Description="Number of km" DataType="uint32" ArrayLength="1"/>
+        <CalibrationParameter DescriptiveName="Current ODOMeter value" ParameterName="ODO_VALUE5" Description="Number of km" DataType="uint32" ArrayLength="1"/>
+        <CalibrationParameter DescriptiveName="Current TripA value" ParameterName="TRIP_A_VALUE" Description="Number of 100 m" DataType="uint32" ArrayLength="1"/>
+        <CalibrationParameter DescriptiveName="Current TripB value" ParameterName="TRIP_B_VALUE" Description="Number of 100 m" DataType="uint32" ArrayLength="1"/>        
+    </CalibrationParameters>
+</FunctionDefinition>

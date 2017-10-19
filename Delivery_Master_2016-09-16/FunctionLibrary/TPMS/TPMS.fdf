@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<FunctionDefinition Name="TPMS">
+    <Tasks>
+        <Task>
+            <InitFunction>TPMS_Init</InitFunction>
+            <Runnable>TPMS_Run</Runnable>
+            <StartupDelay>10</StartupDelay>
+            <Periodicity>500</Periodicity>
+        </Task>
+    </Tasks>
+    <SignalInterface>
+        <InputSignals>
+            <Signal Name="SystemPowerMode" DataType="PowerMode" />
+            <Signal Name="TPMSTireLocation" DataType="uint8" UpdateNotification="False" Mandatory="True"/>
+            <Signal Name="TPMSTirePressure" DataType="uint8" UpdateNotification="False" Mandatory="True"/>
+            <Signal Name="TPMSTirePressureWarning" DataType="uint8" UpdateNotification="False" Mandatory="True"/>
+        </InputSignals>
+        <OutputSignals>
+            <Signal Name="TPMSFrontLeftTireValue" DataType="DynamicWidgetValue"/>
+            <Signal Name="TPMSFrontRightTireValue" DataType="DynamicWidgetValue"/>
+            <Signal Name="TPMSMiddleAxleLeftOuterTireValue" DataType="DynamicWidgetValue"/>
+            <Signal Name="TPMSMiddleAxleLeftInnerTireValue" DataType="DynamicWidgetValue"/>
+            <Signal Name="TPMSMiddleAxleRightOuterTireValue" DataType="DynamicWidgetValue"/>
+            <Signal Name="TPMSMiddleAxleRightInnerTireValue" DataType="DynamicWidgetValue"/>
+            <Signal Name="TPMSRearAxleLeftOuterTireValue" DataType="DynamicWidgetValue"/>
+            <Signal Name="TPMSRearAxleLeftInnerTireValue" DataType="DynamicWidgetValue"/>
+            <Signal Name="TPMSRearAxleRightOuterTireValue" DataType="DynamicWidgetValue"/>
+            <Signal Name="TPMSRearAxleRightInnerTireValue" DataType="DynamicWidgetValue"/>
+            <Signal Name="TPMSIndicatorValue" DataType="uint8"/>
+        </OutputSignals>
+    </SignalInterface>
+    <ConfigurationParameters/>
+    <CalibrationParameters>
+        <CalibrationParameter DescriptiveName="TPMS Installed" ParameterName="TPMS_INSTALLED" Description="Determines if TPMS info shall be displayed in menu. 0x00 = disabled, 0x01 = enabled" DataType="uint8" ArrayLength="1"/>
+    </CalibrationParameters>
+</FunctionDefinition>

@@ -1,0 +1,128 @@
+<?xml version="1.0"?>
+<Project Name="Project">
+    <BSP SpecificationPath="BSP_specification_XML__160912_tft.xml"/>
+    <CAN ClusterECUName="IC" SpecificationPath="IC_CAN_DBC_20160824.xml" PRESDIV="1" RJW="0" PSEG1="4" PSEG2="1" PROPSEG="7"/>
+    <DIAG USDTFuncReqID="257" USDTReqID="576" USDTRespID="608"/>
+    <J1939>
+        <SF_Mailbox ID="533639167" Mask="533638912"/>
+        <FF_Mailbox ID="515682303" Mask="515678208"/>
+        <CF_Mailbox ID="464318463" Mask="464314368"/>
+    </J1939>
+    <TargetSettings Endianess="BigEndian"/>
+    <FunctionBlocks>
+        <FunctionBlock ID="3" PathInLib="QuadSwitchManager.V001/QuadSwitchManager.fdf"/>
+        <FunctionBlock ID="5" PathInLib="VehSpdGauge/VehSpdGauge.fdf">
+            <ConfigurationParameters>
+                <ConfigurationParameter Name="u16NeedleRestPos" Value="2"/>
+                <ConfigurationParameter Name="u16NeedleMaxPos" Value="150"/>
+                <ConfigurationParameter Name="u16VehSpdBias" Value="0"/>
+            </ConfigurationParameters>
+            <CalibrationParameters>
+                <CalibrationParameter Name="VEHSPD_MAXINPUTFREQUENCY" DefaultValue="79616"/>
+                <CalibrationParameter Name="VEHSPD_MAXSPEEDVALUE" DefaultValue="140"/>
+                <CalibrationParameter Name="VEHSPD_FILTERC" DefaultValue="200"/>
+            </CalibrationParameters>
+        </FunctionBlock>
+        <FunctionBlock ID="7" PathInLib="HighBeamTelltale/HighBeamTelltale.fdf"/>
+        <FunctionBlock ID="8" PathInLib="UreaLevelMeter/UreaLevelMeter.fdf"/>
+        <FunctionBlock ID="9" PathInLib="ChargingTellTale/ChargingTellTale.fdf"/>
+        <FunctionBlock ID="10" PathInLib="EngineOilPressureTellTale/EngineOilPressureTellTale.fdf"/>
+        <FunctionBlock ID="11" PathInLib="BrakePressureDummy/BrakePressureDummy.fdf"/>
+        <FunctionBlock ID="12" PathInLib="TurnIndication/TurnIndication.fdf">
+            <CalibrationParameters>
+                <CalibrationParameter Name="TURNINDICATOR_TELLTALEDELAY" DefaultValue="0"/>
+            </CalibrationParameters>
+        </FunctionBlock>
+        <FunctionBlock ID="13" PathInLib="WaterTempHighIndicator/WaterTempHighIndicator.fdf"/>
+        <FunctionBlock ID="14" PathInLib="FuelLevel/FuelLevel.fdf">
+            <ConfigurationParameters>
+                <ConfigurationParameter Name="u16Coefficient" Value="9000"/>
+            </ConfigurationParameters>
+            <CalibrationParameters>
+                <CalibrationParameter Name="FUEL_WARNINGTHRESHOLD" DefaultValue="12"/>
+                <CalibrationParameter Name="FUEL_WARNINGTOLERANCE" DefaultValue="5"/>
+            </CalibrationParameters>
+        </FunctionBlock>
+        <FunctionBlock ID="15" PathInLib="TPMS/TPMS.fdf">
+            <CalibrationParameters>
+                <CalibrationParameter Name="TPMS_INSTALLED" DefaultValue="1"/>
+            </CalibrationParameters>
+        </FunctionBlock>
+        <FunctionBlock ID="16" PathInLib="ParkBrakeIndicator/ParkBrakeIndicator.fdf"/>
+        <FunctionBlock ID="17" PathInLib="BrakePressureLowTellTale/BrakePressureLowTellTale.fdf"/>
+        <FunctionBlock ID="18" PathInLib="LocalizationManager/LocalizationManager.fdf">
+            <CalibrationParameters>
+                <CalibrationParameter Name="INITIAL_LANGUAGE_VALUE" DefaultValue="0"/>
+            </CalibrationParameters>
+            <LabelMappingsParameters>
+                <LabelMappings Name="languages">
+                    <LabelMapping Index="0" LabelID="72"/>
+                    <LabelMapping Index="1" LabelID="73"/>
+                    <LabelMapping Index="2" LabelID="74"/>
+                </LabelMappings>
+            </LabelMappingsParameters>
+        </FunctionBlock>
+        <FunctionBlock ID="19" PathInLib="WarningIconFields/WarningIconFields.fdf">
+            <IconResources>
+                <IconResource Name="Charging" IconID="11"/>
+                <IconResource Name="ParkBrake" IconID="8"/>
+                <IconResource Name="BrakePressureLow" IconID="10"/>
+                <IconResource Name="EngineOilPressure" IconID="9"/>
+            </IconResources>
+        </FunctionBlock>
+        <FunctionBlock ID="20" PathInLib="ODOTrip/ODOTrip.fdf">
+            <CalibrationParameters>
+                <CalibrationParameter Name="ODO_KM_REST_PULSES" DefaultValue="0"/>
+                <CalibrationParameter Name="ODO_HM_REST_PULSES_TRIP_A" DefaultValue="0"/>
+                <CalibrationParameter Name="ODO_HM_REST_PULSES_TRIP_B" DefaultValue="0"/>
+                <CalibrationParameter Name="ODO_PULSES_PER_KM" DefaultValue="7997"/>
+                <CalibrationParameter Name="ODO_VALUE1" DefaultValue="0"/>
+                <CalibrationParameter Name="ODO_VALUE2" DefaultValue="0"/>
+                <CalibrationParameter Name="ODO_VALUE3" DefaultValue="0"/>
+                <CalibrationParameter Name="ODO_VALUE4" DefaultValue="0"/>
+                <CalibrationParameter Name="ODO_VALUE5" DefaultValue="0"/>
+                <CalibrationParameter Name="TRIP_A_VALUE" DefaultValue="0"/>
+                <CalibrationParameter Name="TRIP_B_VALUE" DefaultValue="0"/>
+            </CalibrationParameters>
+        </FunctionBlock>
+        <FunctionBlock ID="21" PathInLib="OdoAndTripDisplayHandler/OdoAndTripDisplayHandler.fdf"/>
+        <FunctionBlock ID="22" PathInLib="FuelConsumption/FuelConsumption.fdf">
+            <ConfigurationParameters>
+                <ConfigurationParameter Name="u16FuelConsumptionCoefficient" Value="5000"/>
+            </ConfigurationParameters>
+            <CalibrationParameters>
+                <CalibrationParameter Name="TOTAL_FUEL_CONSUMPTION" DefaultValue="0"/>
+                <CalibrationParameter Name="TOTAL_FUEL_CONSUMPTION_TICKS" DefaultValue="0"/>
+            </CalibrationParameters>
+        </FunctionBlock>
+        <FunctionBlock ID="23" PathInLib="OutputShaftRotationSpeed/OutputShaftRotationSpeed.fdf">
+            <CalibrationParameters>
+                <CalibrationParameter Name="PULSES_PER_ROTATION" DefaultValue="0"/>
+                <CalibrationParameter Name="RATIO_NUMERATOR" DefaultValue="0"/>
+                <CalibrationParameter Name="RATIO_DENOMINATOR" DefaultValue="0"/>
+            </CalibrationParameters>
+        </FunctionBlock>
+        <FunctionBlock ID="24" PathInLib="IlluminationManager/IlluminationManager.fdf">
+            <CalibrationParameters>
+                <CalibrationParameter Name="DISP_ILLUM" DefaultValue="1|7|14|20|30"/>
+                <CalibrationParameter Name="GAUGE_ILLUM" DefaultValue="7|14|20|40|53"/>
+                <CalibrationParameter Name="ILLUMINATION_LEVEL" DefaultValue="0"/>
+            </CalibrationParameters>
+        </FunctionBlock>
+        <FunctionBlock ID="26" PathInLib="FaultBlockDummy/FaultBlockDummy.fdf">
+            <DTCParameters>
+                <DTCParameter Name="Fault1" Description="A small fault" DTC_ID="250"/>
+                <DTCParameter Name="Fault2" Description="A larger fault" DTC_ID="251"/>
+            </DTCParameters>
+        </FunctionBlock>
+        <FunctionBlock ID="27" PathInLib="OdoRuntimeHandler/OdoRuntimeHandler.fdf"/>
+        <FunctionBlock ID="28" PathInLib="ImageFieldsDummy/ImageFieldsDummy.fdf">
+            <ImageResources>
+                <ImageResource Name="Charging" ImageID="28"/>
+                <ImageResource Name="ParkBrake" ImageID="29"/>
+                <ImageResource Name="BrakePressureLow" ImageID="30"/>
+            </ImageResources>
+        </FunctionBlock>
+        <FunctionBlock ID="29" PathInLib="CANTestBlock/CANTestBlock.fdf"/>
+    </FunctionBlocks>
+</Project>

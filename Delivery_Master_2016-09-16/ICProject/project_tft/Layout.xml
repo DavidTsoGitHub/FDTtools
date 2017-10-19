@@ -1,0 +1,255 @@
+<?xml version="1.0"?>
+<Layouts HighestID="5" CropLeft="0" CropRight="0" CropTop="0" CropBottom="0" MainLayout="3" StartupScreenEnabled="true" StartupScreenDisplayTime="3" ChromaStartRed="144" ChromaEndRed="255" ChromaStartGreen="0" ChromaEndGreen="14" ChromaStartBlue="144" ChromaEndBlue="255">
+    <Layout ID="1" Name="Startup Screen" RGBRed="16" RGBGreen="16" RGBBlue="33" IsStartupScreen="true" IsCheckMessageScreen="false" IsCheckMessagesEnabled="false">
+        <ButtonTransitions/>
+        <SignalTransitions/>
+        <DisplayArea Name="Bottom" IsCheckMessageArea="false" X="0" Y="280" Width="240" Height="40" Border="0" ForegroundRed="255" ForegroundGreen="0" ForegroundBlue="0" BackgroundIsTransparent="true" BackgroundRed="0" BackgroundGreen="0" BackgroundBlue="0">
+            <Widgets>
+                <Widget Type="DynamicValueLabel" WidgetID="567" Name="DL1" GCLName="Widgets_567_DL1" X="30" Y="16" Width="40" Height="18" Boxed="false" PrimaryForegroundRed="255" PrimaryForegroundGreen="255" PrimaryForegroundBlue="255" PrimaryBackgroundIsTransparent="true" PrimaryBackgroundRed="0" PrimaryBackgroundGreen="0" PrimaryBackgroundBlue="0" SecondaryForegroundRed="0" SecondaryForegroundGreen="0" SecondaryForegroundBlue="0" SecondaryBackgroundIsTransparent="false" SecondaryBackgroundRed="0" SecondaryBackgroundGreen="0" SecondaryBackgroundBlue="0" Font="4" Multiplier10n="-3" NumberofDecimals="1" MaximumNumberofDigits="2" DataSink=""/>
+                <Widget Type="DynamicValueLabel" WidgetID="568" Name="DL2" GCLName="Widgets_568_DL2" X="106" Y="16" Width="40" Height="18" Boxed="false" PrimaryForegroundRed="255" PrimaryForegroundGreen="255" PrimaryForegroundBlue="255" PrimaryBackgroundIsTransparent="true" PrimaryBackgroundRed="0" PrimaryBackgroundGreen="0" PrimaryBackgroundBlue="0" SecondaryForegroundRed="0" SecondaryForegroundGreen="0" SecondaryForegroundBlue="0" SecondaryBackgroundIsTransparent="false" SecondaryBackgroundRed="0" SecondaryBackgroundGreen="0" SecondaryBackgroundBlue="0" Font="4" Multiplier10n="-3" NumberofDecimals="1" MaximumNumberofDigits="2" DataSink=""/>
+                <Widget Type="DynamicValueLabel" WidgetID="569" Name="DL3" GCLName="Widgets_569_DL3" X="184" Y="16" Width="40" Height="18" Boxed="false" PrimaryForegroundRed="255" PrimaryForegroundGreen="255" PrimaryForegroundBlue="255" PrimaryBackgroundIsTransparent="true" PrimaryBackgroundRed="0" PrimaryBackgroundGreen="0" PrimaryBackgroundBlue="0" SecondaryForegroundRed="0" SecondaryForegroundGreen="0" SecondaryForegroundBlue="0" SecondaryBackgroundIsTransparent="false" SecondaryBackgroundRed="0" SecondaryBackgroundGreen="0" SecondaryBackgroundBlue="0" Font="4" Multiplier10n="-3" NumberofDecimals="1" MaximumNumberofDigits="2" DataSink=""/>
+                <Widget Type="Icon" WidgetID="564" Name="Icon1" GCLName="Widgets_564_Icon1" X="4" Y="2" Width="32" Height="32" Boxed="false" PrimaryForegroundRed="255" PrimaryForegroundGreen="255" PrimaryForegroundBlue="255" PrimaryBackgroundIsTransparent="true" PrimaryBackgroundRed="0" PrimaryBackgroundGreen="0" PrimaryBackgroundBlue="0" SecondaryForegroundRed="0" SecondaryForegroundGreen="0" SecondaryForegroundBlue="0" SecondaryBackgroundIsTransparent="false" SecondaryBackgroundRed="0" SecondaryBackgroundGreen="0" SecondaryBackgroundBlue="0" Icon="5"/>
+                <Widget Type="Icon" WidgetID="565" Name="Icon2" GCLName="Widgets_565_Icon2" X="80" Y="2" Width="32" Height="32" Boxed="false" PrimaryForegroundRed="255" PrimaryForegroundGreen="255" PrimaryForegroundBlue="255" PrimaryBackgroundIsTransparent="true" PrimaryBackgroundRed="0" PrimaryBackgroundGreen="0" PrimaryBackgroundBlue="0" SecondaryForegroundRed="0" SecondaryForegroundGreen="0" SecondaryForegroundBlue="0" SecondaryBackgroundIsTransparent="false" SecondaryBackgroundRed="0" SecondaryBackgroundGreen="0" SecondaryBackgroundBlue="0" Icon="6"/>
+                <Widget Type="Icon" WidgetID="566" Name="Icon3" GCLName="Widgets_566_Icon3" X="158" Y="2" Width="32" Height="32" Boxed="false" PrimaryForegroundRed="255" PrimaryForegroundGreen="255" PrimaryForegroundBlue="255" PrimaryBackgroundIsTransparent="true" PrimaryBackgroundRed="0" PrimaryBackgroundGreen="0" PrimaryBackgroundBlue="0" SecondaryForegroundRed="0" SecondaryForegroundGreen="0" SecondaryForegroundBlue="0" SecondaryBackgroundIsTransparent="false" SecondaryBackgroundRed="0" SecondaryBackgroundGreen="0" SecondaryBackgroundBlue="0" Icon="4"/>
+            </Widgets>
+        </DisplayArea>
+        <DisplayArea Name="Date" IsCheckMessageArea="false" X="100" Y="0" Width="140" Height="24" Border="0" ForegroundRed="255" ForegroundGreen="255" ForegroundBlue="255" BackgroundIsTransparent="true" BackgroundRed="0" BackgroundGreen="0" BackgroundBlue="0">
+            <Widgets>
+                <Widget Type="Label" WidgetID="562" Name="SampleDate" GCLName="Widgets_562_SampleDate" X="18" Y="2" Width="100" Height="16" Boxed="false" PrimaryForegroundRed="255" PrimaryForegroundGreen="255" PrimaryForegroundBlue="255" PrimaryBackgroundIsTransparent="true" PrimaryBackgroundRed="0" PrimaryBackgroundGreen="0" PrimaryBackgroundBlue="0" SecondaryForegroundRed="0" SecondaryForegroundGreen="0" SecondaryForegroundBlue="0" SecondaryBackgroundIsTransparent="false" SecondaryBackgroundRed="0" SecondaryBackgroundGreen="0" SecondaryBackgroundBlue="0" Label="90"/>
+            </Widgets>
+        </DisplayArea>
+        <DisplayArea Name="Logo" IsCheckMessageArea="false" X="0" Y="34" Width="240" Height="240" Border="0" ForegroundRed="255" ForegroundGreen="255" ForegroundBlue="255" BackgroundIsTransparent="true" BackgroundRed="255" BackgroundGreen="0" BackgroundBlue="0">
+            <Widgets>
+                <Widget Type="Image" WidgetID="590" Name="Logo" GCLName="Widgets_590_Logo" X="46" Y="18" Width="150" Height="210" Boxed="false" PrimaryForegroundRed="0" PrimaryForegroundGreen="0" PrimaryForegroundBlue="0" PrimaryBackgroundIsTransparent="false" PrimaryBackgroundRed="0" PrimaryBackgroundGreen="0" PrimaryBackgroundBlue="0" SecondaryForegroundRed="0" SecondaryForegroundGreen="0" SecondaryForegroundBlue="0" SecondaryBackgroundIsTransparent="false" SecondaryBackgroundRed="0" SecondaryBackgroundGreen="0" SecondaryBackgroundBlue="0" Image="42" Animation1="3" UseTriggers1="false" Animation2="0" UseTriggers2="false"/>
+            </Widgets>
+        </DisplayArea>
+        <DisplayArea Name="Background" IsCheckMessageArea="false" X="0" Y="0" Width="240" Height="320" Border="0" ForegroundRed="255" ForegroundGreen="255" ForegroundBlue="255" BackgroundIsTransparent="true" BackgroundRed="0" BackgroundGreen="0" BackgroundBlue="0">
+            <Widgets>
+                <Widget Type="Image" WidgetID="643" Name="Image" GCLName="Widgets_643_Image" X="0" Y="0" Width="240" Height="320" Boxed="false" PrimaryForegroundRed="255" PrimaryForegroundGreen="255" PrimaryForegroundBlue="255" PrimaryBackgroundIsTransparent="false" PrimaryBackgroundRed="0" PrimaryBackgroundGreen="0" PrimaryBackgroundBlue="0" SecondaryForegroundRed="0" SecondaryForegroundGreen="0" SecondaryForegroundBlue="0" SecondaryBackgroundIsTransparent="false" SecondaryBackgroundRed="0" SecondaryBackgroundGreen="0" SecondaryBackgroundBlue="0" Image="46" Animation1="0" UseTriggers1="false" Animation2="0" UseTriggers2="false"/>
+            </Widgets>
+        </DisplayArea>
+    </Layout>
+    <Layout ID="2" Name="DTC Layout" RGBRed="16" RGBGreen="16" RGBBlue="33" IsStartupScreen="false" IsCheckMessageScreen="false" IsCheckMessagesEnabled="true">
+        <ButtonTransitions/>
+        <SignalTransitions>
+            <Transition>
+                <FirstCondition Value="1" CompareCondition="1"/>
+                <Connective Connective="0"/>
+            </Transition>
+        </SignalTransitions>
+        <DisplayArea Name="Top" IsCheckMessageArea="false" X="0" Y="0" Width="240" Height="24" Border="0" ForegroundRed="255" ForegroundGreen="255" ForegroundBlue="255" BackgroundIsTransparent="true" BackgroundRed="0" BackgroundGreen="0" BackgroundBlue="0">
+            <Widgets>
+                <Widget Type="Label" WidgetID="621" Name="Label" GCLName="Widgets_621_Label" X="118" Y="2" Width="100" Height="18" Boxed="false" PrimaryForegroundRed="255" PrimaryForegroundGreen="255" PrimaryForegroundBlue="255" PrimaryBackgroundIsTransparent="true" PrimaryBackgroundRed="255" PrimaryBackgroundGreen="0" PrimaryBackgroundBlue="255" SecondaryForegroundRed="0" SecondaryForegroundGreen="0" SecondaryForegroundBlue="0" SecondaryBackgroundIsTransparent="false" SecondaryBackgroundRed="0" SecondaryBackgroundGreen="0" SecondaryBackgroundBlue="0" Label="90"/>
+            </Widgets>
+        </DisplayArea>
+        <DisplayArea Name="Bottom Right" IsCheckMessageArea="false" X="140" Y="295" Width="96" Height="24" Border="0" ForegroundRed="255" ForegroundGreen="255" ForegroundBlue="255" BackgroundIsTransparent="true" BackgroundRed="0" BackgroundGreen="0" BackgroundBlue="0">
+            <Widgets>
+                <Widget Type="DynamicTextLabel" WidgetID="619" Name="BottomRightInfo" GCLName="Widgets_619_BottomRightInfo" X="2" Y="1" Width="65" Height="18" Boxed="false" PrimaryForegroundRed="255" PrimaryForegroundGreen="255" PrimaryForegroundBlue="255" PrimaryBackgroundIsTransparent="true" PrimaryBackgroundRed="255" PrimaryBackgroundGreen="0" PrimaryBackgroundBlue="255" SecondaryForegroundRed="0" SecondaryForegroundGreen="0" SecondaryForegroundBlue="0" SecondaryBackgroundIsTransparent="false" SecondaryBackgroundRed="0" SecondaryBackgroundGreen="0" SecondaryBackgroundBlue="0" RightAligned="true" Font="5" DataSink=""/>
+            </Widgets>
+        </DisplayArea>
+        <DisplayArea Name="Bottom Left" IsCheckMessageArea="false" X="4" Y="295" Width="132" Height="24" Border="0" ForegroundRed="255" ForegroundGreen="255" ForegroundBlue="255" BackgroundIsTransparent="true" BackgroundRed="0" BackgroundGreen="0" BackgroundBlue="0">
+            <Widgets>
+                <Widget Type="DynamicTextLabel" WidgetID="618" Name="BottomLeftInfo" GCLName="Widgets_618_BottomLeftInfo" X="2" Y="1" Width="128" Height="18" Boxed="false" PrimaryForegroundRed="255" PrimaryForegroundGreen="255" PrimaryForegroundBlue="255" PrimaryBackgroundIsTransparent="true" PrimaryBackgroundRed="255" PrimaryBackgroundGreen="0" PrimaryBackgroundBlue="255" SecondaryForegroundRed="0" SecondaryForegroundGreen="0" SecondaryForegroundBlue="0" SecondaryBackgroundIsTransparent="false" SecondaryBackgroundRed="0" SecondaryBackgroundGreen="0" SecondaryBackgroundBlue="0" RightAligned="false" Font="5" DataSink=""/>
+            </Widgets>
+        </DisplayArea>
+        <DisplayArea Name="Info Area" IsCheckMessageArea="false" X="4" Y="173" Width="232" Height="116" Border="0" ForegroundRed="255" ForegroundGreen="255" ForegroundBlue="255" BackgroundIsTransparent="true" BackgroundRed="0" BackgroundGreen="0" BackgroundBlue="0">
+            <Widgets>
+                <Widget Type="SelectableList" WidgetID="622" Name="DTCInfowidget" GCLName="Widgets_622_DTCInfowidget" X="1" Y="1" Width="225" Height="110" Boxed="false" PrimaryForegroundRed="255" PrimaryForegroundGreen="255" PrimaryForegroundBlue="255" PrimaryBackgroundIsTransparent="true" PrimaryBackgroundRed="0" PrimaryBackgroundGreen="0" PrimaryBackgroundBlue="0" SecondaryForegroundRed="255" SecondaryForegroundGreen="255" SecondaryForegroundBlue="255" SecondaryBackgroundIsTransparent="false" SecondaryBackgroundRed="0" SecondaryBackgroundGreen="0" SecondaryBackgroundBlue="0" Selectable="false" ShowNumbering="false" DisplayItemCount="1" TextAlignment="1" CurrentValue="" LabelToValueMappings="" SelectedValue=""/>
+            </Widgets>
+        </DisplayArea>
+        <DisplayArea Name="Warning Image Field" IsCheckMessageArea="false" X="17" Y="39" Width="132" Height="32" Border="0" ForegroundRed="255" ForegroundGreen="255" ForegroundBlue="255" BackgroundIsTransparent="true" BackgroundRed="0" BackgroundGreen="0" BackgroundBlue="0">
+            <Widgets>
+                <Widget Type="DynamicImage" WidgetID="603" Name="DynamicImage" GCLName="Widgets_603_DynamicImage" X="2" Y="2" Width="40" Height="28" Boxed="false" PrimaryForegroundRed="0" PrimaryForegroundGreen="0" PrimaryForegroundBlue="0" PrimaryBackgroundIsTransparent="false" PrimaryBackgroundRed="0" PrimaryBackgroundGreen="0" PrimaryBackgroundBlue="0" SecondaryForegroundRed="0" SecondaryForegroundGreen="0" SecondaryForegroundBlue="0" SecondaryBackgroundIsTransparent="false" SecondaryBackgroundRed="0" SecondaryBackgroundGreen="0" SecondaryBackgroundBlue="0" ImageIDtoDisplay="" Animation1="0" UseTriggers1="false" Animation2="0" UseTriggers2="false"/>
+                <Widget Type="DynamicImage" WidgetID="604" Name="DynamicImage" GCLName="Widgets_604_DynamicImage" X="47" Y="2" Width="40" Height="28" Boxed="false" PrimaryForegroundRed="0" PrimaryForegroundGreen="0" PrimaryForegroundBlue="0" PrimaryBackgroundIsTransparent="false" PrimaryBackgroundRed="0" PrimaryBackgroundGreen="0" PrimaryBackgroundBlue="0" SecondaryForegroundRed="0" SecondaryForegroundGreen="0" SecondaryForegroundBlue="0" SecondaryBackgroundIsTransparent="false" SecondaryBackgroundRed="0" SecondaryBackgroundGreen="0" SecondaryBackgroundBlue="0" ImageIDtoDisplay="" Animation1="0" UseTriggers1="false" Animation2="0" UseTriggers2="false"/>
+                <Widget Type="DynamicImage" WidgetID="605" Name="DynamicImage" GCLName="Widgets_605_DynamicImage" X="91" Y="2" Width="40" Height="28" Boxed="false" PrimaryForegroundRed="0" PrimaryForegroundGreen="0" PrimaryForegroundBlue="0" PrimaryBackgroundIsTransparent="false" PrimaryBackgroundRed="0" PrimaryBackgroundGreen="0" PrimaryBackgroundBlue="0" SecondaryForegroundRed="0" SecondaryForegroundGreen="0" SecondaryForegroundBlue="0" SecondaryBackgroundIsTransparent="false" SecondaryBackgroundRed="0" SecondaryBackgroundGreen="0" SecondaryBackgroundBlue="0" ImageIDtoDisplay="" Animation1="0" UseTriggers1="false" Animation2="0" UseTriggers2="false"/>
+            </Widgets>
+        </DisplayArea>
+        <DisplayArea Name="Background" IsCheckMessageArea="false" X="0" Y="0" Width="240" Height="320" Border="0" ForegroundRed="255" ForegroundGreen="255" ForegroundBlue="255" BackgroundIsTransparent="true" BackgroundRed="0" BackgroundGreen="0" BackgroundBlue="0">
+            <Widgets>
+                <Widget Type="Image" WidgetID="644" Name="Image" GCLName="Widgets_644_Image" X="0" Y="0" Width="240" Height="320" Boxed="false" PrimaryForegroundRed="255" PrimaryForegroundGreen="255" PrimaryForegroundBlue="255" PrimaryBackgroundIsTransparent="false" PrimaryBackgroundRed="0" PrimaryBackgroundGreen="0" PrimaryBackgroundBlue="0" SecondaryForegroundRed="0" SecondaryForegroundGreen="0" SecondaryForegroundBlue="0" SecondaryBackgroundIsTransparent="false" SecondaryBackgroundRed="0" SecondaryBackgroundGreen="0" SecondaryBackgroundBlue="0" Image="45" Animation1="0" UseTriggers1="false" Animation2="0" UseTriggers2="false"/>
+            </Widgets>
+        </DisplayArea>
+    </Layout>
+    <Layout ID="3" Name="Main Layout" RGBRed="16" RGBGreen="16" RGBBlue="33" IsStartupScreen="false" IsCheckMessageScreen="false" IsCheckMessagesEnabled="true">
+        <ButtonTransitions>
+            <ButtonTransition Button="4" Layout="3"/>
+        </ButtonTransitions>
+        <SignalTransitions>
+            <Transition>
+                <FirstCondition Value="0" CompareCondition="1"/>
+                <Connective Connective="0"/>
+            </Transition>
+        </SignalTransitions>
+        <DisplayArea Name="Animation Area" IsCheckMessageArea="false" X="175" Y="40" Width="52" Height="124" Border="0" ForegroundRed="0" ForegroundGreen="0" ForegroundBlue="0" BackgroundIsTransparent="true" BackgroundRed="245" BackgroundGreen="0" BackgroundBlue="240">
+            <Widgets>
+                <Widget Type="Image" WidgetID="639" Name="Image" GCLName="Widgets_639_Image" X="9" Y="90" Width="32" Height="32" Boxed="false" PrimaryForegroundRed="255" PrimaryForegroundGreen="255" PrimaryForegroundBlue="255" PrimaryBackgroundIsTransparent="false" PrimaryBackgroundRed="0" PrimaryBackgroundGreen="0" PrimaryBackgroundBlue="0" SecondaryForegroundRed="0" SecondaryForegroundGreen="0" SecondaryForegroundBlue="0" SecondaryBackgroundIsTransparent="false" SecondaryBackgroundRed="0" SecondaryBackgroundGreen="0" SecondaryBackgroundBlue="0" Image="10" Animation1="4" UseTriggers1="false" Animation2="0" UseTriggers2="false"/>
+                <Widget Type="DynamicImage" WidgetID="640" Name="DynamicImage" GCLName="Widgets_640_DynamicImage" X="0" Y="0" Width="50" Height="90" Boxed="false" PrimaryForegroundRed="255" PrimaryForegroundGreen="255" PrimaryForegroundBlue="255" PrimaryBackgroundIsTransparent="false" PrimaryBackgroundRed="0" PrimaryBackgroundGreen="0" PrimaryBackgroundBlue="0" SecondaryForegroundRed="0" SecondaryForegroundGreen="0" SecondaryForegroundBlue="0" SecondaryBackgroundIsTransparent="false" SecondaryBackgroundRed="0" SecondaryBackgroundGreen="0" SecondaryBackgroundBlue="0" ImageIDtoDisplay="" Animation1="0" UseTriggers1="false" Animation2="1" UseTriggers2="true">
+                    <Animation2_Properties BehaviorOnLoad="1" BehaviorOnTriggerActive="0" BehaviorOnTriggerInactive="1">
+                        <Animation2_Triggers>
+                            <Trigger>
+                                <FirstCondition Value="1" CompareCondition="0"/>
+                                <Connective Connective="0"/>
+                            </Trigger>
+                        </Animation2_Triggers>
+                    </Animation2_Properties>
+                </Widget>
+            </Widgets>
+        </DisplayArea>
+        <DisplayArea Name="Info Area" IsCheckMessageArea="false" X="4" Y="173" Width="232" Height="116" Border="0" ForegroundRed="255" ForegroundGreen="255" ForegroundBlue="255" BackgroundIsTransparent="true" BackgroundRed="0" BackgroundGreen="0" BackgroundBlue="0">
+            <Widgets>
+                <Widget Type="Icon" WidgetID="652" Name="BatteryIcon" GCLName="Widgets_652_BatteryIcon" X="1" Y="12" Width="32" Height="32" Boxed="false" PrimaryForegroundRed="255" PrimaryForegroundGreen="255" PrimaryForegroundBlue="255" PrimaryBackgroundIsTransparent="true" PrimaryBackgroundRed="0" PrimaryBackgroundGreen="0" PrimaryBackgroundBlue="0" SecondaryForegroundRed="0" SecondaryForegroundGreen="0" SecondaryForegroundBlue="0" SecondaryBackgroundIsTransparent="true" SecondaryBackgroundRed="255" SecondaryBackgroundGreen="255" SecondaryBackgroundBlue="255" Icon="11"/>
+                <Widget Type="Icon" WidgetID="549" Name="OilIcon" GCLName="Widgets_549_OilIcon" X="1" Y="63" Width="32" Height="32" Boxed="false" PrimaryForegroundRed="255" PrimaryForegroundGreen="255" PrimaryForegroundBlue="255" PrimaryBackgroundIsTransparent="true" PrimaryBackgroundRed="0" PrimaryBackgroundGreen="0" PrimaryBackgroundBlue="0" SecondaryForegroundRed="0" SecondaryForegroundGreen="0" SecondaryForegroundBlue="0" SecondaryBackgroundIsTransparent="false" SecondaryBackgroundRed="0" SecondaryBackgroundGreen="0" SecondaryBackgroundBlue="0" Icon="9"/>
+                <Widget Type="BlockBar" WidgetID="550" Name="BatteryBlockBar" GCLName="Widgets_550_BatteryBlockBar" X="40" Y="20" Width="128" Height="18" Boxed="false" PrimaryForegroundRed="255" PrimaryForegroundGreen="255" PrimaryForegroundBlue="255" PrimaryBackgroundIsTransparent="true" PrimaryBackgroundRed="245" PrimaryBackgroundGreen="0" PrimaryBackgroundBlue="245" SecondaryForegroundRed="0" SecondaryForegroundGreen="0" SecondaryForegroundBlue="0" SecondaryBackgroundIsTransparent="false" SecondaryBackgroundRed="0" SecondaryBackgroundGreen="0" SecondaryBackgroundBlue="0" Spacing="3" Blocks="11" Min="16" Max="36" SignalSink=""/>
+                <Widget Type="BlockBar" WidgetID="551" Name="OilBlockBar" GCLName="Widgets_551_OilBlockBar" X="40" Y="70" Width="128" Height="18" Boxed="false" PrimaryForegroundRed="255" PrimaryForegroundGreen="255" PrimaryForegroundBlue="255" PrimaryBackgroundIsTransparent="true" PrimaryBackgroundRed="255" PrimaryBackgroundGreen="0" PrimaryBackgroundBlue="255" SecondaryForegroundRed="0" SecondaryForegroundGreen="0" SecondaryForegroundBlue="0" SecondaryBackgroundIsTransparent="false" SecondaryBackgroundRed="0" SecondaryBackgroundGreen="0" SecondaryBackgroundBlue="0" Spacing="3" Blocks="11" Min="0" Max="1000" SignalSink=""/>
+                <Widget Type="Label" WidgetID="552" Name="BatteryUnitLabel" GCLName="Widgets_552_BatteryUnitLabel" X="170" Y="22" Width="20" Height="20" Boxed="false" PrimaryForegroundRed="255" PrimaryForegroundGreen="255" PrimaryForegroundBlue="255" PrimaryBackgroundIsTransparent="true" PrimaryBackgroundRed="255" PrimaryBackgroundGreen="0" PrimaryBackgroundBlue="255" SecondaryForegroundRed="0" SecondaryForegroundGreen="0" SecondaryForegroundBlue="0" SecondaryBackgroundIsTransparent="false" SecondaryBackgroundRed="0" SecondaryBackgroundGreen="0" SecondaryBackgroundBlue="0" Label="84"/>
+                <Widget Type="Label" WidgetID="553" Name="OilUnitLabel" GCLName="Widgets_553_OilUnitLabel" X="170" Y="74" Width="55" Height="20" Boxed="false" PrimaryForegroundRed="255" PrimaryForegroundGreen="255" PrimaryForegroundBlue="255" PrimaryBackgroundIsTransparent="true" PrimaryBackgroundRed="255" PrimaryBackgroundGreen="0" PrimaryBackgroundBlue="255" SecondaryForegroundRed="0" SecondaryForegroundGreen="0" SecondaryForegroundBlue="0" SecondaryBackgroundIsTransparent="false" SecondaryBackgroundRed="0" SecondaryBackgroundGreen="0" SecondaryBackgroundBlue="0" Label="69"/>
+                <Widget Type="Label" WidgetID="554" Name="Label" GCLName="Widgets_554_Label" X="34" Y="36" Width="24" Height="15" Boxed="false" PrimaryForegroundRed="255" PrimaryForegroundGreen="255" PrimaryForegroundBlue="255" PrimaryBackgroundIsTransparent="true" PrimaryBackgroundRed="255" PrimaryBackgroundGreen="0" PrimaryBackgroundBlue="255" SecondaryForegroundRed="0" SecondaryForegroundGreen="0" SecondaryForegroundBlue="0" SecondaryBackgroundIsTransparent="false" SecondaryBackgroundRed="0" SecondaryBackgroundGreen="0" SecondaryBackgroundBlue="0" Label="85"/>
+                <Widget Type="Label" WidgetID="555" Name="Label" GCLName="Widgets_555_Label" X="101" Y="36" Width="20" Height="15" Boxed="false" PrimaryForegroundRed="255" PrimaryForegroundGreen="255" PrimaryForegroundBlue="255" PrimaryBackgroundIsTransparent="true" PrimaryBackgroundRed="255" PrimaryBackgroundGreen="0" PrimaryBackgroundBlue="255" SecondaryForegroundRed="0" SecondaryForegroundGreen="0" SecondaryForegroundBlue="0" SecondaryBackgroundIsTransparent="false" SecondaryBackgroundRed="0" SecondaryBackgroundGreen="0" SecondaryBackgroundBlue="0" Label="86"/>
+                <Widget Type="Label" WidgetID="556" Name="Label" GCLName="Widgets_556_Label" X="144" Y="36" Width="20" Height="15" Boxed="false" PrimaryForegroundRed="255" PrimaryForegroundGreen="255" PrimaryForegroundBlue="255" PrimaryBackgroundIsTransparent="true" PrimaryBackgroundRed="255" PrimaryBackgroundGreen="0" PrimaryBackgroundBlue="255" SecondaryForegroundRed="0" SecondaryForegroundGreen="0" SecondaryForegroundBlue="0" SecondaryBackgroundIsTransparent="false" SecondaryBackgroundRed="0" SecondaryBackgroundGreen="0" SecondaryBackgroundBlue="0" Label="87"/>
+                <Widget Type="Label" WidgetID="557" Name="Label" GCLName="Widgets_557_Label" X="37" Y="86" Width="20" Height="15" Boxed="false" PrimaryForegroundRed="255" PrimaryForegroundGreen="255" PrimaryForegroundBlue="255" PrimaryBackgroundIsTransparent="true" PrimaryBackgroundRed="255" PrimaryBackgroundGreen="0" PrimaryBackgroundBlue="255" SecondaryForegroundRed="0" SecondaryForegroundGreen="0" SecondaryForegroundBlue="0" SecondaryBackgroundIsTransparent="false" SecondaryBackgroundRed="0" SecondaryBackgroundGreen="0" SecondaryBackgroundBlue="0" Label="66"/>
+                <Widget Type="Label" WidgetID="558" Name="Label" GCLName="Widgets_558_Label" X="92" Y="86" Width="20" Height="15" Boxed="false" PrimaryForegroundRed="255" PrimaryForegroundGreen="255" PrimaryForegroundBlue="255" PrimaryBackgroundIsTransparent="true" PrimaryBackgroundRed="255" PrimaryBackgroundGreen="0" PrimaryBackgroundBlue="255" SecondaryForegroundRed="0" SecondaryForegroundGreen="0" SecondaryForegroundBlue="0" SecondaryBackgroundIsTransparent="false" SecondaryBackgroundRed="0" SecondaryBackgroundGreen="0" SecondaryBackgroundBlue="0" Label="88"/>
+                <Widget Type="Label" WidgetID="559" Name="Label" GCLName="Widgets_559_Label" X="144" Y="86" Width="24" Height="15" Boxed="false" PrimaryForegroundRed="255" PrimaryForegroundGreen="255" PrimaryForegroundBlue="255" PrimaryBackgroundIsTransparent="true" PrimaryBackgroundRed="255" PrimaryBackgroundGreen="0" PrimaryBackgroundBlue="255" SecondaryForegroundRed="0" SecondaryForegroundGreen="0" SecondaryForegroundBlue="0" SecondaryBackgroundIsTransparent="false" SecondaryBackgroundRed="0" SecondaryBackgroundGreen="0" SecondaryBackgroundBlue="0" Label="89"/>
+            </Widgets>
+        </DisplayArea>
+        <DisplayArea Name="Bottom Right" IsCheckMessageArea="false" X="140" Y="295" Width="96" Height="24" Border="0" ForegroundRed="255" ForegroundGreen="255" ForegroundBlue="255" BackgroundIsTransparent="true" BackgroundRed="0" BackgroundGreen="0" BackgroundBlue="0">
+            <Widgets>
+                <Widget Type="DynamicTextLabel" WidgetID="506" Name="BottomRightInfo" GCLName="Widgets_506_BottomRightInfo" X="2" Y="1" Width="65" Height="18" Boxed="false" PrimaryForegroundRed="255" PrimaryForegroundGreen="255" PrimaryForegroundBlue="255" PrimaryBackgroundIsTransparent="true" PrimaryBackgroundRed="255" PrimaryBackgroundGreen="0" PrimaryBackgroundBlue="255" SecondaryForegroundRed="0" SecondaryForegroundGreen="0" SecondaryForegroundBlue="0" SecondaryBackgroundIsTransparent="false" SecondaryBackgroundRed="0" SecondaryBackgroundGreen="0" SecondaryBackgroundBlue="0" RightAligned="true" Font="5" DataSink=""/>
+            </Widgets>
+        </DisplayArea>
+        <DisplayArea Name="Bottom Left" IsCheckMessageArea="false" X="4" Y="295" Width="132" Height="24" Border="0" ForegroundRed="255" ForegroundGreen="255" ForegroundBlue="255" BackgroundIsTransparent="true" BackgroundRed="0" BackgroundGreen="0" BackgroundBlue="0">
+            <Widgets>
+                <Widget Type="DynamicTextLabel" WidgetID="507" Name="BottomLeftInfo" GCLName="Widgets_507_BottomLeftInfo" X="2" Y="1" Width="128" Height="18" Boxed="false" PrimaryForegroundRed="255" PrimaryForegroundGreen="255" PrimaryForegroundBlue="255" PrimaryBackgroundIsTransparent="true" PrimaryBackgroundRed="255" PrimaryBackgroundGreen="0" PrimaryBackgroundBlue="255" SecondaryForegroundRed="0" SecondaryForegroundGreen="0" SecondaryForegroundBlue="0" SecondaryBackgroundIsTransparent="false" SecondaryBackgroundRed="0" SecondaryBackgroundGreen="0" SecondaryBackgroundBlue="0" RightAligned="false" Font="5" DataSink=""/>
+            </Widgets>
+        </DisplayArea>
+        <DisplayArea Name="Warning Image Field" IsCheckMessageArea="false" X="17" Y="39" Width="132" Height="32" Border="0" ForegroundRed="255" ForegroundGreen="255" ForegroundBlue="255" BackgroundIsTransparent="true" BackgroundRed="245" BackgroundGreen="0" BackgroundBlue="240">
+            <Widgets>
+                <Widget Type="DynamicImage" WidgetID="574" Name="DynamicImage" GCLName="Widgets_574_DynamicImage" X="2" Y="2" Width="40" Height="28" Boxed="false" PrimaryForegroundRed="0" PrimaryForegroundGreen="0" PrimaryForegroundBlue="0" PrimaryBackgroundIsTransparent="false" PrimaryBackgroundRed="0" PrimaryBackgroundGreen="0" PrimaryBackgroundBlue="0" SecondaryForegroundRed="0" SecondaryForegroundGreen="0" SecondaryForegroundBlue="0" SecondaryBackgroundIsTransparent="false" SecondaryBackgroundRed="0" SecondaryBackgroundGreen="0" SecondaryBackgroundBlue="0" ImageIDtoDisplay="" Animation1="0" UseTriggers1="false" Animation2="0" UseTriggers2="false"/>
+                <Widget Type="DynamicImage" WidgetID="575" Name="DynamicImage" GCLName="Widgets_575_DynamicImage" X="47" Y="2" Width="40" Height="28" Boxed="false" PrimaryForegroundRed="0" PrimaryForegroundGreen="0" PrimaryForegroundBlue="0" PrimaryBackgroundIsTransparent="false" PrimaryBackgroundRed="0" PrimaryBackgroundGreen="0" PrimaryBackgroundBlue="0" SecondaryForegroundRed="0" SecondaryForegroundGreen="0" SecondaryForegroundBlue="0" SecondaryBackgroundIsTransparent="false" SecondaryBackgroundRed="0" SecondaryBackgroundGreen="0" SecondaryBackgroundBlue="0" ImageIDtoDisplay="" Animation1="0" UseTriggers1="false" Animation2="0" UseTriggers2="false"/>
+                <Widget Type="DynamicImage" WidgetID="576" Name="DynamicImage" GCLName="Widgets_576_DynamicImage" X="91" Y="2" Width="40" Height="28" Boxed="false" PrimaryForegroundRed="0" PrimaryForegroundGreen="0" PrimaryForegroundBlue="0" PrimaryBackgroundIsTransparent="false" PrimaryBackgroundRed="0" PrimaryBackgroundGreen="0" PrimaryBackgroundBlue="0" SecondaryForegroundRed="0" SecondaryForegroundGreen="0" SecondaryForegroundBlue="0" SecondaryBackgroundIsTransparent="false" SecondaryBackgroundRed="0" SecondaryBackgroundGreen="0" SecondaryBackgroundBlue="0" ImageIDtoDisplay="" Animation1="0" UseTriggers1="false" Animation2="0" UseTriggers2="false"/>
+            </Widgets>
+        </DisplayArea>
+        <DisplayArea Name="Top" IsCheckMessageArea="false" X="0" Y="0" Width="240" Height="24" Border="0" ForegroundRed="255" ForegroundGreen="255" ForegroundBlue="255" BackgroundIsTransparent="true" BackgroundRed="0" BackgroundGreen="0" BackgroundBlue="0">
+            <Widgets>
+                <Widget Type="Label" WidgetID="586" Name="Label" GCLName="Widgets_586_Label" X="118" Y="2" Width="100" Height="18" Boxed="false" PrimaryForegroundRed="255" PrimaryForegroundGreen="255" PrimaryForegroundBlue="255" PrimaryBackgroundIsTransparent="true" PrimaryBackgroundRed="255" PrimaryBackgroundGreen="0" PrimaryBackgroundBlue="255" SecondaryForegroundRed="0" SecondaryForegroundGreen="0" SecondaryForegroundBlue="0" SecondaryBackgroundIsTransparent="false" SecondaryBackgroundRed="0" SecondaryBackgroundGreen="0" SecondaryBackgroundBlue="0" Label="90"/>
+            </Widgets>
+        </DisplayArea>
+        <DisplayArea Name="New Area" IsCheckMessageArea="false" X="0" Y="0" Width="240" Height="320" Border="0" ForegroundRed="255" ForegroundGreen="255" ForegroundBlue="255" BackgroundIsTransparent="true" BackgroundRed="0" BackgroundGreen="0" BackgroundBlue="0">
+            <Widgets>
+                <Widget Type="Image" WidgetID="655" Name="Image" GCLName="Widgets_655_Image" X="0" Y="0" Width="240" Height="320" Boxed="false" PrimaryForegroundRed="255" PrimaryForegroundGreen="255" PrimaryForegroundBlue="255" PrimaryBackgroundIsTransparent="true" PrimaryBackgroundRed="0" PrimaryBackgroundGreen="0" PrimaryBackgroundBlue="0" SecondaryForegroundRed="0" SecondaryForegroundGreen="0" SecondaryForegroundBlue="0" SecondaryBackgroundIsTransparent="true" SecondaryBackgroundRed="255" SecondaryBackgroundGreen="255" SecondaryBackgroundBlue="255" Image="45" Animation1="0" UseTriggers1="false" Animation2="0" UseTriggers2="false"/>
+            </Widgets>
+        </DisplayArea>
+    </Layout>
+    <Layout ID="4" Name="Menu Layout" RGBRed="16" RGBGreen="16" RGBBlue="33" IsStartupScreen="false" IsCheckMessageScreen="false" IsCheckMessagesEnabled="true">
+        <ButtonTransitions>
+            <ButtonTransition Button="5" Layout="2"/>
+        </ButtonTransitions>
+        <SignalTransitions/>
+        <DisplayArea Name="Menu Contents" IsCheckMessageArea="false" X="4" Y="173" Width="232" Height="116" Border="0" ForegroundRed="255" ForegroundGreen="255" ForegroundBlue="255" BackgroundIsTransparent="true" BackgroundRed="255" BackgroundGreen="255" BackgroundBlue="0">
+            <Widgets>
+                <Widget Type="Menu" ConfigurationFile="Menu.xml"/>
+            </Widgets>
+        </DisplayArea>
+        <DisplayArea Name="Menu Text" IsCheckMessageArea="false" X="13" Y="143" Width="140" Height="28" Border="0" ForegroundRed="255" ForegroundGreen="255" ForegroundBlue="255" BackgroundIsTransparent="true" BackgroundRed="255" BackgroundGreen="0" BackgroundBlue="255">
+            <Widgets>
+                <Widget Type="DynamicLabel" WidgetID="581" Name="DynamicLabelMenuText" GCLName="Widgets_581_DynamicLabelMenuText" X="2" Y="2" Width="136" Height="24" Boxed="false" PrimaryForegroundRed="255" PrimaryForegroundGreen="255" PrimaryForegroundBlue="255" PrimaryBackgroundIsTransparent="true" PrimaryBackgroundRed="255" PrimaryBackgroundGreen="0" PrimaryBackgroundBlue="255" SecondaryForegroundRed="0" SecondaryForegroundGreen="0" SecondaryForegroundBlue="0" SecondaryBackgroundIsTransparent="false" SecondaryBackgroundRed="0" SecondaryBackgroundGreen="0" SecondaryBackgroundBlue="0" LabelIDtoDisplay="" TextAlignment="2"/>
+            </Widgets>
+        </DisplayArea>
+        <DisplayArea Name="Bottom Right" IsCheckMessageArea="false" X="140" Y="295" Width="96" Height="24" Border="0" ForegroundRed="255" ForegroundGreen="255" ForegroundBlue="255" BackgroundIsTransparent="true" BackgroundRed="255" BackgroundGreen="0" BackgroundBlue="255">
+            <Widgets>
+                <Widget Type="DynamicTextLabel" WidgetID="596" Name="BottomRightInfo" GCLName="Widgets_596_BottomRightInfo" X="2" Y="1" Width="65" Height="18" Boxed="false" PrimaryForegroundRed="255" PrimaryForegroundGreen="255" PrimaryForegroundBlue="255" PrimaryBackgroundIsTransparent="true" PrimaryBackgroundRed="255" PrimaryBackgroundGreen="0" PrimaryBackgroundBlue="255" SecondaryForegroundRed="0" SecondaryForegroundGreen="0" SecondaryForegroundBlue="0" SecondaryBackgroundIsTransparent="false" SecondaryBackgroundRed="0" SecondaryBackgroundGreen="0" SecondaryBackgroundBlue="0" RightAligned="true" Font="5" DataSink=""/>
+            </Widgets>
+        </DisplayArea>
+        <DisplayArea Name="Bottom Left" IsCheckMessageArea="false" X="4" Y="295" Width="132" Height="24" Border="0" ForegroundRed="255" ForegroundGreen="255" ForegroundBlue="255" BackgroundIsTransparent="true" BackgroundRed="255" BackgroundGreen="0" BackgroundBlue="255">
+            <Widgets>
+                <Widget Type="DynamicTextLabel" WidgetID="595" Name="BottomLeftInfo" GCLName="Widgets_595_BottomLeftInfo" X="2" Y="1" Width="128" Height="18" Boxed="false" PrimaryForegroundRed="255" PrimaryForegroundGreen="255" PrimaryForegroundBlue="255" PrimaryBackgroundIsTransparent="true" PrimaryBackgroundRed="255" PrimaryBackgroundGreen="0" PrimaryBackgroundBlue="255" SecondaryForegroundRed="0" SecondaryForegroundGreen="0" SecondaryForegroundBlue="0" SecondaryBackgroundIsTransparent="false" SecondaryBackgroundRed="0" SecondaryBackgroundGreen="0" SecondaryBackgroundBlue="0" RightAligned="false" Font="5" DataSink=""/>
+            </Widgets>
+        </DisplayArea>
+        <DisplayArea Name="Warning Image Field" IsCheckMessageArea="false" X="17" Y="39" Width="132" Height="32" Border="0" ForegroundRed="255" ForegroundGreen="255" ForegroundBlue="255" BackgroundIsTransparent="true" BackgroundRed="255" BackgroundGreen="0" BackgroundBlue="255">
+            <Widgets>
+                <Widget Type="DynamicImage" WidgetID="592" Name="DynamicImage" GCLName="Widgets_592_DynamicImage" X="2" Y="2" Width="40" Height="28" Boxed="false" PrimaryForegroundRed="0" PrimaryForegroundGreen="0" PrimaryForegroundBlue="0" PrimaryBackgroundIsTransparent="false" PrimaryBackgroundRed="0" PrimaryBackgroundGreen="0" PrimaryBackgroundBlue="0" SecondaryForegroundRed="0" SecondaryForegroundGreen="0" SecondaryForegroundBlue="0" SecondaryBackgroundIsTransparent="false" SecondaryBackgroundRed="0" SecondaryBackgroundGreen="0" SecondaryBackgroundBlue="0" ImageIDtoDisplay="" Animation1="0" UseTriggers1="false" Animation2="0" UseTriggers2="false"/>
+                <Widget Type="DynamicImage" WidgetID="593" Name="DynamicImage" GCLName="Widgets_593_DynamicImage" X="47" Y="2" Width="40" Height="28" Boxed="false" PrimaryForegroundRed="0" PrimaryForegroundGreen="0" PrimaryForegroundBlue="0" PrimaryBackgroundIsTransparent="false" PrimaryBackgroundRed="0" PrimaryBackgroundGreen="0" PrimaryBackgroundBlue="0" SecondaryForegroundRed="0" SecondaryForegroundGreen="0" SecondaryForegroundBlue="0" SecondaryBackgroundIsTransparent="false" SecondaryBackgroundRed="0" SecondaryBackgroundGreen="0" SecondaryBackgroundBlue="0" ImageIDtoDisplay="" Animation1="0" UseTriggers1="false" Animation2="0" UseTriggers2="false"/>
+                <Widget Type="DynamicImage" WidgetID="594" Name="DynamicImage" GCLName="Widgets_594_DynamicImage" X="91" Y="2" Width="40" Height="28" Boxed="false" PrimaryForegroundRed="0" PrimaryForegroundGreen="0" PrimaryForegroundBlue="0" PrimaryBackgroundIsTransparent="false" PrimaryBackgroundRed="0" PrimaryBackgroundGreen="0" PrimaryBackgroundBlue="0" SecondaryForegroundRed="0" SecondaryForegroundGreen="0" SecondaryForegroundBlue="0" SecondaryBackgroundIsTransparent="false" SecondaryBackgroundRed="0" SecondaryBackgroundGreen="0" SecondaryBackgroundBlue="0" ImageIDtoDisplay="" Animation1="0" UseTriggers1="false" Animation2="0" UseTriggers2="false"/>
+            </Widgets>
+        </DisplayArea>
+        <DisplayArea Name="Top" IsCheckMessageArea="false" X="0" Y="0" Width="240" Height="24" Border="0" ForegroundRed="255" ForegroundGreen="255" ForegroundBlue="255" BackgroundIsTransparent="true" BackgroundRed="255" BackgroundGreen="0" BackgroundBlue="255">
+            <Widgets>
+                <Widget Type="Label" WidgetID="602" Name="Label" GCLName="Widgets_602_Label" X="118" Y="2" Width="100" Height="18" Boxed="false" PrimaryForegroundRed="255" PrimaryForegroundGreen="255" PrimaryForegroundBlue="255" PrimaryBackgroundIsTransparent="true" PrimaryBackgroundRed="255" PrimaryBackgroundGreen="0" PrimaryBackgroundBlue="255" SecondaryForegroundRed="0" SecondaryForegroundGreen="0" SecondaryForegroundBlue="0" SecondaryBackgroundIsTransparent="false" SecondaryBackgroundRed="0" SecondaryBackgroundGreen="0" SecondaryBackgroundBlue="0" Label="90"/>
+            </Widgets>
+        </DisplayArea>
+        <DisplayArea Name="Background" IsCheckMessageArea="false" X="0" Y="0" Width="240" Height="320" Border="0" ForegroundRed="255" ForegroundGreen="255" ForegroundBlue="255" BackgroundIsTransparent="true" BackgroundRed="0" BackgroundGreen="0" BackgroundBlue="0">
+            <Widgets>
+                <Widget Type="Image" WidgetID="642" Name="Image" GCLName="Widgets_642_Image" X="0" Y="0" Width="240" Height="320" Boxed="false" PrimaryForegroundRed="255" PrimaryForegroundGreen="255" PrimaryForegroundBlue="255" PrimaryBackgroundIsTransparent="false" PrimaryBackgroundRed="0" PrimaryBackgroundGreen="0" PrimaryBackgroundBlue="0" SecondaryForegroundRed="0" SecondaryForegroundGreen="0" SecondaryForegroundBlue="0" SecondaryBackgroundIsTransparent="false" SecondaryBackgroundRed="0" SecondaryBackgroundGreen="0" SecondaryBackgroundBlue="0" Image="45" Animation1="0" UseTriggers1="false" Animation2="0" UseTriggers2="false"/>
+            </Widgets>
+        </DisplayArea>
+        <DisplayArea Name="Menu Icons" IsCheckMessageArea="false" X="16" Y="95" Width="132" Height="40" Border="0" ForegroundRed="255" ForegroundGreen="255" ForegroundBlue="255" BackgroundIsTransparent="true" BackgroundRed="255" BackgroundGreen="0" BackgroundBlue="255">
+            <Widgets>
+                <Widget Type="DynamicImage" WidgetID="582" Name="DynamicImageMenuPrev" GCLName="Widgets_582_DynamicImageMenuPrev" X="7" Y="5" Width="32" Height="32" Boxed="false" PrimaryForegroundRed="0" PrimaryForegroundGreen="0" PrimaryForegroundBlue="0" PrimaryBackgroundIsTransparent="false" PrimaryBackgroundRed="0" PrimaryBackgroundGreen="0" PrimaryBackgroundBlue="0" SecondaryForegroundRed="0" SecondaryForegroundGreen="0" SecondaryForegroundBlue="0" SecondaryBackgroundIsTransparent="false" SecondaryBackgroundRed="0" SecondaryBackgroundGreen="0" SecondaryBackgroundBlue="0" ImageIDtoDisplay="" Animation1="5" UseTriggers1="true" Animation2="6" UseTriggers2="true">
+                    <Animation1_Properties BehaviorOnLoad="1" BehaviorOnTriggerActive="0" BehaviorOnTriggerInactive="1">
+                        <Animation1_Triggers>
+                            <Trigger>
+                                <FirstCondition Value="0" CompareCondition="1"/>
+                                <Connective Connective="0"/>
+                            </Trigger>
+                        </Animation1_Triggers>
+                    </Animation1_Properties>
+                    <Animation2_Properties BehaviorOnLoad="0" BehaviorOnTriggerActive="0" BehaviorOnTriggerInactive="1">
+                        <Animation2_Triggers>
+                            <Trigger>
+                                <FirstCondition Value="0" CompareCondition="1"/>
+                                <Connective Connective="0"/>
+                            </Trigger>
+                        </Animation2_Triggers>
+                    </Animation2_Properties>
+                </Widget>
+                <Widget Type="DynamicImage" WidgetID="583" Name="DynamicImageMenuCurrent" GCLName="Widgets_583_DynamicImageMenuCurrent" X="52" Y="5" Width="32" Height="32" Boxed="false" PrimaryForegroundRed="0" PrimaryForegroundGreen="0" PrimaryForegroundBlue="0" PrimaryBackgroundIsTransparent="false" PrimaryBackgroundRed="0" PrimaryBackgroundGreen="0" PrimaryBackgroundBlue="0" SecondaryForegroundRed="0" SecondaryForegroundGreen="0" SecondaryForegroundBlue="0" SecondaryBackgroundIsTransparent="false" SecondaryBackgroundRed="0" SecondaryBackgroundGreen="0" SecondaryBackgroundBlue="0" ImageIDtoDisplay="" Animation1="5" UseTriggers1="true" Animation2="6" UseTriggers2="true">
+                    <Animation1_Properties BehaviorOnLoad="1" BehaviorOnTriggerActive="0" BehaviorOnTriggerInactive="1">
+                        <Animation1_Triggers>
+                            <Trigger>
+                                <FirstCondition Value="0" CompareCondition="1"/>
+                                <Connective Connective="0"/>
+                            </Trigger>
+                        </Animation1_Triggers>
+                    </Animation1_Properties>
+                    <Animation2_Properties BehaviorOnLoad="0" BehaviorOnTriggerActive="0" BehaviorOnTriggerInactive="1">
+                        <Animation2_Triggers>
+                            <Trigger>
+                                <FirstCondition Value="0" CompareCondition="1"/>
+                                <Connective Connective="0"/>
+                            </Trigger>
+                        </Animation2_Triggers>
+                    </Animation2_Properties>
+                </Widget>
+                <Widget Type="DynamicImage" WidgetID="584" Name="DynamicImageMenuNext" GCLName="Widgets_584_DynamicImageMenuNext" X="97" Y="5" Width="32" Height="32" Boxed="false" PrimaryForegroundRed="0" PrimaryForegroundGreen="0" PrimaryForegroundBlue="0" PrimaryBackgroundIsTransparent="false" PrimaryBackgroundRed="0" PrimaryBackgroundGreen="0" PrimaryBackgroundBlue="0" SecondaryForegroundRed="0" SecondaryForegroundGreen="0" SecondaryForegroundBlue="0" SecondaryBackgroundIsTransparent="false" SecondaryBackgroundRed="0" SecondaryBackgroundGreen="0" SecondaryBackgroundBlue="0" ImageIDtoDisplay="" Animation1="5" UseTriggers1="true" Animation2="6" UseTriggers2="true">
+                    <Animation1_Properties BehaviorOnLoad="1" BehaviorOnTriggerActive="0" BehaviorOnTriggerInactive="1">
+                        <Animation1_Triggers>
+                            <Trigger>
+                                <FirstCondition Value="0" CompareCondition="1"/>
+                                <Connective Connective="0"/>
+                            </Trigger>
+                        </Animation1_Triggers>
+                    </Animation1_Properties>
+                    <Animation2_Properties BehaviorOnLoad="0" BehaviorOnTriggerActive="0" BehaviorOnTriggerInactive="1">
+                        <Animation2_Triggers>
+                            <Trigger>
+                                <FirstCondition Value="0" CompareCondition="1"/>
+                                <Connective Connective="0"/>
+                            </Trigger>
+                        </Animation2_Triggers>
+                    </Animation2_Properties>
+                </Widget>
+            </Widgets>
+        </DisplayArea>
+    </Layout>
+    <Layout ID="5" Name="Check Message Screen" RGBRed="0" RGBGreen="0" RGBBlue="0" IsStartupScreen="false" IsCheckMessageScreen="true" IsCheckMessagesEnabled="false">
+        <ButtonTransitions/>
+        <SignalTransitions/>
+        <DisplayArea Name="CheckMessage" IsCheckMessageArea="true" X="10" Y="110" Width="220" Height="100" Border="1" ForegroundRed="0" ForegroundGreen="255" ForegroundBlue="0" BackgroundIsTransparent="false" BackgroundRed="16" BackgroundGreen="16" BackgroundBlue="33">
+            <Widgets>
+                <Widget Type="DynamicLabel" WidgetID="606" Name="DynamicLabel1" GCLName="Widgets_606_DynamicLabel1" X="50" Y="25" Width="120" Height="20" Boxed="false" PrimaryForegroundRed="255" PrimaryForegroundGreen="0" PrimaryForegroundBlue="0" PrimaryBackgroundIsTransparent="true" PrimaryBackgroundRed="0" PrimaryBackgroundGreen="0" PrimaryBackgroundBlue="0" SecondaryForegroundRed="0" SecondaryForegroundGreen="0" SecondaryForegroundBlue="0" SecondaryBackgroundIsTransparent="false" SecondaryBackgroundRed="0" SecondaryBackgroundGreen="0" SecondaryBackgroundBlue="0" LabelIDtoDisplay="" TextAlignment="2"/>
+                <Widget Type="DynamicLabel" WidgetID="607" Name="DynamicLabel2" GCLName="Widgets_607_DynamicLabel2" X="50" Y="50" Width="120" Height="20" Boxed="false" PrimaryForegroundRed="255" PrimaryForegroundGreen="0" PrimaryForegroundBlue="0" PrimaryBackgroundIsTransparent="true" PrimaryBackgroundRed="0" PrimaryBackgroundGreen="0" PrimaryBackgroundBlue="0" SecondaryForegroundRed="0" SecondaryForegroundGreen="0" SecondaryForegroundBlue="0" SecondaryBackgroundIsTransparent="false" SecondaryBackgroundRed="0" SecondaryBackgroundGreen="0" SecondaryBackgroundBlue="0" LabelIDtoDisplay="" TextAlignment="2"/>
+                <Widget Type="DynamicImage" WidgetID="608" Name="DynamicImage1" GCLName="Widgets_608_DynamicImage1" X="5" Y="15" Width="40" Height="28" Boxed="false" PrimaryForegroundRed="255" PrimaryForegroundGreen="255" PrimaryForegroundBlue="255" PrimaryBackgroundIsTransparent="false" PrimaryBackgroundRed="0" PrimaryBackgroundGreen="0" PrimaryBackgroundBlue="0" SecondaryForegroundRed="0" SecondaryForegroundGreen="0" SecondaryForegroundBlue="0" SecondaryBackgroundIsTransparent="false" SecondaryBackgroundRed="0" SecondaryBackgroundGreen="0" SecondaryBackgroundBlue="0" ImageIDtoDisplay="" Animation1="0" UseTriggers1="false" Animation2="0" UseTriggers2="false"/>
+                <Widget Type="DynamicImage" WidgetID="609" Name="DynamicImage2" GCLName="Widgets_609_DynamicImage2" X="170" Y="15" Width="40" Height="28" Boxed="false" PrimaryForegroundRed="255" PrimaryForegroundGreen="255" PrimaryForegroundBlue="255" PrimaryBackgroundIsTransparent="false" PrimaryBackgroundRed="0" PrimaryBackgroundGreen="0" PrimaryBackgroundBlue="0" SecondaryForegroundRed="0" SecondaryForegroundGreen="0" SecondaryForegroundBlue="0" SecondaryBackgroundIsTransparent="false" SecondaryBackgroundRed="0" SecondaryBackgroundGreen="0" SecondaryBackgroundBlue="0" ImageIDtoDisplay="" Animation1="0" UseTriggers1="false" Animation2="0" UseTriggers2="false"/>
+            </Widgets>
+        </DisplayArea>
+    </Layout>
+</Layouts>

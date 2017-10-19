@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<FunctionDefinition Name="TurnIndication">
+    <Tasks>
+        <Task>
+            <InitFunction>TurnIndication_Init</InitFunction>
+            <Runnable>TurnIndication_Run</Runnable>
+            <StartupDelay>100</StartupDelay>
+            <Periodicity>10</Periodicity>
+        </Task>
+    </Tasks>
+    <SignalInterface>
+        <InputSignals>
+            <Signal Name="RightTurnIndication" DataType="uint8" UpdateNotification="False" Mandatory="True"/>
+            <Signal Name="LeftTurnIndication" DataType="uint8" UpdateNotification="False" Mandatory="True"/>
+        </InputSignals>
+        <OutputSignals>
+            <Signal Name="TurnRightTelltaleValue" DataType="uint8"/>
+            <Signal Name="TurnLeftTelltaleValue" DataType="uint8"/>
+        </OutputSignals>
+    </SignalInterface>
+    <ConfigurationParameters/>
+    <CalibrationParameters>
+        <CalibrationParameter DescriptiveName="Sound delay in 10 ms increments" ParameterName="TURNINDICATOR_TELLTALEDELAY" Description="The telltale will be delayed by this many runnable periods after indication" DataType="uint8" ArrayLength="1"/>
+    </CalibrationParameters>
+</FunctionDefinition>

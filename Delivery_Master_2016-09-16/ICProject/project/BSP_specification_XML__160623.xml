@@ -1,0 +1,783 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Generated from: DOC2015010218 - DETC_BSP_Specification.docm-->
+<BSP version="">
+  <BSPRunnables>
+    <BSPRunnable Init="ECU_DiscreteInput_Init" Runnable="ECU_DiscreteInput_Runnable" CycleTime="10" InitialDelay="13"/>
+    <BSPRunnable Init="ECU_AnalogueInput_Init" Runnable="ECU_ADC_Runnable" CycleTime="5" InitialDelay="14"/>
+    <BSPRunnable Init="ECU_Indicator_Init" Runnable="ECU_LEDFlash_Runnable" CycleTime="10" InitialDelay="15"/>
+    <BSPRunnable Init="ECU_WdgMgr_Init" Runnable="ECU_WdgMgr_Runnable" CycleTime="100" InitialDelay="200"/>
+    <BSPRunnable Init="ECU_FramebufferUpdated_Init" Runnable="ECU_FramebufferUpdated_Runnable" CycleTime="5" InitialDelay="50"/>
+    <BSPRunnable Init="" Runnable="BSP_ModeChangeRunnable" CycleTime="10" InitialDelay="5"/>
+  </BSPRunnables>
+  <BSPCalibrations>
+    <BSPCalibration Name="VEHSPD_LEVEL1" DataType="uint8" ArrayLength="1" DefaultValue="0" Description=""/>
+    <BSPCalibration Name="VEHSPD_LEVEL2" DataType="uint8" ArrayLength="1" DefaultValue="20" Description=""/>
+    <BSPCalibration Name="VEHSPD_LEVEL3" DataType="uint8" ArrayLength="1" DefaultValue="40" Description=""/>
+    <BSPCalibration Name="VEHSPD_LEVEL4" DataType="uint8" ArrayLength="1" DefaultValue="60" Description=""/>
+    <BSPCalibration Name="VEHSPD_LEVEL5" DataType="uint8" ArrayLength="1" DefaultValue="80" Description=""/>
+    <BSPCalibration Name="VEHSPD_LEVEL6" DataType="uint8" ArrayLength="1" DefaultValue="100" Description=""/>
+    <BSPCalibration Name="VEHSPD_LEVEL7" DataType="uint8" ArrayLength="1" DefaultValue="120" Description=""/>
+    <BSPCalibration Name="VEHSPD_LEVEL8" DataType="uint8" ArrayLength="1" DefaultValue="140" Description=""/>
+    <BSPCalibration Name="VEHSPD_STEP1" DataType="uint16" ArrayLength="1" DefaultValue="0" Description=""/>
+    <BSPCalibration Name="VEHSPD_STEP2" DataType="uint16" ArrayLength="1" DefaultValue="0" Description=""/>
+    <BSPCalibration Name="VEHSPD_STEP3" DataType="uint16" ArrayLength="1" DefaultValue="0" Description=""/>
+    <BSPCalibration Name="VEHSPD_STEP4" DataType="uint16" ArrayLength="1" DefaultValue="0" Description=""/>
+    <BSPCalibration Name="VEHSPD_STEP5" DataType="uint16" ArrayLength="1" DefaultValue="0" Description=""/>
+    <BSPCalibration Name="VEHSPD_STEP6" DataType="uint16" ArrayLength="1" DefaultValue="0" Description=""/>
+    <BSPCalibration Name="VEHSPD_STEP7" DataType="uint16" ArrayLength="1" DefaultValue="0" Description=""/>
+    <BSPCalibration Name="VEHSPD_STEP8" DataType="uint16" ArrayLength="1" DefaultValue="0" Description=""/>
+    <BSPCalibration Name="VEHSPD_SAMPLEINGPERIOD" DataType="uint8" ArrayLength="1" DefaultValue="20" Description="Vehicle speed frequency sampling time"/>
+    <BSPCalibration Name="VEHSPD_RESTPOS" DataType="uint16" ArrayLength="1" DefaultValue="5" Description=""/>
+    <BSPCalibration Name="VEHSPD_STARTPOS" DataType="uint16" ArrayLength="1" DefaultValue="10" Description=""/>
+    <BSPCalibration Name="VEHSPD_PARAMETER" DataType="uint8" ArrayLength="1" DefaultValue="0" Description="Self-defined characteristic"/>
+    <BSPCalibration Name="ENGINERPM_LEVEL1" DataType="uint16" ArrayLength="1" DefaultValue="0" Description=""/>
+    <BSPCalibration Name="ENGINERPM_LEVEL2" DataType="uint16" ArrayLength="1" DefaultValue="0" Description=""/>
+    <BSPCalibration Name="ENGINERPM_LEVEL3" DataType="uint16" ArrayLength="1" DefaultValue="0" Description=""/>
+    <BSPCalibration Name="ENGINERPM_LEVEL4" DataType="uint16" ArrayLength="1" DefaultValue="0" Description=""/>
+    <BSPCalibration Name="ENGINERPM_LEVEL5" DataType="uint16" ArrayLength="1" DefaultValue="0" Description=""/>
+    <BSPCalibration Name="ENGINERPM_LEVEL6" DataType="uint16" ArrayLength="1" DefaultValue="0" Description=""/>
+    <BSPCalibration Name="ENGINERPM_LEVEL7" DataType="uint16" ArrayLength="1" DefaultValue="0" Description=""/>
+    <BSPCalibration Name="ENGINERPM_LEVEL8" DataType="uint16" ArrayLength="1" DefaultValue="0" Description=""/>
+    <BSPCalibration Name="ENGINERPM_STEP1" DataType="uint16" ArrayLength="1" DefaultValue="0" Description=""/>
+    <BSPCalibration Name="ENGINERPM_STEP2" DataType="uint16" ArrayLength="1" DefaultValue="0" Description=""/>
+    <BSPCalibration Name="ENGINERPM_STEP3" DataType="uint16" ArrayLength="1" DefaultValue="0" Description=""/>
+    <BSPCalibration Name="ENGINERPM_STEP4" DataType="uint16" ArrayLength="1" DefaultValue="0" Description=""/>
+    <BSPCalibration Name="ENGINERPM_STEP5" DataType="uint16" ArrayLength="1" DefaultValue="0" Description=""/>
+    <BSPCalibration Name="ENGINERPM_STEP6" DataType="uint16" ArrayLength="1" DefaultValue="0" Description=""/>
+    <BSPCalibration Name="ENGINERPM_STEP7" DataType="uint16" ArrayLength="1" DefaultValue="0" Description=""/>
+    <BSPCalibration Name="ENGINERPM_STEP8" DataType="uint16" ArrayLength="1" DefaultValue="0" Description=""/>
+    <BSPCalibration Name="ENGINERPM_RESTPOS" DataType="uint16" ArrayLength="1" DefaultValue="5" Description=""/>
+    <BSPCalibration Name="ENGINERPM_STARTPOS" DataType="uint8" ArrayLength="1" DefaultValue="1" Description="Time interval between two micro steps"/>
+    <BSPCalibration Name="ENGINERPM_PARAMETER" DataType="uint16" ArrayLength="1" DefaultValue="1" Description="Self-defined characteristic"/>
+    <BSPCalibration Name="FUEL_INPUT1" DataType="uint16" ArrayLength="1" DefaultValue="11" Description=""/>
+    <BSPCalibration Name="FUEL_INPUT2" DataType="uint16" ArrayLength="1" DefaultValue="12" Description=""/>
+    <BSPCalibration Name="FUEL_INPUT3" DataType="uint16" ArrayLength="1" DefaultValue="50" Description=""/>
+    <BSPCalibration Name="FUEL_INPUT4" DataType="uint16" ArrayLength="1" DefaultValue="91" Description=""/>
+    <BSPCalibration Name="FUEL_INPUT5" DataType="uint16" ArrayLength="1" DefaultValue="136" Description=""/>
+    <BSPCalibration Name="FUEL_INPUT6" DataType="uint16" ArrayLength="1" DefaultValue="180" Description=""/>
+    <BSPCalibration Name="FUEL_INPUT7" DataType="uint16" ArrayLength="1" DefaultValue="180" Description=""/>
+    <BSPCalibration Name="FUEL_INPUT8" DataType="uint16" ArrayLength="1" DefaultValue="180" Description=""/>
+    <BSPCalibration Name="FUEL_INPUT9" DataType="uint16" ArrayLength="1" DefaultValue="180" Description=""/>
+    <BSPCalibration Name="FUEL_INPUT10" DataType="uint16" ArrayLength="1" DefaultValue="180" Description=""/>
+    <BSPCalibration Name="FUEL_INPUT11" DataType="uint16" ArrayLength="1" DefaultValue="180" Description=""/>
+    <BSPCalibration Name="FUEL_INPUT12" DataType="uint16" ArrayLength="1" DefaultValue="180" Description=""/>
+    <BSPCalibration Name="FUEL_INPUT13" DataType="uint16" ArrayLength="1" DefaultValue="180" Description=""/>
+    <BSPCalibration Name="FUEL_INPUT14" DataType="uint16" ArrayLength="1" DefaultValue="180" Description=""/>
+    <BSPCalibration Name="FUEL_INPUT15" DataType="uint16" ArrayLength="1" DefaultValue="180" Description=""/>
+    <BSPCalibration Name="FUEL_INPUT16" DataType="uint16" ArrayLength="1" DefaultValue="180" Description=""/>
+    <BSPCalibration Name="FUEL_INPUT_REF_R" DataType="uint16" ArrayLength="1" DefaultValue="200" Description="Referential resistor for fuel input"/>
+    <BSPCalibration Name="FUEL_OUTPUT1" DataType="uint8" ArrayLength="1" DefaultValue="0" Description=""/>
+    <BSPCalibration Name="FUEL_OUTPUT2" DataType="uint8" ArrayLength="1" DefaultValue="20" Description=""/>
+    <BSPCalibration Name="FUEL_OUTPUT3" DataType="uint8" ArrayLength="1" DefaultValue="40" Description=""/>
+    <BSPCalibration Name="FUEL_OUTPUT4" DataType="uint8" ArrayLength="1" DefaultValue="60" Description=""/>
+    <BSPCalibration Name="FUEL_OUTPUT5" DataType="uint8" ArrayLength="1" DefaultValue="80" Description=""/>
+    <BSPCalibration Name="FUEL_OUTPUT6" DataType="uint8" ArrayLength="1" DefaultValue="100" Description=""/>
+    <BSPCalibration Name="FUEL_OUTPUT7" DataType="uint8" ArrayLength="1" DefaultValue="100" Description=""/>
+    <BSPCalibration Name="FUEL_OUTPUT8" DataType="uint8" ArrayLength="1" DefaultValue="100" Description=""/>
+    <BSPCalibration Name="FUEL_OUTPUT9" DataType="uint8" ArrayLength="1" DefaultValue="100" Description=""/>
+    <BSPCalibration Name="FUEL_OUTPUT10" DataType="uint8" ArrayLength="1" DefaultValue="100" Description=""/>
+    <BSPCalibration Name="FUEL_OUTPUT11" DataType="uint8" ArrayLength="1" DefaultValue="100" Description=""/>
+    <BSPCalibration Name="FUEL_OUTPUT12" DataType="uint8" ArrayLength="1" DefaultValue="100" Description=""/>
+    <BSPCalibration Name="FUEL_OUTPUT13" DataType="uint8" ArrayLength="1" DefaultValue="100" Description=""/>
+    <BSPCalibration Name="FUEL_OUTPUT14" DataType="uint8" ArrayLength="1" DefaultValue="100" Description=""/>
+    <BSPCalibration Name="FUEL_OUTPUT15" DataType="uint8" ArrayLength="1" DefaultValue="100" Description=""/>
+    <BSPCalibration Name="FUEL_OUTPUT16" DataType="uint8" ArrayLength="1" DefaultValue="100" Description=""/>
+    <BSPCalibration Name="FUEL_STEP1" DataType="uint16" ArrayLength="1" DefaultValue="0" Description=""/>
+    <BSPCalibration Name="FUEL_STEP2" DataType="uint16" ArrayLength="1" DefaultValue="0" Description=""/>
+    <BSPCalibration Name="FUEL_STEP3" DataType="uint16" ArrayLength="1" DefaultValue="0" Description=""/>
+    <BSPCalibration Name="FUEL_STEP4" DataType="uint16" ArrayLength="1" DefaultValue="0" Description=""/>
+    <BSPCalibration Name="FUEL_STEP5" DataType="uint16" ArrayLength="1" DefaultValue="0" Description=""/>
+    <BSPCalibration Name="FUEL_STEP6" DataType="uint16" ArrayLength="1" DefaultValue="0" Description=""/>
+    <BSPCalibration Name="FUEL_STEP7" DataType="uint16" ArrayLength="1" DefaultValue="0" Description=""/>
+    <BSPCalibration Name="FUEL_STEP8" DataType="uint16" ArrayLength="1" DefaultValue="0" Description=""/>
+    <BSPCalibration Name="FUEL_STEP9" DataType="uint16" ArrayLength="1" DefaultValue="0" Description=""/>
+    <BSPCalibration Name="FUEL_STEP10" DataType="uint16" ArrayLength="1" DefaultValue="0" Description=""/>
+    <BSPCalibration Name="FUEL_STEP11" DataType="uint16" ArrayLength="1" DefaultValue="0" Description=""/>
+    <BSPCalibration Name="FUEL_STEP12" DataType="uint16" ArrayLength="1" DefaultValue="0" Description=""/>
+    <BSPCalibration Name="FUEL_STEP13" DataType="uint16" ArrayLength="1" DefaultValue="0" Description=""/>
+    <BSPCalibration Name="FUEL_STEP14" DataType="uint16" ArrayLength="1" DefaultValue="0" Description=""/>
+    <BSPCalibration Name="FUEL_STEP15" DataType="uint16" ArrayLength="1" DefaultValue="0" Description=""/>
+    <BSPCalibration Name="FUEL_STEP16" DataType="uint16" ArrayLength="1" DefaultValue="0" Description=""/>
+    <BSPCalibration Name="FUEL_STEP_INTERVAL" DataType="uint16" ArrayLength="1" DefaultValue="5" Description="Time interval between 2 micro steps"/>
+    <BSPCalibration Name="FUEL_RESTPOS" DataType="uint16" ArrayLength="1" DefaultValue="5" Description=""/>
+    <BSPCalibration Name="FUEL_STARTPOS" DataType="uint16" ArrayLength="1" DefaultValue="10" Description=""/>
+    <BSPCalibration Name="FUEL_PARAMETER" DataType="uint8" ArrayLength="1" DefaultValue="0" Description="Self-defined characteristic"/>
+    <BSPCalibration Name="WATERCOOLANTTEMP_INPUT1" DataType="uint16" ArrayLength="1" DefaultValue="11" Description=""/>
+    <BSPCalibration Name="WATERCOOLANTTEMP_INPUT2" DataType="uint16" ArrayLength="1" DefaultValue="12" Description=""/>
+    <BSPCalibration Name="WATERCOOLANTTEMP_INPUT3" DataType="uint16" ArrayLength="1" DefaultValue="50" Description=""/>
+    <BSPCalibration Name="WATERCOOLANTTEMP_INPUT4" DataType="uint16" ArrayLength="1" DefaultValue="91" Description=""/>
+    <BSPCalibration Name="WATERCOOLANTTEMP_INPUT5" DataType="uint16" ArrayLength="1" DefaultValue="136" Description=""/>
+    <BSPCalibration Name="WATERCOOLANTTEMP_INPUT6" DataType="uint16" ArrayLength="1" DefaultValue="180" Description=""/>
+    <BSPCalibration Name="WATERCOOLANTTEMP_INPUT7" DataType="uint16" ArrayLength="1" DefaultValue="180" Description=""/>
+    <BSPCalibration Name="WATERCOOLANTTEMP_INPUT8" DataType="uint16" ArrayLength="1" DefaultValue="180" Description=""/>
+    <BSPCalibration Name="WATERCOOLANTTEMP_INPUT9" DataType="uint16" ArrayLength="1" DefaultValue="180" Description=""/>
+    <BSPCalibration Name="WATERCOOLANTTEMP_INPUT10" DataType="uint16" ArrayLength="1" DefaultValue="180" Description=""/>
+    <BSPCalibration Name="WATERCOOLANTTEMP_INPUT11" DataType="uint16" ArrayLength="1" DefaultValue="180" Description=""/>
+    <BSPCalibration Name="WATERCOOLANTTEMP_INPUT12" DataType="uint16" ArrayLength="1" DefaultValue="180" Description=""/>
+    <BSPCalibration Name="WATERCOOLANTTEMP_INPUT13" DataType="uint16" ArrayLength="1" DefaultValue="180" Description=""/>
+    <BSPCalibration Name="WATERCOOLANTTEMP_INPUT14" DataType="uint16" ArrayLength="1" DefaultValue="180" Description=""/>
+    <BSPCalibration Name="WATERCOOLANTTEMP_INPUT15" DataType="uint16" ArrayLength="1" DefaultValue="180" Description=""/>
+    <BSPCalibration Name="WATERCOOLANTTEMP_INPUT16" DataType="uint16" ArrayLength="1" DefaultValue="180" Description=""/>
+    <BSPCalibration Name="WATERCOOLANTTEMP_INPUT_REF_R" DataType="uint16" ArrayLength="1" DefaultValue="200" Description="Referential resistor for fuel input"/>
+    <BSPCalibration Name="WATERCOOLANTTEMP_OUTPUT1" DataType="uint8" ArrayLength="1" DefaultValue="0" Description=""/>
+    <BSPCalibration Name="WATERCOOLANTTEMP_OUTPUT2" DataType="uint8" ArrayLength="1" DefaultValue="20" Description=""/>
+    <BSPCalibration Name="WATERCOOLANTTEMP_OUTPUT3" DataType="uint8" ArrayLength="1" DefaultValue="40" Description=""/>
+    <BSPCalibration Name="WATERCOOLANTTEMP_OUTPUT4" DataType="uint8" ArrayLength="1" DefaultValue="60" Description=""/>
+    <BSPCalibration Name="WATERCOOLANTTEMP_OUTPUT5" DataType="uint8" ArrayLength="1" DefaultValue="80" Description=""/>
+    <BSPCalibration Name="WATERCOOLANTTEMP_OUTPUT6" DataType="uint8" ArrayLength="1" DefaultValue="100" Description=""/>
+    <BSPCalibration Name="WATERCOOLANTTEMP_OUTPUT7" DataType="uint8" ArrayLength="1" DefaultValue="100" Description=""/>
+    <BSPCalibration Name="WATERCOOLANTTEMP_OUTPUT8" DataType="uint8" ArrayLength="1" DefaultValue="100" Description=""/>
+    <BSPCalibration Name="WATERCOOLANTTEMP_OUTPUT9" DataType="uint8" ArrayLength="1" DefaultValue="100" Description=""/>
+    <BSPCalibration Name="WATERCOOLANTTEMP_OUTPUT10" DataType="uint8" ArrayLength="1" DefaultValue="100" Description=""/>
+    <BSPCalibration Name="WATERCOOLANTTEMP_OUTPUT11" DataType="uint8" ArrayLength="1" DefaultValue="100" Description=""/>
+    <BSPCalibration Name="WATERCOOLANTTEMP_OUTPUT12" DataType="uint8" ArrayLength="1" DefaultValue="100" Description=""/>
+    <BSPCalibration Name="WATERCOOLANTTEMP_OUTPUT13" DataType="uint8" ArrayLength="1" DefaultValue="100" Description=""/>
+    <BSPCalibration Name="WATERCOOLANTTEMP_OUTPUT14" DataType="uint8" ArrayLength="1" DefaultValue="100" Description=""/>
+    <BSPCalibration Name="WATERCOOLANTTEMP_OUTPUT15" DataType="uint8" ArrayLength="1" DefaultValue="100" Description=""/>
+    <BSPCalibration Name="WATERCOOLANTTEMP_OUTPUT16" DataType="uint8" ArrayLength="1" DefaultValue="100" Description=""/>
+    <BSPCalibration Name="WATERCOOLANTTEMP_STEP1" DataType="uint16" ArrayLength="1" DefaultValue="0" Description=""/>
+    <BSPCalibration Name="WATERCOOLANTTEMP_STEP2" DataType="uint16" ArrayLength="1" DefaultValue="0" Description=""/>
+    <BSPCalibration Name="WATERCOOLANTTEMP_STEP3" DataType="uint16" ArrayLength="1" DefaultValue="0" Description=""/>
+    <BSPCalibration Name="WATERCOOLANTTEMP_STEP4" DataType="uint16" ArrayLength="1" DefaultValue="0" Description=""/>
+    <BSPCalibration Name="WATERCOOLANTTEMP_STEP5" DataType="uint16" ArrayLength="1" DefaultValue="0" Description=""/>
+    <BSPCalibration Name="WATERCOOLANTTEMP_STEP6" DataType="uint16" ArrayLength="1" DefaultValue="0" Description=""/>
+    <BSPCalibration Name="WATERCOOLANTTEMP_STEP7" DataType="uint16" ArrayLength="1" DefaultValue="0" Description=""/>
+    <BSPCalibration Name="WATERCOOLANTTEMP_STEP8" DataType="uint16" ArrayLength="1" DefaultValue="0" Description=""/>
+    <BSPCalibration Name="WATERCOOLANTTEMP_STEP9" DataType="uint16" ArrayLength="1" DefaultValue="0" Description=""/>
+    <BSPCalibration Name="WATERCOOLANTTEMP_STEP10" DataType="uint16" ArrayLength="1" DefaultValue="0" Description=""/>
+    <BSPCalibration Name="WATERCOOLANTTEMP_STEP11" DataType="uint16" ArrayLength="1" DefaultValue="0" Description=""/>
+    <BSPCalibration Name="WATERCOOLANTTEMP_STEP12" DataType="uint16" ArrayLength="1" DefaultValue="0" Description=""/>
+    <BSPCalibration Name="WATERCOOLANTTEMP_STEP13" DataType="uint16" ArrayLength="1" DefaultValue="0" Description=""/>
+    <BSPCalibration Name="WATERCOOLANTTEMP_STEP14" DataType="uint16" ArrayLength="1" DefaultValue="0" Description=""/>
+    <BSPCalibration Name="WATERCOOLANTTEMP_STEP15" DataType="uint16" ArrayLength="1" DefaultValue="0" Description=""/>
+    <BSPCalibration Name="WATERCOOLANTTEMP_STEP16" DataType="uint16" ArrayLength="1" DefaultValue="0" Description=""/>
+    <BSPCalibration Name="WATERCOOLANTTEMP_STEP_INTERVAL" DataType="uint16" ArrayLength="1" DefaultValue="5" Description=""/>
+    <BSPCalibration Name="WATERCOOLANTTEMP_RESTPOS" DataType="uint16" ArrayLength="1" DefaultValue="10" Description=""/>
+    <BSPCalibration Name="WATERCOOLANTTEMP_STARTPOS" DataType="uint16" ArrayLength="1" DefaultValue="5" Description=""/>
+    <BSPCalibration Name="WATERCOOLANTTEMP_PARAMETER" DataType="uint8" ArrayLength="1" DefaultValue="0" Description="Self-defined characteristic"/>
+    <BSPCalibration Name="LEFTBRAKEPRESSURE_INPUT1" DataType="uint16" ArrayLength="1" DefaultValue="11" Description=""/>
+    <BSPCalibration Name="LEFTBRAKEPRESSURE_INPUT2" DataType="uint16" ArrayLength="1" DefaultValue="12" Description=""/>
+    <BSPCalibration Name="LEFTBRAKEPRESSURE_INPUT3" DataType="uint16" ArrayLength="1" DefaultValue="50" Description=""/>
+    <BSPCalibration Name="LEFTBRAKEPRESSURE_INPUT4" DataType="uint16" ArrayLength="1" DefaultValue="91" Description=""/>
+    <BSPCalibration Name="LEFTBRAKEPRESSURE_INPUT5" DataType="uint16" ArrayLength="1" DefaultValue="136" Description=""/>
+    <BSPCalibration Name="LEFTBRAKEPRESSURE_INPUT6" DataType="uint16" ArrayLength="1" DefaultValue="180" Description=""/>
+    <BSPCalibration Name="LEFTBRAKEPRESSURE_INPUT7" DataType="uint16" ArrayLength="1" DefaultValue="180" Description=""/>
+    <BSPCalibration Name="LEFTBRAKEPRESSURE_INPUT8" DataType="uint16" ArrayLength="1" DefaultValue="180" Description=""/>
+    <BSPCalibration Name="LEFTBRAKEPRESSURE_INPUT9" DataType="uint16" ArrayLength="1" DefaultValue="180" Description=""/>
+    <BSPCalibration Name="LEFTBRAKEPRESSURE_INPUT10" DataType="uint16" ArrayLength="1" DefaultValue="180" Description=""/>
+    <BSPCalibration Name="LEFTBRAKEPRESSURE_INPUT11" DataType="uint16" ArrayLength="1" DefaultValue="180" Description=""/>
+    <BSPCalibration Name="LEFTBRAKEPRESSURE_INPUT12" DataType="uint16" ArrayLength="1" DefaultValue="180" Description=""/>
+    <BSPCalibration Name="LEFTBRAKEPRESSURE_INPUT13" DataType="uint16" ArrayLength="1" DefaultValue="180" Description=""/>
+    <BSPCalibration Name="LEFTBRAKEPRESSURE_INPUT14" DataType="uint16" ArrayLength="1" DefaultValue="180" Description=""/>
+    <BSPCalibration Name="LEFTBRAKEPRESSURE_INPUT15" DataType="uint16" ArrayLength="1" DefaultValue="180" Description=""/>
+    <BSPCalibration Name="LEFTBRAKEPRESSURE_INPUT16" DataType="uint16" ArrayLength="1" DefaultValue="180" Description=""/>
+    <BSPCalibration Name="LEFTBRAKEPRESSURE_INPUT_REF_R" DataType="uint16" ArrayLength="1" DefaultValue="200" Description="Referential resistor for fuel input"/>
+    <BSPCalibration Name="LEFTBRAKEPRESSURE_OUTPUT1" DataType="uint8" ArrayLength="1" DefaultValue="0" Description=""/>
+    <BSPCalibration Name="LEFTBRAKEPRESSURE_OUTPUT2" DataType="uint8" ArrayLength="1" DefaultValue="20" Description=""/>
+    <BSPCalibration Name="LEFTBRAKEPRESSURE_OUTPUT3" DataType="uint8" ArrayLength="1" DefaultValue="40" Description=""/>
+    <BSPCalibration Name="LEFTBRAKEPRESSURE_OUTPUT4" DataType="uint8" ArrayLength="1" DefaultValue="60" Description=""/>
+    <BSPCalibration Name="LEFTBRAKEPRESSURE_OUTPUT5" DataType="uint8" ArrayLength="1" DefaultValue="80" Description=""/>
+    <BSPCalibration Name="LEFTBRAKEPRESSURE_OUTPUT6" DataType="uint8" ArrayLength="1" DefaultValue="100" Description=""/>
+    <BSPCalibration Name="LEFTBRAKEPRESSURE_OUTPUT7" DataType="uint8" ArrayLength="1" DefaultValue="100" Description=""/>
+    <BSPCalibration Name="LEFTBRAKEPRESSURE_OUTPUT8" DataType="uint8" ArrayLength="1" DefaultValue="100" Description=""/>
+    <BSPCalibration Name="LEFTBRAKEPRESSURE_OUTPUT9" DataType="uint8" ArrayLength="1" DefaultValue="100" Description=""/>
+    <BSPCalibration Name="LEFTBRAKEPRESSURE_OUTPUT10" DataType="uint8" ArrayLength="1" DefaultValue="100" Description=""/>
+    <BSPCalibration Name="LEFTBRAKEPRESSURE_OUTPUT11" DataType="uint8" ArrayLength="1" DefaultValue="100" Description=""/>
+    <BSPCalibration Name="LEFTBRAKEPRESSURE_OUTPUT12" DataType="uint8" ArrayLength="1" DefaultValue="100" Description=""/>
+    <BSPCalibration Name="LEFTBRAKEPRESSURE_OUTPUT13" DataType="uint8" ArrayLength="1" DefaultValue="100" Description=""/>
+    <BSPCalibration Name="LEFTBRAKEPRESSURE_OUTPUT14" DataType="uint8" ArrayLength="1" DefaultValue="100" Description=""/>
+    <BSPCalibration Name="LEFTBRAKEPRESSURE_OUTPUT15" DataType="uint8" ArrayLength="1" DefaultValue="100" Description=""/>
+    <BSPCalibration Name="LEFTBRAKEPRESSURE_OUTPUT16" DataType="uint8" ArrayLength="1" DefaultValue="100" Description=""/>
+    <BSPCalibration Name="LEFTBRAKEPRESSURE_STEP1" DataType="uint16" ArrayLength="1" DefaultValue="0" Description=""/>
+    <BSPCalibration Name="LEFTBRAKEPRESSURE_STEP2" DataType="uint16" ArrayLength="1" DefaultValue="0" Description=""/>
+    <BSPCalibration Name="LEFTBRAKEPRESSURE_STEP3" DataType="uint16" ArrayLength="1" DefaultValue="0" Description=""/>
+    <BSPCalibration Name="LEFTBRAKEPRESSURE_STEP4" DataType="uint16" ArrayLength="1" DefaultValue="0" Description=""/>
+    <BSPCalibration Name="LEFTBRAKEPRESSURE_STEP5" DataType="uint16" ArrayLength="1" DefaultValue="0" Description=""/>
+    <BSPCalibration Name="LEFTBRAKEPRESSURE_STEP6" DataType="uint16" ArrayLength="1" DefaultValue="0" Description=""/>
+    <BSPCalibration Name="LEFTBRAKEPRESSURE_STEP7" DataType="uint16" ArrayLength="1" DefaultValue="0" Description=""/>
+    <BSPCalibration Name="LEFTBRAKEPRESSURE_STEP8" DataType="uint16" ArrayLength="1" DefaultValue="0" Description=""/>
+    <BSPCalibration Name="LEFTBRAKEPRESSURE_STEP9" DataType="uint16" ArrayLength="1" DefaultValue="0" Description=""/>
+    <BSPCalibration Name="LEFTBRAKEPRESSURE_STEP10" DataType="uint16" ArrayLength="1" DefaultValue="0" Description=""/>
+    <BSPCalibration Name="LEFTBRAKEPRESSURE_STEP11" DataType="uint16" ArrayLength="1" DefaultValue="0" Description=""/>
+    <BSPCalibration Name="LEFTBRAKEPRESSURE_STEP12" DataType="uint16" ArrayLength="1" DefaultValue="0" Description=""/>
+    <BSPCalibration Name="LEFTBRAKEPRESSURE_STEP13" DataType="uint16" ArrayLength="1" DefaultValue="0" Description=""/>
+    <BSPCalibration Name="LEFTBRAKEPRESSURE_STEP14" DataType="uint16" ArrayLength="1" DefaultValue="0" Description=""/>
+    <BSPCalibration Name="LEFTBRAKEPRESSURE_STEP15" DataType="uint16" ArrayLength="1" DefaultValue="0" Description=""/>
+    <BSPCalibration Name="LEFTBRAKEPRESSURE_STEP16" DataType="uint16" ArrayLength="1" DefaultValue="0" Description=""/>
+    <BSPCalibration Name="LEFTBRAKEPRESSURE_STEP_INTERVAL" DataType="uint16" ArrayLength="1" DefaultValue="5" Description=""/>
+    <BSPCalibration Name="LEFTBRAKEPRESSURE_RESTPOS" DataType="uint16" ArrayLength="1" DefaultValue="10" Description=""/>
+    <BSPCalibration Name="LEFTBRAKEPRESSURE_STARTPOS" DataType="uint16" ArrayLength="1" DefaultValue="5" Description=""/>
+    <BSPCalibration Name="LEFTBRAKEPRESSURE_PARAMETER" DataType="uint8" ArrayLength="1" DefaultValue="0" Description="Self-defined characteristic"/>
+    <BSPCalibration Name="RIGHTBRAKEPRESSURE_INPUT1" DataType="uint16" ArrayLength="1" DefaultValue="11" Description=""/>
+    <BSPCalibration Name="RIGHTBRAKEPRESSURE_INPUT2" DataType="uint16" ArrayLength="1" DefaultValue="12" Description=""/>
+    <BSPCalibration Name="RIGHTBRAKEPRESSURE_INPUT3" DataType="uint16" ArrayLength="1" DefaultValue="50" Description=""/>
+    <BSPCalibration Name="RIGHTBRAKEPRESSURE_INPUT4" DataType="uint16" ArrayLength="1" DefaultValue="91" Description=""/>
+    <BSPCalibration Name="RIGHTBRAKEPRESSURE_INPUT5" DataType="uint16" ArrayLength="1" DefaultValue="136" Description=""/>
+    <BSPCalibration Name="RIGHTBRAKEPRESSURE_INPUT6" DataType="uint16" ArrayLength="1" DefaultValue="180" Description=""/>
+    <BSPCalibration Name="RIGHTBRAKEPRESSURE_INPUT7" DataType="uint16" ArrayLength="1" DefaultValue="180" Description=""/>
+    <BSPCalibration Name="RIGHTBRAKEPRESSURE_INPUT8" DataType="uint16" ArrayLength="1" DefaultValue="180" Description=""/>
+    <BSPCalibration Name="RIGHTBRAKEPRESSURE_INPUT9" DataType="uint16" ArrayLength="1" DefaultValue="180" Description=""/>
+    <BSPCalibration Name="RIGHTBRAKEPRESSURE_INPUT10" DataType="uint16" ArrayLength="1" DefaultValue="180" Description=""/>
+    <BSPCalibration Name="RIGHTBRAKEPRESSURE_INPUT11" DataType="uint16" ArrayLength="1" DefaultValue="180" Description=""/>
+    <BSPCalibration Name="RIGHTBRAKEPRESSURE_INPUT12" DataType="uint16" ArrayLength="1" DefaultValue="180" Description=""/>
+    <BSPCalibration Name="RIGHTBRAKEPRESSURE_INPUT13" DataType="uint16" ArrayLength="1" DefaultValue="180" Description=""/>
+    <BSPCalibration Name="RIGHTBRAKEPRESSURE_INPUT14" DataType="uint16" ArrayLength="1" DefaultValue="180" Description=""/>
+    <BSPCalibration Name="RIGHTBRAKEPRESSURE_INPUT15" DataType="uint16" ArrayLength="1" DefaultValue="180" Description=""/>
+    <BSPCalibration Name="RIGHTBRAKEPRESSURE_INPUT16" DataType="uint16" ArrayLength="1" DefaultValue="180" Description=""/>
+    <BSPCalibration Name="RIGHTBRAKEPRESSURE_INPUT_REF_R" DataType="uint16" ArrayLength="1" DefaultValue="200" Description="Referential resistor for fuel input"/>
+    <BSPCalibration Name="RIGHTBRAKEPRESSURE_OUTPUT1" DataType="uint8" ArrayLength="1" DefaultValue="0" Description=""/>
+    <BSPCalibration Name="RIGHTBRAKEPRESSURE_OUTPUT2" DataType="uint8" ArrayLength="1" DefaultValue="20" Description=""/>
+    <BSPCalibration Name="RIGHTBRAKEPRESSURE_OUTPUT3" DataType="uint8" ArrayLength="1" DefaultValue="40" Description=""/>
+    <BSPCalibration Name="RIGHTBRAKEPRESSURE_OUTPUT4" DataType="uint8" ArrayLength="1" DefaultValue="60" Description=""/>
+    <BSPCalibration Name="RIGHTBRAKEPRESSURE_OUTPUT5" DataType="uint8" ArrayLength="1" DefaultValue="80" Description=""/>
+    <BSPCalibration Name="RIGHTBRAKEPRESSURE_OUTPUT6" DataType="uint8" ArrayLength="1" DefaultValue="100" Description=""/>
+    <BSPCalibration Name="RIGHTBRAKEPRESSURE_OUTPUT7" DataType="uint8" ArrayLength="1" DefaultValue="100" Description=""/>
+    <BSPCalibration Name="RIGHTBRAKEPRESSURE_OUTPUT8" DataType="uint8" ArrayLength="1" DefaultValue="100" Description=""/>
+    <BSPCalibration Name="RIGHTBRAKEPRESSURE_OUTPUT9" DataType="uint8" ArrayLength="1" DefaultValue="100" Description=""/>
+    <BSPCalibration Name="RIGHTBRAKEPRESSURE_OUTPUT10" DataType="uint8" ArrayLength="1" DefaultValue="100" Description=""/>
+    <BSPCalibration Name="RIGHTBRAKEPRESSURE_OUTPUT11" DataType="uint8" ArrayLength="1" DefaultValue="100" Description=""/>
+    <BSPCalibration Name="RIGHTBRAKEPRESSURE_OUTPUT12" DataType="uint8" ArrayLength="1" DefaultValue="100" Description=""/>
+    <BSPCalibration Name="RIGHTBRAKEPRESSURE_OUTPUT13" DataType="uint8" ArrayLength="1" DefaultValue="100" Description=""/>
+    <BSPCalibration Name="RIGHTBRAKEPRESSURE_OUTPUT14" DataType="uint8" ArrayLength="1" DefaultValue="100" Description=""/>
+    <BSPCalibration Name="RIGHTBRAKEPRESSURE_OUTPUT15" DataType="uint8" ArrayLength="1" DefaultValue="100" Description=""/>
+    <BSPCalibration Name="RIGHTBRAKEPRESSURE_OUTPUT16" DataType="uint8" ArrayLength="1" DefaultValue="100" Description=""/>
+    <BSPCalibration Name="RIGHTBRAKEPRESSURE_STEP1" DataType="uint16" ArrayLength="1" DefaultValue="0" Description=""/>
+    <BSPCalibration Name="RIGHTBRAKEPRESSURE_STEP2" DataType="uint16" ArrayLength="1" DefaultValue="0" Description=""/>
+    <BSPCalibration Name="RIGHTBRAKEPRESSURE_STEP3" DataType="uint16" ArrayLength="1" DefaultValue="0" Description=""/>
+    <BSPCalibration Name="RIGHTBRAKEPRESSURE_STEP4" DataType="uint16" ArrayLength="1" DefaultValue="0" Description=""/>
+    <BSPCalibration Name="RIGHTBRAKEPRESSURE_STEP5" DataType="uint16" ArrayLength="1" DefaultValue="0" Description=""/>
+    <BSPCalibration Name="RIGHTBRAKEPRESSURE_STEP6" DataType="uint16" ArrayLength="1" DefaultValue="0" Description=""/>
+    <BSPCalibration Name="RIGHTBRAKEPRESSURE_STEP7" DataType="uint16" ArrayLength="1" DefaultValue="0" Description=""/>
+    <BSPCalibration Name="RIGHTBRAKEPRESSURE_STEP8" DataType="uint16" ArrayLength="1" DefaultValue="0" Description=""/>
+    <BSPCalibration Name="RIGHTBRAKEPRESSURE_STEP9" DataType="uint16" ArrayLength="1" DefaultValue="0" Description=""/>
+    <BSPCalibration Name="RIGHTBRAKEPRESSURE_STEP10" DataType="uint16" ArrayLength="1" DefaultValue="0" Description=""/>
+    <BSPCalibration Name="RIGHTBRAKEPRESSURE_STEP11" DataType="uint16" ArrayLength="1" DefaultValue="0" Description=""/>
+    <BSPCalibration Name="RIGHTBRAKEPRESSURE_STEP12" DataType="uint16" ArrayLength="1" DefaultValue="0" Description=""/>
+    <BSPCalibration Name="RIGHTBRAKEPRESSURE_STEP13" DataType="uint16" ArrayLength="1" DefaultValue="0" Description=""/>
+    <BSPCalibration Name="RIGHTBRAKEPRESSURE_STEP14" DataType="uint16" ArrayLength="1" DefaultValue="0" Description=""/>
+    <BSPCalibration Name="RIGHTBRAKEPRESSURE_STEP15" DataType="uint16" ArrayLength="1" DefaultValue="0" Description=""/>
+    <BSPCalibration Name="RIGHTBRAKEPRESSURE_STEP16" DataType="uint16" ArrayLength="1" DefaultValue="0" Description=""/>
+    <BSPCalibration Name="RIGHTBRAKEPRESSURE_STEP_INTERVAL" DataType="uint16" ArrayLength="1" DefaultValue="5" Description=""/>
+    <BSPCalibration Name="RIGHTBRAKEPRESSURE_RESTPOS" DataType="uint16" ArrayLength="1" DefaultValue="10" Description=""/>
+    <BSPCalibration Name="RIGHTBRAKEPRESSURE_STARTPOS" DataType="uint16" ArrayLength="1" DefaultValue="1" Description=""/>
+    <BSPCalibration Name="RIGHTBRAKEPRESSURE_PARAMETER" DataType="uint8" ArrayLength="1" DefaultValue="0" Description="Self-defined characteristic"/>
+    <BSPCalibration Name="AD_K1" DataType="uint8" ArrayLength="1" DefaultValue="23" Description="Referential value K1 for AD"/>
+    <BSPCalibration Name="AD_K2" DataType="uint8" ArrayLength="1" DefaultValue="30" Description="Referential value K2 for AD"/>
+    <BSPCalibration Name="ANGCOEFF" DataType="uint8" ArrayLength="1" DefaultValue="12" Description=""/>
+  </BSPCalibrations>
+  <BSPTypes>
+    <BSPEnumerations>
+      <BSPEnum Name="BSP_StdReturnType" Description="Standard BSP return types">
+        <Items>
+          <Item Value="0" Identifier="BSP_OK" Description="Function call succeded"/>
+          <Item Value="1" Identifier="BSP_BUSY" Description="BSP busy processing previous request"/>
+          <Item Value="2" Identifier="BSP_ERROR" Description="An unknown error occurred"/>
+          <Item Value="3" Identifier="BSP_INVALID_RANGE" Description="Data is out of range or unsupported"/>
+          <Item Value="4" Identifier="BSP_NOT_SUPPORTED" Description="Function not supported"/>
+        </Items>
+      </BSPEnum>
+      <BSPEnum Name="BSP_ECUModes" Description="ECU Mode type definition">
+        <Items>
+          <Item Value="0" Identifier="BSP_MODE_SLEEP" Description="Sleep mode"/>
+          <Item Value="1" Identifier="BSP_MODE_LOWPOWER" Description="Low power mode"/>
+          <Item Value="2" Identifier="BSP_MODE_NORMAL" Description="Normal mode"/>
+        </Items>
+      </BSPEnum>
+      <BSPEnum Name="WakeupSourceType" Description="Datatype to be used as the argument for wake up notification">
+        <Items>
+          <Item Value="0" Identifier="BSP_WAKEUP_IGN" Description="Wake up source: Ignition"/>
+          <Item Value="1" Identifier="BSP_WAKEUP_BUTTON" Description="Wake up source: Button press"/>
+          <Item Value="2" Identifier="BSP_WAKEUP_ANALOGUE_INP" Description="Wake up source: Analogue input"/>
+          <Item Value="3" Identifier="BSP_WAKEUP_DISCRETE_INP" Description="Wake up source: Discrete input"/>
+          <Item Value="4" Identifier="BSP_WAKEUP_TIMER" Description="Wake up source: Timer timout"/>
+          <Item Value="5" Identifier="BSP_WAKEUP_CAN_COMM" Description="Wake up source: CAN communication"/>
+          <Item Value="6" Identifier="BSP_WAKEUP_UNKNOWN" Description="Unknown source"/>
+        </Items>
+      </BSPEnum>
+      <BSPEnum Name="BSP_CanTrcvMdType" Description="CAN Transceiver Mode definition">
+        <Items>
+          <Item Value="0" Identifier="BSP_CANTRCV_NORMAL" Description="Normal mode"/>
+          <Item Value="1" Identifier="BSP_CANTRCV_STANDBY" Description="Standby/sleep/silent mode"/>
+        </Items>
+      </BSPEnum>
+      <BSPEnum Name="BSP_DIStatusType" Description="Discrete input return type for Get function">
+        <Items>
+          <Item Value="0" Identifier="BSP_DI_OFF" Description="Discrete input Off"/>
+          <Item Value="1" Identifier="BSP_DI_ON" Description="Discrete input On"/>
+        </Items>
+      </BSPEnum>
+      <BSPEnum Name="BSP_DOStatusType" Description="Discrete output type">
+        <Items>
+          <Item Value="0" Identifier="BSP_DO_OFF" Description="Discrete output Off"/>
+          <Item Value="1" Identifier="BSP_DO_ON" Description="Discrete output On"/>
+        </Items>
+      </BSPEnum>
+      <BSPEnum Name="BSP_IndOutType" Description="Argument for indicator Set function">
+        <Items>
+          <Item Value="0" Identifier="BSP_IND_OFF" Description="Indicator Off"/>
+          <Item Value="1" Identifier="BSP_IND_ON" Description="Indicator On Steady"/>
+          <Item Value="2" Identifier="BSP_IND_1HZ_FLASH" Description="Flashing 1Hz"/>
+          <Item Value="3" Identifier="BSP_IND_2HZ_FLASH" Description="Flashing 2H"/>
+        </Items>
+      </BSPEnum>
+      <BSPEnum Name="BSP_SoundGenStatus" Description="Sound status return for Get function">
+        <Items>
+          <Item Value="0" Identifier="BSP_SOUND_GEN_INACTIVE" Description="Sound generator inactive"/>
+          <Item Value="1" Identifier="BSP_SOUND_GEN_ACTIVE" Description="Sound generator active"/>
+        </Items>
+      </BSPEnum>
+      <BSPEnum Name="BSP_Sound" Description="Sound enumeration to be used when playing passive sounds">
+        <Items>
+          <Item Value="0" Identifier="BSP_SOUND_TICK" Description="Turn indicator tick sound"/>
+          <Item Value="1" Identifier="BSP_SOUND_TACK" Description="Turn indicator tack sound"/>
+          <Item Value="2" Identifier="BSP_SOUND_WARN3" Description="Warn 3 sound"/>
+          <Item Value="3" Identifier="BSP_SOUND_WARN4" Description="Warn 4 sound"/>
+          <Item Value="4" Identifier="BSP_SOUND_WARN5" Description="Warn 5 sound"/>
+        </Items>
+      </BSPEnum>
+      <BSPEnum Name="BSP_BuzzerSound" Description="Sound enumeration to be used when playing active sounds">
+        <Items>
+          <Item Value="0" Identifier="BSP_SOUND_ON" Description="infinite warning sound"/>
+          <Item Value="1" Identifier="BSP_SOUND_1HZ" Description="countless warning sound"/>
+        </Items>
+      </BSPEnum>
+      <BSPEnum Name="BSP_TestCommand" Description="Start command enumeration">
+        <Items>
+          <Item Value="0" Identifier="BSP_START_TEST" Description="Start test sequence"/>
+          <Item Value="1" Identifier="BSP_STOP_TEST" Description="Stop the currently active test sequence"/>
+        </Items>
+      </BSPEnum>
+    </BSPEnumerations>
+    <BSPFixedPointFloats>
+      <BSPFixedPointFloat Name="FPF_u32_8_Hz" BaseType="uint32" Unit="Hz" Endianess="BigEndian" SignificantBits="24" FractionalBits="8"/>
+    </BSPFixedPointFloats>
+  </BSPTypes>
+  <BSPFunctions>
+    <BSPFunction ToImplement="yes" FunctionName="BSP_RequestModeChange" Description="Mode change interface" Requirement="BSP_Req-0087" Version="v1" Return="void">
+      <Arguments>
+        <Argument Order="1" ArgumentName="newMode" ArgumentType="BSP_ECUModes"/>
+      </Arguments>
+    </BSPFunction>
+    <BSPFunction ToImplement="yes" FunctionName="BSP_Service_ShutdownAbort" Description="Abort shutdown" Requirement="BSP_Req-0003" Version="v1" Return="void"/>
+    <BSPFunction ToImplement="yes" FunctionName="BSP_EnterCriticalSection" Description="Enter critical section" Requirement="BSP_Req-0006" Version="v1" Return="void"/>
+    <BSPFunction ToImplement="yes" FunctionName="BSP_LeaveCriticalSection" Description="Leave critical section" Requirement="BSP_Req-0007" Version="v1" Return="void"/>
+    <BSPFunction ToImplement="yes" FunctionName="BSP_Set_CanTrcvMode" Description="Set CAN transceiver mode" Requirement="BSP_Req-0008" Version="v1" Return="void">
+      <Arguments>
+        <Argument Order="1" ArgumentName="CanChannel" ArgumentType="uint8"/>
+        <Argument Order="2" ArgumentName="NewMode" ArgumentType="BSP_CanTrcvMdType"/>
+      </Arguments>
+    </BSPFunction>
+    <BSPFunction ToImplement="yes" FunctionName="BSP_Get_IgnitionStatus" GCLSignalType="Source" GCLSignalName="IgnitionStatus" Description="Ignition status interface" Requirement="BSP_Req-0091" Version="v1" Return="BSP_StdReturnType">
+      <Arguments>
+        <Argument Order="1" ArgumentName="result" ArgumentType="BSP_DIStatusType*"/>
+      </Arguments>
+    </BSPFunction>
+    <BSPFunction ToImplement="yes" FunctionName="BSP_Get_DiscreteInput" GCLSignalType="Source" Description="Read discrete inputs" Requirement="BSP_Req-0009" Version="v1" Return="BSP_StdReturnType" MappingType="DiscreteInputs">
+      <Arguments>
+        <Argument Order="1" ArgumentName="DInputId" ArgumentType="uint8"/>
+        <Argument Order="2" ArgumentName="result" ArgumentType="BSP_DIStatusType*"/>
+      </Arguments>
+      <IndexToSignalMappings>
+        <IndexToSignalMapping ID="0x00" GCLSignal="Button_OK" Description="&#x201C;OK&#x201D; button status,=0 when button is pressed down(i.e. the connector Pin connects to GND); otherwise =1"/>
+        <IndexToSignalMapping ID="0x01" GCLSignal="Button_Cancel" Description="&#x201C;Cancel&#x201D; button status,=0 when button is pressed down(i.e. the connector Pin connects to GND); otherwise =1"/>
+        <IndexToSignalMapping ID="0x02" GCLSignal="Button_Up" Description="&#x201C;Up&#x201D; button status,=0 when button is pressed down(i.e. the connector Pin connects to GND); otherwise =1"/>
+        <IndexToSignalMapping ID="0x03" GCLSignal="Button_Down" Description="&#x201C;Down&#x201D; button status,=0 when button is pressed down(i.e. the connector Pin connects to GND); otherwise =1"/>
+        <IndexToSignalMapping ID="0x04" GCLSignal="Float_Axle_Warning_Indication" Description="This signal is valid only when connected to VCC"/>
+        <IndexToSignalMapping ID="0x05" GCLSignal="Diesel_PreHeat_Indication" Description="This signal is valid only when connected to VCC"/>
+        <IndexToSignalMapping ID="0x06" GCLSignal="Desiccant_Indication" Description="This signal is valid only when connected to VCC"/>
+        <IndexToSignalMapping ID="0x07" GCLSignal="Air_Suspension_Indication" Description="This signal is valid only when connected to VCC"/>
+        <IndexToSignalMapping ID="0x08" GCLSignal="BrakeWearR2" Description="This signal is valid only when connected to GND"/>
+        <IndexToSignalMapping ID="0x09" GCLSignal="BrakeWearR3" Description="This signal is valid only when connected to GND"/>
+        <IndexToSignalMapping ID="0x0A" GCLSignal="BrakeWearR4" Description="This signal is valid only when connected to GND"/>
+        <IndexToSignalMapping ID="0x0B" GCLSignal="BrakeWearL2" Description="This signal is valid only when connected to GND"/>
+        <IndexToSignalMapping ID="0x0C" GCLSignal="BrakeWearL3" Description="This signal is valid only when connected to GND"/>
+        <IndexToSignalMapping ID="0x0D" GCLSignal="BrakeWearL4" Description="This signal is valid only when connected to GND"/>
+        <IndexToSignalMapping ID="0x0E" GCLSignal="BrakeWearL1" Description="This signal is valid only when connected to GND"/>
+        <IndexToSignalMapping ID="0x0F" GCLSignal="Trailer_ABS_Indication" Description="This signal is valid only when connected to GND"/>
+        <IndexToSignalMapping ID="0x10" GCLSignal="ECAS_Warning_Indication" Description="This signal is valid only when connected to GND"/>
+        <IndexToSignalMapping ID="0x11" GCLSignal="ECAS_Failure_Indication" Description="This signal is valid only when connected to GND"/>
+        <IndexToSignalMapping ID="0x12" GCLSignal="Charging_Indication" Description="This signal is valid only when connected to GND"/>
+        <IndexToSignalMapping ID="0x13" GCLSignal="AirFilter_Block_Indication" Description="This signal is valid only when connected to GND"/>
+        <IndexToSignalMapping ID="0x14" GCLSignal="Cab_Unfixed_Warning_Indication" Description="This signal is valid only when connected to GND"/>
+        <IndexToSignalMapping ID="0x15" GCLSignal="PowerTakeOff_Indicator" Description="This signal is valid only when connected to GND"/>
+        <IndexToSignalMapping ID="0x16" GCLSignal="GearBox_Failure_Indication" Description="This signal is valid only when connected to GND"/>
+        <IndexToSignalMapping ID="0x17" GCLSignal="IntakeAir_PreHeat_Indication" Description="This signal is valid only when connected to GND"/>
+        <IndexToSignalMapping ID="0x18" GCLSignal="BrakeWearR1" Description="This signal is valid only when connected to GND"/>      
+      </IndexToSignalMappings>
+    </BSPFunction>
+    <BSPFunction ToImplement="yes" FunctionName="BSP_ReportError_DiscreteInput" Description="Get discrete input status" Requirement="BSP_Req-0010" Version="v1" Return="BSP_StdReturnType">
+      <Arguments>
+        <Argument Order="1" ArgumentName="DInputId" ArgumentType="uint8"/>
+        <Argument Order="2" ArgumentName="FTB" ArgumentType="uint8*"/>
+      </Arguments>
+    </BSPFunction>
+    <BSPFunction ToImplement="yes" FunctionName="BSP_Set_DiscreteOutput" GCLSignalType="Sink" Description="Set discrete outputs" Requirement="BSP_Req-0066" Version="v2" Return="BSP_StdReturnType" MappingType="DiscreteOutputMapping">
+      <Arguments>
+        <Argument Order="1" ArgumentName="DOutputId" ArgumentType="uint8"/>
+        <Argument Order="2" ArgumentName="value" ArgumentType="BSP_DOStatusType"/>
+      </Arguments>
+      <IndexToSignalMappings>
+        <IndexToSignalMapping ID="0x00" GCLSignal="Dummy" Description="Dummy mapping"/>      
+      </IndexToSignalMappings>
+    </BSPFunction>
+    <BSPFunction ToImplement="yes" FunctionName="BSP_ReportError_DiscreteOutput" Description="Get discrete output status" Requirement="BSP_Req-0064" Version="v1" Return="BSP_StdReturnType">
+      <Arguments>
+        <Argument Order="1" ArgumentName="DOutputId" ArgumentType="uint8"/>
+        <Argument Order="2" ArgumentName="FTB" ArgumentType="uint8*"/>
+      </Arguments>
+    </BSPFunction>
+    <BSPFunction ToImplement="yes" FunctionName="BSP_Get_BatteryVoltage" GCLSignalType="Source" GCLSignalName="BatteryVoltage" Description="Get battery voltage" Requirement="BSP_Req-0011" Version="v1" Return="BSP_StdReturnType" Scaling="E*10">
+      <Arguments>
+        <Argument Order="1" ArgumentName="BatteryVoltage" ArgumentType="uint16*"/>
+      </Arguments>
+    </BSPFunction>
+    <BSPFunction ToImplement="yes" FunctionName="BSP_Get_FuelLevel" GCLSignalType="Source" GCLSignalName="FuelLevel" Description="Get fuel level" Requirement="BSP_Req-0069" Version="v1" Return="BSP_StdReturnType" Scaling="TBD">
+      <Arguments>
+        <Argument Order="1" ArgumentName="FuelLevel" ArgumentType="uint16*"/>
+      </Arguments>
+    </BSPFunction>
+    <BSPFunction ToImplement="yes" FunctionName="BSP_Get_Park_Brake_Pressure" GCLSignalType="Source" GCLSignalName="Park_Brake_Pressure" Description="Park_Brake_Pressure" Requirement="BSP_Req-0094" Version="v1" Return="BSP_StdReturnType" Scaling="TBD">
+      <Arguments>
+        <Argument Order="1" ArgumentName="data" ArgumentType="uint16*"/>
+      </Arguments>
+    </BSPFunction>
+    <BSPFunction ToImplement="yes" FunctionName="BSP_Get_Front_Brake_Pressure" GCLSignalType="Source" GCLSignalName="FrontReservoirPressure" Description="Front brake pressue value" Requirement="BSP_Req-0092" Version="v1" Return="BSP_StdReturnType" Scaling="TBD">
+      <Arguments>
+        <Argument Order="1" ArgumentName="data" ArgumentType="uint16*"/>
+      </Arguments>
+    </BSPFunction>
+    <BSPFunction ToImplement="yes" FunctionName="BSP_Get_Rear_Brake_Pressure" GCLSignalType="Source" GCLSignalName="RearReservoirPressure" Description="Rear_Brake_Pressure" Requirement="BSP_Req-0095" Version="v1" Return="BSP_StdReturnType" Scaling="TBD">
+      <Arguments>
+        <Argument Order="1" ArgumentName="data" ArgumentType="uint16*"/>
+      </Arguments>
+    </BSPFunction>
+    <BSPFunction ToImplement="yes" FunctionName="BSP_Get_Front_Airtank_Pressure" GCLSignalType="Source" GCLSignalName="Front_Airtank_Pressure" Description="Front_Airtank_Pressure" Requirement="BSP_Req-0096" Version="v1" Return="BSP_StdReturnType" Scaling="TBD">
+      <Arguments>
+        <Argument Order="1" ArgumentName="data" ArgumentType="uint16*"/>
+      </Arguments>
+    </BSPFunction>
+    <BSPFunction ToImplement="yes" FunctionName="BSP_Get_Rear_Airtank_Pressure" GCLSignalType="Source" GCLSignalName="Rear_Airtank_Pressure" Description="Rear_Airtank_Pressure" Requirement="BSP_Req-0099" Version="v1" Return="BSP_StdReturnType" Scaling="TBD">
+      <Arguments>
+        <Argument Order="1" ArgumentName="data" ArgumentType="uint16*"/>
+      </Arguments>
+    </BSPFunction>
+    <BSPFunction ToImplement="yes" FunctionName="BSP_Get_Gearbox_Temp_Sensor" GCLSignalType="Source" GCLSignalName="Gearbox_Temp_Sensor" Description="Gearbox_Temp_Sensor" Requirement="BSP_Req-0098" Version="v1" Return="BSP_StdReturnType" Scaling="TBD">
+      <Arguments>
+        <Argument Order="1" ArgumentName="data" ArgumentType="uint16*"/>
+      </Arguments>
+    </BSPFunction>
+    <BSPFunction ToImplement="yes" FunctionName="BSP_ReportError_AnalogueInput" Description="Get analogue input status" Requirement="BSP_Req-0013" Version="v1" Return="BSP_StdReturnType">
+      <Arguments>
+        <Argument Order="1" ArgumentName="AInputId" ArgumentType="uint8"/>
+        <Argument Order="2" ArgumentName="FTB" ArgumentType="uint8*"/>
+      </Arguments>
+    </BSPFunction>
+    <BSPFunction ToImplement="yes" FunctionName="BSP_Get_Frequency" GCLSignalType="Source" Description="Get Frequency counter input value" Requirement="BSP_Req-0055" Version="v1" Return="BSP_StdReturnType" MappingType="FrequencyInputs">
+      <Arguments>
+        <Argument Order="1" ArgumentName="FInputId" ArgumentType="uint8"/>
+        <Argument Order="2" ArgumentName="Value" ArgumentType="FPF_u32_8_Hz*"/>
+      </Arguments>
+      <IndexToSignalMappings>
+        <IndexToSignalMapping ID="0x00" GCLSignal="VehSpdFreqInput" Description="Vehicle speed sensor signal"/>      
+      </IndexToSignalMappings>
+    </BSPFunction>
+    <BSPFunction ToImplement="yes" FunctionName="BSP_ReportError_FrequencyCounter" Description="Get frequency counter input status" Requirement="BSP_Req-0056" Version="v1" Return="BSP_StdReturnType">
+      <Arguments>
+        <Argument Order="1" ArgumentName="FInputId" ArgumentType="uint8"/>
+        <Argument Order="2" ArgumentName="FTB" ArgumentType="uint8*"/>
+      </Arguments>
+    </BSPFunction>
+    <BSPFunction ToImplement="yes" FunctionName="BSP_Set_FrequencyOutput" GCLSignalType="Sink" Description="Set frequency output value" Requirement="BSP_Req-0057" Version="v1" Return="BSP_StdReturnType" MappingType="FrequencyOutputs">
+      <Arguments>
+        <Argument Order="1" ArgumentName="FOutputId" ArgumentType="uint8"/>
+        <Argument Order="2" ArgumentName="Value" ArgumentType="FPF_u32_8_Hz"/>
+      </Arguments>
+      <IndexToSignalMappings>
+      </IndexToSignalMappings>
+    </BSPFunction>
+    <BSPFunction ToImplement="yes" FunctionName="BSP_Set_FrequencyDutyCycle" GCLSignalType="Sink" Description="Set duty cycle for frequency output" Requirement="BSP_Req-0074" Version="v1" Return="BSP_StdReturnType" Scaling="E=N">
+      <Arguments>
+        <Argument Order="1" ArgumentName="FOutputId" ArgumentType="uint8"/>
+        <Argument Order="2" ArgumentName="u8DutyCycle" ArgumentType="uint8"/>
+      </Arguments>
+    </BSPFunction>
+    <BSPFunction ToImplement="yes" FunctionName="BSP_ReportError_FrequencyOutput" Description="Get frequency output status" Requirement="BSP_Req-0058" Version="v1" Return="BSP_StdReturnType">
+      <Arguments>
+        <Argument Order="1" ArgumentName="FOutputId" ArgumentType="uint8"/>
+        <Argument Order="2" ArgumentName="FTB" ArgumentType="uint8*"/>
+      </Arguments>
+    </BSPFunction>
+    <BSPFunction ToImplement="yes" FunctionName="BSP_GetPulseCount" GCLSignalType="Source" Description="Pulse counter interface" Requirement="BSP_Req-0079" Version="v1" Return="void" Scaling="N=E" MappingType="PulseCounters">
+      <Arguments>
+        <Argument Order="1" ArgumentName="u8InputID" ArgumentType="uint8"/>
+        <Argument Order="2" ArgumentName="u32PulseCount" ArgumentType="uint32*"/>
+      </Arguments>
+      <IndexToSignalMappings>
+        <IndexToSignalMapping ID="0x01" GCLSignal="WheelPulseCount" Description="Number of pulses received from the ABS"/>      
+      </IndexToSignalMappings>
+    </BSPFunction>
+    <BSPFunction ToImplement="yes" FunctionName="BSP_ReportError_PulseCounter" Description="Pulse counter status interface" Requirement="BSP_Req-0080" Version="v1" Return="BSP_StdReturnType">
+      <Arguments>
+        <Argument Order="1" ArgumentName="u8InputID" ArgumentType="uint8"/>
+        <Argument Order="2" ArgumentName="FTB" ArgumentType="uint8*"/>
+      </Arguments>
+    </BSPFunction>
+    <BSPFunction ToImplement="yes" FunctionName="BSP_Set_NeedlePosition" GCLSignalType="Sink" Description="Set position command for gauges" Requirement="BSP_Req-0040" Version="v1" Return="BSP_StdReturnType" MappingType="Gauges">
+      <Arguments>
+        <Argument Order="1" ArgumentName="GaugeId" ArgumentType="uint8"/>
+        <Argument Order="2" ArgumentName="GaugePos" ArgumentType="uint16"/>
+      </Arguments>
+      <IndexToSignalMappings>
+        <IndexToSignalMapping ID="0x00" GCLSignal="VehSpdGauge" Description="Vehicle speed gauge"/>
+        <IndexToSignalMapping ID="0x01" GCLSignal="EngSpdGauge" Description="Engine speed gauge"/>
+        <IndexToSignalMapping ID="0x02" GCLSignal="FuelGauge" Description="Fuel gauge"/>      
+      </IndexToSignalMappings>
+    </BSPFunction>
+    <BSPFunction ToImplement="yes" FunctionName="BSP_ReportError_Gauge" Description="Error check for gauges" Requirement="BSP_Req-0038" Version="v2" Return="BSP_StdReturnType">
+      <Arguments>
+        <Argument Order="1" ArgumentName="GaugeId" ArgumentType="uint8"/>
+        <Argument Order="2" ArgumentName="FTB" ArgumentType="uint8*"/>
+      </Arguments>
+    </BSPFunction>
+    <BSPFunction ToImplement="yes" FunctionName="BSP_Set_Telltale" GCLSignalType="Sink" Description="Set telltale" Requirement="BSP_Req-0014" Version="v1" Return="BSP_StdReturnType" MappingType="Indicators">
+      <Arguments>
+        <Argument Order="1" ArgumentName="TelltaleId" ArgumentType="uint8"/>
+        <Argument Order="2" ArgumentName="IndOutCmd" ArgumentType="BSP_IndOutType"/>
+      </Arguments>
+      <IndexToSignalMappings>
+        <IndexToSignalMapping ID="0x00" GCLSignal="Left_Indicator" Description="Tractor turn left lamp"/>
+        <IndexToSignalMapping ID="0x01" GCLSignal="Trailer_Left_Indicator" Description="Trailer turn left lamp"/>
+        <IndexToSignalMapping ID="0x02" GCLSignal="Right_Indicator" Description="Tractor turn right lamp"/>
+        <IndexToSignalMapping ID="0x03" GCLSignal="Trailer_Right_Indicator" Description="Trailer turn right lamp"/>
+        <IndexToSignalMapping ID="0x04" GCLSignal="Coolant_Temp_High_Indicator" Description="Water temperature overhigh warning lamp"/>
+        <IndexToSignalMapping ID="0x05" GCLSignal="Front_Fog_Light_Indicator" Description="Front fog lamp"/>
+        <IndexToSignalMapping ID="0x06" GCLSignal="Water_In_Fuel_Indicator" Description="Water in fuel indicator"/>
+        <IndexToSignalMapping ID="0x07" GCLSignal="Engine_Maintenance_Indicator" Description="Engine maintance warning lamp"/>
+        <IndexToSignalMapping ID="0x08" GCLSignal="MIL_Indicator" Description="MIL lamp"/>
+        <IndexToSignalMapping ID="0x09" GCLSignal="Airbag_Indicator" Description="Airbag warning lamp"/>
+        <IndexToSignalMapping ID="0x0A" GCLSignal="Engine_Repair_Indicator" Description="Engine repair warning lamp"/>
+        <IndexToSignalMapping ID="0x0B" GCLSignal="Parking_Light_Indicator" Description="Parking lamp"/>
+        <IndexToSignalMapping ID="0x0C" GCLSignal="Oil_Pressure_Low_Indicator" Description="Low oil pressure warning lamp"/>
+        <IndexToSignalMapping ID="0x0D" GCLSignal="Water_Level_Low_Indicator" Description="Low water level warning lamp"/>
+        <IndexToSignalMapping ID="0x0E" GCLSignal="Lamp_Failure_Indicator" Description="Lamp filament detection indicator"/>
+        <IndexToSignalMapping ID="0x0F" GCLSignal="High_Beam_Indicator" Description="High beam lamp"/>
+        <IndexToSignalMapping ID="0x10" GCLSignal="Rear_Fog_Light_Indicator" Description="Back fog lamp"/>
+        <IndexToSignalMapping ID="0x11" GCLSignal="Exhaust_Brake_Indicator" Description="Exhaust brake indicator"/>
+        <IndexToSignalMapping ID="0x12" GCLSignal="ASR_Indicator" Description="ASR indicator"/>
+        <IndexToSignalMapping ID="0x13" GCLSignal="Retarder_Indicator" Description="Retarder indicator"/>
+        <IndexToSignalMapping ID="0x14" GCLSignal="Low_Beam_Indicator" Description="Low beam lamp"/>
+        <IndexToSignalMapping ID="0x15" GCLSignal="Interwheel_Differential_Indicator" Description="Inter-wheel differential indicator"/>
+        <IndexToSignalMapping ID="0x16" GCLSignal="Interaxle_Differential_Indicator" Description="Inter-axle differential indicator"/>
+        <IndexToSignalMapping ID="0x17" GCLSignal="EBS_Warning_Indicator" Description="EBS warning lamp"/>
+        <IndexToSignalMapping ID="0x18" GCLSignal="EBS_Failure_Indicator" Description="EBS failure lamp"/>
+        <IndexToSignalMapping ID="0x19" GCLSignal="Door_Open_Indicator" Description="Door open warning lamp"/>
+        <IndexToSignalMapping ID="0x1A" GCLSignal="Engine_Brake_Indicator" Description="Engine brake indicator"/>
+        <IndexToSignalMapping ID="0x1B" GCLSignal="Engine_Overspeed_Indicator" Description="Engine overspeed warning lamp"/>
+        <IndexToSignalMapping ID="0x1C" GCLSignal="Engine_Stop_Indicator" Description="Engine stop warning lamp"/>
+        <IndexToSignalMapping ID="0x1D" GCLSignal="Tyre_Pressure_Low_Indicator" Description="Tyre pressure low warning lamp"/>
+        <IndexToSignalMapping ID="0x1E" GCLSignal="VDC_Indicator" Description="VDC indicator"/>
+        <IndexToSignalMapping ID="0x1F" GCLSignal="Seatbelt_Indicator" Description="Seatbelt indicator"/>
+        <IndexToSignalMapping ID="0x20" GCLSignal="Urea_Level_Indicator" Description="Urea level indicator"/>
+        <IndexToSignalMapping ID="0x21" GCLSignal="Cruise_Indicator" Description="Cruise indicator"/>
+        <IndexToSignalMapping ID="0x22" GCLSignal="Work_Light_Indicator" Description="Back lamp"/>
+        <IndexToSignalMapping ID="0x23" GCLSignal="Brake_Pressure_Low_Indicator" Description="Brake pressure low warning lamp"/>
+        <IndexToSignalMapping ID="0x24" GCLSignal="Brake_Pressure_High_Indicator" Description="Brake pressure overhigh warning lamp"/>
+        <IndexToSignalMapping ID="0x25" GCLSignal="Fuel_Level_Low_Indicator" Description="Fuel level low warning lamp"/>
+        <IndexToSignalMapping ID="0x26" GCLSignal="ABS_Indicator" Description="Tractor ABS indicator"/>
+        <IndexToSignalMapping ID="0x45" GCLSignal="Brake_Wear_Indicator" Description="Brake shoe wear indicator"/>
+        <IndexToSignalMapping ID="0x4B" GCLSignal="Trailer_ABS_Indicator" Description="Trialer ABS indicator"/>
+        <IndexToSignalMapping ID="0x4C" GCLSignal="ECAS_Indicator" Description="ECAS warning lamp"/>
+        <IndexToSignalMapping ID="0x4D" GCLSignal="ECAS_Failure_Indicator" Description="ECAS failure indicator"/>
+        <IndexToSignalMapping ID="0x4E" GCLSignal="Charging_Indicator" Description="Charging indicator"/>
+        <IndexToSignalMapping ID="0x4F" GCLSignal="Air_Filter_Block_Indicator" Description="Air filter block warning lamp"/>
+        <IndexToSignalMapping ID="0x50" GCLSignal="Cab_Unlocked_Indicator" Description="Cab unfixed warning lamp"/>
+        <IndexToSignalMapping ID="0x51" GCLSignal="Power_Takeoff_Indicator" Description="Power take-off indicator"/>
+        <IndexToSignalMapping ID="0x52" GCLSignal="Gearbox_Failure_Indicator" Description="Gearbox failure indicator"/>
+        <IndexToSignalMapping ID="0x27" GCLSignal="Urea_Level_1_4_Indicator" Description="25% urea level indicator"/>
+        <IndexToSignalMapping ID="0x28" GCLSignal="Urea_Level_2_4_Indicator" Description="50% urea level indicator"/>
+        <IndexToSignalMapping ID="0x29" GCLSignal="Urea_Level_3_4_Indicator" Description="75% urea level indicator"/>
+        <IndexToSignalMapping ID="0x2A" GCLSignal="Urea_Level_4_4_Indicator" Description="100% urea level indicator"/>
+        <IndexToSignalMapping ID="0x2B" GCLSignal="RPM_900_Indicator" Description="900 rpm indicator"/>
+        <IndexToSignalMapping ID="0x2C" GCLSignal="RPM_1000_Indicator" Description="1000 rpm indicator"/>
+        <IndexToSignalMapping ID="0x2D" GCLSignal="RPM_1100_Indicator" Description="1100 rpm indicator"/>
+        <IndexToSignalMapping ID="0x2E" GCLSignal="RPM_1200_Indicator" Description="1200 rpm indicator"/>
+        <IndexToSignalMapping ID="0x2F" GCLSignal="RPM_1300_Indicator" Description="1300 rpm indicator"/>
+        <IndexToSignalMapping ID="0x30" GCLSignal="RPM_1400_Indicator" Description="1400 rpm indicator"/>
+        <IndexToSignalMapping ID="0x31" GCLSignal="RPM_1500_Indicator" Description="1500 rpm indicator"/>
+        <IndexToSignalMapping ID="0x32" GCLSignal="RPM_1600_Indicator" Description="1600 rpm indicator"/>
+        <IndexToSignalMapping ID="0x33" GCLSignal="RPM_1700_Indicator" Description="1700 rpm indicator"/>
+        <IndexToSignalMapping ID="0x34" GCLSignal="RPM_1800_Indicator" Description="1800 rpm indicator"/>
+        <IndexToSignalMapping ID="0x35" GCLSignal="RPM_1900_Indicator" Description="1900 rpm indicator"/>
+        <IndexToSignalMapping ID="0x36" GCLSignal="RPM_2000_Indicator" Description="2000 rpm indicator"/>
+        <IndexToSignalMapping ID="0x37" GCLSignal="RPM_2100_Indicator" Description="2100 rpm indicator"/>
+        <IndexToSignalMapping ID="0x38" GCLSignal="RPM_2200_Indicator" Description="2200 rpm indicator"/>
+        <IndexToSignalMapping ID="0x39" GCLSignal="RPM_2300_Indicator" Description="2300 rpm indicator"/>
+        <IndexToSignalMapping ID="0x3A" GCLSignal="RPM_2400_Indicator" Description="2400 rpm indicator"/>
+        <IndexToSignalMapping ID="0x3B" GCLSignal="RPM_2500_Indicator" Description="2500 rpm indicator"/>
+        <IndexToSignalMapping ID="0x3C" GCLSignal="RPM_2600_Indicator" Description="2600 rpm indicator"/>
+        <IndexToSignalMapping ID="0x3D" GCLSignal="RPM_2700_Indicator" Description="2700 rpm indicator"/>
+        <IndexToSignalMapping ID="0x3E" GCLSignal="RPM_2800_Indicator" Description="2800 rpm indicator"/>
+        <IndexToSignalMapping ID="0x3F" GCLSignal="RPM_2900_Indicator" Description="2900 rpm indicator"/>
+        <IndexToSignalMapping ID="0x40" GCLSignal="RPM_3000_Indicator" Description="3000 rpm indicator"/>
+        <IndexToSignalMapping ID="0x41" GCLSignal="RPM_3100_Indicator" Description="3100 rpm indicator"/>
+        <IndexToSignalMapping ID="0x42" GCLSignal="RPM_3200_Indicator" Description="3200 rpm indicator"/>
+        <IndexToSignalMapping ID="0x43" GCLSignal="RPM_3300_Indicator" Description="3300 rpm indicator"/>
+        <IndexToSignalMapping ID="0x44" GCLSignal="RPM_3400_Indicator" Description="3400 rpm indicator"/>      
+      </IndexToSignalMappings>
+    </BSPFunction>
+    <BSPFunction ToImplement="yes" FunctionName="BSP_ReportError_Telltale" Description="Telltale error status" Requirement="BSP_Req-0030" Version="v1" Return="BSP_StdReturnType">
+      <Arguments>
+        <Argument Order="1" ArgumentName="TelltaleId" ArgumentType="uint8"/>
+        <Argument Order="2" ArgumentName="FTB" ArgumentType="uint8*"/>
+      </Arguments>
+    </BSPFunction>
+    <BSPFunction ToImplement="yes" FunctionName="BSP_Sound_Buzzer" GCLSignalType="Sink" GCLSignalName="ActiveSoundGeneration" Description="Active buzzer interface" Requirement="BSP_Req-0086" Version="v1" Return="void">
+      <Arguments>
+        <Argument Order="1" ArgumentName="sound" ArgumentType="BSP_BuzzerSound"/>
+      </Arguments>
+    </BSPFunction>
+    <BSPFunction ToImplement="yes" FunctionName="BSP_StopActiveSoundGeneration" GCLSignalType="Sink" GCLSignalName="StopActiveSoundGeneration" Description="Stop active sound generator" Requirement="BSP_Req-0089" Version="v1" Return="void"/>
+    <BSPFunction ToImplement="yes" FunctionName="BSP_Get_ActiveSoundGenerationStatus" GCLSignalType="Source" GCLSignalName="ActiveSoundGenerationState" Description="Get Active sound generator status" Requirement="BSP_Req-0090" Version="v1" Return="BSP_SoundGenStatus"/>
+    <BSPFunction ToImplement="yes" FunctionName="BSP_Service_SoundGen" GCLSignalType="Sink" GCLSignalName="PassiveSoundGeneration" Description="Start sound generation command" Requirement="BSP_Req-0015" Version="v1" Return="BSP_StdReturnType" Scaling="TBD" MappingType="Sounds">
+      <Arguments>
+        <Argument Order="1" ArgumentName="Sound" ArgumentType="BSP_Sound"/>
+        <Argument Order="2" ArgumentName="Volume" ArgumentType="uint8"/>
+      </Arguments>
+      <IndexToSignalMappings>
+        <IndexToSignalMapping ID="0x00" GCLSignal="SoundTickTack" Description="Turing indication, &#x201C;Tick-tack&#x201D; sound&#10;&#x8F6C;&#x5411;&#x6307;&#x793A;&#x58F0;"/>
+        <IndexToSignalMapping ID="0x01" GCLSignal="SoundWarning1" Description="Countless waring(1HZ), Repeat warning at 1s period until conditions disappears or higher-priority warning occurs&#10;"/>
+        <IndexToSignalMapping ID="0x02" GCLSignal="SoundWarning3" Description="Buzzer warning-3, Repeat warning at 2.5s period until conditions disappears or higher-priority warning occurs&#10;"/>
+        <IndexToSignalMapping ID="0x03" GCLSignal="SoundWarning4" Description="Buzzer warning-4: Repeat warning at 3.5s period until conditions disappears or higher-priority warning occurs&#10;"/>
+        <IndexToSignalMapping ID="0x04" GCLSignal="SoundWarning45" Description="Repeat warning at 4.5s period until conditions disappears or higher-priority warning occurs&#10;"/>      
+      </IndexToSignalMappings>
+    </BSPFunction>
+    <BSPFunction ToImplement="yes" FunctionName="BSP_Service_StopSoundGeneration" GCLSignalType="Sink" GCLSignalName="StopSoundGeneration" Description="Stop sound command" Requirement="BSP_Req-0016" Version="v1" Return="void"/>
+    <BSPFunction ToImplement="yes" FunctionName="BSP_Get_SoundGeneratorStatus" GCLSignalType="Source" GCLSignalName="SoundGenerationState" Description="Sound generation status" Requirement="BSP_Req-0018" Version="v2" Return="BSP_SoundGenStatus"/>
+    <BSPFunction ToImplement="yes" FunctionName="BSP_ReportError_SoundGenerator" Description="Query sound generator for error" Requirement="BSP_Req-0019" Version="v2" Return="BSP_StdReturnType">
+      <Arguments>
+        <Argument Order="1" ArgumentName="FTB" ArgumentType="uint8*"/>
+      </Arguments>
+    </BSPFunction>
+    <BSPFunction ToImplement="yes" FunctionName="BSP_Set_DisplaySegments" GCLSignalType="Sink" GCLSignalName="DisplaySegments" Description="Segment display control" Requirement="BSP_Req-0041" Version="v2" Return="void">
+      <Arguments>
+        <Argument Order="1" ArgumentName="Segments" ArgumentType="const uint8*"/>
+        <Argument Order="2" ArgumentName="ArrayLength" ArgumentType="uint8"/>
+      </Arguments>
+    </BSPFunction>
+    <BSPFunction ToImplement="yes" FunctionName="BSP_Get_Framebuffer" Description="Get framebuffer pointer" Requirement="BSP_Req-0042" Version="v2" Return="void">
+      <Arguments>
+        <Argument Order="1" ArgumentName="FrameBuffer" ArgumentType="uint8**"/>
+      </Arguments>
+    </BSPFunction>
+    <BSPFunction ToImplement="yes" FunctionName="BSP_Service_FramebufferUpdated" Description="Notify framebuffer update" Requirement="BSP_Req-0043" Version="v1" Return="void"/>
+    <BSPFunction ToImplement="yes" FunctionName="BSP_Set_Illumination" GCLSignalType="Sink" Description="Set illumination" Requirement="BSP_Req-0028" Version="v1" Return="void" Scaling="Illumination level: E=N % (0-100%)" MappingType="Illumination">
+      <Arguments>
+        <Argument Order="1" ArgumentName="ChannelId" ArgumentType="uint8"/>
+        <Argument Order="2" ArgumentName="IllumLevel" ArgumentType="uint8"/>
+      </Arguments>
+      <IndexToSignalMappings>
+        <IndexToSignalMapping ID="0x00" GCLSignal="Gauge_Backlight" Description="Gauge backlight channel"/>
+        <IndexToSignalMapping ID="0x01" GCLSignal="Display_Backlight" Description="Display backlight channel"/>      
+      </IndexToSignalMappings>
+    </BSPFunction>
+    <BSPFunction ToImplement="yes" FunctionName="BSP_ReportError_Illumination" Description="Error check for illumination channels" Requirement="BSP_Req-0029" Version="v2" Return="void">
+      <Arguments>
+        <Argument Order="1" ArgumentName="ChannelId" ArgumentType="uint8"/>
+        <Argument Order="2" ArgumentName="FTB" ArgumentType="uint8*"/>
+      </Arguments>
+    </BSPFunction>
+    <BSPFunction ToImplement="yes" FunctionName="BSP_Set_RTC" GCLSignalType="Sink" GCLSignalName="SetRealTimeClock" Description="Set Real Time Clock" Requirement="BSP_Req-0052" Version="v1" Return="BSP_StdReturnType">
+      <Arguments>
+        <Argument Order="1" ArgumentName="time" ArgumentType="dateTime_t"/>
+      </Arguments>
+    </BSPFunction>
+    <BSPFunction ToImplement="yes" FunctionName="BSP_Get_RTC" GCLSignalType="Source" GCLSignalName="RealTimeClock" Description="Get Real Time Clock" Requirement="BSP_Req-0053" Version="v1" Return="BSP_StdReturnType">
+      <Arguments>
+        <Argument Order="1" ArgumentName="time" ArgumentType="dateTime_t*"/>
+      </Arguments>
+    </BSPFunction>
+    <BSPFunction ToImplement="yes" FunctionName="BSP_Get_Milliseconds" GCLSignalType="Source" GCLSignalName="RTC_Milliseconds" Description="Get milliseconds counter" Requirement="BSP_Req-0054" Version="v1" Return="BSP_StdReturnType">
+      <Arguments>
+        <Argument Order="1" ArgumentName="milliseconds" ArgumentType="uint32*"/>
+      </Arguments>
+    </BSPFunction>
+    <BSPFunction ToImplement="yes" FunctionName="BSP_ReportError_RTC" GCLSignalType="Source" GCLSignalName="RealTimeClock_Status" Description="Error check for RTC" Requirement="BSP_Req-0059" Version="v2" Return="BSP_StdReturnType" Scaling="RTC_ReportError">
+      <Arguments>
+        <Argument Order="1" ArgumentName="FTB" ArgumentType="uint8*"/>
+      </Arguments>
+    </BSPFunction>
+    <BSPFunction ToImplement="yes" FunctionName="BSP_Read_Memory" Description="Read memory area" Requirement="BSP_Req-0061" Version="v2" Return="BSP_StdReturnType">
+      <Arguments>
+        <Argument Order="1" ArgumentName="value" ArgumentType="uint8*"/>
+        <Argument Order="2" ArgumentName="length" ArgumentType="uint16"/>
+        <Argument Order="3" ArgumentName="startAddress" ArgumentType="uint16"/>
+      </Arguments>
+    </BSPFunction>
+    <BSPFunction ToImplement="yes" FunctionName="BSP_Write_Memory" Description="Write memory area" Requirement="BSP_Req-0062" Version="v1" Return="BSP_StdReturnType">
+      <Arguments>
+        <Argument Order="1" ArgumentName="value" ArgumentType="uint8*"/>
+        <Argument Order="2" ArgumentName="length" ArgumentType="uint16"/>
+        <Argument Order="3" ArgumentName="startAddress" ArgumentType="uint16"/>
+      </Arguments>
+    </BSPFunction>
+    <BSPFunction ToImplement="yes" FunctionName="BSP_ReportError_Memory" Description="Error check for memory interface" Requirement="BSP_Req-0063" Version="v2" Return="BSP_StdReturnType">
+      <Arguments>
+        <Argument Order="1" ArgumentName="FTB" ArgumentType="uint8*"/>
+      </Arguments>
+    </BSPFunction>
+    <BSPFunction ToImplement="yes" FunctionName="BSP_Service_GetPartNumber" Description="Get Partnumber" Requirement="BSP_Req-0044" Version="v2" Return="BSP_StdReturnType">
+      <Arguments>
+        <Argument Order="1" ArgumentName="PartNumber" ArgumentType="uint32*"/>
+      </Arguments>
+    </BSPFunction>
+    <BSPFunction ToImplement="yes" FunctionName="BSP_Service_GetRevision" Description="Get revision number" Requirement="BSP_Req-0045" Version="v2" Return="BSP_StdReturnType">
+      <Arguments>
+        <Argument Order="1" ArgumentName="Revision" ArgumentType="uint8*"/>
+      </Arguments>
+    </BSPFunction>
+    <BSPFunction ToImplement="yes" FunctionName="BSP_Service_DisplayTest" Description="Service display test" Requirement="BSP_Req-0047" Version="v1" Return="BSP_StdReturnType">
+      <Arguments>
+        <Argument Order="1" ArgumentName="Command" ArgumentType="BSP_TestCommand"/>
+      </Arguments>
+    </BSPFunction>
+    <BSPFunction ToImplement="yes" FunctionName="BSP_Service_TestGauges" Description="Service gauge test" Requirement="BSP_Req-0048" Version="v1" Return="BSP_StdReturnType">
+      <Arguments>
+        <Argument Order="1" ArgumentName="GaugeId" ArgumentType="uint8"/>
+        <Argument Order="2" ArgumentName="Command" ArgumentType="BSP_TestCommand"/>
+      </Arguments>
+    </BSPFunction>
+    <BSPFunction ToImplement="yes" FunctionName="BSP_Service_TelltaleTest" Description="Service symbol test" Requirement="BSP_Req-0049" Version="v1" Return="BSP_StdReturnType">
+      <Arguments>
+        <Argument Order="1" ArgumentName="TestCommand" ArgumentType="BSP_TestCommand"/>
+      </Arguments>
+    </BSPFunction>
+  </BSPFunctions>
+  <BSPSegmentDisplay>
+    <CharacterMappings>
+      <CharacterMapping Char="0" Segments="ABCDEF"/>
+      <CharacterMapping Char="1" Segments="BC"/>
+      <CharacterMapping Char="2" Segments="ABGED"/>
+      <CharacterMapping Char="3" Segments="ABCDG"/>
+      <CharacterMapping Char="4" Segments="BCFG"/>
+      <CharacterMapping Char="5" Segments="ACDFG"/>
+      <CharacterMapping Char="6" Segments="ACDEFG"/>
+      <CharacterMapping Char="7" Segments="ABC"/>
+      <CharacterMapping Char="8" Segments="ABCDEFG"/>
+      <CharacterMapping Char="9" Segments="ABCFG"/>
+    </CharacterMappings>
+    <SpecialSegments>
+      <SpecialSegment ID="DOT"/>
+      <SpecialSegment ID="T1"/>
+    </SpecialSegments>
+    <SegmentBitMappings>
+      <SegmentBitMapping Byte="0" Bit0="F" Bit1="G" Bit2="E" Bit3="T1" Bit4="A" Bit5="B" Bit6="C" Bit7="D"/>
+      <SegmentBitMapping Byte="1" Bit0="" Bit1="F" Bit2="G" Bit3="E" Bit4="A" Bit5="B" Bit6="C" Bit7="D"/>
+      <SegmentBitMapping Byte="2" Bit0="" Bit1="F" Bit2="G" Bit3="E" Bit4="A" Bit5="B" Bit6="C" Bit7="D"/>
+      <SegmentBitMapping Byte="3" Bit0="" Bit1="F" Bit2="G" Bit3="E" Bit4="A" Bit5="B" Bit6="C" Bit7="D"/>
+      <SegmentBitMapping Byte="4" Bit0="" Bit1="F" Bit2="G" Bit3="E" Bit4="A" Bit5="B" Bit6="C" Bit7="D"/>
+      <SegmentBitMapping Byte="5" Bit0="F" Bit1="G" Bit2="E" Bit3="DOT" Bit4="A" Bit5="B" Bit6="C" Bit7="D"/>
+    </SegmentBitMappings>
+  </BSPSegmentDisplay>
+  <BSPDisplay Width="240" Height="320" AvailableMemory="76800" UseGRAM="False" NumberOfLayers="1" RenderingType="SW" RenderingOrientation="Normal"/>
+  <BSPMemory InternalMemorySize="0x100000" ExternalMemorySize="0x000000" ExternalMemoryAddress="0x00000000"/>
+</BSP>

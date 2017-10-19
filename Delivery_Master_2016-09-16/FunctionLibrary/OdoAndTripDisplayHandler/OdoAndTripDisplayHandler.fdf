@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<FunctionDefinition Name="OdoAndTripDisplayHandler">
+    <Tasks>
+        <Task>
+            <InitFunction>OdoAndTripDisplayHandler_Init</InitFunction>
+            <Runnable>OdoAndTripDisplayHandler_Run</Runnable>
+            <StartupDelay>50</StartupDelay>
+            <Periodicity>200</Periodicity>
+        </Task>
+    </Tasks>
+    <SignalInterface>
+        <InputSignals>
+            <Signal Name="ShowNextTrigger1" DataType="void" UpdateNotification="True" Mandatory="True"/>
+            <Signal Name="ShowNextTrigger2" DataType="void" UpdateNotification="True" Mandatory="False"/>
+            <Signal Name="OdoValue" DataType="uint32" UpdateNotification="False" Mandatory="True"/>
+            <Signal Name="TripValue" DataType="uint32" UpdateNotification="False" Mandatory="True"/>
+            <Signal Name="InstantaneousFuelConsumption" DataType="uint16" UpdateNotification="False" Mandatory="True"/>
+            <Signal Name="TripFuelConsumption" DataType="uint32" UpdateNotification="False" Mandatory="True"/>
+        </InputSignals>
+        <OutputSignals>
+            <Signal Name="TripFieldText" DataType="wchar*"/>
+            <Signal Name="OdoAndInstFuelFieldText" DataType="wchar*"/>
+        </OutputSignals>
+    </SignalInterface>
+    <ConfigurationParameters/>
+    <CalibrationParameters/>
+    <LabelMappingsParameters/>
+    <UIResources>
+        <Icons/>
+    </UIResources>
+</FunctionDefinition>

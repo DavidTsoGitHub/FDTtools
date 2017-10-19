@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>CreateProjectWizard</class>
+ <widget class="QWizard" name="CreateProjectWizard">
+  <property name="windowModality">
+   <enum>Qt::ApplicationModal</enum>
+  </property>
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>627</width>
+    <height>360</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Create New FDT Project</string>
+  </property>
+  <property name="modal">
+   <bool>true</bool>
+  </property>
+  <property name="wizardStyle">
+   <enum>QWizard::ModernStyle</enum>
+  </property>
+  <property name="options">
+   <set>QWizard::HelpButtonOnRight|QWizard::NoBackButtonOnStartPage</set>
+  </property>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

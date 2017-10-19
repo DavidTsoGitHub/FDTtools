@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+<ImageDefinition>
+    <Images>
+        <Image ID="1" Name="StartupScreen" Path="Images/StartupScreen320.bmp" Description="StartupScreen" StoreInExternalFlash="false" UseForNonAnimations="true" UseForAnimations="false"/>
+        <Image ID="2" Name="small_logo.bmp" Path="Images/small_logo.bmp" Description="Small Logo" StoreInExternalFlash="false" UseForNonAnimations="true" UseForAnimations="false"/>
+        <Image ID="3" Name="startup.bmp" Path="Images/startup.bmp" Description="Startup" StoreInExternalFlash="false" UseForNonAnimations="true" UseForAnimations="false"/>
+        <Image ID="4" Name="Turtle.bmp" Path="Images/Turtle.bmp" Description="Turtle" StoreInExternalFlash="false" UseForNonAnimations="true" UseForAnimations="false"/>
+        <Image ID="5" Name="Crazy.bmp" Path="Images/Crazy.bmp" Description="Crazy Eyes" StoreInExternalFlash="false" UseForNonAnimations="true" UseForAnimations="false"/>
+        <Image ID="6" Name="Wait.bmp" Path="Images/Wait.bmp" Description="Wait" StoreInExternalFlash="false" UseForNonAnimations="true" UseForAnimations="false"/>
+        <Image ID="7" Name="32x32_round_menu_backlight_adjustment.bmp" Path="Images/32x32_round_menu_backlight_adjustment.bmp" Description="" StoreInExternalFlash="false" UseForNonAnimations="true" UseForAnimations="false"/>
+        <Image ID="8" Name="32x32_round_menu_brake_system_info.bmp" Path="Images/32x32_round_menu_brake_system_info.bmp" Description="" StoreInExternalFlash="false" UseForNonAnimations="true" UseForAnimations="false"/>
+        <Image ID="9" Name="32x32_round_menu_date_adjustments.bmp" Path="Images/32x32_round_menu_date_adjustments.bmp" Description="" StoreInExternalFlash="false" UseForNonAnimations="true" UseForAnimations="false"/>
+        <Image ID="10" Name="32x32_round_menu_diagnostics.bmp" Path="Images/32x32_round_menu_diagnostics.bmp" Description="" StoreInExternalFlash="false" UseForNonAnimations="true" UseForAnimations="false"/>
+        <Image ID="11" Name="32x32_round_menu_front_axle_circuit.bmp" Path="Images/32x32_round_menu_front_axle_circuit.bmp" Description="" StoreInExternalFlash="false" UseForNonAnimations="true" UseForAnimations="false"/>
+        <Image ID="12" Name="32x32_round_menu_fuel_consumption.bmp" Path="Images/32x32_round_menu_fuel_consumption.bmp" Description="" StoreInExternalFlash="false" UseForNonAnimations="true" UseForAnimations="false"/>
+        <Image ID="13" Name="32x32_round_menu_fuel_sensors.bmp" Path="Images/32x32_round_menu_fuel_sensors.bmp" Description="" StoreInExternalFlash="false" UseForNonAnimations="true" UseForAnimations="false"/>
+        <Image ID="14" Name="32x32_round_menu_operating_hours.bmp" Path="Images/32x32_round_menu_operating_hours.bmp" Description="" StoreInExternalFlash="false" UseForNonAnimations="true" UseForAnimations="false"/>
+        <Image ID="15" Name="32x32_round_menu_parking_accumulator.bmp" Path="Images/32x32_round_menu_parking_accumulator.bmp" Description="" StoreInExternalFlash="false" UseForNonAnimations="true" UseForAnimations="false"/>
+        <Image ID="16" Name="32x32_round_menu_rear_axle_circuit.bmp" Path="Images/32x32_round_menu_rear_axle_circuit.bmp" Description="" StoreInExternalFlash="false" UseForNonAnimations="true" UseForAnimations="false"/>
+        <Image ID="17" Name="32x32_round_menu_sensor_signal.bmp" Path="Images/32x32_round_menu_sensor_signal.bmp" Description="" StoreInExternalFlash="false" UseForNonAnimations="true" UseForAnimations="false"/>
+        <Image ID="18" Name="32x32_round_menu_sensor_supply.bmp" Path="Images/32x32_round_menu_sensor_supply.bmp" Description="" StoreInExternalFlash="false" UseForNonAnimations="true" UseForAnimations="false"/>
+        <Image ID="19" Name="32x32_round_menu_time_adjustments.bmp" Path="Images/32x32_round_menu_time_adjustments.bmp" Description="" StoreInExternalFlash="false" UseForNonAnimations="true" UseForAnimations="false"/>
+        <Image ID="20" Name="32x32_round_menu_tire_pressure.bmp" Path="Images/32x32_round_menu_tire_pressure.bmp" Description="" StoreInExternalFlash="false" UseForNonAnimations="true" UseForAnimations="false"/>
+        <Image ID="21" Name="32x32_round_menu_tire_temperature.bmp" Path="Images/32x32_round_menu_tire_temperature.bmp" Description="" StoreInExternalFlash="false" UseForNonAnimations="true" UseForAnimations="false"/>
+        <Image ID="22" Name="32x32_round_menu_tpms.bmp" Path="Images/32x32_round_menu_tpms.bmp" Description="" StoreInExternalFlash="false" UseForNonAnimations="true" UseForAnimations="false"/>
+        <Image ID="23" Name="32x32_round_menu_travel_info.bmp" Path="Images/32x32_round_menu_travel_info.bmp" Description="" StoreInExternalFlash="false" UseForNonAnimations="true" UseForAnimations="false"/>
+        <Image ID="24" Name="32x32_round_menu_trip_information.bmp" Path="Images/32x32_round_menu_trip_information.bmp" Description="" StoreInExternalFlash="false" UseForNonAnimations="true" UseForAnimations="false"/>
+        <Image ID="25" Name="32x32_round_menu_vehicle_info.bmp" Path="Images/32x32_round_menu_vehicle_info.bmp" Description="" StoreInExternalFlash="false" UseForNonAnimations="true" UseForAnimations="false"/>
+        <Image ID="26" Name="32x32_round_menu_vehicle_speed_sensor.bmp" Path="Images/32x32_round_menu_vehicle_speed_sensor.bmp" Description="" StoreInExternalFlash="false" UseForNonAnimations="true" UseForAnimations="false"/>
+        <Image ID="27" Name="mainscreen_background.bmp" Path="Images/mainscreen_background.bmp" Description="" StoreInExternalFlash="false" UseForNonAnimations="true" UseForAnimations="false"/>
+        <Image ID="28" Name="1_40x28.bmp" Path="Images/1_40x28.bmp" Description="" StoreInExternalFlash="false" UseForNonAnimations="true" UseForAnimations="false"/>
+        <Image ID="29" Name="2_40x28.bmp" Path="Images/2_40x28.bmp" Description="" StoreInExternalFlash="false" UseForNonAnimations="true" UseForAnimations="false"/>
+        <Image ID="30" Name="3_40x28.bmp" Path="Images/3_40x28.bmp" Description="" StoreInExternalFlash="false" UseForNonAnimations="true" UseForAnimations="false"/>
+        <Image ID="31" Name="hurdle1.bmp" Path="Images/hurdle1.bmp" Description="" StoreInExternalFlash="false" UseForNonAnimations="true" UseForAnimations="true"/>
+        <Image ID="32" Name="hurdle2.bmp" Path="Images/hurdle2.bmp" Description="" StoreInExternalFlash="false" UseForNonAnimations="true" UseForAnimations="true"/>
+        <Image ID="33" Name="hurdle3.bmp" Path="Images/hurdle3.bmp" Description="" StoreInExternalFlash="false" UseForNonAnimations="true" UseForAnimations="true"/>
+        <Image ID="34" Name="hurdle4.bmp" Path="Images/hurdle4.bmp" Description="" StoreInExternalFlash="false" UseForNonAnimations="true" UseForAnimations="true"/>
+        <Image ID="35" Name="hurdle5.bmp" Path="Images/hurdle5.bmp" Description="" StoreInExternalFlash="false" UseForNonAnimations="true" UseForAnimations="true"/>
+        <Image ID="36" Name="hurdle6.bmp" Path="Images/hurdle6.bmp" Description="" StoreInExternalFlash="false" UseForNonAnimations="true" UseForAnimations="true"/>
+        <Image ID="37" Name="hurdle7.bmp" Path="Images/hurdle7.bmp" Description="" StoreInExternalFlash="false" UseForNonAnimations="true" UseForAnimations="true"/>
+        <Image ID="38" Name="hurdle8.bmp" Path="Images/hurdle8.bmp" Description="" StoreInExternalFlash="false" UseForNonAnimations="true" UseForAnimations="true"/>
+        <Image ID="39" Name="hurdle9.bmp" Path="Images/hurdle9.bmp" Description="" StoreInExternalFlash="false" UseForNonAnimations="true" UseForAnimations="true"/>
+        <Image ID="40" Name="hurdle10.bmp" Path="Images/hurdle10.bmp" Description="" StoreInExternalFlash="false" UseForNonAnimations="true" UseForAnimations="true"/>
+        <Image ID="41" Name="StartupScreenWithoutLogo320 .bmp" Path="Images/StartupScreenWithoutLogo320 .bmp" Description="" StoreInExternalFlash="false" UseForNonAnimations="true" UseForAnimations="false"/>
+        <Image ID="42" Name="medium_logo.bmp" Path="Images/medium_logo.bmp" Description="" StoreInExternalFlash="false" UseForNonAnimations="true" UseForAnimations="false"/>
+        <Image ID="43" Name="mainscreen_background_chroma.bmp" Path="Images/mainscreen_background_chroma.bmp" Description="" StoreInExternalFlash="false" UseForNonAnimations="true" UseForAnimations="false"/>
+        <Image ID="44" Name="menuscreen_background.bmp" Path="Images/menuscreen_background.bmp" Description="" StoreInExternalFlash="false" UseForNonAnimations="true" UseForAnimations="false"/>
+        <Image ID="45" Name="menuscreen_background_real_good.bmp" Path="Images/menuscreen_background_real_good.bmp" Description="" StoreInExternalFlash="false" UseForNonAnimations="true" UseForAnimations="false"/>
+        <Image ID="46" Name="StartupScreenWithoutLogo320_real_good.bmp" Path="Images/StartupScreenWithoutLogo320_real_good.bmp" Description="" StoreInExternalFlash="false" UseForNonAnimations="true" UseForAnimations="false"/>
+    </Images>
+</ImageDefinition>

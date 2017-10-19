@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<FunctionDefinition Name="BrakePressureLowTellTale">
+    <Tasks>
+        <Task>
+            <InitFunction>BrakePressureLowTellTale_Init</InitFunction>
+            <Runnable>BrakePressureLowTellTale_Run</Runnable>
+            <StartupDelay>10</StartupDelay>
+            <Periodicity>100</Periodicity>
+        </Task>
+    </Tasks>
+    <SignalInterface>
+        <InputSignals>
+            <Signal Name="SystemPowerMode" DataType="PowerMode" UpdateNotification="False" Mandatory="True"/>
+            <Signal Name="FrontReservoirPressure" DataType="uint16" UpdateNotification="False" Mandatory="True"/>
+            <Signal Name="RearReservoirPressure" DataType="uint16" UpdateNotification="False" Mandatory="True"/>
+            <Signal Name="ParkBrakeReservoirPressure" DataType="uint16" UpdateNotification="False" Mandatory="True"/>
+            <Signal Name="FrontCircuitPressure" DataType="uint16" UpdateNotification="False" Mandatory="True"/>
+            <Signal Name="RearCircuitPressure" DataType="uint16" UpdateNotification="False" Mandatory="True"/>
+        </InputSignals>
+        <OutputSignals>
+            <Signal Name="BrakePressureLowIndicatorValue" DataType="uint8"/>
+        </OutputSignals>
+    </SignalInterface>
+    <ConfigurationParameters/>
+    <CalibrationParameters/>
+</FunctionDefinition>

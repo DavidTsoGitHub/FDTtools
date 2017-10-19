@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<FunctionDefinition Name="FuelLevel">
+    <Tasks>
+        <Task>
+            <InitFunction>FuelLevel_Init</InitFunction>
+            <Runnable>FuelLevel_Run</Runnable>
+            <StartupDelay>20</StartupDelay>
+            <Periodicity>200</Periodicity>
+        </Task>
+    </Tasks>
+    <SignalInterface>
+        <InputSignals>
+            <Signal Name="PowerMode" DataType="PowerMode" UpdateNotification="False" Mandatory="True"/>
+            <Signal Name="FuelLevel" DataType="uint16" UpdateNotification="False" Mandatory="True"/>
+        </InputSignals>
+        <OutputSignals>
+            <Signal Name="FuelLevelGaugeValue" DataType="uint16"/>
+            <Signal Name="FuelLevelWarningIndication" DataType="uint8"/>
+        </OutputSignals>
+    </SignalInterface>
+    <ConfigurationParameters>
+        <ConfigurationParameter DescriptiveName="Filter coefficient" ParameterName="u16Coefficient" Description="A value between 0 and 10000, higher value means the historic average is more important, lower value means latest value is more important " DataType="uint16" ArrayLength="1" />
+    </ConfigurationParameters>
+    <CalibrationParameters>
+        <CalibrationParameter DescriptiveName="Warning threshold in percent" ParameterName="FUEL_WARNINGTHRESHOLD" Description="When the fuel level goes below this percentage, the indicator is lit" DataType="uint8" ArrayLength="1" />
+        <CalibrationParameter DescriptiveName="Fuel warning hysteresis parameter" ParameterName="FUEL_WARNINGTOLERANCE" Description="When the fuel level reaches above the threshold by this amount, the fuel warning indicator turns off" DataType="uint8" ArrayLength="1"/>
+    </CalibrationParameters>
+</FunctionDefinition>

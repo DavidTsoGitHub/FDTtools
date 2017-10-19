@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<FunctionDefinition Name="EngineOilPressureTellTale">
+    <Tasks>
+        <Task>
+            <InitFunction>EngineOilPressureTellTale_Init</InitFunction>
+            <Runnable>EngineOilPressureTellTale_Run</Runnable>
+            <StartupDelay>10</StartupDelay>
+            <Periodicity>20</Periodicity>
+        </Task>
+    </Tasks>
+    <SignalInterface>
+        <InputSignals>
+            <Signal Name="SystemPowerMode" DataType="PowerMode" UpdateNotification="False" Mandatory="True"/>
+            <Signal Name="OilPressureWarningRequest" DataType="uint8" UpdateNotification="False" Mandatory="True"/>
+        </InputSignals>
+        <OutputSignals>
+            <Signal Name="OilPressureWarningIndication" DataType="uint8"/>
+        </OutputSignals>
+    </SignalInterface>
+    <ConfigurationParameters/>
+    <CalibrationParameters/>
+</FunctionDefinition>

@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<FunctionDefinition Name="WarningIconFields">
+    <Tasks>
+        <Task>
+            <InitFunction>WarningIconFields_Init</InitFunction>
+            <Runnable>WarningIconFields_Run</Runnable>
+            <StartupDelay>35</StartupDelay>
+            <Periodicity>500</Periodicity>
+        </Task>
+    </Tasks>
+    <SignalInterface>
+        <InputSignals>
+            <Signal Name="ChargingIndication" DataType="uint8" UpdateNotification="False" Mandatory="True"/>
+            <Signal Name="ParkBrakeIndication" DataType="uint8" UpdateNotification="False" Mandatory="True"/>
+            <Signal Name="BrakePressureLowIndication" DataType="uint8" UpdateNotification="False" Mandatory="True"/>
+            <Signal Name="EngineOilPressureIndication" DataType="uint8" UpdateNotification="False" Mandatory="True"/>
+        </InputSignals>
+        <OutputSignals>
+            <Signal Name="Icon1ID" DataType="uint32"/>
+            <Signal Name="Icon2ID" DataType="uint32"/>
+            <Signal Name="Icon3ID" DataType="uint32"/>
+            <Signal Name="Icon4ID" DataType="uint32"/>
+        </OutputSignals>
+    </SignalInterface>
+    <UIResources>
+        <Icons>
+            <Icon Name="Charging" />
+            <Icon Name="ParkBrake" />
+            <Icon Name="BrakePressureLow" />
+            <Icon Name="EngineOilPressure" />
+        </Icons>
+    </UIResources>
+    <ConfigurationParameters/>
+    <CalibrationParameters/>
+</FunctionDefinition>

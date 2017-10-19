@@ -1,0 +1,108 @@
+<Updates>
+ <ApplicationName>FDT</ApplicationName>
+ <ApplicationVersion>1.0.0</ApplicationVersion>
+ <Checksum>true</Checksum>
+ <PackageUpdate>
+  <Name>com.swedspot.fdt</Name>
+  <DisplayName>FDT</DisplayName>
+  <Description>FDT Tool</Description>
+  <Version>0.1.0</Version>
+  <ReleaseDate>2016-09-16</ReleaseDate>
+  <Script>installscript.qs</Script>
+  <Dependencies>com.swedspot.fdt.simulator,com.swedspot.fdt.dbc2xml,com.swedspot.fdt.platformgenerator</Dependencies>
+  <DownloadableArchives></DownloadableArchives>
+  <AutoDependOn></AutoDependOn>
+  <SortingPriority>123</SortingPriority>
+  <UpdateText>Release</UpdateText>
+  <Default>true</Default>
+  <ForcedInstallation>true</ForcedInstallation>
+  <Essential>true</Essential>
+  <Replaces></Replaces>
+  <UpdateFile CompressedSize="14855978" UncompressedSize="54633009" OS="Any"/>
+ </PackageUpdate>
+ <PackageUpdate>
+  <Name>com.swedspot.fdt.bspeditor</Name>
+  <DisplayName>FDT BSP Editor</DisplayName>
+  <Description>FDT BSP Editor</Description>
+  <Version>1.0.0</Version>
+  <ReleaseDate>2016-09-16</ReleaseDate>
+  <Dependencies></Dependencies>
+  <DownloadableArchives></DownloadableArchives>
+  <AutoDependOn></AutoDependOn>
+  <SortingPriority>123</SortingPriority>
+  <UpdateText>First Release</UpdateText>
+  <Default>true</Default>
+  <ForcedInstallation>true</ForcedInstallation>
+  <Essential>true</Essential>
+  <Replaces></Replaces>
+  <UpdateFile CompressedSize="14911297" UncompressedSize="57867950" OS="Any"/>
+ </PackageUpdate>
+ <PackageUpdate>
+  <Name>com.swedspot.fdt.builder</Name>
+  <DisplayName>FDT PlatformBuilder</DisplayName>
+  <Description>FDT Platform Builder</Description>
+  <Version>1.0.0</Version>
+  <ReleaseDate>2016-09-16</ReleaseDate>
+  <Dependencies></Dependencies>
+  <DownloadableArchives></DownloadableArchives>
+  <AutoDependOn></AutoDependOn>
+  <SortingPriority>123</SortingPriority>
+  <UpdateText>First Release</UpdateText>
+  <Default>true</Default>
+  <ForcedInstallation>true</ForcedInstallation>
+  <Essential>true</Essential>
+  <Replaces></Replaces>
+  <UpdateFile CompressedSize="57836" UncompressedSize="180776" OS="Any"/>
+ </PackageUpdate>
+ <PackageUpdate>
+  <Name>com.swedspot.fdt.dbc2xml</Name>
+  <DisplayName>FDT dbc2xml</DisplayName>
+  <Description>FDT Tool DBC to XML Converter</Description>
+  <Version>1.0.0</Version>
+  <ReleaseDate>2016-09-16</ReleaseDate>
+  <Dependencies></Dependencies>
+  <DownloadableArchives></DownloadableArchives>
+  <AutoDependOn></AutoDependOn>
+  <SortingPriority>123</SortingPriority>
+  <UpdateText>First Release</UpdateText>
+  <Default>true</Default>
+  <ForcedInstallation>true</ForcedInstallation>
+  <Essential>true</Essential>
+  <Replaces></Replaces>
+  <UpdateFile CompressedSize="21965" UncompressedSize="68136" OS="Any"/>
+ </PackageUpdate>
+ <PackageUpdate>
+  <Name>com.swedspot.fdt.platformgenerator</Name>
+  <DisplayName>FDT PlatformGenerator</DisplayName>
+  <Description>FDT Tool Platform Generator</Description>
+  <Version>1.0.0</Version>
+  <ReleaseDate>2016-09-16</ReleaseDate>
+  <Dependencies></Dependencies>
+  <DownloadableArchives></DownloadableArchives>
+  <AutoDependOn></AutoDependOn>
+  <SortingPriority>123</SortingPriority>
+  <UpdateText>First Release</UpdateText>
+  <Default>true</Default>
+  <ForcedInstallation>true</ForcedInstallation>
+  <Essential>true</Essential>
+  <Replaces></Replaces>
+  <UpdateFile CompressedSize="627086" UncompressedSize="2270760" OS="Any"/>
+ </PackageUpdate>
+ <PackageUpdate>
+  <Name>com.swedspot.fdt.simulator</Name>
+  <DisplayName>FDT Simulator</DisplayName>
+  <Description>FDT Tool Simulator</Description>
+  <Version>1.0.0</Version>
+  <ReleaseDate>2016-09-16</ReleaseDate>
+  <Dependencies></Dependencies>
+  <DownloadableArchives></DownloadableArchives>
+  <AutoDependOn></AutoDependOn>
+  <SortingPriority>123</SortingPriority>
+  <UpdateText>First Release</UpdateText>
+  <Default>true</Default>
+  <ForcedInstallation>true</ForcedInstallation>
+  <Essential>true</Essential>
+  <Replaces></Replaces>
+  <UpdateFile CompressedSize="14057262" UncompressedSize="53028065" OS="Any"/>
+ </PackageUpdate>
+</Updates>

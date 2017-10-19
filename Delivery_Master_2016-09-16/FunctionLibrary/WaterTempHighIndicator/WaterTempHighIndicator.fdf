@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<FunctionDefinition Name="WaterTempHighIndicator">
+    <Tasks>
+        <Task>
+            <InitFunction>WaterTempHighIndicator_Init</InitFunction>
+            <Runnable>WaterTempHighIndicator_Run</Runnable>
+            <StartupDelay>10</StartupDelay>
+            <Periodicity>1000</Periodicity>
+        </Task>
+    </Tasks>
+    <SignalInterface>
+        <InputSignals>
+            <Signal Name="WaterTempHighIndication" DataType="uint8" UpdateNotification="False" Mandatory="True"/>
+			<Signal Name="SystemPowerMode" DataType="PowerMode" />
+        </InputSignals>
+        <OutputSignals>
+            <Signal Name="WaterTempHighTelltaleValue" DataType="uint8"/>
+        </OutputSignals>
+    </SignalInterface>
+    <ConfigurationParameters/>
+    <CalibrationParameters/>
+</FunctionDefinition>

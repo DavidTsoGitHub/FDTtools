@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<FunctionDefinition Name="LocalizationManager">
+    <Tasks>
+        <Task>
+            <InitFunction>LocalizationManager_Init</InitFunction>
+            <Runnable>LocalizationManager_Run</Runnable>
+            <StartupDelay>10</StartupDelay>
+            <Periodicity>300</Periodicity>
+        </Task>
+    </Tasks>
+    <SignalInterface>
+        <InputSignals>
+            <Signal Name="SelectedLanguageValue" DataType="uint8" UpdateNotification="True" Mandatory="True"/>
+        </InputSignals>
+        <OutputSignals>
+            <Signal Name="CurrentLanguageValue" DataType="uint8" />
+            <Signal Name="Languages" DataType="LabelMappings*" />
+        </OutputSignals>
+    </SignalInterface>
+    <LabelMappingsParameters>
+        <LabelMappings DescriptiveName="Language mappings" LabelMappingsName="languages" Description="The name of the struct that holds the label mappings for the LocalizationManager." />
+    </LabelMappingsParameters>
+    <ConfigurationParameters />
+    <CalibrationParameters>
+        <CalibrationParameter DescriptiveName="Selected Language" ParameterName="INITIAL_LANGUAGE_VALUE" Description="Initial language value used in the menu at startup" DataType="uint8" ParameterLength="1"/>
+    </CalibrationParameters>
+</FunctionDefinition>

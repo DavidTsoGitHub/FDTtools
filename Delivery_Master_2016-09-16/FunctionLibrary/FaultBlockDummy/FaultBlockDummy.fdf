@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<FunctionDefinition Name="FaultBlockDummy">
+    <Tasks>
+        <Task>
+            <InitFunction>FaultBlockDummy_Init</InitFunction>
+            <Runnable>FaultBlockDummy_Run</Runnable>
+            <StartupDelay>10</StartupDelay>
+            <Periodicity>500</Periodicity>
+        </Task>
+    </Tasks>
+    <SignalInterface>
+        <InputSignals>
+            <Signal Name="Trigger1" DataType="uint8" UpdateNotification="True" Mandatory="True"/>
+            <Signal Name="Trigger2" DataType="uint8" UpdateNotification="True" Mandatory="True"/>
+        </InputSignals>
+        <OutputSignals>
+            <Signal Name="ActiveDTCs" DataType="LabelMappings*"/>
+            <Signal Name="DTCIndication" DataType="uint8"/>
+        </OutputSignals>
+    </SignalInterface>
+    <ConfigurationParameters/>
+    <CalibrationParameters/>
+    <LabelMappingsParameters/>
+    <FaultDefinitions>
+        <FaultDefinition Name="Fault1" Description="A small fault"/>
+        <FaultDefinition Name="Fault2" Description="A larger fault"/>
+    </FaultDefinitions>
+    <UIResources>
+        <Icons/>
+    </UIResources>
+</FunctionDefinition>

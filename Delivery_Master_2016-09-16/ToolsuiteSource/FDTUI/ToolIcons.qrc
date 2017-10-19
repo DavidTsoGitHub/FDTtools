@@ -1,0 +1,17 @@
+<RCC>
+    <qresource prefix="/">
+        <file>ToolIcons/IconIcon.bmp</file>
+        <file>ToolIcons/ColumnLevelIcon.bmp</file>
+        <file>ToolIcons/DynamicIconIcon.bmp</file>
+        <file>ToolIcons/DynamicTextLabelIcon.bmp</file>
+        <file>ToolIcons/DynamicValueLabelIcon.bmp</file>
+        <file>ToolIcons/LabelIcon.bmp</file>
+        <file>ToolIcons/SelectableListIcon.bmp</file>
+        <file>ToolIcons/BlockBarIcon.bmp</file>
+        <file>ToolIcons/SignalTriggerIcon.bmp</file>
+        <file>ToolIcons/DynamicLabelIcon.bmp</file>
+        <file>ToolIcons/ImageIcon.bmp</file>
+        <file>ToolIcons/ListNavigationIcon.bmp</file>
+        <file>ToolIcons/DynamicImageIcon.bmp</file>
+    </qresource>
+</RCC>

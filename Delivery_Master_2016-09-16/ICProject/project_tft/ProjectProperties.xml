@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ProjectProperties AIVersion="1.0">
+    <BuildTargets>
+        <BuildTarget Name="PC - Default" Path=""/>
+        <BuildTarget Name="Freescale" Path="BSPSource"/>
+        <BuildTarget Name="Freescale_TFT" Path="BSPSource"/>
+    </BuildTargets>
+</ProjectProperties>

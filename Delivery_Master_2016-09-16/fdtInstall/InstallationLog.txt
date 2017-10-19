@@ -1,0 +1,209 @@
+************************************* Invoked: 周二 九月 20 09:47:28 2016
+[0] Arguments:  F:\T_project\Delivery_Master_2016-09-16\FDT\FDTInstaller.exe
+[304] Operations sanity check succeeded.
+[1896] Loaded control script ":/metadata/installer-config/control_qs.qs"
+[1896] Using control script: ":/metadata/installer-config/control_qs.qs"
+[1959] Control script callback "IntroductionPageCallback" does not exist.
+[3619] Control script callback "TargetDirectoryPageCallback" does not exist.
+[159886] Control script callback "ComponentSelectionPageCallback" does not exist.
+[160953] Tmp is on a different volume than the install folder. Tmp volume mount point: "C:\" Free space available: "54.25 GB" Install volume mount point: "F:\" Free space available: "36.25 GB"
+[160954] Installation space required: "233.46 MB" Temporary space required: "0.00 字节" Local repository size: "57.17 MB"
+[160954] Control script callback "ReadyForInstallationPageCallback" does not exist.
+[161463] Control script callback "PerformInstallationPageCallback" does not exist.
+[161497] backup  operation: Mkdir
+[161497] 	- arguments: F:/T_project/Delivery_Master_2016-09-16/fdtInstall
+[161497] Done
+[161498] perform  operation: Mkdir
+[161498] 	- arguments: F:/T_project/Delivery_Master_2016-09-16/fdtInstall
+[161499] Done
+[161499] Install size: 6 components
+[161575] backup com.swedspot.fdt.builder operation: Extract
+[161575] 	- arguments: installer://com.swedspot.fdt.builder/1.0.0content.7z, F:\T_project\Delivery_Master_2016-09-16\fdtInstall
+[161575] Done
+[161577] perform com.swedspot.fdt.builder operation: Extract
+[161577] 	- arguments: installer://com.swedspot.fdt.builder/1.0.0content.7z, F:\T_project\Delivery_Master_2016-09-16\fdtInstall
+[161589] Done
+[161590] backup com.swedspot.fdt.simulator operation: Extract
+[161590] 	- arguments: installer://com.swedspot.fdt.simulator/1.0.0bearer.7z, F:\T_project\Delivery_Master_2016-09-16\fdtInstall
+[161590] Done
+[161590] perform com.swedspot.fdt.simulator operation: Extract
+[161590] 	- arguments: installer://com.swedspot.fdt.simulator/1.0.0bearer.7z, F:\T_project\Delivery_Master_2016-09-16\fdtInstall
+[161608] Done
+[161608] backup com.swedspot.fdt.simulator operation: Extract
+[161608] 	- arguments: installer://com.swedspot.fdt.simulator/1.0.0content.7z, F:\T_project\Delivery_Master_2016-09-16\fdtInstall
+[161608] Done
+[161608] perform com.swedspot.fdt.simulator operation: Extract
+[161608] 	- arguments: installer://com.swedspot.fdt.simulator/1.0.0content.7z, F:\T_project\Delivery_Master_2016-09-16\fdtInstall
+[163087] Done
+[163088] backup com.swedspot.fdt.simulator operation: Extract
+[163088] 	- arguments: installer://com.swedspot.fdt.simulator/1.0.0iconengines.7z, F:\T_project\Delivery_Master_2016-09-16\fdtInstall
+[163088] Done
+[163088] perform com.swedspot.fdt.simulator operation: Extract
+[163088] 	- arguments: installer://com.swedspot.fdt.simulator/1.0.0iconengines.7z, F:\T_project\Delivery_Master_2016-09-16\fdtInstall
+[163102] Done
+[163102] backup com.swedspot.fdt.simulator operation: Extract
+[163102] 	- arguments: installer://com.swedspot.fdt.simulator/1.0.0imageformats.7z, F:\T_project\Delivery_Master_2016-09-16\fdtInstall
+[163102] Done
+[163102] perform com.swedspot.fdt.simulator operation: Extract
+[163102] 	- arguments: installer://com.swedspot.fdt.simulator/1.0.0imageformats.7z, F:\T_project\Delivery_Master_2016-09-16\fdtInstall
+[163354] Done
+[163354] backup com.swedspot.fdt.simulator operation: Extract
+[163354] 	- arguments: installer://com.swedspot.fdt.simulator/1.0.0platforms.7z, F:\T_project\Delivery_Master_2016-09-16\fdtInstall
+[163354] Done
+[163354] perform com.swedspot.fdt.simulator operation: Extract
+[163354] 	- arguments: installer://com.swedspot.fdt.simulator/1.0.0platforms.7z, F:\T_project\Delivery_Master_2016-09-16\fdtInstall
+[163412] Done
+[163412] backup com.swedspot.fdt.simulator operation: Extract
+[163412] 	- arguments: installer://com.swedspot.fdt.simulator/1.0.0Telltales.7z, F:\T_project\Delivery_Master_2016-09-16\fdtInstall
+[163412] Done
+[163412] perform com.swedspot.fdt.simulator operation: Extract
+[163412] 	- arguments: installer://com.swedspot.fdt.simulator/1.0.0Telltales.7z, F:\T_project\Delivery_Master_2016-09-16\fdtInstall
+[163499] Done
+[163500] backup com.swedspot.fdt.bspeditor operation: Extract
+[163500] 	- arguments: installer://com.swedspot.fdt.bspeditor/1.0.0bearer.7z, F:\T_project\Delivery_Master_2016-09-16\fdtInstall
+[163500] Done
+[163500] perform com.swedspot.fdt.bspeditor operation: Extract
+[163500] 	- arguments: installer://com.swedspot.fdt.bspeditor/1.0.0bearer.7z, F:\T_project\Delivery_Master_2016-09-16\fdtInstall
+[163566] Done
+[163566] backup com.swedspot.fdt.bspeditor operation: Extract
+[163566] 	- arguments: installer://com.swedspot.fdt.bspeditor/1.0.0content.7z, F:\T_project\Delivery_Master_2016-09-16\fdtInstall
+[163566] Done
+[163566] perform com.swedspot.fdt.bspeditor operation: Extract
+[163566] 	- arguments: installer://com.swedspot.fdt.bspeditor/1.0.0content.7z, F:\T_project\Delivery_Master_2016-09-16\fdtInstall
+[165134] Done
+[165134] backup com.swedspot.fdt.bspeditor operation: Extract
+[165134] 	- arguments: installer://com.swedspot.fdt.bspeditor/1.0.0iconengines.7z, F:\T_project\Delivery_Master_2016-09-16\fdtInstall
+[165134] Done
+[165134] perform com.swedspot.fdt.bspeditor operation: Extract
+[165134] 	- arguments: installer://com.swedspot.fdt.bspeditor/1.0.0iconengines.7z, F:\T_project\Delivery_Master_2016-09-16\fdtInstall
+[165506] Done
+[165506] backup com.swedspot.fdt.bspeditor operation: Extract
+[165506] 	- arguments: installer://com.swedspot.fdt.bspeditor/1.0.0imageformats.7z, F:\T_project\Delivery_Master_2016-09-16\fdtInstall
+[165506] Done
+[165506] perform com.swedspot.fdt.bspeditor operation: Extract
+[165506] 	- arguments: installer://com.swedspot.fdt.bspeditor/1.0.0imageformats.7z, F:\T_project\Delivery_Master_2016-09-16\fdtInstall
+[165713] Done
+[165713] backup com.swedspot.fdt.bspeditor operation: Extract
+[165713] 	- arguments: installer://com.swedspot.fdt.bspeditor/1.0.0platforms.7z, F:\T_project\Delivery_Master_2016-09-16\fdtInstall
+[165713] Done
+[165713] perform com.swedspot.fdt.bspeditor operation: Extract
+[165713] 	- arguments: installer://com.swedspot.fdt.bspeditor/1.0.0platforms.7z, F:\T_project\Delivery_Master_2016-09-16\fdtInstall
+[165784] Done
+[165785] backup com.swedspot.fdt.dbc2xml operation: Extract
+[165786] 	- arguments: installer://com.swedspot.fdt.dbc2xml/1.0.0content.7z, F:\T_project\Delivery_Master_2016-09-16\fdtInstall
+[165786] Done
+[165786] perform com.swedspot.fdt.dbc2xml operation: Extract
+[165786] 	- arguments: installer://com.swedspot.fdt.dbc2xml/1.0.0content.7z, F:\T_project\Delivery_Master_2016-09-16\fdtInstall
+[165792] Done
+[165793] backup com.swedspot.fdt.platformgenerator operation: Extract
+[165793] 	- arguments: installer://com.swedspot.fdt.platformgenerator/1.0.0content.7z, F:\T_project\Delivery_Master_2016-09-16\fdtInstall
+[165793] Done
+[165793] perform com.swedspot.fdt.platformgenerator operation: Extract
+[165793] 	- arguments: installer://com.swedspot.fdt.platformgenerator/1.0.0content.7z, F:\T_project\Delivery_Master_2016-09-16\fdtInstall
+[165870] Done
+[165871] backup com.swedspot.fdt operation: Extract
+[165871] 	- arguments: installer://com.swedspot.fdt/0.1.0content.7z, F:\T_project\Delivery_Master_2016-09-16\fdtInstall
+[165871] Done
+[165871] perform com.swedspot.fdt operation: Extract
+[165871] 	- arguments: installer://com.swedspot.fdt/0.1.0content.7z, F:\T_project\Delivery_Master_2016-09-16\fdtInstall
+[167867] Done
+[167867] backup com.swedspot.fdt operation: Extract
+[167867] 	- arguments: installer://com.swedspot.fdt/0.1.0iconengines.7z, F:\T_project\Delivery_Master_2016-09-16\fdtInstall
+[167868] Done
+[167868] perform com.swedspot.fdt operation: Extract
+[167868] 	- arguments: installer://com.swedspot.fdt/0.1.0iconengines.7z, F:\T_project\Delivery_Master_2016-09-16\fdtInstall
+[167880] Done
+[167880] backup com.swedspot.fdt operation: Extract
+[167880] 	- arguments: installer://com.swedspot.fdt/0.1.0imageformats.7z, F:\T_project\Delivery_Master_2016-09-16\fdtInstall
+[167880] Done
+[167880] perform com.swedspot.fdt operation: Extract
+[167880] 	- arguments: installer://com.swedspot.fdt/0.1.0imageformats.7z, F:\T_project\Delivery_Master_2016-09-16\fdtInstall
+[168028] Done
+[168029] backup com.swedspot.fdt operation: Extract
+[168029] 	- arguments: installer://com.swedspot.fdt/0.1.0platforms.7z, F:\T_project\Delivery_Master_2016-09-16\fdtInstall
+[168029] Done
+[168029] perform com.swedspot.fdt operation: Extract
+[168029] 	- arguments: installer://com.swedspot.fdt/0.1.0platforms.7z, F:\T_project\Delivery_Master_2016-09-16\fdtInstall
+[168085] Done
+[168086] backup com.swedspot.fdt operation: CreateShortcut
+[168086] 	- arguments: F:\T_project\Delivery_Master_2016-09-16\fdtInstall/FDTUI.exe, C:\ProgramData\Microsoft\Windows\Start Menu\Programs/FDT/FDT.lnk, workingDirectory=F:\T_project\Delivery_Master_2016-09-16\fdtInstall, iconPath=F:\T_project\Delivery_Master_2016-09-16\fdtInstall/FDTUI.exe, iconId=0
+[168086] Done
+[168086] perform com.swedspot.fdt operation: CreateShortcut
+[168086] 	- arguments: F:\T_project\Delivery_Master_2016-09-16\fdtInstall/FDTUI.exe, C:\ProgramData\Microsoft\Windows\Start Menu\Programs/FDT/FDT.lnk, workingDirectory=F:\T_project\Delivery_Master_2016-09-16\fdtInstall, iconPath=F:\T_project\Delivery_Master_2016-09-16\fdtInstall/FDTUI.exe, iconId=0
+[168175] Done
+[168175] backup com.swedspot.fdt operation: CreateShortcut
+[168175] 	- arguments: F:\T_project\Delivery_Master_2016-09-16\fdtInstall/FDTUI.exe, C:\Users\LENOVO-2\Desktop/FDT.lnk, workingDirectory=F:\T_project\Delivery_Master_2016-09-16\fdtInstall, iconPath=F:\T_project\Delivery_Master_2016-09-16\fdtInstall/FDTUI.exe, iconId=0
+[168175] Done
+[168175] perform com.swedspot.fdt operation: CreateShortcut
+[168175] 	- arguments: F:\T_project\Delivery_Master_2016-09-16\fdtInstall/FDTUI.exe, C:\Users\LENOVO-2\Desktop/FDT.lnk, workingDirectory=F:\T_project\Delivery_Master_2016-09-16\fdtInstall, iconPath=F:\T_project\Delivery_Master_2016-09-16\fdtInstall/FDTUI.exe, iconId=0
+[168192] Done
+[168192] "Execute" as admin: true
+[168193] backup com.swedspot.fdt operation: Execute
+[168193] 	- arguments: cmd /C reg /?, UNDOEXECUTE, cmd /C reg delete "HKEY_CURRENT_USER\Software\SwedSpot AB" /f
+[168193] Done
+[168193] perform com.swedspot.fdt operation: Execute
+[168193] 	- arguments: cmd /C reg /?, UNDOEXECUTE, cmd /C reg delete "HKEY_CURRENT_USER\Software\SwedSpot AB" /f
+[168193] ElevatedExecuteOperation setNativeArguments to start: "cmd /C reg /?"
+[168297] cmd /C reg /?" started, arguments: "
+[168616] 
+
+[168616] REG Operation [Parameter List]
+
+  Operation  [ QUERY   | ADD    | DELETE  | COPY    |
+               SAVE    | LOAD   | UNLOAD  | RESTORE |
+               COMPARE | EXPORT | IMPORT  | FLAGS ]
+
+???????: (???? REG COMPARE)
+
+  0 - ???
+  1 - ???
+
+?????й?????????????????????:
+
+  REG Operation /?
+
+????:
+
+  REG QUERY /?
+  REG ADD /?
+  REG DELETE /?
+  REG COPY /?
+  REG SAVE /?
+  REG RESTORE /?
+  REG LOAD /?
+  REG UNLOAD /?
+  REG COMPARE /?
+  REG EXPORT /?
+  REG IMPORT /?
+  REG FLAGS /?
+
+[168616] Done
+[168616] "GlobalConfig" as admin: true
+[168616] backup com.swedspot.fdt operation: GlobalConfig
+[168616] 	- arguments: SwedSpot AB, FDT, BuilderFilePath, F:\T_project\Delivery_Master_2016-09-16\fdtInstall\builder.exe
+[168616] Done
+[168616] perform com.swedspot.fdt operation: GlobalConfig
+[168616] 	- arguments: SwedSpot AB, FDT, BuilderFilePath, F:\T_project\Delivery_Master_2016-09-16\fdtInstall\builder.exe
+[168789] Done
+[168790] "GlobalConfig" as admin: true
+[168790] backup com.swedspot.fdt operation: GlobalConfig
+[168790] 	- arguments: SwedSpot AB, FDT, PlatformGeneratorPath, F:\T_project\Delivery_Master_2016-09-16\fdtInstall\platformgenerator.exe
+[168790] Done
+[168790] perform com.swedspot.fdt operation: GlobalConfig
+[168790] 	- arguments: SwedSpot AB, FDT, PlatformGeneratorPath, F:\T_project\Delivery_Master_2016-09-16\fdtInstall\platformgenerator.exe
+[169105] Done
+[169105] "GlobalConfig" as admin: true
+[169105] backup com.swedspot.fdt operation: GlobalConfig
+[169105] 	- arguments: SwedSpot AB, FDT, SimulatorFilePath, F:\T_project\Delivery_Master_2016-09-16\fdtInstall\simulator.exe
+[169105] Done
+[169105] perform com.swedspot.fdt operation: GlobalConfig
+[169105] 	- arguments: SwedSpot AB, FDT, SimulatorFilePath, F:\T_project\Delivery_Master_2016-09-16\fdtInstall\simulator.exe
+[169393] Done
+[169409] perform  operation: CreateLocalRepository
+[169409] 	- arguments: F:/T_project/Delivery_Master_2016-09-16/FDT/FDTInstaller.exe, F:/T_project/Delivery_Master_2016-09-16/fdtInstall/repository
+[169756] Done
+[169762] Writing maintenance tool: "F:\T_project\Delivery_Master_2016-09-16\fdtInstall/maintenancetool.exe.new"
+[169805] Wrote permissions for maintenance tool.
+[171269] Maintenance tool restart: false.
+[171273] SHOW FINISHED PAGE
+[171274] Control script callback "FinishedPageCallback" does not exist.

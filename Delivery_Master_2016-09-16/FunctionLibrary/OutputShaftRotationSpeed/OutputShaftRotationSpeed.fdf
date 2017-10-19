@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<FunctionDefinition Name="OutputShaftRotationSpeed">
+    <Tasks>
+        <Task>
+            <InitFunction>OutputShaftRotationSpeed_Init</InitFunction>
+            <Runnable>OutputShaftRotationSpeed_Run</Runnable>
+            <StartupDelay>10</StartupDelay>
+            <Periodicity>100</Periodicity>
+        </Task>
+    </Tasks>
+    <SignalInterface>
+        <InputSignals>
+            <Signal Name="VehSpdFreqInput" DataType="uint32" UpdateNotification="False" Mandatory="True"/>
+        </InputSignals>
+        <OutputSignals>
+            <Signal Name="OutputShaftRotationSpeed" DataType="uint16"/>
+        </OutputSignals>
+    </SignalInterface>
+    <ConfigurationParameters/>
+    <CalibrationParameters>
+        <CalibrationParameter DescriptiveName="Pulses per rotation" ParameterName="PULSES_PER_ROTATION" Description="Number of pulses from sensor per rotation." DataType="uint16" ArrayLength="1"/>
+        <CalibrationParameter DescriptiveName="Numerator for ratio" ParameterName="RATIO_NUMERATOR" Description="" DataType="uint8" ArrayLength="1"/>
+        <CalibrationParameter DescriptiveName="Denominator for ratio" ParameterName="RATIO_DENOMINATOR" Description="" DataType="uint8" ArrayLength="1"/>
+    </CalibrationParameters>
+    <LabelMappingsParameters/>
+    <UIResources>
+        <Icons/>
+    </UIResources>
+</FunctionDefinition>

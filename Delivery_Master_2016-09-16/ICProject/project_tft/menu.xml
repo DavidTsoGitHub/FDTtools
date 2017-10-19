@@ -1,0 +1,305 @@
+<?xml version="1.0"?>
+<Menu>
+    <InputToCommandMappings>
+        <Mapping MenuInputID="0" CommandID="2"/>
+        <Mapping MenuInputID="1" CommandID="1"/>
+        <Mapping MenuInputID="2" CommandID="0"/>
+        <Mapping MenuInputID="3" CommandID="0"/>
+        <Mapping MenuInputID="4" CommandID="3"/>
+        <Mapping MenuInputID="5" CommandID="4"/>
+    </InputToCommandMappings>
+    <MenuRoot WrapRootMenu="False" StartupMenuItemID="1">
+        <MenuItem Name="VehicleInfo" ID="1" Index="0" WrapSubMenu="True" LabelID="1" ImageID="25">
+            <Widgets/>
+            <SubMenuItems>
+                <MenuItem Name="BattOilInfo" ID="2" Index="0" WrapSubMenu="True" LabelID="70" ImageID="7">
+                    <Widgets/>
+                </MenuItem>
+                <MenuItem Name="BrakeSystemInfo" ID="3" Index="1" WrapSubMenu="True" LabelID="4" ImageID="15">
+                    <Widgets/>
+                    <SubMenuItems>
+                        <MenuItem Name="FrontRearReservoirPressure" ID="4" Index="0" WrapSubMenu="False" LabelID="15" ImageID="11">
+                            <Widgets/>
+                        </MenuItem>
+                        <MenuItem Name="ParkBrakereservoirpressure" ID="5" Index="1" WrapSubMenu="False" LabelID="16" ImageID="15">
+                            <Widgets/>
+                        </MenuItem>
+                        <MenuItem Name="FrontRearAxleLimiterPressure" ID="6" Index="2" WrapSubMenu="False" LabelID="17" ImageID="16">
+                            <Widgets/>
+                        </MenuItem>
+                    </SubMenuItems>
+                </MenuItem>
+                <MenuItem Name="TripInfo" ID="7" Index="2" WrapSubMenu="True" LabelID="5" ImageID="24">
+                    <Widgets/>
+                    <SubMenuItems>
+                        <MenuItem Name="FuelConsumption" ID="8" Index="0" WrapSubMenu="True" LabelID="18" ImageID="13">
+                            <Widgets/>
+                            <SubMenuItems>
+                                <MenuItem Name="AverageFuelConsumption" ID="9" Index="0" WrapSubMenu="False" LabelID="35" ImageID="7">
+                                    <Widgets/>
+                                </MenuItem>
+                                <MenuItem Name="TripFuelConsumption" ID="10" Index="1" WrapSubMenu="False" LabelID="36" ImageID="8">
+                                    <Widgets>
+                                        <Widget Type="Label" WidgetID="532" Name="LitresLabel" GCLName="Widgets_532_LitresLabel" X="170" Y="50" Width="20" Height="20" Boxed="false" PrimaryForegroundRed="255" PrimaryForegroundGreen="255" PrimaryForegroundBlue="255" PrimaryBackgroundIsTransparent="true" PrimaryBackgroundRed="0" PrimaryBackgroundGreen="0" PrimaryBackgroundBlue="0" SecondaryForegroundRed="0" SecondaryForegroundGreen="0" SecondaryForegroundBlue="0" SecondaryBackgroundIsTransparent="false" SecondaryBackgroundRed="0" SecondaryBackgroundGreen="0" SecondaryBackgroundBlue="0" Label="83"/>
+                                        <Widget Type="DynamicValueLabel" WidgetID="533" Name="TripFuelLabel" GCLName="Widgets_533_TripFuelLabel" X="86" Y="50" Width="80" Height="20" Boxed="false" PrimaryForegroundRed="255" PrimaryForegroundGreen="255" PrimaryForegroundBlue="255" PrimaryBackgroundIsTransparent="true" PrimaryBackgroundRed="0" PrimaryBackgroundGreen="0" PrimaryBackgroundBlue="0" SecondaryForegroundRed="0" SecondaryForegroundGreen="0" SecondaryForegroundBlue="0" SecondaryBackgroundIsTransparent="false" SecondaryBackgroundRed="0" SecondaryBackgroundGreen="0" SecondaryBackgroundBlue="0" Font="5" Multiplier10n="-1" NumberofDecimals="1" MaximumNumberofDigits="6" DataSink=""/>
+                                    </Widgets>
+                                </MenuItem>
+                                <MenuItem Name="TotalFuelConsumption" ID="11" Index="2" WrapSubMenu="False" LabelID="37" ImageID="9">
+                                    <Widgets>
+                                        <Widget Type="Label" WidgetID="534" Name="LitresLabel" GCLName="Widgets_534_LitresLabel" X="170" Y="50" Width="20" Height="20" Boxed="false" PrimaryForegroundRed="255" PrimaryForegroundGreen="255" PrimaryForegroundBlue="255" PrimaryBackgroundIsTransparent="true" PrimaryBackgroundRed="0" PrimaryBackgroundGreen="0" PrimaryBackgroundBlue="0" SecondaryForegroundRed="0" SecondaryForegroundGreen="0" SecondaryForegroundBlue="0" SecondaryBackgroundIsTransparent="false" SecondaryBackgroundRed="0" SecondaryBackgroundGreen="0" SecondaryBackgroundBlue="0" Label="83"/>
+                                        <Widget Type="DynamicValueLabel" WidgetID="535" Name="TotalFuelLabel" GCLName="Widgets_535_TotalFuelLabel" X="86" Y="50" Width="80" Height="20" Boxed="false" PrimaryForegroundRed="255" PrimaryForegroundGreen="255" PrimaryForegroundBlue="255" PrimaryBackgroundIsTransparent="true" PrimaryBackgroundRed="0" PrimaryBackgroundGreen="0" PrimaryBackgroundBlue="0" SecondaryForegroundRed="0" SecondaryForegroundGreen="0" SecondaryForegroundBlue="0" SecondaryBackgroundIsTransparent="false" SecondaryBackgroundRed="0" SecondaryBackgroundGreen="0" SecondaryBackgroundBlue="0" Font="5" Multiplier10n="0" NumberofDecimals="0" MaximumNumberofDigits="7" DataSink=""/>
+                                    </Widgets>
+                                </MenuItem>
+                            </SubMenuItems>
+                        </MenuItem>
+                        <MenuItem Name="Mileage" ID="12" Index="1" WrapSubMenu="True" LabelID="19" ImageID="24">
+                            <Widgets/>
+                            <SubMenuItems>
+                                <MenuItem Name="TotalMileage" ID="13" Index="0" WrapSubMenu="False" LabelID="38" ImageID="14">
+                                    <Widgets>
+                                        <Widget Type="Label" WidgetID="314" Name="ODO" GCLName="Widgets_314_ODO" X="8" Y="20" Width="70" Height="30" Boxed="false" PrimaryForegroundRed="0" PrimaryForegroundGreen="0" PrimaryForegroundBlue="0" PrimaryBackgroundIsTransparent="true" PrimaryBackgroundRed="0" PrimaryBackgroundGreen="0" PrimaryBackgroundBlue="0" SecondaryForegroundRed="0" SecondaryForegroundGreen="0" SecondaryForegroundBlue="0" SecondaryBackgroundIsTransparent="false" SecondaryBackgroundRed="0" SecondaryBackgroundGreen="0" SecondaryBackgroundBlue="0" Label="76"/>
+                                        <Widget Type="DynamicValueLabel" WidgetID="315" Name="MenuODOValue" GCLName="Widgets_315_MenuODOValue" X="110" Y="45" Width="80" Height="20" Boxed="false" PrimaryForegroundRed="0" PrimaryForegroundGreen="0" PrimaryForegroundBlue="0" PrimaryBackgroundIsTransparent="true" PrimaryBackgroundRed="0" PrimaryBackgroundGreen="0" PrimaryBackgroundBlue="0" SecondaryForegroundRed="0" SecondaryForegroundGreen="0" SecondaryForegroundBlue="0" SecondaryBackgroundIsTransparent="false" SecondaryBackgroundRed="0" SecondaryBackgroundGreen="0" SecondaryBackgroundBlue="0" Font="5" Multiplier10n="0" NumberofDecimals="0" MaximumNumberofDigits="7" DataSink=""/>
+                                        <Widget Type="Label" WidgetID="316" Name="KM" GCLName="Widgets_316_KM" X="190" Y="45" Width="30" Height="25" Boxed="false" PrimaryForegroundRed="0" PrimaryForegroundGreen="0" PrimaryForegroundBlue="0" PrimaryBackgroundIsTransparent="true" PrimaryBackgroundRed="0" PrimaryBackgroundGreen="0" PrimaryBackgroundBlue="0" SecondaryForegroundRed="0" SecondaryForegroundGreen="0" SecondaryForegroundBlue="0" SecondaryBackgroundIsTransparent="false" SecondaryBackgroundRed="0" SecondaryBackgroundGreen="0" SecondaryBackgroundBlue="0" Label="75"/>
+                                    </Widgets>
+                                </MenuItem>
+                                <MenuItem Name="TripMileage" ID="14" Index="1" WrapSubMenu="False" LabelID="39" ImageID="24">
+                                    <Widgets/>
+                                    <SubMenuItems>
+                                        <MenuItem Name="TripA" ID="68" Index="0" WrapSubMenu="False" LabelID="79" ImageID="23">
+                                            <Widgets>
+                                                <Widget Type="Label" WidgetID="524" Name="TRIPA" GCLName="Widgets_524_TRIPA" X="8" Y="20" Width="70" Height="30" Boxed="false" PrimaryForegroundRed="0" PrimaryForegroundGreen="0" PrimaryForegroundBlue="0" PrimaryBackgroundIsTransparent="true" PrimaryBackgroundRed="0" PrimaryBackgroundGreen="0" PrimaryBackgroundBlue="0" SecondaryForegroundRed="0" SecondaryForegroundGreen="0" SecondaryForegroundBlue="0" SecondaryBackgroundIsTransparent="false" SecondaryBackgroundRed="0" SecondaryBackgroundGreen="0" SecondaryBackgroundBlue="0" Label="77"/>
+                                                <Widget Type="DynamicValueLabel" WidgetID="525" Name="TripAValue" GCLName="Widgets_525_TripAValue" X="110" Y="45" Width="80" Height="20" Boxed="false" PrimaryForegroundRed="0" PrimaryForegroundGreen="0" PrimaryForegroundBlue="0" PrimaryBackgroundIsTransparent="true" PrimaryBackgroundRed="0" PrimaryBackgroundGreen="0" PrimaryBackgroundBlue="0" SecondaryForegroundRed="0" SecondaryForegroundGreen="0" SecondaryForegroundBlue="0" SecondaryBackgroundIsTransparent="false" SecondaryBackgroundRed="0" SecondaryBackgroundGreen="0" SecondaryBackgroundBlue="0" Font="5" Multiplier10n="-1" NumberofDecimals="1" MaximumNumberofDigits="6" DataSink=""/>
+                                                <Widget Type="Label" WidgetID="526" Name="KM" GCLName="Widgets_526_KM" X="190" Y="45" Width="30" Height="25" Boxed="false" PrimaryForegroundRed="0" PrimaryForegroundGreen="0" PrimaryForegroundBlue="0" PrimaryBackgroundIsTransparent="true" PrimaryBackgroundRed="0" PrimaryBackgroundGreen="0" PrimaryBackgroundBlue="0" SecondaryForegroundRed="0" SecondaryForegroundGreen="0" SecondaryForegroundBlue="0" SecondaryBackgroundIsTransparent="false" SecondaryBackgroundRed="0" SecondaryBackgroundGreen="0" SecondaryBackgroundBlue="0" Label="75"/>
+                                            </Widgets>
+                                        </MenuItem>
+                                        <MenuItem Name="TripB" ID="69" Index="1" WrapSubMenu="False" LabelID="80" ImageID="19">
+                                            <Widgets>
+                                                <Widget Type="Label" WidgetID="527" Name="TRIPB" GCLName="Widgets_527_TRIPB" X="8" Y="20" Width="70" Height="30" Boxed="false" PrimaryForegroundRed="0" PrimaryForegroundGreen="0" PrimaryForegroundBlue="0" PrimaryBackgroundIsTransparent="true" PrimaryBackgroundRed="0" PrimaryBackgroundGreen="0" PrimaryBackgroundBlue="0" SecondaryForegroundRed="0" SecondaryForegroundGreen="0" SecondaryForegroundBlue="0" SecondaryBackgroundIsTransparent="false" SecondaryBackgroundRed="0" SecondaryBackgroundGreen="0" SecondaryBackgroundBlue="0" Label="78"/>
+                                                <Widget Type="DynamicValueLabel" WidgetID="528" Name="TripBValue" GCLName="Widgets_528_TripBValue" X="110" Y="45" Width="80" Height="20" Boxed="false" PrimaryForegroundRed="0" PrimaryForegroundGreen="0" PrimaryForegroundBlue="0" PrimaryBackgroundIsTransparent="true" PrimaryBackgroundRed="0" PrimaryBackgroundGreen="0" PrimaryBackgroundBlue="0" SecondaryForegroundRed="0" SecondaryForegroundGreen="0" SecondaryForegroundBlue="0" SecondaryBackgroundIsTransparent="false" SecondaryBackgroundRed="0" SecondaryBackgroundGreen="0" SecondaryBackgroundBlue="0" Font="5" Multiplier10n="-1" NumberofDecimals="1" MaximumNumberofDigits="6" DataSink=""/>
+                                                <Widget Type="Label" WidgetID="529" Name="KM" GCLName="Widgets_529_KM" X="190" Y="45" Width="30" Height="25" Boxed="false" PrimaryForegroundRed="0" PrimaryForegroundGreen="0" PrimaryForegroundBlue="0" PrimaryBackgroundIsTransparent="true" PrimaryBackgroundRed="0" PrimaryBackgroundGreen="0" PrimaryBackgroundBlue="0" SecondaryForegroundRed="0" SecondaryForegroundGreen="0" SecondaryForegroundBlue="0" SecondaryBackgroundIsTransparent="false" SecondaryBackgroundRed="0" SecondaryBackgroundGreen="0" SecondaryBackgroundBlue="0" Label="75"/>
+                                            </Widgets>
+                                        </MenuItem>
+                                    </SubMenuItems>
+                                </MenuItem>
+                            </SubMenuItems>
+                        </MenuItem>
+                        <MenuItem Name="WorkDuration" ID="15" Index="2" WrapSubMenu="True" LabelID="20" ImageID="14">
+                            <Widgets/>
+                            <SubMenuItems>
+                                <MenuItem Name="EngineWorkDuration" ID="16" Index="0" WrapSubMenu="False" LabelID="40" ImageID="19">
+                                    <Widgets/>
+                                </MenuItem>
+                                <MenuItem Name="EngineIdleDuration" ID="17" Index="1" WrapSubMenu="False" LabelID="41" ImageID="24">
+                                    <Widgets/>
+                                </MenuItem>
+                            </SubMenuItems>
+                        </MenuItem>
+                        <MenuItem Name="AverageVehicleSpeed" ID="18" Index="3" WrapSubMenu="True" LabelID="22" ImageID="25">
+                            <Widgets/>
+                            <SubMenuItems>
+                                <MenuItem Name="AccumulatedAverageSpeed" ID="19" Index="0" WrapSubMenu="False" LabelID="42" ImageID="7">
+                                    <Widgets/>
+                                </MenuItem>
+                                <MenuItem Name="ShortDistanceAverageSpeed" ID="20" Index="1" WrapSubMenu="False" LabelID="43" ImageID="19">
+                                    <Widgets/>
+                                </MenuItem>
+                            </SubMenuItems>
+                        </MenuItem>
+                    </SubMenuItems>
+                </MenuItem>
+                <MenuItem Name="TPMSInfo" ID="21" Index="3" WrapSubMenu="True" LabelID="63" ImageID="22">
+                    <Widgets/>
+                    <SubMenuItems>
+                        <MenuItem Name="TyrePressure" ID="22" Index="0" WrapSubMenu="False" LabelID="22" ImageID="20">
+                            <Widgets>
+                                <Widget Type="Icon" WidgetID="287" Name="Icon" GCLName="Widgets_287_Icon" X="120" Y="60" Width="0" Height="0" Boxed="false" PrimaryForegroundRed="255" PrimaryForegroundGreen="255" PrimaryForegroundBlue="255" PrimaryBackgroundIsTransparent="true" PrimaryBackgroundRed="0" PrimaryBackgroundGreen="0" PrimaryBackgroundBlue="0" SecondaryForegroundRed="0" SecondaryForegroundGreen="0" SecondaryForegroundBlue="0" SecondaryBackgroundIsTransparent="false" SecondaryBackgroundRed="0" SecondaryBackgroundGreen="0" SecondaryBackgroundBlue="0" Icon="7"/>
+                                <Widget Type="DynamicValueLabel" WidgetID="288" Name="FR_TP" GCLName="Widgets_288_FR_TP" X="48" Y="8" Width="35" Height="15" Boxed="false" PrimaryForegroundRed="255" PrimaryForegroundGreen="255" PrimaryForegroundBlue="255" PrimaryBackgroundIsTransparent="true" PrimaryBackgroundRed="0" PrimaryBackgroundGreen="0" PrimaryBackgroundBlue="0" SecondaryForegroundRed="0" SecondaryForegroundGreen="0" SecondaryForegroundBlue="0" SecondaryBackgroundIsTransparent="false" SecondaryBackgroundRed="0" SecondaryBackgroundGreen="0" SecondaryBackgroundBlue="0" Font="1" Multiplier10n="-2" NumberofDecimals="1" MaximumNumberofDigits="4" DataSink=""/>
+                                <Widget Type="DynamicValueLabel" WidgetID="289" Name="FL_TP" GCLName="Widgets_289_FL_TP" X="48" Y="97" Width="35" Height="15" Boxed="false" PrimaryForegroundRed="255" PrimaryForegroundGreen="255" PrimaryForegroundBlue="255" PrimaryBackgroundIsTransparent="true" PrimaryBackgroundRed="0" PrimaryBackgroundGreen="0" PrimaryBackgroundBlue="0" SecondaryForegroundRed="0" SecondaryForegroundGreen="0" SecondaryForegroundBlue="0" SecondaryBackgroundIsTransparent="false" SecondaryBackgroundRed="0" SecondaryBackgroundGreen="0" SecondaryBackgroundBlue="0" Font="1" Multiplier10n="-2" NumberofDecimals="1" MaximumNumberofDigits="4" DataSink=""/>
+                                <Widget Type="DynamicValueLabel" WidgetID="290" Name="ML_TP" GCLName="Widgets_290_ML_TP" X="101" Y="97" Width="35" Height="15" Boxed="false" PrimaryForegroundRed="255" PrimaryForegroundGreen="255" PrimaryForegroundBlue="255" PrimaryBackgroundIsTransparent="true" PrimaryBackgroundRed="0" PrimaryBackgroundGreen="0" PrimaryBackgroundBlue="0" SecondaryForegroundRed="0" SecondaryForegroundGreen="0" SecondaryForegroundBlue="0" SecondaryBackgroundIsTransparent="false" SecondaryBackgroundRed="0" SecondaryBackgroundGreen="0" SecondaryBackgroundBlue="0" Font="1" Multiplier10n="-2" NumberofDecimals="1" MaximumNumberofDigits="4" DataSink=""/>
+                                <Widget Type="DynamicValueLabel" WidgetID="291" Name="RL_TP" GCLName="Widgets_291_RL_TP" X="144" Y="97" Width="35" Height="15" Boxed="false" PrimaryForegroundRed="255" PrimaryForegroundGreen="255" PrimaryForegroundBlue="255" PrimaryBackgroundIsTransparent="true" PrimaryBackgroundRed="0" PrimaryBackgroundGreen="0" PrimaryBackgroundBlue="0" SecondaryForegroundRed="0" SecondaryForegroundGreen="0" SecondaryForegroundBlue="0" SecondaryBackgroundIsTransparent="false" SecondaryBackgroundRed="0" SecondaryBackgroundGreen="0" SecondaryBackgroundBlue="0" Font="1" Multiplier10n="-2" NumberofDecimals="1" MaximumNumberofDigits="4" DataSink=""/>
+                                <Widget Type="DynamicValueLabel" WidgetID="292" Name="RR_TP" GCLName="Widgets_292_RR_TP" X="144" Y="8" Width="35" Height="15" Boxed="false" PrimaryForegroundRed="255" PrimaryForegroundGreen="255" PrimaryForegroundBlue="255" PrimaryBackgroundIsTransparent="true" PrimaryBackgroundRed="0" PrimaryBackgroundGreen="0" PrimaryBackgroundBlue="0" SecondaryForegroundRed="0" SecondaryForegroundGreen="0" SecondaryForegroundBlue="0" SecondaryBackgroundIsTransparent="false" SecondaryBackgroundRed="0" SecondaryBackgroundGreen="0" SecondaryBackgroundBlue="0" Font="1" Multiplier10n="-2" NumberofDecimals="1" MaximumNumberofDigits="4" DataSink=""/>
+                                <Widget Type="DynamicValueLabel" WidgetID="293" Name="MRO_TP" GCLName="Widgets_293_MRO_TP" X="102" Y="8" Width="35" Height="15" Boxed="false" PrimaryForegroundRed="255" PrimaryForegroundGreen="255" PrimaryForegroundBlue="255" PrimaryBackgroundIsTransparent="true" PrimaryBackgroundRed="0" PrimaryBackgroundGreen="0" PrimaryBackgroundBlue="0" SecondaryForegroundRed="0" SecondaryForegroundGreen="0" SecondaryForegroundBlue="0" SecondaryBackgroundIsTransparent="false" SecondaryBackgroundRed="0" SecondaryBackgroundGreen="0" SecondaryBackgroundBlue="0" Font="1" Multiplier10n="-2" NumberofDecimals="1" MaximumNumberofDigits="4" DataSink=""/>
+                                <Widget Type="DynamicValueLabel" WidgetID="294" Name="MLI_TP" GCLName="Widgets_294_MLI_TP" X="102" Y="65" Width="35" Height="15" Boxed="false" PrimaryForegroundRed="255" PrimaryForegroundGreen="255" PrimaryForegroundBlue="255" PrimaryBackgroundIsTransparent="true" PrimaryBackgroundRed="0" PrimaryBackgroundGreen="0" PrimaryBackgroundBlue="0" SecondaryForegroundRed="0" SecondaryForegroundGreen="0" SecondaryForegroundBlue="0" SecondaryBackgroundIsTransparent="false" SecondaryBackgroundRed="0" SecondaryBackgroundGreen="0" SecondaryBackgroundBlue="0" Font="1" Multiplier10n="-2" NumberofDecimals="1" MaximumNumberofDigits="4" DataSink=""/>
+                                <Widget Type="DynamicValueLabel" WidgetID="295" Name="RLI_TP" GCLName="Widgets_295_RLI_TP" X="144" Y="65" Width="35" Height="15" Boxed="false" PrimaryForegroundRed="255" PrimaryForegroundGreen="255" PrimaryForegroundBlue="255" PrimaryBackgroundIsTransparent="true" PrimaryBackgroundRed="0" PrimaryBackgroundGreen="0" PrimaryBackgroundBlue="0" SecondaryForegroundRed="0" SecondaryForegroundGreen="0" SecondaryForegroundBlue="0" SecondaryBackgroundIsTransparent="false" SecondaryBackgroundRed="0" SecondaryBackgroundGreen="0" SecondaryBackgroundBlue="0" Font="1" Multiplier10n="-2" NumberofDecimals="1" MaximumNumberofDigits="4" DataSink=""/>
+                                <Widget Type="DynamicValueLabel" WidgetID="296" Name="MRI_TP" GCLName="Widgets_296_MRI_TP" X="102" Y="38" Width="35" Height="15" Boxed="false" PrimaryForegroundRed="255" PrimaryForegroundGreen="255" PrimaryForegroundBlue="255" PrimaryBackgroundIsTransparent="true" PrimaryBackgroundRed="0" PrimaryBackgroundGreen="0" PrimaryBackgroundBlue="0" SecondaryForegroundRed="0" SecondaryForegroundGreen="0" SecondaryForegroundBlue="0" SecondaryBackgroundIsTransparent="false" SecondaryBackgroundRed="0" SecondaryBackgroundGreen="0" SecondaryBackgroundBlue="0" Font="1" Multiplier10n="-2" NumberofDecimals="1" MaximumNumberofDigits="4" DataSink=""/>
+                                <Widget Type="DynamicValueLabel" WidgetID="297" Name="RRI_TP" GCLName="Widgets_297_RRI_TP" X="144" Y="38" Width="35" Height="15" Boxed="false" PrimaryForegroundRed="255" PrimaryForegroundGreen="255" PrimaryForegroundBlue="255" PrimaryBackgroundIsTransparent="true" PrimaryBackgroundRed="0" PrimaryBackgroundGreen="0" PrimaryBackgroundBlue="0" SecondaryForegroundRed="0" SecondaryForegroundGreen="0" SecondaryForegroundBlue="0" SecondaryBackgroundIsTransparent="false" SecondaryBackgroundRed="0" SecondaryBackgroundGreen="0" SecondaryBackgroundBlue="0" Font="1" Multiplier10n="-2" NumberofDecimals="1" MaximumNumberofDigits="4" DataSink=""/>
+                                <Widget Type="Label" WidgetID="298" Name="Unit" GCLName="Widgets_298_Unit" X="3" Y="51" Width="55" Height="15" Boxed="false" PrimaryForegroundRed="255" PrimaryForegroundGreen="255" PrimaryForegroundBlue="255" PrimaryBackgroundIsTransparent="true" PrimaryBackgroundRed="0" PrimaryBackgroundGreen="0" PrimaryBackgroundBlue="0" SecondaryForegroundRed="0" SecondaryForegroundGreen="0" SecondaryForegroundBlue="0" SecondaryBackgroundIsTransparent="false" SecondaryBackgroundRed="0" SecondaryBackgroundGreen="0" SecondaryBackgroundBlue="0" Label="69"/>
+                            </Widgets>
+                        </MenuItem>
+                        <MenuItem Name="TyreTemperature" ID="23" Index="1" WrapSubMenu="False" LabelID="23" ImageID="21">
+                            <Widgets/>
+                        </MenuItem>
+                    </SubMenuItems>
+                </MenuItem>
+                <MenuItem Name="DTCInfo" ID="24" Index="4" WrapSubMenu="True" LabelID="71" ImageID="10">
+                    <Widgets/>
+                </MenuItem>
+            </SubMenuItems>
+        </MenuItem>
+        <MenuItem Name="Settings" ID="25" Index="1" WrapSubMenu="True" LabelID="2" ImageID="8">
+            <Widgets/>
+            <SubMenuItems>
+                <MenuItem Name="DateTime" ID="26" Index="0" WrapSubMenu="True" LabelID="6" ImageID="9">
+                    <Widgets/>
+                    <SubMenuItems>
+                        <MenuItem Name="DateTimeAdjustment" ID="27" Index="0" WrapSubMenu="True" LabelID="24" ImageID="9">
+                            <Widgets/>
+                            <SubMenuItems>
+                                <MenuItem Name="DateAdjustment" ID="28" Index="0" WrapSubMenu="False" LabelID="44" ImageID="9">
+                                    <Widgets/>
+                                </MenuItem>
+                                <MenuItem Name="TimeAdjustment" ID="29" Index="1" WrapSubMenu="False" LabelID="45" ImageID="19">
+                                    <Widgets/>
+                                </MenuItem>
+                            </SubMenuItems>
+                        </MenuItem>
+                        <MenuItem Name="Displayformat" ID="30" Index="1" WrapSubMenu="True" LabelID="25" ImageID="24">
+                            <Widgets/>
+                            <SubMenuItems>
+                                <MenuItem Name="FormatOfDate" ID="31" Index="0" WrapSubMenu="False" LabelID="46" ImageID="9">
+                                    <Widgets/>
+                                </MenuItem>
+                                <MenuItem Name="FormatOfTime" ID="32" Index="1" WrapSubMenu="False" LabelID="47" ImageID="19">
+                                    <Widgets/>
+                                </MenuItem>
+                            </SubMenuItems>
+                        </MenuItem>
+                    </SubMenuItems>
+                </MenuItem>
+                <MenuItem Name="TripInfoReset" ID="33" Index="1" WrapSubMenu="True" LabelID="7" ImageID="8">
+                    <Widgets/>
+                    <SubMenuItems>
+                        <MenuItem Name="TripResetA" ID="66" Index="0" WrapSubMenu="False" LabelID="81" ImageID="24">
+                            <Widgets>
+                                <Widget Type="SignalTrigger" WidgetID="530" Name="SignalTriggerTripA" GCLName="Widgets_530_SignalTriggerTripA" X="75" Y="6" Width="65" Height="12" Boxed="false" PrimaryForegroundRed="0" PrimaryForegroundGreen="0" PrimaryForegroundBlue="0" PrimaryBackgroundIsTransparent="false" PrimaryBackgroundRed="0" PrimaryBackgroundGreen="0" PrimaryBackgroundBlue="3" SecondaryForegroundRed="0" SecondaryForegroundGreen="0" SecondaryForegroundBlue="0" SecondaryBackgroundIsTransparent="false" SecondaryBackgroundRed="0" SecondaryBackgroundGreen="0" SecondaryBackgroundBlue="0" SignalTriggerSource=""/>
+                            </Widgets>
+                        </MenuItem>
+                        <MenuItem Name="TripResetB" ID="67" Index="1" WrapSubMenu="False" LabelID="82" ImageID="23">
+                            <Widgets>
+                                <Widget Type="SignalTrigger" WidgetID="531" Name="SignalTriggerTripB" GCLName="Widgets_531_SignalTriggerTripB" X="75" Y="6" Width="65" Height="12" Boxed="false" PrimaryForegroundRed="0" PrimaryForegroundGreen="0" PrimaryForegroundBlue="0" PrimaryBackgroundIsTransparent="false" PrimaryBackgroundRed="0" PrimaryBackgroundGreen="0" PrimaryBackgroundBlue="0" SecondaryForegroundRed="0" SecondaryForegroundGreen="0" SecondaryForegroundBlue="0" SecondaryBackgroundIsTransparent="false" SecondaryBackgroundRed="0" SecondaryBackgroundGreen="0" SecondaryBackgroundBlue="0" SignalTriggerSource=""/>
+                            </Widgets>
+                        </MenuItem>
+                    </SubMenuItems>
+                </MenuItem>
+                <MenuItem Name="LanguageUnits" ID="34" Index="2" WrapSubMenu="True" LabelID="8" ImageID="8">
+                    <Widgets/>
+                    <SubMenuItems>
+                        <MenuItem Name="Language" ID="35" Index="0" WrapSubMenu="False" LabelID="26" ImageID="10">
+                            <Widgets>
+                                <Widget Type="SelectableList" WidgetID="501" Name="SelectableListWidget" GCLName="Widgets_501_SelectableListWidget" X="2" Y="2" Width="228" Height="110" Boxed="false" PrimaryForegroundRed="255" PrimaryForegroundGreen="255" PrimaryForegroundBlue="255" PrimaryBackgroundIsTransparent="true" PrimaryBackgroundRed="255" PrimaryBackgroundGreen="0" PrimaryBackgroundBlue="0" SecondaryForegroundRed="221" SecondaryForegroundGreen="170" SecondaryForegroundBlue="13" SecondaryBackgroundIsTransparent="true" SecondaryBackgroundRed="0" SecondaryBackgroundGreen="0" SecondaryBackgroundBlue="255" Selectable="true" ShowNumbering="false" DisplayItemCount="2" TextAlignment="2" CurrentValue="" LabelToValueMappings="" SelectedValue=""/>
+                            </Widgets>
+                        </MenuItem>
+                        <MenuItem Name="Units" ID="36" Index="1" WrapSubMenu="True" LabelID="27" ImageID="23">
+                            <Widgets/>
+                            <SubMenuItems>
+                                <MenuItem Name="Distance" ID="37" Index="0" WrapSubMenu="False" LabelID="48" ImageID="19">
+                                    <Widgets/>
+                                </MenuItem>
+                                <MenuItem Name="FuelConsumptionUnits" ID="38" Index="1" WrapSubMenu="False" LabelID="49" ImageID="24">
+                                    <Widgets/>
+                                </MenuItem>
+                                <MenuItem Name="Temperature" ID="39" Index="2" WrapSubMenu="False" LabelID="50" ImageID="25">
+                                    <Widgets/>
+                                </MenuItem>
+                                <MenuItem Name="Pressure" ID="40" Index="3" WrapSubMenu="False" LabelID="51" ImageID="20">
+                                    <Widgets/>
+                                </MenuItem>
+                            </SubMenuItems>
+                        </MenuItem>
+                    </SubMenuItems>
+                </MenuItem>
+                <MenuItem Name="DisplaySettings" ID="41" Index="3" WrapSubMenu="False" LabelID="9" ImageID="19">
+                    <Widgets/>
+                    <SubMenuItems>
+                        <MenuItem Name="IlluminationSettings" ID="42" Index="0" WrapSubMenu="False" LabelID="28" ImageID="7">
+                            <Widgets>
+                                <Widget Type="ColumnLevel" WidgetID="506" Name="IlluminationLevel" GCLName="Widgets_506_IlluminationLevel" X="72" Y="38" Width="82" Height="46" Boxed="true" PrimaryForegroundRed="255" PrimaryForegroundGreen="255" PrimaryForegroundBlue="255" PrimaryBackgroundIsTransparent="true" PrimaryBackgroundRed="0" PrimaryBackgroundGreen="255" PrimaryBackgroundBlue="0" SecondaryForegroundRed="255" SecondaryForegroundGreen="255" SecondaryForegroundBlue="0" SecondaryBackgroundIsTransparent="true" SecondaryBackgroundRed="0" SecondaryBackgroundGreen="0" SecondaryBackgroundBlue="0" Spacing="2" Blocks="5" Min="1" Max="5" Minblockheight="12" Maxblockheight="42" CurrentLevelSink="" SelectedLevelSource=""/>
+                            </Widgets>
+                        </MenuItem>
+                    </SubMenuItems>
+                </MenuItem>
+            </SubMenuItems>
+        </MenuItem>
+        <MenuItem Name="SelfDiagnosis" ID="43" Index="2" WrapSubMenu="True" LabelID="3" ImageID="10">
+            <Widgets/>
+            <SubMenuItems>
+                <MenuItem Name="Needle" ID="44" Index="0" WrapSubMenu="False" LabelID="10" ImageID="19">
+                    <Widgets/>
+                </MenuItem>
+                <MenuItem Name="TellTales" ID="45" Index="1" WrapSubMenu="False" LabelID="11" ImageID="17">
+                    <Widgets/>
+                </MenuItem>
+                <MenuItem Name="Buzzer" ID="46" Index="2" WrapSubMenu="True" LabelID="12" ImageID="18">
+                    <Widgets/>
+                    <SubMenuItems>
+                        <MenuItem Name="Buzzer1" ID="47" Index="0" WrapSubMenu="False" LabelID="29" ImageID="7">
+                            <Widgets/>
+                        </MenuItem>
+                        <MenuItem Name="Buzzer2" ID="48" Index="1" WrapSubMenu="False" LabelID="30" ImageID="8">
+                            <Widgets/>
+                        </MenuItem>
+                    </SubMenuItems>
+                </MenuItem>
+                <MenuItem Name="Monochrome" ID="49" Index="3" WrapSubMenu="True" LabelID="13" ImageID="13">
+                    <Widgets/>
+                    <SubMenuItems>
+                        <MenuItem Name="WholeScreenBlack" ID="50" Index="0" WrapSubMenu="False" LabelID="31" ImageID="22">
+                            <Widgets/>
+                        </MenuItem>
+                        <MenuItem Name="WholeScreenWhite" ID="51" Index="1" WrapSubMenu="False" LabelID="32" ImageID="25">
+                            <Widgets/>
+                        </MenuItem>
+                    </SubMenuItems>
+                </MenuItem>
+                <MenuItem Name="SensorInfo" ID="52" Index="4" WrapSubMenu="True" LabelID="14" ImageID="17">
+                    <Widgets/>
+                    <SubMenuItems>
+                        <MenuItem Name="SensorPowerSupply" ID="53" Index="0" WrapSubMenu="True" LabelID="33" ImageID="18">
+                            <Widgets/>
+                            <SubMenuItems>
+                                <MenuItem Name="VehicleSpeedSensorPowerSupply" ID="54" Index="0" WrapSubMenu="False" LabelID="52" ImageID="21">
+                                    <Widgets/>
+                                </MenuItem>
+                                <MenuItem Name="FrontReservoirPressureSensorPowerSupply" ID="55" Index="1" WrapSubMenu="False" LabelID="53" ImageID="23">
+                                    <Widgets/>
+                                </MenuItem>
+                                <MenuItem Name="ParkReservoirPressureSensorPowerSupply" ID="56" Index="2" WrapSubMenu="False" LabelID="54" ImageID="24">
+                                    <Widgets/>
+                                </MenuItem>
+                                <MenuItem Name="RearReservoirPressureSensorPowerSupply" ID="57" Index="3" WrapSubMenu="False" LabelID="55" ImageID="18">
+                                    <Widgets/>
+                                </MenuItem>
+                            </SubMenuItems>
+                        </MenuItem>
+                        <MenuItem Name="SensorSignal" ID="58" Index="1" WrapSubMenu="True" LabelID="34" ImageID="17">
+                            <Widgets/>
+                            <SubMenuItems>
+                                <MenuItem Name="FrontReservoirPressureSensor" ID="59" Index="0" WrapSubMenu="False" LabelID="56" ImageID="19">
+                                    <Widgets/>
+                                </MenuItem>
+                                <MenuItem Name="RearReservoirPressureSensor" ID="60" Index="1" WrapSubMenu="False" LabelID="57" ImageID="22">
+                                    <Widgets/>
+                                </MenuItem>
+                                <MenuItem Name="ParkReservoirPressureSensor" ID="61" Index="2" WrapSubMenu="False" LabelID="58" ImageID="26">
+                                    <Widgets/>
+                                </MenuItem>
+                                <MenuItem Name="VehicleSpeedSensor" ID="62" Index="3" WrapSubMenu="False" LabelID="59" ImageID="24">
+                                    <Widgets/>
+                                </MenuItem>
+                                <MenuItem Name="FuelLevelSensor" ID="63" Index="4" WrapSubMenu="False" LabelID="60" ImageID="25">
+                                    <Widgets/>
+                                </MenuItem>
+                                <MenuItem Name="FrontCircuitPressureSensor" ID="64" Index="5" WrapSubMenu="False" LabelID="61" ImageID="26">
+                                    <Widgets/>
+                                </MenuItem>
+                                <MenuItem Name="RearCircuitPressureSensor" ID="65" Index="6" WrapSubMenu="False" LabelID="62" ImageID="20">
+                                    <Widgets/>
+                                </MenuItem>
+                            </SubMenuItems>
+                        </MenuItem>
+                    </SubMenuItems>
+                </MenuItem>
+            </SubMenuItems>
+        </MenuItem>
+    </MenuRoot>
+</Menu>

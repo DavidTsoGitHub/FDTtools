@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<FunctionDefinition Name="ImageFieldsDummy">
+    <Tasks>
+        <Task>
+            <InitFunction>ImageFieldsDummy_Init</InitFunction>
+            <Runnable>ImageFieldsDummy_Run</Runnable>
+            <StartupDelay>35</StartupDelay>
+            <Periodicity>500</Periodicity>
+        </Task>
+    </Tasks>
+    <SignalInterface>
+        <InputSignals>
+            <Signal Name="ChargingIndication" DataType="uint8" UpdateNotification="False" Mandatory="True"/>
+            <Signal Name="ParkBrakeIndication" DataType="uint8" UpdateNotification="False" Mandatory="True"/>
+            <Signal Name="BrakePressureLowIndication" DataType="uint8" UpdateNotification="False" Mandatory="True"/>
+        </InputSignals>
+        <OutputSignals>
+            <Signal Name="Image1ID" DataType="uint32"/>
+            <Signal Name="Image2ID" DataType="uint32"/>
+            <Signal Name="Image3ID" DataType="uint32"/>
+        </OutputSignals>
+    </SignalInterface>
+    <UIResources>
+        <Images>
+            <Image Name="Charging" />
+            <Image Name="ParkBrake" />
+            <Image Name="BrakePressureLow" />
+        </Images>
+    </UIResources>
+    <ConfigurationParameters/>
+    <CalibrationParameters/>
+</FunctionDefinition>

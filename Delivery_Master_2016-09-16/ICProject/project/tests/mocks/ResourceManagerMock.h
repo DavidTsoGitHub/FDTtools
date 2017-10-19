@@ -1,0 +1,23 @@
+#ifndef RESOURCEMANAGERMOCK_H
+#define RESOURCEMANAGERMOCK_H
+
+#include "ResourceManager.h"
+#include <time.h>
+
+void ResourceManagerMock_Reset(void);
+void ResourceManagerMock_GrantResource(void);
+void ResourceManagerMock_RevokeResource(void);
+
+int ResourceManagerMock_RegisterResourceClient_CallCount(void);
+clock_t ResourceManagerMock_RegisterResourceClient_FirstCallTimeStamp(void);
+clock_t ResourceManagerMock_RegisterResourceClient_LastCallTimeStamp(void);
+
+int ResourceManagerMock_RequestResource_CallCount(void);
+clock_t ResourceManagerMock_RequestResource_FirstCallTimeStamp(void);
+clock_t ResourceManagerMock_RequestResource_LastCallTimeStamp(void);
+
+int ResourceManagerMock_ReleaseResource_CallCount(void);
+clock_t ResourceManagerMock_ReleaseResource_FirstCallTimeStamp(void);
+clock_t ResourceManagerMock_ReleaseResource_LastCallTimeStamp(void);
+
+#endif

@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<FunctionDefinition Name="FuelConsumption">
+    <Tasks>
+        <Task>
+            <InitFunction>FuelConsumption_Init</InitFunction>
+            <Runnable>FuelConsumption_Run</Runnable>
+            <StartupDelay>10</StartupDelay>
+            <Periodicity>100</Periodicity>
+        </Task>
+    </Tasks>
+    <SignalInterface>
+        <InputSignals>
+            <Signal Name="InstantaneousFuelConsumption" DataType="uint16" UpdateNotification="False" Mandatory="True"/>
+            <Signal Name="FuelRate" DataType="uint16" UpdateNotification="False" Mandatory="True"/>
+            <Signal Name="ResetSignal" DataType="void" UpdateNotification="True" Mandatory="True"/>
+            <Signal Name="SystemPowerMode" DataType="PowerMode" UpdateNotification="False" Mandatory="True"/>
+        </InputSignals>
+        <OutputSignals>
+            <Signal Name="TotalFuelConsumption" DataType="uint32"/>
+            <Signal Name="TripFuelConsumption" DataType="uint32"/>
+            <Signal Name="FilteredInstantaniousFuelConsumption" DataType="uint16"/>
+        </OutputSignals>
+    </SignalInterface>
+    <ConfigurationParameters>
+        <ConfigurationParameter DescriptiveName="Filter Period" ParameterName="u16FuelConsumptionCoefficient" Description="A value between 0 and 10000, higher value means the historic average is more important, lower value means latest value is more important." DataType="uint16" ArrayLength="1"/>
+    </ConfigurationParameters>
+    <CalibrationParameters>
+        <CalibrationParameter DescriptiveName="Total Fuel Consumption" ParameterName="TOTAL_FUEL_CONSUMPTION" Description="Total Fuel Consumption stored when power mode goes to POWER_IGNITION_OFF" DataType="uint32" ArrayLength="1"/>
+        <CalibrationParameter DescriptiveName="Total Fuel Consumption Ticks" ParameterName="TOTAL_FUEL_CONSUMPTION_TICKS" Description="The Total Fuel Consumption Ticks since last litre was added to Total Fuel Consumption" DataType="uint32" ArrayLength="1"/>
+    </CalibrationParameters>
+    <LabelMappingsParameters/>
+    <UIResources>
+        <Icons/>
+    </UIResources>
+</FunctionDefinition>

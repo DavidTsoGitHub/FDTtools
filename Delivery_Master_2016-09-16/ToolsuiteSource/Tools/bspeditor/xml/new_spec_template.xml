@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<BSP AIVersion="1.0">
+  <BSPRunnables>
+  </BSPRunnables>
+  <BSPCalibrations>
+  </BSPCalibrations>
+  <BSPTypes>
+    <BSPEnumerations>
+      <BSPEnum Name="BSP_StdReturnType" Description="Standard BSP return types">
+        <Items>
+          <Item Value="0" Identifier="BSP_OK" Description="Function call succeded"/>
+          <Item Value="1" Identifier="BSP_BUSY" Description="BSP busy processing previous request"/>
+          <Item Value="2" Identifier="BSP_ERROR" Description="An unknown error occurred"/>
+          <Item Value="3" Identifier="BSP_INVALID_RANGE" Description="Data is out of range or unsupported"/>
+          <Item Value="4" Identifier="BSP_NOT_SUPPORTED" Description="Function not supported"/>
+        </Items>
+      </BSPEnum>
+      <BSPEnum Name="BSP_ECUModes" Description="ECU Mode type definition">
+        <Items>
+          <Item Value="0" Identifier="BSP_MODE_SLEEP" Description="Sleep mode"/>
+          <Item Value="1" Identifier="BSP_MODE_LOWPOWER" Description="Low power mode"/>
+          <Item Value="2" Identifier="BSP_MODE_NORMAL" Description="Normal mode"/>
+        </Items>
+      </BSPEnum>
+    </BSPEnumerations>
+    <BSPFixedPointFloats>
+    </BSPFixedPointFloats>
+  </BSPTypes>
+  <BSPFunctions>
+  </BSPFunctions>
+  <BSPSegmentDisplay>
+    <CharacterMappings>
+      <CharacterMapping Char="0" Segments="ABCDEF"/>
+      <CharacterMapping Char="1" Segments="BC"/>
+      <CharacterMapping Char="2" Segments="ABGED"/>
+      <CharacterMapping Char="3" Segments="ABCDG"/>
+      <CharacterMapping Char="4" Segments="BCFG"/>
+      <CharacterMapping Char="5" Segments="ACDFG"/>
+      <CharacterMapping Char="6" Segments="ACDEFG"/>
+      <CharacterMapping Char="7" Segments="ABC"/>
+      <CharacterMapping Char="8" Segments="ABCDEFG"/>
+      <CharacterMapping Char="9" Segments="ABCFG"/>
+    </CharacterMappings>
+    <SpecialSegments>
+      <SpecialSegment ID="DOT"/>
+      <SpecialSegment ID="T1"/>
+    </SpecialSegments>
+    <SegmentBitMappings>
+      <SegmentBitMapping Byte="0" Bit0="F" Bit1="G" Bit2="E" Bit3="T1" Bit4="A" Bit5="B" Bit6="C" Bit7="D"/>
+      <SegmentBitMapping Byte="1" Bit0="" Bit1="F" Bit2="G" Bit3="E" Bit4="A" Bit5="B" Bit6="C" Bit7="D"/>
+      <SegmentBitMapping Byte="2" Bit0="" Bit1="F" Bit2="G" Bit3="E" Bit4="A" Bit5="B" Bit6="C" Bit7="D"/>
+      <SegmentBitMapping Byte="3" Bit0="" Bit1="F" Bit2="G" Bit3="E" Bit4="A" Bit5="B" Bit6="C" Bit7="D"/>
+      <SegmentBitMapping Byte="4" Bit0="" Bit1="F" Bit2="G" Bit3="E" Bit4="A" Bit5="B" Bit6="C" Bit7="D"/>
+      <SegmentBitMapping Byte="5" Bit0="F" Bit1="G" Bit2="E" Bit3="DOT" Bit4="A" Bit5="B" Bit6="C" Bit7="D"/>
+    </SegmentBitMappings>
+  </BSPSegmentDisplay>
+  <BSPDisplay Width="240" Height="320" AvailableMemory="76800" UseGRAM="False" NumberOfLayers="1" RenderingType="SW" RenderingOrientation="Normal"/>
+  <BSPMemory InternalMemorySize="0x100000" ExternalMemorySize="0x00" ExternalMemoryAddress="0x00"/>
+</BSP>

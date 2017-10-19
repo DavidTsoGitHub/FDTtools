@@ -1,0 +1,650 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1200</width>
+    <height>800</height>
+   </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="windowTitle">
+   <string>FDT</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <layout class="QGridLayout" name="gridLayout_11">
+    <item row="0" column="0">
+     <widget class="QTabWidget" name="mainTabWidget">
+      <property name="currentIndex">
+       <number>6</number>
+      </property>
+      <widget class="QWidget" name="SignalMappingTab">
+       <attribute name="title">
+        <string>Signals</string>
+       </attribute>
+       <layout class="QGridLayout" name="gridLayout">
+        <item row="0" column="0">
+         <widget class="QTabWidget" name="SignalLayoutTab">
+          <property name="currentIndex">
+           <number>2</number>
+          </property>
+          <widget class="QWidget" name="SigMapTab">
+           <attribute name="title">
+            <string>Signal Mapping</string>
+           </attribute>
+           <layout class="QGridLayout" name="gridLayout_14">
+            <item row="0" column="0">
+             <layout class="QGridLayout" name="SignalMappingLayout">
+              <property name="sizeConstraint">
+               <enum>QLayout::SetDefaultConstraint</enum>
+              </property>
+             </layout>
+            </item>
+           </layout>
+          </widget>
+          <widget class="QWidget" name="SinksOverviewTab">
+           <attribute name="title">
+            <string>Sinks Overview</string>
+           </attribute>
+           <layout class="QGridLayout" name="gridLayout_16">
+            <item row="0" column="0">
+             <layout class="QGridLayout" name="SinksOverviewLayout"/>
+            </item>
+           </layout>
+          </widget>
+          <widget class="QWidget" name="SourcesOverviewTab">
+           <attribute name="title">
+            <string>Sources Overview</string>
+           </attribute>
+           <layout class="QGridLayout" name="gridLayout_17">
+            <item row="0" column="0">
+             <layout class="QGridLayout" name="SourcesOverviewLayout"/>
+            </item>
+           </layout>
+          </widget>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="DiagnosticsTab">
+       <attribute name="title">
+        <string>Diagnostics</string>
+       </attribute>
+       <layout class="QGridLayout" name="gridLayout_13">
+        <item row="0" column="0">
+         <layout class="QGridLayout" name="DiagLayout"/>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="LayoutEditorTab">
+       <attribute name="title">
+        <string>Layout Editor</string>
+       </attribute>
+       <layout class="QGridLayout" name="gridLayout_10"/>
+      </widget>
+      <widget class="QWidget" name="LabelEditorTab">
+       <attribute name="title">
+        <string>Label Editor</string>
+       </attribute>
+       <layout class="QGridLayout" name="gridLayout_7">
+        <item row="0" column="0">
+         <layout class="QGridLayout" name="LabelEditorLayout"/>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="MenuDesignerTab">
+       <attribute name="title">
+        <string>Menu Editor</string>
+       </attribute>
+       <layout class="QGridLayout" name="gridLayout_8"/>
+      </widget>
+      <widget class="QWidget" name="IconManagerTab">
+       <attribute name="title">
+        <string>Icons Manager</string>
+       </attribute>
+       <layout class="QGridLayout" name="gridLayout_12"/>
+      </widget>
+      <widget class="QWidget" name="CheckMessageTab">
+       <attribute name="title">
+        <string>Check Message Editor</string>
+       </attribute>
+       <layout class="QGridLayout" name="gridLayout_20"/>
+      </widget>
+      <widget class="QWidget" name="AnimationEditorTab">
+       <attribute name="title">
+        <string>Animation Editor</string>
+       </attribute>
+       <layout class="QGridLayout" name="gridLayout_19"/>
+      </widget>
+      <widget class="QWidget" name="ImageManagerTab">
+       <attribute name="title">
+        <string>Image Manager</string>
+       </attribute>
+       <layout class="QGridLayout" name="gridLayout_18"/>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1200</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuFile">
+    <property name="title">
+     <string>File</string>
+    </property>
+    <addaction name="actionNewProject"/>
+    <addaction name="actionOpenProject"/>
+    <addaction name="actionReloadProject"/>
+    <addaction name="separator"/>
+    <addaction name="actionSaveProject"/>
+    <addaction name="actionCloseProject"/>
+    <addaction name="separator"/>
+    <addaction name="actionQuit"/>
+   </widget>
+   <widget class="QMenu" name="menuTools">
+    <property name="title">
+     <string>Tools</string>
+    </property>
+    <addaction name="actionCreateFunctionBlock"/>
+    <addaction name="separator"/>
+    <addaction name="actionSchedulerAnalysis"/>
+    <addaction name="separator"/>
+    <addaction name="actionSettings"/>
+   </widget>
+   <widget class="QMenu" name="menuAbout">
+    <property name="title">
+     <string>About</string>
+    </property>
+    <addaction name="actionHelp"/>
+    <addaction name="actionAbout_FDT"/>
+   </widget>
+   <widget class="QMenu" name="menuWindows">
+    <property name="title">
+     <string>Windows</string>
+    </property>
+   </widget>
+   <widget class="QMenu" name="menuProject">
+    <property name="enabled">
+     <bool>false</bool>
+    </property>
+    <property name="title">
+     <string>Project</string>
+    </property>
+    <widget class="QMenu" name="menuActiveBuildTarget">
+     <property name="title">
+      <string>Active Build Target</string>
+     </property>
+     <addaction name="actionSimulationActive"/>
+     <addaction name="actionTargetActive"/>
+    </widget>
+    <addaction name="actionGenerate"/>
+    <addaction name="actionBuild"/>
+    <addaction name="actionQuickBuild"/>
+    <addaction name="actionRun"/>
+    <addaction name="menuActiveBuildTarget"/>
+    <addaction name="separator"/>
+    <addaction name="actionOpenProjectProperties"/>
+   </widget>
+   <addaction name="menuFile"/>
+   <addaction name="menuProject"/>
+   <addaction name="menuTools"/>
+   <addaction name="menuWindows"/>
+   <addaction name="menuAbout"/>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+  <widget class="QDockWidget" name="functionLibraryDock">
+   <property name="sizePolicy">
+    <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+     <horstretch>0</horstretch>
+     <verstretch>0</verstretch>
+    </sizepolicy>
+   </property>
+   <property name="allowedAreas">
+    <set>Qt::LeftDockWidgetArea|Qt::RightDockWidgetArea</set>
+   </property>
+   <property name="windowTitle">
+    <string>Function Block Library</string>
+   </property>
+   <attribute name="dockWidgetArea">
+    <number>1</number>
+   </attribute>
+   <widget class="QWidget" name="dockWidgetContents">
+    <layout class="QVBoxLayout" name="verticalLayout">
+     <item>
+      <widget class="QTreeView" name="functionLibraryTree"/>
+     </item>
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout_2">
+       <item>
+        <widget class="QPushButton" name="editFunctionBlockButton">
+         <property name="enabled">
+          <bool>false</bool>
+         </property>
+         <property name="text">
+          <string>Edit function block</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="addFunctionBlockButton">
+         <property name="enabled">
+          <bool>false</bool>
+         </property>
+         <property name="text">
+          <string>Add to project</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+    </layout>
+   </widget>
+  </widget>
+  <widget class="QToolBar" name="toolBar">
+   <property name="windowTitle">
+    <string>toolBar</string>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="separator"/>
+  </widget>
+  <widget class="QDockWidget" name="projectBrowserDock">
+   <property name="sizePolicy">
+    <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+     <horstretch>0</horstretch>
+     <verstretch>0</verstretch>
+    </sizepolicy>
+   </property>
+   <property name="allowedAreas">
+    <set>Qt::LeftDockWidgetArea|Qt::RightDockWidgetArea</set>
+   </property>
+   <property name="windowTitle">
+    <string>Project Browser</string>
+   </property>
+   <attribute name="dockWidgetArea">
+    <number>1</number>
+   </attribute>
+   <widget class="QWidget" name="projectBrowserContainer">
+    <layout class="QVBoxLayout" name="verticalLayout_2"/>
+   </widget>
+  </widget>
+  <widget class="QDockWidget" name="propertiesDock">
+   <property name="sizePolicy">
+    <sizepolicy hsizetype="MinimumExpanding" vsizetype="MinimumExpanding">
+     <horstretch>0</horstretch>
+     <verstretch>0</verstretch>
+    </sizepolicy>
+   </property>
+   <property name="allowedAreas">
+    <set>Qt::LeftDockWidgetArea|Qt::RightDockWidgetArea</set>
+   </property>
+   <property name="windowTitle">
+    <string>Properties</string>
+   </property>
+   <attribute name="dockWidgetArea">
+    <number>2</number>
+   </attribute>
+   <widget class="QWidget" name="propertiesDockContents">
+    <property name="sizePolicy">
+     <sizepolicy hsizetype="MinimumExpanding" vsizetype="MinimumExpanding">
+      <horstretch>0</horstretch>
+      <verstretch>0</verstretch>
+     </sizepolicy>
+    </property>
+    <layout class="QGridLayout" name="gridLayout_3"/>
+   </widget>
+  </widget>
+  <widget class="QDockWidget" name="toolOutputDock">
+   <property name="sizePolicy">
+    <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+     <horstretch>0</horstretch>
+     <verstretch>0</verstretch>
+    </sizepolicy>
+   </property>
+   <property name="allowedAreas">
+    <set>Qt::BottomDockWidgetArea|Qt::TopDockWidgetArea</set>
+   </property>
+   <property name="windowTitle">
+    <string>Tool Output</string>
+   </property>
+   <attribute name="dockWidgetArea">
+    <number>8</number>
+   </attribute>
+   <widget class="QWidget" name="toolOutputDockContents">
+    <layout class="QGridLayout" name="gridLayout_2">
+     <item row="0" column="0">
+      <widget class="QTabWidget" name="toolOutputTabs">
+       <property name="tabPosition">
+        <enum>QTabWidget::South</enum>
+       </property>
+       <property name="currentIndex">
+        <number>0</number>
+       </property>
+       <widget class="QWidget" name="generateToolOutputTab">
+        <attribute name="title">
+         <string>Platform Generator Output</string>
+        </attribute>
+        <layout class="QHBoxLayout" name="horizontalLayout">
+         <item>
+          <widget class="QPlainTextEdit" name="generateToolOutput">
+           <property name="undoRedoEnabled">
+            <bool>false</bool>
+           </property>
+           <property name="lineWrapMode">
+            <enum>QPlainTextEdit::WidgetWidth</enum>
+           </property>
+           <property name="readOnly">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+       <widget class="QWidget" name="buildToolOutputTab">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+          <horstretch>2</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <attribute name="title">
+         <string>Platform Build Output</string>
+        </attribute>
+        <layout class="QGridLayout" name="gridLayout_5">
+         <item row="0" column="2">
+          <widget class="QPlainTextEdit" name="buildToolOutput">
+           <property name="undoRedoEnabled">
+            <bool>false</bool>
+           </property>
+           <property name="lineWrapMode">
+            <enum>QPlainTextEdit::WidgetWidth</enum>
+           </property>
+           <property name="textInteractionFlags">
+            <set>Qt::TextSelectableByKeyboard|Qt::TextSelectableByMouse</set>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="1">
+          <widget class="QPushButton" name="abortButton">
+           <property name="enabled">
+            <bool>false</bool>
+           </property>
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="text">
+            <string>Abort</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+       <widget class="QWidget" name="validationOutputTab">
+        <attribute name="title">
+         <string>Issues</string>
+        </attribute>
+        <layout class="QGridLayout" name="gridLayout_6">
+         <item row="0" column="0">
+          <widget class="QPlainTextEdit" name="validationOutput">
+           <property name="readOnly">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+       <widget class="QWidget" name="simulationOutputTab">
+        <attribute name="title">
+         <string>Simulation Output</string>
+        </attribute>
+        <layout class="QGridLayout" name="gridLayout_9">
+         <item row="0" column="0">
+          <widget class="QPlainTextEdit" name="simulationOutput">
+           <property name="readOnly">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+  </widget>
+  <action name="actionQuit">
+   <property name="text">
+    <string>Quit</string>
+   </property>
+   <property name="shortcut">
+    <string>Alt+Q</string>
+   </property>
+  </action>
+  <action name="actionOpenProject">
+   <property name="text">
+    <string>Open...</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+O</string>
+   </property>
+  </action>
+  <action name="actionSettings">
+   <property name="text">
+    <string>Settings</string>
+   </property>
+  </action>
+  <action name="actionHelp">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Help</string>
+   </property>
+  </action>
+  <action name="actionAbout_FDT">
+   <property name="text">
+    <string>About FDT</string>
+   </property>
+  </action>
+  <action name="actionFunctionLibraryVisibility">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Function Block List</string>
+   </property>
+  </action>
+  <action name="actionProjectBrowserVisibility">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Project Browser</string>
+   </property>
+  </action>
+  <action name="actionPropertiesExplorerVisibility">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Properties Explorer</string>
+   </property>
+  </action>
+  <action name="actionCloseProject">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="text">
+    <string>Close</string>
+   </property>
+  </action>
+  <action name="actionSaveProject">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="text">
+    <string>Save</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+S</string>
+   </property>
+  </action>
+  <action name="action_2">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="text">
+    <string>Save As...</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Shift+S</string>
+   </property>
+  </action>
+  <action name="actionBuild">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="text">
+    <string>Build</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+B</string>
+   </property>
+  </action>
+  <action name="actionQuickBuild">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="text">
+    <string>Quick Build</string>
+   </property>
+  </action>
+  <action name="actionAddMenu">
+   <property name="text">
+    <string>Add Menu</string>
+   </property>
+  </action>
+  <action name="actionRun">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="text">
+    <string>Run Simulator</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+R</string>
+   </property>
+  </action>
+  <action name="actionNewProject">
+   <property name="text">
+    <string>New...</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+N</string>
+   </property>
+  </action>
+  <action name="actionCreateFunctionBlock">
+   <property name="text">
+    <string>Create Function Block...</string>
+   </property>
+  </action>
+  <action name="actionMonochromeDisplayEnabled">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Enabled</string>
+   </property>
+  </action>
+  <action name="actionOpenProjectProperties">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Properties</string>
+   </property>
+  </action>
+  <action name="actionGenerate">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="text">
+    <string>Generate </string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+G</string>
+   </property>
+  </action>
+  <action name="actionSegmentDisplayEnabled">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Enabled</string>
+   </property>
+  </action>
+  <action name="actionSchedulerAnalysis">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="text">
+    <string>Scheduler Analysis</string>
+   </property>
+  </action>
+  <action name="actionSimulationActive">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Simulation</string>
+   </property>
+  </action>
+  <action name="actionTargetActive">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Target</string>
+   </property>
+  </action>
+  <action name="actionReloadProject">
+   <property name="text">
+    <string>Reload project</string>
+   </property>
+  </action>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources/>
+ <connections/>
+</ui>

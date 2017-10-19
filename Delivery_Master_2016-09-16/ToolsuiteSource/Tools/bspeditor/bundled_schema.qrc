@@ -1,0 +1,6 @@
+<RCC>
+    <qresource prefix="/">
+        <file>xml/default.xsd</file>
+        <file>xml/new_spec_template.xml</file>
+    </qresource>
+</RCC>
