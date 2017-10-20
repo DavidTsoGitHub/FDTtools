@@ -1,0 +1,61 @@
+// memory config file for MPC5645S
+reservedchar 0x21	// display '!' for invalid reads
+
+// On-chip flash memories (Code Flash)
+// Code Flash 0: FL-2048_4_0 (8?16k, 2?64k, 2?128k, 6?256k)
+////range     0x00000000 0x001FFFFF 4 ReadWrite
+reserved    0x00200000 0x007FFFFF
+
+//Code Flash Array 0 Shadow Sector
+reserved    0x00F00000 0x00FFBFFF
+////range       0x00FFC000 0x00FFFFFF 4 ReadWrite
+
+//Emulation mapping
+// Flash memory emulation mapping
+// //range 0x01000000 0x1FFFFFFF 507904 4 ReadWrite
+//DRAM (lower 512 MB)
+////range 0x20000000 0x3FFFFFFF 524288 4 ReadWrite
+
+// SRAM
+// 8K SRAM (Power Domain PD0 - Always ON )
+// //range 0x40000000 0x40001FFF 4 ReadWrite
+// 56 SRAM (RAM Domain PD2)
+// //range 0x40002000 0x4000FFFF 4 ReadWrite
+reserved 0x40010000 0x5FFFFFFF
+
+// 1 MB graphics SRAM
+////range 0x60000000 0x600FFFFF 1024 4 ReadWrite
+reserved 0x60100000 0x7FFFFFFF
+
+//External, Memory Mapped Serial Flash for QuadSPI
+reserved 0x90000200 0x90003FFF
+reserved 0x90004200 0x9FFFFFFF
+
+//PBRIDGE(1) - Off Platform Peripherals (mirrored to PBRIDGE(0) memory range 0xFFE80000-0xFFEFFFFF)
+reserved 0xC0000000 0xC3F87FFF
+reserved 0xC3F8C000 0xC3F8FFFF
+reserved 0xC3F98000 0xC3F9BFFF
+reserved 0xC3F9C000 0xC3F9FFFF
+reserved 0xC3FA8000 0xC3FD7FFF
+reserved 0xC3FF4000 0xC3FFFFFF
+
+//PBRIDGE(0) - Off Platform Peripherals (new range)
+reserved 0xFFE04000 0xFFE13FFF
+reserved 0xFFE18000 0xFFE23FFF
+reserved 0xFFE2C000 0xFFE2FFFF
+reserved 0xFFE64000 0xFFE6FFFF
+reserved 0xFFE74000 0xFFE77FFF
+reserved 0xFFE80000 0xFFEFFFFF
+
+//PBRIDGE(0) - On Platform Peripherals
+reserved 0xFFF08000 0xFFF0BFFF
+reserved 0xFFF14000 0xFFF37FFF
+reserved 0xFFF4C000 0xFFF7FFFF
+
+//PBRIDGE(0) - Off Platform Peripherals
+reserved 0xFFF80000 0xFFF8FFFF
+reserved 0xFFF9C000 0xFFF9FFFF
+reserved 0xFFFA4000 0xFFFBFFFF
+reserved 0xFFFCC000 0xFFFDBFFF
+reserved 0xFFFE0000 0xFFFFBFFF
+

@@ -1,0 +1,62 @@
+"./Project_Settings/Startup_Code/__ppc_eabi_init_c.obj"
+"./Project_Settings/Startup_Code/MPC5645S_init_flash_c.obj"
+"./Project_Settings/Startup_Code/MPC5645S_Startup_c.obj"
+"./Project_Settings/Startup_Code/MPC5645S_HWInit_c.obj"
+"./Sources/Arch/ppc/mpc55xx/drivers/flash_ll_h7f_c90_c.obj"
+"./Sources/Arch/ppc/mpc55xx/drivers/flash_h7f_c90_c.obj"
+"./Sources/Arch/ppc/mpc55xx/drivers/Wdg_c.obj"
+"./Sources/Arch/ppc/mpc55xx/drivers/QuadSPI_c.obj"
+"./Sources/Arch/ppc/mpc55xx/drivers/Nvm_c.obj"
+"./Sources/Arch/ppc/mpc55xx/drivers/Mcu_c.obj"
+"./Sources/Arch/ppc/mpc55xx/drivers/Gpt_c.obj"
+"./Sources/Arch/ppc/mpc55xx/drivers/Fls_c.obj"
+"./Sources/Boards/DETC/Board_c.obj"
+"./Sources/Boards/DETC/Config/Fls_Cfg_c.obj"
+"./Sources/Boards/DETC/Config/FlashLoader_Cfg_c.obj"
+"./Sources/Boards/DETC/Config/Can_Cfg_c.obj"
+"./Sources/Common/Diagnostic/Can/Can_c.obj"
+"./Sources/Common/Diagnostic/CanTp/CanTp_Cfg_c.obj"
+"./Sources/Common/Diagnostic/CanTp/CanTp_c.obj"
+"./Sources/Common/Diagnostic/Dcm/Dcm_Dsp_c.obj"
+"./Sources/Common/Diagnostic/Dcm/Dcm_Cfg_c.obj"
+"./Sources/Common/Diagnostic/Dcm/Dcm_c.obj"
+"./Sources/Common/SecMLib/Cal/Cal_c.obj"
+"./Sources/Common/SecMLib/SecM/SecM_c.obj"
+"./Sources/Common/memcmp_c.obj"
+"./Sources/Common/main_c.obj"
+"./Sources/Common/Stubs_c.obj"
+"./Sources/Common/FlashLoader_c.obj"
+"./Sources/Common/Appl_c.obj"
+"./Sources/ivor_branch_table_c.obj"
+"./Sources/IntcInterrupts_c.obj"
+"./Sources/Exceptions_c.obj"
+-sym dwarf-2
+-sym full
+-msgstyle parseable
+-proc zen
+-big
+-fp soft
+-model absolute
+-abi eabi
+-sdata 8
+-sdata2 8
+-nostdlib
+-lcf
+"$(ProjDirPath)/Project_Settings/Linker_Files/MPC5645S_FLASH.lcf"
+-m __startup
+-L"$(MCUToolsBaseDirEnv)/PA_Support/ewl/lib"
+-char unsigned
+-application
+-heapsize 32
+-stacksize 32
+-map
+-listclosure
+-mapunused
+-genbinary none
+-srec
+-sreclength 26
+-sreceol dos
+-romaddr 0x000000500
+-rambuffer 0x000000500 
+-l"$(MCUToolsBaseDirEnv)/PA_Support/ewl/lib/libc_E200z446_VLE.a"
+-l"$(MCUToolsBaseDirEnv)/PA_Support/ewl/lib/librt_E200z446_VLE.a"

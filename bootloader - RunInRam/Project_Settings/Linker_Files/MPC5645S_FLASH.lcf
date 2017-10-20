@@ -1,0 +1,210 @@
+/* Internal FLASH linker command file for MPC5645S                          */
+/*                                                                          */
+/*               2MB Flash, 64KB SRAM                                       */
+/*                                                                          */
+/* Intended to be used for the stationary example project.                  */
+/*                                                                          */
+/* VERSION: 1.2                                                             */
+
+MEMORY
+{
+    /* FLASH: 0x00000000 - 0x0001FFFFF */
+    /* Fixed location required for RCHW and program entry point*/
+    resetvector:           org = 0x00000000,   len = 0x00000008
+    boot_header_flash:     org = 0x00000008,   len = 0x00000008
+    
+    init:                  org = 0x00000020,   len = 0x000004E0
+    
+    /* ~64K gap required to align the exception handlers.*/
+
+    /* Contains interrupt branch tables for both z4 core and INTC module
+     and the ISR handlers code. Note, the gap is required since the vector
+     base address field of core IVPR is defined within the range [0:15], the
+     INTC branch tables must be loaded at an address aligned to 64K boundary.
+     */
+   /*
+	exception_handlers:    org = 0x00009000,   len = 0x00000400 
+
+    internal_flash:        org = 0x00000500,   len = 0x0000BB00 
+    */ 
+    internal_flash:        org = 0x00000500,   len = 0x0000B700 
+    
+    exception_handlers:    org = 0x0000BC00,   len = 0x00000400 
+    
+	fingerprint_flash:     org = 0x0000E000,   len = 0x00001000
+    vendorPI_flash:        org = 0x0000F000,   len = 0x00001000
+    
+    application:           org = 0x0001C000,   len = 0x001E3FF0
+    application_header:    org = 0x001FFFF8,   len = 0x00000008
+
+    calibration:           org = 0x80000000,   len = 0x00FFFFF8
+    calibration_header:    org = 0x001FFFF0,   len = 0x00000008
+    
+    
+    /* SRAM: 0x40000000 - 0x4000FFFF */
+    internal_ram:          org = 0x40000000,   len = 0x10000
+}
+
+/* This will ensure the rchw and reset vector are not stripped by the linker */
+FORCEACTIVE { "bam_rchw" "bam_resetvector"}
+
+SECTIONS
+{
+    .__bam_bootarea LOAD (ADDR(resetvector)): {} > resetvector
+
+    .__bootarea_header LOAD (0x00000008): {} > boot_header_flash
+    GROUP  : {
+        .init LOAD (0x00000020) : {}
+        .init_vle (VLECODE) LOAD (_e_init) : {
+            *(.init)
+            *(.init_vle)
+        } 
+    } > init
+/**/
+   GROUP : {
+        .intc_hw_branch_table (VLECODE) LOAD (ADDR(exception_handlers)) ALIGN (0x10) : {}
+        .ivor_branch_table (VLECODE) LOAD (_e_intc_hw_branch_table) ALIGN (0x10) : {}
+        .__exception_handlers (VLECODE) LOAD (_e_ivor_branch_table) : {}
+   } > exception_handlers
+
+    GROUP  : {
+ /*   
+    	.intc_hw_branch_table (VLECODE) ALIGN (0x10) : {}
+        .ivor_branch_table (VLECODE) LOAD (_e_intc_hw_branch_table) ALIGN (0x10) : {}
+        .__exception_handlers (VLECODE) LOAD (_e_ivor_branch_table) : {}
+*/
+      .text : {} 
+      .text_vle (VLECODE) ALIGN(0x08): {
+            *(.text)
+            *(.text_vle)
+       }
+       
+       .rodata (CONST) : {
+            *(.rdata)
+            *(.rodata)
+        }
+       
+       .ctors : {}
+       .dtors : {}
+       extab : {}
+       extabindex : {}
+    } > internal_flash
+
+    .fingerprint_flash (CONST) LOAD (0x0000E000): { 
+         _fingerprint_flash_start = .; *(.fingerprint_flash) _fingerprint_flash_end = .;
+    } > fingerprint_flash
+
+    .__vendorPI_flash LOAD (0x0000F000): {
+        /* Appl_c.obj(.rodata)*/
+    } > vendorPI_flash
+
+    .application (CONST) LOAD (0x0001C000): {
+         _application_start = .; *(.application) _application_end = .;
+    } > application
+										
+    .application_header (CONST) LOAD (0x001FFFF8): {
+         _application_header_start = .; *(.application_header) _application_header_end = .;
+    } > application_header
+
+    .calibration (CONST) LOAD (0x80000000): {
+         _calibaration_start = .; *(.calibration) _calibaration_end = .;
+    } > calibration
+
+    .calibration_header (CONST) LOAD (0x001FFFF0): {
+         _calibaration_header_start = .; *(.calibration_header) _calibaration_header_end = .;
+    } > calibration_header
+    
+    GROUP : {
+       /* This section is used in INTC SW mode to store the interrupt handlers array.
+        Although INTC_IACKR.VTBA is 21-bit wide it should be aligned to 4K since if
+        INTC_MCR.VTES == 0 only 20 bits are actually used.*/
+       .__uninitialized_intc_handlertable ALIGN(0x1000) : {}
+       
+       .data   : {}
+       .sdata  : {}
+       .sbss   : {}
+       .sdata2 : {}
+       .sbss2  : {}
+       .bss    : {}
+       _stack_end = .;
+       . = . + 0x400;
+       _stack_addr = .;
+       
+              
+         .ramrodata (CONST) : {
+         Can_Cfg_c.obj(.rdata)
+         Can_Cfg_c.obj(.rodata)
+         CanTp_Cfg_c.obj(.rdata)
+         CanTp_Cfg_c.obj(.rodata)
+       }
+             
+       .ramtext (VLECODE) ALIGN(0x08): {
+         Wdg_c.obj(.text)
+         Wdg_c.obj(.text_vle)
+         Cal_c.obj(.text)
+         Cal_c.obj(.text_vle)
+         SecM_c.obj(.text)
+         SecM_c.obj(.text_vle)
+         Appl_c.obj(.text)
+         Appl_c.obj(.text_vle)
+         FlashLoader_c.obj(.text)
+         FlashLoader_c.obj(.text_vle)
+         CanTp_c.obj(.text)
+         CanTp_c.obj(.text_vle)
+         Can_c.obj(.text)
+         Can_c.obj(.text_vle)
+         Dcm_c.obj(.text)
+         Dcm_c.obj(.text_vle)
+         Dcm_Dsp_c.obj(.text)
+         Dcm_Dsp_c.obj(.text_vle)
+         main_c.obj(.text)
+         main_c.obj(.text_vle)
+         Gpt_c.obj(.text)
+         Gpt_c.obj(.text_vle)
+         Mcu_c.obj(.text)
+         Mcu_c.obj(.text_vle)
+         Board_c.obj(.text)
+         Board_c.obj(.text_vle)
+       }
+       
+   	   . = 0x4000A000;
+       .flashheader (CONST): {
+          Nvm_c.obj(.rodata)
+          Fls_Cfg_c.obj(.rodata)
+       }
+       . = 0x4000A1A8;
+       .flashtext (VLECODE) ALIGN(0x08): {
+		Nvm_c.obj(.text)
+		Nvm_c.obj(.text_vle)
+		Fls_c.obj(.text)
+		Fls_c.obj(.text_vle)
+		flash_h7f_c90_c.obj(.text)
+		flash_h7f_c90_c.obj(.text_vle)
+		flash_ll_h7f_c90_c.obj(.text)
+		flash_ll_h7f_c90_c.obj(.text_vle)
+		QuadSPI_c.obj(.text)
+		QuadSPI_c.obj(.text_vle)
+		memcmp_c.obj(.text)
+		memcmp_c.obj(.text_vle)
+	    Stubs_c.obj(.text)
+		Stubs_c.obj(.text_vle)
+		}
+					
+    } > internal_ram
+}
+
+/* If INTC HW mode is used it represents the vector base address to set
+IVPR and the location of intc_hw_branch_table section. The EXCEPTION_HANDLERS
+will point to the IVOR branch table.
+
+__IVPR_VALUE = ADDR(exception_handlers);
+*/
+/* IVOR branch table location. Used in Exceptions.c */
+EXCEPTION_HANDLERS = ADDR(.ivor_branch_table);
+
+/* L2 SRAM Location (used for L2 SRAM initialization) */
+L2SRAM_LOCATION = ADDR(internal_ram);
+
+/* How many writes with stmw, 128 bytes each, are needed to cover
+   the whole L2SRAM (used for L2 SRAM initialization) */
+L2SRAM_CNT = 0x10000 / 128;

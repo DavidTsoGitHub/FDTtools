@@ -1,0 +1,79 @@
+-sym dwarf-2
+-sym full
+-msgstyle parseable
+-proc zen
+-big
+-fp soft
+-model absolute
+-abi eabi
+-sdata 8
+-sdata2 8
+-vle
+-enc ascii
+-prefix
+"$(MCUToolsBaseDirEnv)/PA_Support/ewl/EWL_C/include/lib_ewl.prefix"
+-prefix
+"$(ProjDirPath)/Prefix/MPC5645S_FLASH_VLE.prefix"
+-c
+-nostdinc
+-nosyspath
+-i
+"$(ProjDirPath)/Project_Headers"
+-i
+"$(ProjDirPath)/Sources/Arch/ppc/mpc55xx/drivers"
+-i
+"$(ProjDirPath)/Sources/Boards/DETC"
+-i
+"$(ProjDirPath)/Sources/Boards/DETC/Config"
+-i
+"$(ProjDirPath)/Sources/Common"
+-i
+"$(ProjDirPath)/Sources/Common/Diagnostic/Can"
+-i
+"$(ProjDirPath)/Sources/Common/Diagnostic/CanTp"
+-i
+"$(ProjDirPath)/Sources/Common/Diagnostic/Dcm"
+-i
+"$(ProjDirPath)/Sources/Common/SecMLib/Cal"
+-i
+"$(ProjDirPath)/Sources/Common/SecMLib/SecM"
+-i
+"$(ProjDirPath)/Project_Settings/Startup_Code"
+-I-
+-I"$(MCUToolsBaseDirEnv)/PA_Support/ewl/EWL_C/include"
+-I-
+-I"$(MCUToolsBaseDirEnv)/PA_Support/ewl/EWL_Runtime/Runtime_PA/Include"
+-I-
+-I"$(MCUToolsBaseDirEnv)/PA_Support/Initialization_Files"
+-disable_extensions off
+-warn illpragmas
+-warn unwanted
+-warn hidevirtual
+-warn implicitconv
+-warn unusedarg
+-warn unusedvar
+-warn unusedexpr
+-warn extracomma
+-warn structclass
+-opt level=0
+-opt speed
+-inline on
+-inline nobottomup
+-align powerpc
+-func_align 4
+-pooldata off
+-common off
+-use_lmw_stmw on
+-novolatileasm
+-schedule off
+-opt nopeephole
+-use_isel on
+-ppc_asm_to_vle
+-Cpp_Exceptions off
+-bool off
+-requireprotos
+-lang c99
+-char unsigned
+-str nopool
+-str reuse
+-ipa off
